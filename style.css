@@ -16,7 +16,7 @@ h1{
     font-size: 30px;
     padding: 16px;
     margin: auto;
-    border: solid red;
+    color: #737373;    
 }
 
 h2, h3{
@@ -43,24 +43,18 @@ p{
     color: #3A4957;
 }
 
-span{
-    width: 50vw;
-    height: 100%;
-    border: solid black;
-}
 
 header{
     margin: 0px 120px, 0px, 120px;
     height: 56px;
     padding: 0%;
-    border: solid black;
 }
 
 
 
 
 img.profile{
-    clear left; 
+    clear: left; 
     float: left;
     padding: 10px;
 }
@@ -73,18 +67,19 @@ p.profile{
 
 a:link, a:visited{
  text-decoration: none;
- color: black;
 }
 
 a:hover{
     color: blue;
 }
 
+a{
+    color: #737373;
+}
+
 li{
     display: inline;
     padding: 16px;
-    border: solid gold;
-
 }
 
 ul{
@@ -96,7 +91,6 @@ ul{
 
 nav{
     float: right;
-    border: solid pink;
     margin: auto;
 }
 
@@ -154,7 +148,6 @@ div{
 }
 
 .contact{
-    height: 100vw;
     padding: 120px;
     background-color: #f1f1f1;
 }
