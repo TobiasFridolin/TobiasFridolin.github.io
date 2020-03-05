@@ -1,0 +1,160 @@
+
+body{
+    margin: 0%;
+    padding: 0%;
+    background-color: #f1f1f1;
+}
+
+header{
+    height: 96px;
+    width: 100vw;
+}
+
+h1{
+    display: inline;
+    font-family: "frank ruhl libre", serif;
+    font-size: 30px;
+    padding: 16px;
+    margin: auto;
+    border: solid red;
+}
+
+h2, h3{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3em;
+    padding: 16px;
+    color: #3A4957;
+}
+
+h3{
+    font-size: 1.5em;
+    padding: 8px;
+    color: #BFC7CF;
+    font-style: italic;
+}
+
+
+p{
+    font-family: 'raleway', sans-serif;
+    font-size: 1.5em;
+    padding: 8px 8px 8px 8px;
+    line-height: 1.5em;
+    width: 50vw;
+    color: #3A4957;
+}
+
+span{
+    width: 50vw;
+    height: 100%;
+    border: solid black;
+}
+
+header{
+    margin: 0px 120px, 0px, 120px;
+    height: 56px;
+    padding: 0%;
+    border: solid black;
+}
+
+
+
+
+img.profile{
+    clear left; 
+    float: left;
+    padding: 10px;
+}
+
+p.profile{
+    width: 10%;
+    padding: 50px;
+    margin: 0%;
+}
+
+a:link, a:visited{
+ text-decoration: none;
+ color: black;
+}
+
+a:hover{
+    color: blue;
+}
+
+li{
+    display: inline;
+    padding: 16px;
+    border: solid gold;
+
+}
+
+ul{
+    font-style: normal;
+    font-family: 'raleway', sans-serif;
+    text-align: center; 
+    list-style: none; 
+}
+
+nav{
+    float: right;
+    border: solid pink;
+    margin: auto;
+}
+
+article{
+    float: left;
+}
+
+section:after{
+    clear: both;
+    display: table;
+}
+
+aside{
+    float: left;
+}
+
+iframe{
+    border: solid;
+    height: 640px;
+    width: 360px;
+    margin: auto;
+}
+
+
+
+
+
+div{
+    padding: 96px, 120px, 96px, 120px;
+}
+
+
+
+.landing{
+    height: 400px;
+    padding: 120px;
+    background-color: white;
+    
+    background-image: url("landing2.png");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+.about{
+    padding: 120px;
+    background-color: #f1f1f1;
+}
+
+
+.portfolio{
+    background-color: black;
+    padding: 96px;
+}
+
+.contact{
+    height: 100vw;
+    padding: 120px;
+    background-color: #f1f1f1;
+}
