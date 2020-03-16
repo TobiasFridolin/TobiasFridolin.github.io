@@ -1,153 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Frank+Ruhl+Libre:wght@300;500&family=Montserrat:wght@700&family=Raleway:wght@300&display=swap');
+
+*{
+    margin: 0%;
+    padding: 0%;
+}
 
 body{
-    margin: 0%;
-    padding: 0%;
-    background-color: #f1f1f1;
-}
-
-header{
-    height: 96px;
-    width: 100vw;
-}
-
-h1{
-    display: inline;
-    font-family: "frank ruhl libre", serif;
-    font-size: 30px;
-    padding: 16px;
-    margin: auto;
-    color: #737373;    
-}
-
-h2, h3{
-    font-family: 'Montserrat', sans-serif;
-    font-size: 3em;
-    padding: 16px;
-    color: #3A4957;
-}
-
-h3{
-    font-size: 1.5em;
-    padding: 8px;
-    color: #BFC7CF;
-    font-style: italic;
-}
-
-
-p{
-    font-family: 'raleway', sans-serif;
-    font-size: 1.5em;
-    padding: 8px 8px 8px 8px;
-    line-height: 1.5em;
-    width: 50vw;
-    color: #3A4957;
-}
-
-
-header{
-    margin: 0px 120px, 0px, 120px;
-    height: 56px;
-    padding: 0%;
-}
-
-
-
-
-img.profile{
-    clear: left; 
-    float: left;
-    padding: 10px;
-}
-
-p.profile{
-    width: 10%;
-    padding: 50px;
-    margin: 0%;
-}
-
-a:link, a:visited{
- text-decoration: none;
-}
-
-a:hover{
-    color: blue;
-}
-
-a{
-    color: #737373;
-}
-
-li{
-    display: inline;
-    padding: 16px;
-}
-
-ul{
-    font-style: normal;
-    font-family: 'raleway', sans-serif;
-    text-align: center; 
-    list-style: none; 
+    transition: 1s ease;
 }
 
 nav{
-    float: right;
-    margin: auto;
+    /*height: 80px;*/
 }
 
-article{
-    float: left;
+ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0px;
 }
 
-section:after{
-    clear: both;
-    display: table;
+li{
+    list-style: none;
+    padding: 0px 40px;
 }
 
-aside{
-    float: left;
+li > a {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-weight: 300;
+    font-size: 1em;
+    text-decoration: none;
+    color: black;
+}
+
+li > a:hover{
+ text-decoration: none;
+}
+
+
+section{
+    height: 101vh;
+    padding: 0px 120px;
+}
+
+h1{
+    font-family: 'Frank Ruhl Libre', serif;
+    font-weight: 500;
+    font-size: 1.5em;
+    padding-left: 40px;
+    margin: 0px;
+}
+
+h2, h3{
+    font-size: 3em;
+    font-family: 'Montserrat', sans-serif;
+    padding: 20px;
+    margin: 0px;
+}
+
+h2{
+    margin: 20px 0px;
+}
+
+h3{
+    font-size: 2em;
+}
+
+
+
+p{
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: 1.8em;
+    font-weight: lighter;
+    padding: 20px;
+}
+
+header{
+    transition: 0.3s ease;
+    z-index: 1;
+    position: sticky;
+    top: 0px;
 }
 
 iframe{
-    border: solid;
-    height: 640px;
-    width: 360px;
-    margin: auto;
+    height: 700px; /* 640 */
+    width: 400px; /* 360 */
+    border: none;
+}
+
+.flex-container{
+    display: flex;
+}
+
+.case{
+    align-content: flex-start;
+    align-items:flex-start;
+}
+
+.item{
 }
 
 
-
-
-
-div{
-    padding: 96px, 120px, 96px, 120px;
+#leftControl, #rightControl{
+    background-image: none;
+    align-content: center;
+    width: 80px;
 }
 
 
-
-.landing{
-    height: 400px;
-    padding: 120px;
-    background-color: white;
-    
-    background-image: url("landing2.png");
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-
+#landing{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 100%;
 }
 
-.about{
-    padding: 120px;
-    background-color: #f1f1f1;
+#portfolio{
+    flex-direction: column;
+    height: 140vh; /* fixed for now. Fix later */
 }
 
-
-.portfolio{
-    background-color: black;
-    padding: 96px;
+#header{
+    flex-direction: row;
+    justify-content: space-between;
+    justify-items: center;
 }
 
-.contact{
-    padding: 120px;
-    background-color: #f1f1f1;
+#currentSection{
+    align-items: center;
+    height: 80px; /* findes også på nav*/
+}
+
+#prototype{
+    margin: 0px 40px;
+    align-items: flex-start;
+}
+
+#masters{
+    width: 30vw;
+    margin: 0px 40px;
+    object-fit: cover;
+    opacity: 100%;
 }

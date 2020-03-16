@@ -1,97 +1,144 @@
 <!DOCTYPE html>
-
 <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale:1.0">
-        <link rel="stylesheet" type="text/css" href="style.css">
-        <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre:300&display=swap" rel="stylesheet">
-        <title>
-            Tobias Fridolin
-        </title>
-    </head>
+    <!-- Carousel, Bootstrap     -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-    <body>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
 
-        <header>
-            <h1>TOBIAS FRIDOLIN</h1>
+    <title>Portfolio</title>
+</head>
 
-            <nav>
-                <ul>
-                    <li><a href="#portfolio" >Portfolio</a></li>
-                    <li><a href="#contact" >Contact</a></li>    
-                </ul>
-             </nav>
-        </header>
+<body id="body">
+
+    <header id="header" class="flex-container">
         
-        
-
-       <div class="landing">
-       </div>
-
-        <div class="about">
-           
-            <div>
-                <h2>Hi!</h2>
-            
-                <div>    
-                    <p>
-                        Hi. My name is Tobey.  I have a passion for making beautiful digital experiences and digital products enjoyable to use.
-                    </p>
-                    <p>
-                        I have a cand.scient. in interaction design from Aalborg University.
-                    </p>
-                    <p>
-                        In my spare time I enjoy being out in nature, baking sourdoughs, making music, and playing games with friends and family.            
-                    </p>
-                </div>
-            </div>
-
-           <h2>What I do</h2>
-
-           <div>
-
-                <p>
-                    The user-centered design philosophy is at the heart of what I do. 
-                    Exploring and communicating alternative designs and creating detailed user interfaces is what I enjoy the most. 
-                    The ‘aha’ moments of discovering how other people work and interact with digital products, and seeing how your prototype holds up in action is, to me, what keeps it interesting
-                </p>
-
-            </div>
-
-           <h2>What is interaction design?</h2>
-
-           <div>
-
-                <p>
-                    Interaction design is very much about learning. 
-                    Learning about people so you can design products which align with how they perceive, understand and behave in the context of use.
-                </p>
-
-            </div>
-           
-       </div>
-
-       <div id="portfolio" class="portfolio">
-           <h2 style="color: white;"> Portfolio </h2>
-            <div style="margin: auto; width: 360px; height: 640px;">
-                <iframe src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2F92unqdwpdNwMa2DW1wGlVH%2FNaturbasen%3Fnode-id%3D242%253A1029%26viewport%3D616%252C660%252C0.09019886702299118%26scaling%3Dmin-zoom" allowfullscreen></iframe>
-            </div>  
+        <div id="currentSection" class="flex-container">
+            <h1> Tobias Fridolin</h1>
         </div>
 
-       <div id="contact" class="contact">
+        <nav id="nav" class ="flex-container">
+            <ul>
+                <li>
+                    <a href="#">About</a>
+                </li>
+                <li>
+                    <a href="#">Portfolio</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+        </nav>
 
-        <h2> Wanna talk?</h2>
-        <h3> Let's grab a cop of coffee</h3>
-        <p> I'm currently living it up in Aalborg. </p>
-        <p> Looking for new opportunities in Aalborg, Aarhus and Copenhagen. </p>
-        <p> Send me an email at tobiasfridolin@gmail.com </p>
-        <p> And connect with me on LinkedIn </p>
-
-       </div>
+    </header>
 
 
-    </body>
 
+
+    <main>
+        <section style="padding: 0px;">
+            <img id="landing" src="landing2.png" alt="Landing">
+        </section>
+        
+        <section id="about">
+            <h2>Hi!</h2>
+            <h3>My name is Tobias.</h3>
+            <p >My name is Tobias.</p>
+        </section>
+
+        <section id="portfolio" class="carousel slide" data-ride="carousel" data-interval="false">
+            
+            <div class="carousel-inner" style="height: 100%;">
+                
+                
+                <div class="item active" style="overflow: hidden;">
+                    
+                    <div class="flex-container case" style="flex-direction: column;">
+                        <h2 id="portfolioHeader">Portfolio</h2>
+                        
+                        <div>
+                            <h3>Naturbasen redesign</h3>
+                        </div>
+                        
+                        <div class="flex-container" style="flex-direction: row;">
+                            <div>
+                                <p>
+                                    Naturbasen's app giver brugere muligheden for at indberette observationer om den danske flora og fauna, og få et overblik over hvilke dyr og områdetyper der er i nærheden. 
+                                    Som del af en uopfordret ansøgning, udarbejdede jeg et redesign af den eksisterende app. Resultatet er den interaktive prototype til højre (tryk F for at se den i fuld skærm). Fokuset var primært et grafisk redesign, men jeg kunne ikke holde mig fra at lave en funktionelle ændringer, baseret på mine egne og andres erfaringer med appen.
+
+                                    <!-- As part of applying unsolicited for a digital design position, I asked for a case I could redesign. The interactive prototype on the right is the result (press F to view in full screen). In addition to a graphical redesign, I made some functional changes, based on the experiences of myself and others.
+                                    -->
+                                </p>
+                                <p>
+                                    Hvis du har lyst til at vide mere, og høre hvad jeg kan gøre for jer, så tøv ikke med at kontakte mig.
+                                    <!-- If you'd like to know more about the process and the decisions I made, feel free to contact me. -->
+                                </p>
+                            </div>
+                            <div id="prototype">
+                                <iframe src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2F92unqdwpdNwMa2DW1wGlVH%2FNaturbasen%3Fnode-id%3D242%253A1029%26viewport%3D616%252C624%252C0.09019886702299118%26scaling%3Dscale-down" allowfullscreen ></iframe>
+                            </div>
+                        </div>       
+                    </div>
+                </div>
+
+                <div id="case2" class="item">
+                    <div>
+                        <h2>Portfolio</h2>
+                    </div>
+                    <div>
+                        <h3>Brugerflader til Kreative Processer</h3>
+                    </div>
+                    <div class="flex-container" style="flex-flow: row;">
+                        <div>
+                            <p>
+                                "Hvordan kan man designe en brugerflade med fokus på at understøtte kreative processer?". Det var spørgsmålet som satte min speciale afhandling igang, hvor vi samarbejdede med 8 musik producere. Efter at have klarlagt nogle af de udfordringer der er i nutidige musik brugerflader, designede vi prototypen på billede. 
+                                Brugerfladen viste sig at have potentiale for idegenering, hvor fokuset er på at prøve forskellige idéer af, frem for at låse sig fast i et spor.
+                            </p>
+                        </div>
+                        <div>
+                            <img id="masters" src="Masters Project.png" alt="Master's Project">
+                        </div>
+                    </div>
+                </div>
+
+                <div id="case3" class="item">
+                    <h3>Case 3</h3>
+
+                </div>
+
+            </div>
+
+            <a id="leftControl" class="left carousel-control" href="#portfolio" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+
+            <a id="rightControl" class="right carousel-control" href="#portfolio" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+                <span class="sr-only">Next</span>
+            </a>
+
+        </section>
+
+
+        <section id="contact">
+            <h2>Get in touch</h2>
+            <h3>Let's grab a cop of coffee</h3>
+
+
+        </section>
+        <div>
+
+        </div>
+    </main>
+    <script src="app.js"></script>   
+
+</body>
 </html>
