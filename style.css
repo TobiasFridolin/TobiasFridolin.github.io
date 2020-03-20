@@ -3,6 +3,7 @@
 *{
     margin: 0%;
     padding: 0%;
+    box-sizing: border-box;
 }
 
 body{
@@ -22,24 +23,30 @@ ul{
 
 li{
     list-style: none;
-    padding: 0px 40px;
 }
 
-li > a {
+a {
     font-family: 'Frank Ruhl Libre', serif;
     font-weight: 300;
     font-size: 1em;
     text-decoration: none;
-    color: black;
+    color: grey;
+    padding: 0px 40px;
 }
 
 li > a:hover{
  text-decoration: none;
 }
 
+main{
+    height: 100vh;
+    width: 100vw;
+}
+
 
 section{
-    height: 101vh;
+    height: 100%;
+    width: 100%;
     padding: 0px 120px;
 }
 
@@ -78,8 +85,18 @@ p{
 header{
     transition: 0.3s ease;
     z-index: 1;
-    position: sticky;
+    position: fixed;
     top: 0px;
+}
+
+footer{
+    height: 5vh; 
+    background-color: white;
+    position: sticky; 
+    bottom: 0px; 
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
 }
 
 iframe{
@@ -95,9 +112,6 @@ iframe{
 .case{
     align-content: flex-start;
     align-items:flex-start;
-}
-
-.item{
 }
 
 
@@ -117,7 +131,6 @@ iframe{
 
 #portfolio{
     flex-direction: column;
-    height: 140vh; /* fixed for now. Fix later */
 }
 
 #header{
@@ -134,6 +147,7 @@ iframe{
 #prototype{
     margin: 0px 40px;
     align-items: flex-start;
+    visibility: hidden;
 }
 
 #masters{
