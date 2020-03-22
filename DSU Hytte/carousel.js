@@ -1,5 +1,9 @@
+
+
 var slideIndex = 1;
-displaySlide(slideIndex);
+var counter = 0;
+
+// displaySlide(slideIndex);
 
 function changeSlides(n){
     displaySlide(slideIndex += n);
@@ -16,10 +20,21 @@ function displaySlide(n){
     }
 
 
+
     slides[slideIndex-1].style.display = 'flex';
-    
-    console.log(slideIndex);
+    counter=n;
+}
+
+setInterval(function() {displaySlide(counter+=1)}, 2000);
+setInterval(function() {console.log(counter)}, 2000);
 
 
+window.addEventListener("scroll", animate());
+
+function animate(){
+    if(this.scrollY > 10){
+        // gsap.from("body", {duration: 1.5, opacity: 0}); 
+    }
+    console.log("animate");  
 }
 
