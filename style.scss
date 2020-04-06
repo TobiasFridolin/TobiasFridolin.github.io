@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Frank+Ruhl+Libre:wght@300;500&family=Montserrat:wght@700&family=Raleway:wght@300&display=swap');
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    height: 100vh;
+    overflow: hidden;
+
+    transition: 1s ease;
+}
+
+header{
+    width: 100%;
+    transition: 0.3s ease;
+    z-index: 1;
+    position: fixed;
+    top: 0px;
+    padding: 0 40px;
+}
+
+nav{
+    display: flex;
+    justify-items: end;
+
+    ul{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: 0px;
+        li{
+            list-style: none;
+            a {
+                color: grey;
+                padding: 0px 40px;
+            }
+        }
+    }
+}
+
+main{
+    height: 100vh;
+    width: 100vw;
+}
+
+section{
+    height: 100%;
+    width: 100%;
+
+    padding-top: 80px;
+    overflow: hidden;
+    .row{
+        margin: 0 80px;
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+
+a {
+    font-family: 'Source Sans Pro', sans-serif;    
+    font-weight: 300;
+    font-size: 1em;
+    text-decoration: none;
+}
+
+a:hover{
+ text-decoration: none;
+}
+
+
+
+p{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.5em;
+    text-align: justify;
+    font-weight: lighter;
+    margin-bottom: 1em;
+}
+
+h1, h2, h3, p, .button{
+    margin-top: 0.5em;
+}
+
+h1{
+    font-weight: 500;
+    font-size: 1.5em;
+}
+
+h2, h3{
+    font-family: 'Lato', sans-serif;
+}
+
+h2{
+    font-size: 3em;
+}
+
+
+h2{
+    a{
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1em;
+      
+    }
+}
+
+h3{
+    font-size: 1.5em;
+    width: fit-content;
+}
+
+#portfolio h3{
+    padding: 0.5em;
+}
+
+
+
+
+
+
+
+.flex-container{
+    display: flex;
+}
+
+
+
+.column{
+    margin: 0 40px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    width: 50%;
+    height: 100%;
+}
+
+.column1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+
+
+#leftControl, #rightControl{
+    background-image: none;
+    align-content: center;
+    width: 80px;
+}
+
+
+#landing{
+    width: 100%;
+    height: 100%;
+    // background-image: url("./landing2.png");
+    background-size: cover;
+    opacity: 100%;
+}
+
+
+
+#about{
+    justify-content: space-between;
+    padding-top: 120px;
+    padding-bottom: 40px;
+}
+
+
+#portfolio{
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    min-height: 100vh;
+    width: 100%;
+
+    .carousel-inner{
+        width: 100%;
+        height: 100%;
+    
+        .item{
+            width: 100%;
+            height: 100%;
+
+            .case{
+                margin: 0 40px;
+                display: flex;
+                align-content: flex-start;
+                align-items:flex-start;
+                flex-direction: row; 
+                justify-items: self-start;
+            }
+        }
+    }
+}
+
+img{
+    width: 100%;
+    object-fit: contain;
+}
+
+
+#header{
+    flex-direction: row;
+    justify-content: space-between;
+    justify-items: center;
+}
+
+#currentSection{
+    align-items: center;
+    height: 80px; /* findes også på nav*/
+}
+
+#prototype{
+    visibility: hidden;
+    iframe{
+        margin: auto;
+    }
+}
+
+
+#naturbasen{
+    height: 700px; /* 640 */
+    width: 400px; /* 360 */
+    border: none;
+}
+
+#profil{
+    width: 200px;
+    border-radius: 100%;
+}
+
+.button{
+    margin-left: 1em;
+    a{    
+        letter-spacing: 0.5em;
+        text-align: center;
+        border-radius: 4px;
+        border: solid #337ab7;;
+        border-width: 1px;
+        padding: 0.5em 0.5em 0.5em 1em;
+        font-size: 1em;
+        color: #337ab7;    
+    }
+}
+
+footer{
+    position: fixed; 
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+
+    a{
+        font-weight: 300;
+        font-size: 1em;
+        text-decoration: none;
+        color: grey;
+        padding: 0px 40px;
+      }
+}
+
+#navTip{
+    position: relative;
+    top: 50%;
+    width: 100%;
+
+    p{
+        text-align: center;
+        color: gray;
+    }
+}

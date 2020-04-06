@@ -1,0 +1,367 @@
+@font-face {
+  font-family: aldoTheApache;
+  src: url(AldotheApache.ttf);
+}
+
+// Colors
+$orange: rgb(249, 181, 118);
+$orangetransparent: rgba(49, 208, 118, 0.5); 
+$orangeshadow: rgb(235, 165, 61);
+$pink: rgb(238, 122, 165);
+$pinktransparent: rgba(233, 136, 172, 0.5);
+$pinkshadow: rgb(99, 41, 62); 
+$pinkHighlight: rgb(255, 159, 194);
+$blue: rgb(115, 206, 241);
+$bluetransparent: rgba(115, 206, 241, 0.5);
+$blueshadow: rgb(40, 78, 94);
+$dark1: rgb(23, 23, 48);
+$dark2: #23233d;
+
+// Margins
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color:  $dark2;
+}
+
+h2, h3, h4, p, .line, .container, section, img, .margin, em{
+  margin-bottom: 20px;
+  color: whitesmoke;
+}
+
+table, .row{
+  margin-bottom: 40px;
+}
+
+header {
+  background-color: $dark1;
+  flex-direction: column;
+  align-items: center;
+}
+
+nav{
+  position: sticky;
+  top:0;
+  display: flex;
+  width: 100%;
+  padding: 10px 50px;
+  background-color: $dark2;
+  z-index: 2;
+}
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  list-style: none;
+  text-align: center;
+  padding: 0 20px;
+  color: whitesmoke;
+  text-decoration: none;
+  margin: 10px;
+}
+
+p {
+  color: whitesmoke;
+  font-family: 'Roboto mono', monospace;
+  font-size: 1.4em;
+  font-weight: lighter;
+  line-height: 1.5em;
+  text-align: justify;
+}
+
+a {
+  color: $blue;
+  font-family: 'Sen', sans-serif;
+  text-decoration: none;
+}
+
+a:hover{
+  transition: 0.2s ease-in-out;
+  color: $pink;
+}
+
+h1 {
+  font-family: aldoTheApache;
+  text-align: center;
+  font-size: 5em;
+  font-weight: lighter;
+}
+
+h2 {
+  font-family: 'Sen', sans-serif;
+  font-size: 3.5em;
+  // width: fit-content;
+  text-align: center;
+}
+
+h3{
+  font-family: 'Sen', sans-serif;
+  font-size: 2em;
+  text-align: center;
+}
+
+h4, th{
+  text-transform: uppercase;
+  font-family: 'Sen', sans-serif;
+  font-size: 1em;
+  padding: 4px;
+  width: fit-content;
+  text-shadow: 1px 1px 6px $dark1;
+}
+
+em{
+  color: whitesmoke;
+  line-height: 1.5em;
+  text-align: center;
+}
+
+td{
+  font-family: 'Sen', sans-serif;
+  color: white;
+  padding: 0 40px;
+}
+
+section {
+  padding: 120px 0 40px 0;
+}
+
+button{
+  background-color: $pink;
+  border: 8px solid $dark2;
+  border-radius: 12px;
+  font-size: 1em;
+  padding: 4px 8px;
+  width: fit-content;
+  z-index: 1;
+  a{
+    color: whitesmoke;
+    text-decoration: none;
+  }
+  // box-shadow: 1px 1px 0 $pinkshadow, 2px 2px 0 $pinkshadow, 3px 3px 0 $pinkshadow, 4px 4px 0 $pinkshadow;
+}
+
+button:hover{
+  transition: 0.2s;
+  background-color: $pinkHighlight;
+  a{
+    color: white;
+  }
+}
+
+footer{
+  display: flex;
+  background-color: $dark1;
+  font-size: 0.7em;
+  padding: 20px 120px;
+
+  div{
+    p{
+      margin-bottom: 1em;
+      line-height: 2em;
+      text-align: left;
+    }
+  }
+}
+
+.line{
+  width: 100%;
+}
+
+.line:before{
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  width: 100%;
+  border-bottom: 1px solid white;
+
+}
+
+img{
+  object-fit: cover; 
+  width: 100%; 
+}
+
+table{
+  width: 100%;
+  border: 1px solid white; 
+}
+
+td{
+  padding: 10px 20px;
+  width: 33%;
+}
+
+
+.flex-container {
+  display: flex;
+}
+
+.create{
+  color: $blue;
+  text-shadow: 1px 1px 0 white, -1px -1px 0 white, -1px 1px 0 white,  1px -1px 0 white, 2px 0px 0 $blueshadow, 3px 1px 0 $blueshadow, 4px 2px 0 $blueshadow, 5px 3px 0 $blueshadow, 6px 4px 0 $blueshadow, 0px 2px 0 $blueshadow, 1px 3px 0 $blueshadow, 2px 4px 0 $blueshadow, 3px 5px 0 $blueshadow, 4px 6px 0 $blueshadow;
+}
+
+.jam{
+  color: $orange;
+  text-shadow: 1px 1px 0 white, -1px -1px 0 white, -1px 1px 0 white,  1px -1px 0 white, 2px 2px 0 $orangeshadow, 3px 3px 0 $orangeshadow, 4px 4px 0 $orangeshadow, 5px 5px 0 $orangeshadow, 6px 6px 0 $orangeshadow, 7px 7px 0 $orangeshadow, 8px 8px 0 $orangeshadow;
+}
+
+.blueHighlight{
+  color: white;
+  background-color: $blue;
+}
+
+.pinkHighlight{
+  color: white;
+  background-color: $pink;
+}
+
+.orangeHighlight{
+  color: white;
+  background-color: $orange;
+}
+
+.shadow{
+  box-shadow: 12px 12px 0 $dark1;
+}
+
+.heart{
+  font-size: 1.2em;
+  color: $pink;
+  text-shadow: 2px 2px 0 $dark1;
+}
+
+.row{
+  display: flex;
+  width: 100%;
+  padding-left: 120px;
+  flex-flow: row wrap;
+}
+
+.col{
+  display: flex;
+  flex-direction: column;
+  padding-right: 120px;
+  width: 50%;
+}
+
+.pressStart{
+  
+  h1{
+    box-shadow: 1px 1px 0 white, -1px -1px 0 white, -1px 1px 0 white, 1px -1px 0 white, 2px 2px 0 white, 3px 3px 0 white, 4px 4px 0 white, 5px 5px 0 white, 6px 6px 0 white, 7px 7px 0 white, 8px 8px 0 white, -1px 2px 0 $pinkshadow, 3px 3px 0 $pinkshadow, 4px 4px 0 $pinkshadow, 5px 5px 0 $pinkshadow, 6px 6px 0 $pinkshadow, 7px 7px 0 $pinkshadow, 8px 8px 0 $pinkshadow, 2px 2px 0 $pinkshadow, 3px 3px 0 $pinkshadow, 4px 4px 0 $pinkshadow, 5px 5px 0 $pinkshadow, 6px 6px 0 $pinkshadow, 7px 7px 0 $pinkshadow, 8px 8px 0 $pinkshadow;
+
+    padding: 6px; 
+    background-color: $pink;
+    font-size: 2em; 
+    color: white;
+    text-shadow: 2px 2px 4px rgba($color: #000000, $alpha: 0.5);
+  }
+
+
+  -webkit-transform:scale(0.8,1.2); /* Safari and Chrome */
+  //-moz-transform:scale(0.5,1); /* Firefox */
+  //-ms-transform:scale(2,1); /* IE 9 */
+  //-o-transform:scale(2,1); /* Opera */
+  //transform:scale(2,1); /* W3C */
+}
+
+.banner {
+  background-image: url("../img/intro.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 400px;
+}
+
+.sponsors{
+  background-color: $pink;
+  margin: 0;
+}
+
+.media{
+  height: 48px;
+  margin-right: 80px;
+
+  object-fit: contain;
+  width: auto;
+}
+
+.hofContainer{
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0 80px 80px 80px;
+  border: 2px solid $dark1;
+}
+
+.hofElement{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+
+  width: 25%;
+  height: 200px;
+
+  font-family: 'aldo the apache', sans-serif;
+  font-size: 2em;
+  overflow: hidden;
+  border: 2px solid $dark1;
+
+}
+
+.hofImage{
+  display: flex;
+  height: 100%;
+  width: 100%;  
+  filter: grayscale(100%);
+}
+
+.hofImage:hover{
+  transition: ease-in-out 0.2s;
+  transform: scale(1.2);
+  filter: grayscale(0%);
+}
+
+.hofFocus{
+  height: 500px;
+  width: 100%;
+
+  background-color: $dark1;
+}
+
+
+#logo{
+  display: none;
+  position: fixed;
+  top: 15px;
+  left: 5px;
+}
+
+.orangeBackground{
+  position: absolute;
+  top: 33%;
+  background-color: $orange;
+  height: 100%;
+  width: 100%;
+z-index: -1;
+}
+
+
+
+/*# sourceMappingURL=styles.scss.map */
+

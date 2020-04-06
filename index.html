@@ -8,86 +8,146 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
 
     <title>Portfolio</title>
 </head>
 
-<body id="body">    
+<body 
+    id="body"
+    onresize="resize()"
+    onmousewheel="wheel(event)"
+>     
+
     <header id="header" class="flex-container">
         <div id="currentSection" class="flex-container"> 
-            <h1> Tobias Fridolin</h1> 
+            <h1> <a id="landingAnchor" href="#landing" onclick="active('landingAnchor')"> Tobias Fridolin </a> </h1> 
         </div>
         <nav id="nav" class ="flex-container">
             <ul>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="DSU Hytte/index.html">DSU Hytten</a></li>
+                <li><a id="aboutAnchor" href="#about" onclick="active('aboutAnchor')">Om mig</a></li>
+                <li><a id="portfolioAnchor" href="#portfolio" onclick="active('portfolio')">Portfolio</a></li>
+                <li><a id="contactAnchor" href="#contact" onclick="active('contact')">Kontakt</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section style="padding: 0px;"><img id="landing" src="./landing2.png" alt="Landing"></section>
+        <section id="landing" class="active">
+          
+        </section>
+       
         <section id="about">
-            <h2>Hej!</h2>
-            <h3>Jeg hedder Tobias.</h3>
-            <p>Og jeg har en passion for at designe digitale oplevelser.</p>
+               
+            <div class="flex-container" style="height: 100%; flex-direction: column; justify-content: space-evenly;">
+                <div class="flex-container" style="flex-direction: column; align-items: center;">
+                    <div> <img id="profil" src="Profil.JPG" alt="Profil"> </div>
+                    <div> <h2>Hej!</h2> </div>
+                    <div> <h3>Jeg hedder Tobias.</h3> </div>
+                    <div> <p>Og jeg har en passion for at designe digitale oplevelser.</p> </div>
+                </div>
+       
+                <div class="flex-container" style="align-items: center; margin: auto;">
+                    <div>
+                        <h2>
+                            <a href="#portfolio"> Portfolio </a>
+                        </h2> 
+                    </div>
+                    <div class="button">
+                        <a href=""> CV </a>
+                    </div>
+                </div>
+            </div>
+            
         </section>
         
         <section id="portfolio" class="carousel slide" data-ride="carousel" data-interval="false">
-            <h2 id="portfolioHeader">Portfolio</h2>
+            <div class="row">
+                <h2 id="portfolioHeader">Portfolio</h2>
+            </div>
             
-            <div class="carousel-inner" style="height: 100%;">
-                <div class="item active" style="overflow: hidden;">
-                    <div class="flex-container case" style="flex-direction: row; justify-items: self-start;">
-                        <div class="flex-container" style="flex-direction: column;">
-                            <div>
-                                <h3>Naturbasen redesign</h3>
-                            </div>
-                            <div>
-                                <p>
-                                    Naturbasen's app giver brugere muligheden for at indberette observationer om den danske flora og fauna, og få et overblik over hvilke dyr og områdetyper der er i nærheden. 
+            <div class="carousel-inner">
+                
+                <div class="item active">       
+                    <div class="case">
+                        
+                        <div class="column">
+                            <div> <h3 style="background-color: green;">Naturbasen redesign</h3> </div>
+                            <div> <p>
+                                    Naturbasen's app lader brugeren indberette observationer om den danske flora og fauna, og få et overblik over hvilke dyr og områdetyper der er i nærheden. 
                                     Som del af en uopfordret ansøgning, udarbejdede jeg et redesign af den eksisterende app. Resultatet er den interaktive prototype til højre (tryk F for at se den i fuld skærm). Fokuset var primært et grafisk redesign, men jeg kunne ikke holde mig fra at lave en funktionelle ændringer, baseret på mine egne og andres erfaringer med appen.
                                     
                                     <!-- As part of applying unsolicited for a digital design position, I asked for a case I could redesign. The interactive prototype on the right is the result (press F to view in full screen). In addition to a graphical redesign, I made some functional changes, based on the experiences of myself and others.
                                     -->
-                                </p>
-                                <p>
-                                    Hvis du har lyst til at vide mere, og høre hvad jeg kan gøre for jer, så tøv ikke med at kontakte mig.
-                                    <!-- If you'd like to know more about the process and the decisions I made, feel free to contact me. -->
-                                </p>
+                                    </p>
                             </div>
                         </div>       
                         
-                        <div id="prototype">
-                            <iframe src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2F92unqdwpdNwMa2DW1wGlVH%2FNaturbasen%3Fnode-id%3D242%253A1029%26viewport%3D616%252C624%252C0.09019886702299118%26scaling%3Dscale-down" allowfullscreen ></iframe>
-                        </div>
+                        <div id="prototype" class="column"> <iframe id="naturbasen" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2F92unqdwpdNwMa2DW1wGlVH%2FNaturbasen%3Fnode-id%3D242%253A1029%26viewport%3D616%252C624%252C0.09019886702299118%26scaling%3Dscale-down" allowfullscreen ></iframe> </div>
                     </div>
                 </div>
                 
-                <div id="case2" class="item">
-                    <div>
-                        <h3>Brugerflader til Kreative Processer</h3>
-                    </div>
-                    <div class="flex-container" style="flex-flow: row;">
-                        <div>
-                            <p>
-                                "Hvordan kan man designe en brugerflade med fokus på at understøtte kreative processer?". Det var spørgsmålet som satte min speciale afhandling igang, hvor vi samarbejdede med 8 musik producere. Efter at have klarlagt nogle af de udfordringer der er i nutidige musik brugerflader, designede vi prototypen på billede. 
-                                Brugerfladen viste sig at have potentiale for idegenering, hvor fokuset er på at prøve forskellige idéer af, frem for at låse sig fast i et spor.
-                            </p>
+                <div class="item">
+
+                    <div class="case">
+                        
+                        <div class="column">
+                            <div>
+                                <h3 style="background-color: purple;">Brugerflader til Kreative Processer</h3>
+                            </div>
+                            <div>
+                                <p>
+                                    "Hvordan kan man designe en brugerflade med fokus på at understøtte kreative processer?". Det var spørgsmålet som satte min speciale afhandling igang, hvor vi samarbejdede med 8 musik producere. Efter at have klarlagt nogle af de udfordringer der er i nutidige musik brugerflader, designede vi prototypen set på billedet. 
+                                    Brugertests viste at prototypen især var god i idegeneringsprocessen, hvor fokuset er på at prøve forskellige idéer af, frem for at låse sig fast i et spor.
+                                </p>
+                            </div>
                         </div>
-                        <div>
+                      
+                        <div class="column">
                             <img id="masters" src="./Masters Project.png" alt="Master's Project">
                         </div>
                     </div>
+                  
                 </div>
                 
-                <div id="case3" class="item">
-                    <h3>Case 3</h3>
-                    
+                <div class="item">
+                    <div class="case">
+                        <div class="column">
+                            <h3 style="background-color: blue;">Forebygning af Liggesår</h3>
+                            <p>
+                                I samarbejde med Aalborg Universitetshopsital udviklede vi en prototype, som kunne skelne imellem forskellige mobilisering aktiviteter, som sygeplejersker udfører sammen med de intensive patienter. En korrekt forståelse for konteksten var især vigtig, grundet de fysiske, etiske og arbejdsmæssige begrænsninger. Derfor var der meget fokus på undersøgende aktiviteter. 
+                            </p>
+                            <p>
+                                Billedet viser prototypen klassificere et test billede.
+                            </p>
+                        </div>
+                        <div class="column">
+                            <img src="otsu2.png" alt="Klassificering">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="case">
+                        <div class="column">
+                            <div>
+                                <h3 style="background-color: crimson;">DSU Hytten</h3>
+                            </div>
+                            <p>
+                                Mit første freelance job. 
+                            </p>
+                            <p>
+                                En simpel hjemmeside for har til formål at vække de besøgendes interesse, og omredigere dem til airbnb, hvor hytten kan bookes.
+                            </p>
+                            <p> 
+                                Se hjemmesiden <a href="https://tobiasfridolin.github.io/DSU%20Hytte/index.html">her</a>
+                            </p>
+                        </div>
+                        <div class="column">
+                            <iframe style="height: 50vh;" src="https://tobiasfridolin.github.io/DSU%20Hytte/index.html" frameborder="0"></iframe>
+                        </div>
+                    </div>
                 </div>
                 
             </div>
@@ -103,19 +163,41 @@
             </a>    
         </section>
           
-        <section id="contact">
-            <h2>Get in touch</h2>
-            <h3>Let's grab a cop of coffee</h3>
+        <section id="contact" style="height: 98vh;"> 
+            <div class="row">
+                <div>
+                    <h2>Kontakt</h2>
+                   
+                    <h3>Pt. på udkig efter nye muligheder!</h3>
+            
+                    <p>
+                        Smid mig en email eller ring, hvis du vil høre nærmere om et samarbejde. 
+                    </p>
+
+                    <p>
+                        tobiasfridolin@gmail.com
+                    </p>
+
+                    <p>
+                        /in/tobiasfridolin
+                    </p>
+
+                    <p>
+                        +45 60 18 11 87
+                    </p>
+                </div>
+            </div>
         </section>
         
-        <footer id="footer" class="flex-container">
+        <footer id="footer">
             <div><a>tobiasfridolin@gmail.com</a></div>
             <div><a>/in/tobiasfridolin</a></div>
             <div><a>+45 60 18 11 87</a></div>
         </footer>
   
     </main>        
-    <script src="app.js"></script>   
+    <script src="app.js"></script> 
+      
 
 </body>
 </html>

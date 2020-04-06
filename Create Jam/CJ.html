@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<head>
+    <html lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Sen:wght@400&display=swap" rel="stylesheet">
+    <!-- Muli font? -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400&display=swap" rel="stylesheet">
+
+    <title>Create Jam</title>
+</head>
+<body onscroll = "headerAnimate()">
+    
+    <header class="flex-container">
+        <div class="flex-container" style="flex-direction: column; padding: 15px;">
+            <div>
+                <h1 class="create"> Create </h1>
+            </div>
+            <div class="flex-container">
+                <h1 class="jam"> Jam </h1>
+                <div class="pressStart" style="display: flex; align-items: center;">
+                    <h1 > Press Start </h1>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <nav style="display: flex; justify-content: center;">
+        <div id="logo" class="pressStart" style="align-items: center;">
+            <h1 style="font-size: 1em;"> Press Start </h1>
+        </div>
+        <ul>
+            <li><a href="practical.html">Practical</a></li>
+            <li><a href="hof.html">Hall of Fame</a></li>
+            <li><a href="registration.html">Sign Up</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+        
+    </nav>    
+
+    <div class="banner"></div>
+
+    <section id="welcome">
+        <div class="row">
+            
+            <div class="col container" style="width: 100%;">
+                <h2 id="welcome">  Welcome </h2>
+                <p style="text-align: center;">
+                    Hello there! Welcome to the official website for Create Jam.
+                </p>
+                <div class="line" style="position: relative; display: flex; justify-content: center;">
+                    <button>
+                        <a href="registration.html"> SIGN UP </a>
+                    </button>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="container">
+                    <h4 class="orangeHighlight shadow">
+                        What is Create Jam?
+                    </h4>
+
+                    <p>
+                        We are a bi-annual game jam, taking place at the <a target="_blank" href="https://www.google.com/maps/place/CREATE+Aalborg+University/@57.0482977,9.9274781,17z/data=!4m8!1m2!2m1!1screate+rendsburggade+14+9000+aalborg!3m4!1s0x0:0x970c94513d78ecf6!8m2!3d57.0482963!4d9.930158">Create</a> during spring and fall. 
+                        Our mission is to foster the game development environment in Aalborg. 
+                    </p>
+                </div>
+
+                <div class="container">
+                    <h4 class="orangeHighlight shadow">
+                        Why should I attend?
+                    </h4>
+                    <p>
+                        Maybe you wanna get into game development, or maybe you are already a game dev looking to take your skills further.  
+                    </p>
+                    <p>
+                        Create Jam is an opportunity to get to know new people, working on your skills or obtain new ones, get insight into the industry from talks, and overall just having fun.
+                    </p>
+                </div>
+
+                <div class="container">
+                    <h4 class="orangeHighlight shadow">
+                        When is the next jam?
+                    </h4>
+                    <p>
+                        Our next edition is in Fall. Sign up and we will shoot you an email when we have the date set. You can also like us on <a href="https://www.facebook.com/createjam/">Facebook</a>.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="col" >
+                <img class="shadow" style="border: 8px solid white;" src="./img/trophy.jpg" alt="Trophy">
+                <em style="font-size: 1em;">
+                    Our beloved trophy. It has the team names of all previous Create Jam community award winners. Is your name next?
+                </em>
+            </div>
+            
+        </div>
+
+        <div class="row">
+            <div class="col" style="width: 100%;">
+                <p style="text-align: center; padding-top: 80px; font-size: 2em;">
+                    We are currently planning the next jam..
+                </p>
+                <p style="text-align: center;">
+                    Prepare by having a look at our <a href="practical.html">practical guide</a>. 
+                </p>
+               
+                <img 
+                src="./img/jam-factory-4.svg" 
+                alt="Preparing jam"
+                style="border: none; width: 90%; align-self: center;"
+                >
+
+                <div class="container" id="timer"> 
+                    <h3>
+                        LOADING...
+                    </h3>
+                    <p style="text-align: center;"> Time until Create Jam begins: </p>
+                </div>
+
+                <div>
+                    <div style="position: relative; display: flex; justify-content: center;">
+                        <button>
+                            <a style="font-size: 2em; padding: 0.5em;" href="registration.html"> SIGN UP </a>
+                        </button>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <div class="banner" style="background-image: url('./img/program2.jpg');"></div>
+    
+    <section>
+        <div class="row">
+            <div class="col" style="width: 100%;">
+                <h2>Program</h2>
+                <p>Here's a breakdown of the schedule for the weekend. If you have any questions, head over to our <a href="practical.html">practical guide</a>, or shoot us a message on email or facebook. </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <h3>Friday</h3>
+
+                <table class="shadow">
+                    <tr>
+                        <th class="blueHighlight">Time</th>
+                        <th class="blueHighlight">Activity</th>
+                        <th class="blueHighlight">Place</th>
+                    </tr>
+                    <tr>
+                        <td>15:00</td>
+                        <td>Registration</td>
+                        <td>Lobby</td>
+                    </tr>
+                    <tr>
+                        <td>16:30</td>
+                        <td>Time to mingle</td>
+                        <td>Lobby</td>
+                    </tr>
+                    <tr>
+                        <td>17:00</td>
+                        <td>Intro presentation</td>
+                        <td>AUD 3.107</td>
+                    </tr>
+                    <!-- Line -->
+                    <tr>
+                        <td>17:30</td>
+                        <td>Break</td>
+                        <td></td>
+                    </tr>
+                    <!-- Line -->
+                    <tr>
+                        <td>17:35</td>
+                        <td>Keynote speaker</td>
+                        <td>AUD 3.107</td>
+                    </tr>
+                    <tr>
+                        <td>18:35</td>
+                        <td>Theme reveal</td>
+                        <td>AUD 3.107</td>
+                    </tr>
+                    <tr>
+                        <td>18:40</td>
+                        <td>Group forming</td>
+                        <td>Lobby</td>
+                    </tr>
+                    <tr>
+                        <td>20:00</td>
+                        <td>Jamming begins!</td>
+                        <td>Everywhere</td>
+                    </tr>
+                </table>
+    
+            </div>
+            <div class="col">
+                <h3>Saturday</h3>
+                <table class="shadow">
+                    <tr>
+                        <th class="pinkHighlight">Time</th>
+                        <th class="pinkHighlight">Activity</th>
+                        <th class="pinkHighlight">Place</th>
+                    </tr>
+                    <tr>
+                        <td>8:00 - 12:00 </td>
+                        <td>Breakfast</td>
+                        <td>Lobby</td>
+                    </tr>
+                    <tr>
+                        <td>12:00</td>
+                        <td>Dev meet</td>
+                        <td>AUD 3.107</td>
+                    </tr>
+                </table>
+    
+                <h3>Sunday</h3>
+                <table class="shadow">
+                    <tr>
+                        <th class="orangeHighlight">Time</th>
+                        <th class="orangeHighlight">Activity</th>
+                        <th class="orangeHighlight">Place</th>
+                    </tr>
+                    <tr>
+                        <td>12:00</td>
+                        <td>Deadline</td>
+                    </tr>
+                    <tr>
+                        <td>12:30</td>
+                        <td>Showcase</td>
+                    </tr>
+                    <tr>
+                        <td>15:00</td>
+                        <td>Voting ends</td>
+                    </tr>
+                    <tr>
+                        <td>15:30</td>
+                        <td>Awards announcement</td>
+                        <td>AUD 3.107</td>
+                    </tr>
+                    <tr>
+                        <td>16:00</td>
+                        <td>Goodbye <span class="heart">&#10084;</span>  </td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div class="line" style="position: relative; display: flex; justify-content: center; padding-right: 150px">
+                <button>
+                    <a href="registration.html"> SIGN UP </a>
+                </button>
+            </div>
+       </div>
+    
+        <div class="row">
+            <div class="col container">
+                <h2 id="talks"> Keynote </h2>
+            
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+            </div>
+            <div class="col container">
+                <img class="shadow" src="./img/talk.png" alt="keynote">
+            </div>
+            <div class="line" style="position: relative; display: flex; justify-content: center; padding-right: 150px">
+                <button>
+                    <a href="registration.html"> SIGN UP </a>
+                </button>
+             </div>
+        </div>
+    </section>
+
+    <div class="banner" style="background-image: url('./img/Awards.png');"></div>
+
+    <section>
+        <div class="row">
+            <div class="col" style="width: 100%">
+                <h2>
+                    Hall of Fame
+                </h2>
+                <div class="container">
+                    <p>
+                        
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="sponsors">
+        <div class="row">
+            <div class="col" style="width: 100%">
+                <h2>
+                    Sponsors
+                </h2>
+                <p>
+                    Our sponsors help us make Create Jam what it is. 
+                    Create Jam is driven by a volunteers and is funded 100% through sponsorships, which also means no entrance fee for you. 
+                </p>
+                <p>
+                    We love all of our sponsors, partners and all the great people helping make Create Jam what it is.
+                    Most importantly, we would like to thank you, as create jam would not be here without you.
+                </p>
+                <div class="container">
+                    <h3>Our friends</h3>
+                    <p>
+                        Say hi to our friends in the game community:                    
+                    </p>
+                    <div class="row" style="justify-content: space-around;">
+                        <div>
+                            <img src="./img/nordic-gamejam.jpg" alt="" style="width: 160px;">
+                        </div>
+                                <p>
+                                    Game hub
+                                </p>
+                        <p>
+                            Spilhylden
+                        </p>
+                        <p>
+                            Dice 'n Drinks
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="app.js"> </script>
+
+    <footer style="justify-content: space-between;">
+        <div style="width:350px;">
+            <h3 style="text-align: left;">
+                Contact
+            </h3>
+            <p>Createjam@create.aau.dk</p>
+            <p>CREATE Aalborg University, Rendsburggade 14, 9000 Aalborg</p>
+        </div>
+        <div>
+            <h3 style="text-align: left;">
+                Platforms
+            </h3>
+          
+            <div style="display: flex;">
+                <div>
+                    <img class="media" src="./img/itch-logo-white.svg" alt="twitch">            
+                </div>
+                <div>
+                    <img class="media" src="./img/facebook-logo.svg" alt="facebook">            
+                </div>
+                <div>
+                    <img class="media" src="./img/twitter-logo.svg" alt="twitter">
+                </div>
+            </div>
+        </div>
+
+    </footer>
+</body>
+</html>
