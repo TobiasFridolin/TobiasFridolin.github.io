@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hall of fame</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playball&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body> 
     <header>
@@ -19,10 +21,10 @@
                 <p >
                     Behold the winners from all previous jams. 
          
-                    Each of these games won the community award by gaining the most votes, and as a result have their name engraved on the throphy. 
-           
-                    Have a look and see what the competition is like.
+                    Each of these games won the what we call the "community award" by gaining the most votes. As a result, they have their team name engraved on the throphy. 
                 </p>
+                <p>Click on a thumbnail to read about a given jam.</p>
+
             </div>
         </div>
 
@@ -30,44 +32,181 @@
         
             <div class="orangeBackground"></div>
 
-            <div class="hofContainer selected">
+            <div class="hofContainer">
                 <div class="hofElement">
-                    <img src="./img/winner-spring-2020.png" alt="" class="hofImage">
+                    <div>
+                        <a href="#hofDescription">
+                            <img src="./img/winner-spring-2020.png" alt="" class="hofImage" id="spring2020">
+                        </a>
+                    </div>
+                    <div class="hofYear">
+                        <h3 class="pinkHighlight">Spring 2020</h3>
+                    </div>
                 </div>
 
                 <div class="hofElement">
-                    <img src="./img/winner-spring-2020.png" alt="" class="hofImage">
+                    <a href="#hofDescription">
+                        <img src="./img/winner-fall-2019.png" alt="" class="hofImage" id="fall2019">
+                    </a>
+                    <div class="hofYear">
+                        <h3 class="blueHighlight">Fall 2019</h3>
+                    </div>
                 </div>
 
                 <div class="hofElement">
-                    <img src="./img/winner-spring-2020.png" alt="" class="hofImage">
+                    <a href="#hofDescription">
+                        <img src="./img/winner-spring-2019.png" alt="" class="hofImage" id="spring2019">
+                    </a>
+                    <div class="hofYear">
+                        <h3 class="pinkHighlight">Spring 2019</h3>
+                    </div>
                 </div>
 
                 <div class="hofElement">
-                    <img src="./img/winner-spring-2020.png" alt="" class="hofImage">
+                    <a href="#hofDescription">
+                        <img src="./img/winner-fall-2018.png" alt="" class="hofImage" id="fall2019">
+                    </a>
+                    <div class="hofYear">
+                        <h3 class="blueHighlight"> Fall 2018</h3>
+                    </div>
                 </div>
 
                 <div class="hofElement">
-                    <img src="./img/winner-spring-2020.png" alt="" class="hofImage">
+                    <a href="#hofDescription">
+                        <img src="./img/winner-spring-2018.png" alt="" class="hofImage" id="spring2018">
+                    </a>
+                    <div class="hofYear">
+                        <h3 class="pinkHighlight">Spring 2018</h3>
+                    </div>
                 </div>
 
                 <div class="hofElement">
-                    <img src="./img/winner-spring-2020.png" alt="" class="hofImage">
+                    <a href="#hofDescription">
+                        <img src="./img/winner-fall-2017.png" alt="" class="hofImage" id="fall2017">
+                    </a>
+                    <div class="hofYear">
+                        <h3 class="blueHighlight">Fall 2017</h3>
+                    </div>
                 </div>
 
                 <div class="hofElement">
-                    <img src="./img/winner-spring-2020.png" alt="" class="hofImage">
+                    <a href="#hofDescription">
+                        <img src="./img/winner-spring-2017.png" alt="" class="hofImage" id="spring2017">
+                    </a>
+                    <div class="hofYear">
+                        <h3 class="pinkHighlight">Spring 2017</h3>
+                    </div>
                 </div>
 
                 <div class="hofElement">
-                    <img src="./img/winner-spring-2020.png" alt="" class="hofImage">
+                    <a href="#hofDescription">
+                        <img src="./img/winner-fall-2016.png" alt="" class="hofImage" id="fall2016">
+                    </a>
+                    <div class="hofYear">
+                        <h3 class="blueHighlight">Fall 2016</h3>
+                    </div>
+                </div>
+                <div class="hofElement">
+                    <a href="#hofDescription">
+                        <div class="hofImage" id="spring2016" style="justify-content: center; align-items: center;">
+                            <img src="./img/sad-seal.png" style="height:150px; width: 50%;" alt="">
+                        </div>
+                    </a>
+                    <div class="hofYear">
+                        <h3 class="pinkHighlight">Spring 2016</h3>
+                    </div>
+                </div>
+                <div class="hofElement">
+                    <a href="#hofDescription">
+                        <img src="./img/winner-fall-2015.jpg" alt="" style="height:150px;" class="hofImage" id="fall2015">
+                    </a>
+                    <div class="hofYear">
+                        <h3 class="blueHighlight">Fall 2015</h3>
+                    </div>
                 </div>
             </div>
 
         </div>
 
-        <div class="hofFocus">
-            
+        <div id="hofDescription">
+           
+            <div class="hofEntry" id="entry-spring2020">
+                <h2>Create Jam - Spring 2020</h2>
+                <h3>Noir Spring edition</h3>
+                <h4 class="pinkHighlight shadow">Some wizard and the mystery of the smoking owl</h4>
+                <p>This edition became the first Create Jam edition to be hosted entirely online. Submissions where voted according to the criteria of solid gameplay and creative take on the (pseudo-randomly generated) theme. A lot of the submissions also related to the noir aesthetic of this edition.</p>
+                <p>With a concept relating to the zeitgeist and a beautifully excecuted game, Team Escargots (AKA <a href="https://www.setsnail.com/">Set Snail</a> ) took home the win with "The Social Distancing Owl".</p>
+                <p>You can check out the submissions <a href="https://itch.io/jam/create-jam-spring-2020/entries">here</a>.</p>
+            </div>
+
+            <div class="hofEntry" id="entry-fall2019">
+                <h2>Create Jam - Fall 2019</h2>
+                <h3>Level up spring edition</h3>
+                <h4 class="blueHighlight shadow">Level up a mechanic</h4>
+                <p>Create Jam levelled up by partnering up with Game Hub and Business Aalborg. As a result, we had 148 attendant and 36 games created, both being recordbreakers for Create Jam.</p>
+                <p>Team Cherio made a game best described as slime volleyball on steriods. Their game Capitalistic and Haughty Extraordinaires Engaging in Riveting and Intriguing Occupation (C.H.E.E.R.I.O.) employed crazy powerups to embody the theme and ultimately took home the community award.</p>
+                <p>(kill Pell' (industry) Hangover Santa (boardgame))</p>
+                <p>You can check out the submissions <a href="https://itch.io/jam/create-jam-fall-2019/entries">here</a>.</p>
+            </div>
+
+            <div class="hofEntry" id="entry-spring2019">
+                <h2>Create Jam - Spring 2019</h2>
+                <h3>Retro spring edition</h3>
+                <h4 class="pinkHighlight shadow">Desperately seeking high-speed skater</h4>
+                <p>With a synthwave 80s aesthetic and our pseudo-random theme selector being on point, the backdrop for the jam was set. 15 itch.io submissions. 5 boardgames. 1 awesome weekend.</p>
+                <p>Retro Skullzzz, AKA Octohat Games won their 3rd Create Jam, this time with their game "Maya Mash". Apart from the community award, we had prizes for best boardgame as well as the industry award - the game with the most release potential.</p>
+                <p>You can find Maya Mash <a href="https://octohatgames.itch.io/maya-mash">here</a> and all other submissions <a href="https://itch.io/jam/create-jam-spring-2019/entries">here</a>.
+            </div>
+
+            <div class="hofEntry" id="entry-fall2018">
+                <h2>Create Jam - Fall 2018</h2>
+                <h3>Spooky fall edition</h3>
+                <h4 class="pinkHighlight shadow">Spooky baby cultist</h4>
+                <p>About 60 attendants.</p>
+                <p>Octohat games won for their second time, with the game "Far from Normal". Industry award - BA:BEET by Pøcket Børd. Boardgame award - The Ilithid: Deliverance by Committée Babez.</p>
+                <p>You can check out the submissions <a href="https://itch.io/jam/create-jam-fall-2018/entries">here</a>.</p>
+            </div>
+
+            <div class="hofEntry" id="entry-spring2018">
+                <h2>Create Jam - Spring 2018</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita maxime distinctio ex rem at, ad eaque veniam iusto sunt cupiditate, magni minus laborum. Aliquid a vel ipsa cum dolores. Suscipit, odit. Similique placeat aperiam recusandae aliquam dolores perspiciatis soluta quis!</p>
+                <p>Team Zero Effort with "This is not my Child?". </p>
+                <p>You can check out the submissions <a href="https://itch.io/jam/create-jam-spring-2018/entries">here</a>.</p>
+            </div>
+
+            <div class="hofEntry" id="entry-fall2017">
+                <h2>Create Jam - Fall 2017</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita maxime distinctio ex rem at, ad eaque veniam iusto sunt cupiditate, magni minus laborum. Aliquid a vel ipsa cum dolores. Suscipit, odit. Similique placeat aperiam recusandae aliquam dolores perspiciatis soluta quis!</p>
+                <p>You can check out the submissions <a href="https://itch.io/jam/create-jam-fall-2017/entries">here</a>.</p>
+            </div>
+
+            <div class="hofEntry" id="entry-spring2017">
+                <h2>Create Jam - Spring 2017</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita maxime distinctio ex rem at, ad eaque veniam iusto sunt cupiditate, magni minus laborum. Aliquid a vel ipsa cum dolores. Suscipit, odit. Similique placeat aperiam recusandae aliquam dolores perspiciatis soluta quis!</p>
+                <p>You can check out the submissions <a href="https://itch.io/jam/create-jam-spring-2017/entries">here</a>.</p>
+            </div>
+
+            <div class="hofEntry" id="entry-fall2016">
+                <h2>Create Jam - Fall 2016</h2>
+                <h4 class="blueHighlight shadow">Princess Pogo</h4>
+                <p>The debut of the pseudo-random theme generator.</p>
+                <p>You can check out the submissions <a href="https://itch.io/jam/create-jam/entries">here</a>.</p>
+            </div>
+
+            <div class="hofEntry" id="entry-spring2016">
+                <h2>Create Jam Spring 2016</h2>
+                <h4 class="pinkHighlight shadow">Growth</h4>
+                <p></p>
+                <p>Team Bloom, four anchors and a captain.</p>
+                <p>You can check out the submissions <a href="https://itch.io/jam/createjam/entries">here</a>.</p>
+            </div>
+
+            <div class="hofEntry" id="entry-fall2015">
+                <h2>Create Jam - Fall 2015</h2>
+                <p>Third edition of Create Jam, and the first "recorded" one.</p>
+                <p>You can check out the submissions <a href="http://jams.gamejolt.io/createfall15/games">here</a>.</p>
+            </div>
+
         </div>
 
         
@@ -77,5 +216,6 @@
     <footer>
 
     </footer>
+    <script src="hof.js"> </script>
 </body>
 </html>
