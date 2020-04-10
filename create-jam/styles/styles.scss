@@ -6,15 +6,15 @@
 // Colors
 $orange: rgb(249, 181, 118);
 $orangetransparent: rgba(49, 208, 118, 0.5); 
-$orangeshadow: rgb(235, 165, 61);
-$pink: rgb(238, 122, 165);
-$pinktransparent: rgba(233, 136, 172, 0.5);
-$pinkshadow: rgb(99, 41, 62); 
+$orangeshadow: #B48137;
+$pink: #ee7aa5;
+$pinktransparent: #e988ac80;
+$pinkshadow: #63293e; 
 $pinkHighlight: rgb(255, 159, 194);
-$blue: rgb(115, 206, 241);
+$blue: #73cef1;
 $bluetransparent: rgba(115, 206, 241, 0.5);
-$blueshadow: rgb(40, 78, 94);
-$dark1: rgb(23, 23, 48);
+$blueshadow: #284e5e;
+$dark1: #171730;
 $dark2: #23233d;
 
 // Margins
@@ -32,13 +32,13 @@ body{
   background-color:  $dark2;
 }
 
-h2, h3, h4, p, .line, .container, section, img, .margin, em{
-  margin-bottom: 20px;
+h2, h3, h4, p, .line, .container, section, .margin, em{
+  margin-bottom: 1rem;
   color: whitesmoke;
 }
 
 table, .row{
-  margin-bottom: 40px;
+  margin-bottom: 3em;
 }
 
 header {
@@ -47,46 +47,92 @@ header {
   align-items: center;
 }
 
-nav{
-  position: sticky;
-  top:0;
-  display: flex;
-  width: 100%;
-  padding: 10px 50px;
-  background-color: $dark2;
-  z-index: 2;
-}
+.nav{
 
+  a{      
+    color: whitesmoke;
+    font-family: 'Sen', sans-serif;
+    font-size: 1rem;
+  }
+  
+  &--top{
+    position: sticky;
+    top:0;
+    width: 100%;
+    height: 2.5em;
+    background-color: $dark2;
+    z-index: 2;
+    box-shadow: rgba($dark1, $alpha: 0.1) 0 2px 2px, rgba($dark1, $alpha: 0.5) 0 4px 16px;
+
+    li a {
+      list-style: none;
+      text-align: center;
+      padding: 0 5px;
+      text-decoration: none;
+      margin: 1em;
+    }
+  }
+
+  &--side{
+    font-size: 24px;
+    padding: 1em;
+    
+    position: fixed;
+    top: 0px;
+    height: 100%;
+    background-color: $dark1;
+    width: 400px;
+  
+    ul{
+      display: block;
+      width: 100%;
+      padding: 1em;
+  
+      li{
+        display: block;
+        width: 100%;
+        line-height: 2em;
+       
+        a{
+          display: block;
+          width: 100%;
+          text-align: left;
+        }
+      }
+    }
+  }
+
+  &__links{
+    padding: 0.5em;
+  }
+}
 
 ul {
   list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
 }
 
 li {
   float: left;
 }
 
-li a {
-  list-style: none;
-  text-align: center;
-  padding: 0 20px;
-  color: whitesmoke;
-  text-decoration: none;
-  margin: 10px;
-  font-family: 'Sen', sans-serif;
+.practical{
+  padding: 60px;
 
+  p{
+    font-family: 'Sen', sans-serif;
+  }
 }
+
 
 p {
   color: whitesmoke;
   font-family: 'Roboto mono', monospace;
-  font-size: 1.4em;
   font-weight: lighter;
+  font-size: 1.4em;
   line-height: 1.5em;
   text-align: justify;
+  align-self: center;
+  max-width: 32em;
 }
 
 a {
@@ -103,15 +149,15 @@ a:hover{
 h1 {
   font-family: aldoTheApache;
   text-align: center;
-  font-size: 5em;
+  font-size: 4em;
   font-weight: lighter;
 }
 
 h2 {
   font-family: 'Sen', sans-serif;
-  font-size: 3.5em;
-  // width: fit-content;
   text-align: center;
+  font-size: 3em;
+  font-weight: lighter;
 }
 
 h3{
@@ -124,7 +170,7 @@ h4, th{
   text-transform: uppercase;
   font-family: 'Sen', sans-serif;
   font-size: 1em;
-  padding: 4px;
+  padding: 0.25em;
   width: fit-content;
   text-shadow: 1px 1px 6px $dark1;
 }
@@ -142,7 +188,9 @@ td{
 }
 
 section {
-  padding: 120px 0 40px 0;
+  padding: 4em;
+  padding-top: 8em;
+  padding-bottom: 4em;
 }
 
 button{
@@ -158,33 +206,57 @@ button{
     text-decoration: none;
   }
   // box-shadow: 1px 1px 0 $pinkshadow, 2px 2px 0 $pinkshadow, 3px 3px 0 $pinkshadow, 4px 4px 0 $pinkshadow;
-}
-
-button:hover{
-  transition: 0.2s;
-  background-color: $pinkHighlight;
-  a{
-    color: white;
+  
+  &:hover{
+    transition: 0.2s;
+    background-color: $pinkHighlight;
+    a{
+      color: white;
+    }
   }
 }
 
-footer{
+.footer{
+  font-size: 12px;
+  overflow: hidden;
   display: flex;
+  flex-flow: row wrap;
   background-color: $dark1;
-  font-size: 0.7em;
-  padding: 20px 120px;
+  padding: 3em;
+  justify-content: space-around;
+  
+  &__contact{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    //max-width: 350px;
 
-  div{
-    p{
-      margin-bottom: 1em;
-      line-height: 2em;
+    div p{
+      font-family: 'Sen', sans-serif;
+      line-height: 1.5em;
       text-align: left;
+    }
+
+  }
+  
+  &__media{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    
+    .media{
+      height: 40px;    
+      object-fit: contain;
+      width: auto;
     }
   }
 }
 
 .line{
   width: 100%;
+  position: relative; 
+  padding-right: 150px
 }
 
 .line:before{
@@ -203,30 +275,41 @@ img{
   width: 100%; 
 }
 
-table{
+.table{
   width: 100%;
   border: 1px solid white; 
+
+  &__time{
+    width: 20%;
+  }
+
+  &__activity{
+    width: 30%;
+  }
+
+  &__place{
+    width: 30%;
+  }
+
 }
 
 td{
-  padding: 10px 20px;
-  width: 33%;
+  padding: 0.5em 1em;
 }
 
+th{
+  width: fit-content;
+}
 
-.flex-container {
+.flex{
   display: flex;
+  justify-content: center;
 }
 
-.create{
-  color: $blue;
-  text-shadow: 1px 1px 0 white, -1px -1px 0 white, -1px 1px 0 white,  1px -1px 0 white, 2px 0px 0 $blueshadow, 3px 1px 0 $blueshadow, 4px 2px 0 $blueshadow, 5px 3px 0 $blueshadow, 6px 4px 0 $blueshadow, 0px 2px 0 $blueshadow, 1px 3px 0 $blueshadow, 2px 4px 0 $blueshadow, 3px 5px 0 $blueshadow, 4px 6px 0 $blueshadow;
+.container{
+  align-self: center;
 }
 
-.jam{
-  color: $orange;
-  text-shadow: 1px 1px 0 white, -1px -1px 0 white, -1px 1px 0 white,  1px -1px 0 white, 2px 2px 0 $orangeshadow, 3px 3px 0 $orangeshadow, 4px 4px 0 $orangeshadow, 5px 5px 0 $orangeshadow, 6px 6px 0 $orangeshadow, 7px 7px 0 $orangeshadow, 8px 8px 0 $orangeshadow;
-}
 
 .blueHighlight{
   color: white;
@@ -256,38 +339,22 @@ td{
 .row{
   display: flex;
   width: 100%;
-  padding-left: 120px;
+  padding-left: 4em;
   flex-flow: row wrap;
 }
 
 .col{
   display: flex;
   flex-direction: column;
-  padding-right: 120px;
-  width: 50%;
-}
-
-
-
-
-.pressStart{
+  padding-right: 4em;
   
-  h1{
-    box-shadow: 1px 1px 0 white, -1px -1px 0 white, -1px 1px 0 white, 1px -1px 0 white, 2px 2px 0 white, 3px 3px 0 white, 4px 4px 0 white, 5px 5px 0 white, 6px 6px 0 white, 7px 7px 0 white, 8px 8px 0 white, -1px 2px 0 $pinkshadow, 3px 3px 0 $pinkshadow, 4px 4px 0 $pinkshadow, 5px 5px 0 $pinkshadow, 6px 6px 0 $pinkshadow, 7px 7px 0 $pinkshadow, 8px 8px 0 $pinkshadow, 2px 2px 0 $pinkshadow, 3px 3px 0 $pinkshadow, 4px 4px 0 $pinkshadow, 5px 5px 0 $pinkshadow, 6px 6px 0 $pinkshadow, 7px 7px 0 $pinkshadow, 8px 8px 0 $pinkshadow;
-
-    padding: 6px; 
-    background-color: $pink;
-    font-size: 2em; 
-    color: white;
-    text-shadow: 2px 2px 4px rgba($color: #000000, $alpha: 0.5);
+  &--1{
+    width: 100%;
   }
 
-
-  -webkit-transform:scale(0.8,1.2); /* Safari and Chrome */
-  //-moz-transform:scale(0.5,1); /* Firefox */
-  //-ms-transform:scale(2,1); /* IE 9 */
-  //-o-transform:scale(2,1); /* Opera */
-  //transform:scale(2,1); /* W3C */
+  &--2{
+    width: 50%;
+  }
 }
 
 .banner {
@@ -296,6 +363,7 @@ td{
   background-size: cover;
   background-attachment: fixed;
   height: 400px;
+  width: 100%;
 }
 
 .sponsors{
@@ -303,13 +371,7 @@ td{
   margin: 0;
 }
 
-.media{
-  height: 48px;
-  margin-right: 80px;
 
-  object-fit: contain;
-  width: auto;
-}
 
 .hofContainer{
   display: flex;
@@ -330,46 +392,6 @@ td{
   border: 2px solid white;
   justify-content: space-between;
 }
-
-@media screen and (max-width: 900px){
-  .hofElement{
-    width: 33.33%;
-  }
-
-  .col{
-    padding-right: 80px;
-  }
-
-  .row{
-    padding-left: 80px;
-  }
-
-  .hofDescription{
-    padding: 0 80px;
-  }
-}
-
-@media screen and (max-width: 700px){
-  .hofElement{
-    width: 50%;
-  }
-  .hofContainer{
-    margin: 0 40px 40px 40px;
-  }
-
-  .col{
-    padding-right: 40px;
-  }
-
-  .row{
-    padding-left: 40px;
-  }
-
-  .hofDescription{
-    padding: 0 40px;
-  }
-}
-
 .hofImage{
   // 300 x 240
   display: flex;
@@ -397,7 +419,7 @@ td{
   width: 100%;
   background-color: $dark2;
   color: whitesmoke;
-
+  
   h3{
     font-size: 0.8em;
     text-align: center;
@@ -410,7 +432,6 @@ td{
 }
 
 #hofDescription{
-  height: 500px;
   width: 100%;
   // background-color: $dark2;
   padding: 0 80px;
@@ -420,7 +441,7 @@ td{
   display: none;
   flex-direction: column;
   padding: 40px;
-
+  
   h2{
     font-family: 'aldo the apache', sans-serif;
   }
@@ -436,7 +457,53 @@ td{
   display: none;
   position: fixed;
   top: 15px;
-  left: 5px;
+  left: 0;
+  height: 40px;
+}
+
+.logo{
+  font-size: 3rem;
+  display: flex;
+  flex-direction: column; 
+  padding: 15px;
+  
+  &--secondline{
+    display: flex;
+    flex-direction: row;
+  }
+  
+  &__create{
+    font-size: 1em;
+    color: $blue;
+    text-shadow: 1px 1px 0 white, -1px -1px 0 white, -1px 1px 0 white,  1px -1px 0 white, 2px 0px 0 $blueshadow, 3px 1px 0 $blueshadow, 4px 2px 0 $blueshadow, 5px 3px 0 $blueshadow, 6px 4px 0 $blueshadow, 0px 2px 0 $blueshadow, 1px 3px 0 $blueshadow, 2px 4px 0 $blueshadow, 3px 5px 0 $blueshadow, 4px 6px 0 $blueshadow;
+  }
+  
+  &__jam{
+    font-size: 1em;
+    color: $orange;
+    text-shadow: 1px 1px 0 white, -1px -1px 0 white, -1px 1px 0 white,  1px -1px 0 white, 2px 2px 0 $orangeshadow, 3px 3px 0 $orangeshadow, 4px 4px 0 $orangeshadow, 5px 5px 0 $orangeshadow, 6px 6px 0 $orangeshadow, 7px 7px 0 $orangeshadow, 8px 8px 0 $orangeshadow;
+  }
+  
+  &__pressStart{
+    font-size: 0.5em;
+    display: flex;
+    align-items: center;
+    
+    h1{
+      box-shadow: 1px 1px 0 white, -1px -1px 0 white, -1px 1px 0 white, 1px -1px 0 white, 2px 2px 0 white, 3px 3px 0 white, 4px 4px 0 white, 5px 5px 0 white, 6px 6px 0 white, 7px 7px 0 white, 8px 8px 0 white, -1px 2px 0 $pinkshadow, 3px 3px 0 $pinkshadow, 4px 4px 0 $pinkshadow, 5px 5px 0 $pinkshadow, 6px 6px 0 $pinkshadow, 7px 7px 0 $pinkshadow, 8px 8px 0 $pinkshadow, 2px 2px 0 $pinkshadow, 3px 3px 0 $pinkshadow, 4px 4px 0 $pinkshadow, 5px 5px 0 $pinkshadow, 6px 6px 0 $pinkshadow, 7px 7px 0 $pinkshadow, 8px 8px 0 $pinkshadow; 
+      padding: 6px; 
+      background-color: $pink;
+      font-size: 1em; 
+      color: white;
+      text-shadow: 2px 2px 4px rgba($color: #000000, $alpha: 0.5);
+    }
+    
+    -webkit-transform:scale(0.8,1.2); /* Safari and Chrome */
+    -moz-transform:scale(0.8,1.2); /* Firefox */
+    -ms-transform:scale(0.8,1.2); /* IE 9 */
+    -o-transform:scale(0.8,1.2); /* Opera */
+    transform:scale(0.8,1.2); /* W3C */
+  }
 }
 
 .orangeBackground{
@@ -448,7 +515,150 @@ td{
   z-index: -1;
 }
 
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 } 
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom { 
+  from{ bottom:-100px; opacity:0 } 
+  to{ bottom:0; opacity:1 }
+}
 
 
-/*# sourceMappingURL=styles.scss.map */
+.nav__burger{
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: none;
+  padding: 2px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
 
+.nav__burger div{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.nav__burger div div{
+  width: 100%;
+  height: 2px;
+  background-color: white;
+}
+
+ul.nav__links.open{
+  display: flex;
+  height: fit-content;
+  width: 100vw;
+}
+
+
+  
+@media screen and (max-width: 900px){
+
+  section{
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+
+  #factory{
+    width: 100%;
+  }
+
+  .hofElement{
+    width: 33.33%;
+  }
+
+  .col--2{
+    width: 100%;
+    margin-bottom: 80px;
+  }
+
+  .hofDescription{
+    padding: 0 80px;
+  }
+}
+
+@media screen and (max-width: 700px){
+  
+  p{
+    font-size: 1em;
+  }
+
+  .header{
+    position: sticky;
+    top:0;
+  }
+
+  .logo{
+    font-size: 2rem;
+  }
+
+  .nav__burger{
+    display: block;
+  }
+
+  .nav--top{
+    width: 100%;
+    // height: fit-content;
+    align-content: center;
+  }
+  
+  .nav--top .nav__links{
+    display: none;
+    flex-direction: column;
+    background-color: $dark1;
+    padding: 1em;
+
+    li{
+      line-height: 2em;
+      text-align: center;
+    }
+  }
+
+  section{
+    padding-left: 0em;
+    padding-right: 0em;
+  }
+
+  .hofElement{
+    width: 50%;
+  }
+  .hofContainer{
+    margin: 0 40px 40px 40px;
+  }
+
+  .col--2{
+    margin-bottom: 40px;
+  }
+
+  .hofDescription{
+    padding: 0 40px;
+  }
+
+  .footer{
+    flex-direction: column-reverse;
+
+    &__contact{
+      width: 100%;
+    }
+
+    &__media{
+      width:100%;
+    }
+  }
+}
+  /*# sourceMappingURL=styles.scss.map */

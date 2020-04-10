@@ -1,22 +1,36 @@
-var nav = document.getElementsByTagName("nav")[0];
-var logo = document.getElementById("logo");
 
-welcome = document.getElementById("welcome");
-
-console.log(document.getElementById("welcome").getBoundingClientRect().top);
-
-const headerAnimate = () =>{
-    console.log(this.scrollY);
-
-    if(window.scrollY > document.getElementById("welcome").getBoundingClientRect().top + this.scrollY){
+$(document).ready(function(){
+    var logo = document.getElementById("logo");
+    
+    welcome = document.getElementById("welcome");
+    
+    console.log(document.getElementById("welcome").getBoundingClientRect().top);
+    
+    const headerAnimate = () =>{
         
-        nav.style.height="70px";
-        logo.style.display ="flex";
+        if($(document).scrollTop() > welcome.getBoundingClientRect().top + $(document).scrollTop()){      
+            logo.style.display ="flex";
+            
+            
+        }else{
+            logo.style.display="none";
+        }
         
-        
-    }else{
-        logo.style.display="none";
-        nav.style.height="auto";
     }
+    
+    
+    const navSlide = () =>{
+        const burger = document.querySelector(".nav__burger");
+        const nav = document.querySelector(".nav__links");
 
-}
+        burger.addEventListener('click', () => {
+            nav.classList.toggle("open");
+            console.log(nav.classList);
+        });
+
+        console.log(burger);
+    }
+    
+    navSlide();
+    $(document).scroll(headerAnimate);
+});

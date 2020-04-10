@@ -10,13 +10,46 @@
     <script src="header.js"></script>
 </head>
 <body> 
-    <header>
-    
+    <header class="flex-container">
+        <div class="flex-container" style="flex-direction: column; padding: 15px;">
+            <a href="CJ.html">
+                <div>
+                    <h1 class="create"> Create </h1>
+                </div>
+                <div class="flex-container">
+                    <h1 class="jam"> Jam </h1>
+                    <div class="pressStart" style="display: flex; align-items: center;">
+                        <h1 > Press Start </h1>
+                    </div>
+                </div>
+            </a>
+        </div>
     </header>
 
-    <section style="overflow: hidden; margin: 0;">
+    <nav style="display: flex; justify-content: center;">
+        <svg id="logo"width="193" height="76" viewBox="0 0 193 76" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="8" y="8" width="168" height="51" fill="#EE7AA5"/>
+            <path d="M24.5156 44H19.7812V24.5938L23.2031 21.4062H32.8906V38.2656H24.5156V44ZM28.1562 33.9375V25.7031H24.5156V33.9375H28.1562ZM42.5831 44L39.7706 35.8281H38.5206V44H33.7863V24.5938L37.2238 21.4062H46.8956V35.7656H44.3331L47.3331 44H42.5831ZM42.1613 31.5938V25.7031H38.5206V31.5938H42.1613ZM47.9788 21.4062H58.9475V25.7031H52.6663V30.0625H58.635V34.2812H52.7288V39.7188H59.1038V44H47.9788V21.4062ZM72.1556 44H59.7337V36.9688H64.4681V39.7188H67.4056V36.125L59.89 30.4531V21.4062H72.015V28.125H67.7181V25.7188H64.6244V28.6719L72.1556 34.3281V44ZM85.5044 44H73.0825V36.9688H77.8169V39.7188H80.7544V36.125L73.2388 30.4531V21.4062H85.3638V28.125H81.0669V25.7188H77.9731V28.6719L85.5044 34.3281V44ZM105.046 44H92.6237V36.9688H97.3581V39.7188H100.296V36.125L92.78 30.4531V21.4062H104.905V28.125H100.608V25.7188H97.5144V28.6719L105.046 34.3281V44ZM119.426 25.7031H115.16V44H110.394V25.7031H105.973V21.4062H119.426V25.7031ZM124.978 44H120.228V24.9844L123.868 21.4062H133.743V44H129.009V36.5781H124.978V44ZM129.009 32.2812V25.7031H124.978V32.2812H129.009ZM143.217 44L140.404 35.8281H139.154V44H134.42V24.5938L137.857 21.4062H147.529V35.7656H144.967L147.967 44H143.217ZM142.795 31.5938V25.7031H139.154V31.5938H142.795ZM162.066 25.7031H157.8V44H153.034V25.7031H148.613V21.4062H162.066V25.7031Z" fill="white"/>
+            <path d="M17 68L8 59H176L185 68H17Z" fill="#CC6A8E"/>
+            <path d="M186 18L185 68L176 59V8L186 18Z" fill="#CC6A8E"/>
+            <path d="M8 4H4V8V59V60.7814L5.32414 61.9732L15.3241 70.9732L16.4651 72H18H185H189V68V17V15.3431L187.828 14.1716L178.828 5.17157L177.657 4H176H8Z" stroke="#23233D" stroke-width="8"/>
+            </svg>
+            
+        <!--<div id="logo" class="pressStart" style="align-items: center;">
+            <h1 style="font-size: 1em;"> Press Start </h1>
+        </div>-->
+        <ul>
+            <li><a href="practical.html">Practical</a></li>
+            <li><a href="hof.html">Hall of Fame</a></li>
+            <li><a href="registration.html">Sign Up</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+        
+    </nav>    
+
+    <section class="animate-bottom" style="overflow: hidden; margin: 0;">
         <div class="row">
-            <div class="col" style="width: 100%;">
+            <div class="col col--1">
                 <h1 style="text-align: center;">Hall of fame</h1>
                 
                 <p >
@@ -209,8 +242,6 @@
             </div>
 
         </div>
-
-        
         
     </section>
 
