@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-    // $("header").append("hej");
-    $("header").load("header.txt");
+    $("header").load("header.html");
+    $("nav").load("nav.html");
 
 });

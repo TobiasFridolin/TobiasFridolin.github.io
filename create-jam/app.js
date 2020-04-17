@@ -1,5 +1,7 @@
 
 $(document).ready(function(){
+
+
     var logo = document.getElementById("logo");
     
     welcome = document.getElementById("welcome");
@@ -33,4 +35,6 @@ $(document).ready(function(){
     
     navSlide();
     $(document).scroll(headerAnimate);
+
+  
 });

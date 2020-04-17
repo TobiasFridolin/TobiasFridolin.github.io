@@ -1,0 +1,36 @@
+@media screen and (max-width: 900px){
+
+    p{
+      font-size: 1em;
+    }
+  
+    h2{
+      font-size: 2rem;
+    }
+  
+    h3{
+      font-size: 1.4rem;
+    }
+  
+    section{
+      padding-left: 2em;
+      padding-right: 2em;
+    }
+  
+    #factory{
+      width: 100%;
+    }
+  
+    .hofElement{
+      width: 33.33%;
+    }
+  
+    .col--2{
+      width: 100%;
+      margin-bottom: 80px;
+    }
+  
+    .hofDescription{
+      padding: 0 80px;
+    }
+  }
