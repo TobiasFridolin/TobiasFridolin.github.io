@@ -82,6 +82,35 @@ table, .row {
   padding: 0.5em;
 }
 
+.nav__burger {
+  position: absolute;
+  display: none;
+  padding: 2px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.nav__burger div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.nav__burger div div {
+  width: 100%;
+  height: 2px;
+  background-color: white;
+}
+
+ul.nav__links.open {
+  display: flex;
+  height: fit-content;
+  width: 100vw;
+}
+
 ul {
   list-style-type: none;
 }
@@ -316,94 +345,6 @@ th {
   width: 50%;
 }
 
-.banner {
-  background-image: url("../img/Intro.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  height: 50vh;
-  width: 100%;
-}
-
-.sponsors {
-  background-color: #ee7aa5;
-  margin: 0;
-}
-
-.hofContainer {
-  display: flex;
-  flex-flow: row wrap;
-  margin: 0 80px 80px 80px;
-  justify-content: center;
-}
-
-.hofElement {
-  display: flex;
-  flex-flow: column nowrap;
-  background-color: black;
-  width: 20%;
-  font-family: "aldo the apache", sans-serif;
-  font-size: 2em;
-  overflow: hidden;
-  border: 2px solid white;
-  justify-content: space-between;
-}
-
-.hofImage {
-  display: flex;
-  width: 100%;
-  object-fit: contain;
-  transform: scale(0.95);
-  filter: grayscale(100%);
-  margin: 0;
-}
-
-.active {
-  filter: none;
-}
-
-.hofImage:hover {
-  transition: ease-in-out 0.2s;
-  transform: scale(1);
-  filter: grayscale(0%);
-}
-
-.hofYear {
-  opacity: 1;
-  z-index: 1;
-  width: 100%;
-  background-color: #23233d;
-  color: whitesmoke;
-  margin: 0;
-}
-.hofYear h3 {
-  font-size: 0.8em;
-  text-align: center;
-  font-family: "aldo the apache", sans-serif;
-  margin: 0;
-  padding: 0.2em;
-}
-
-#hofDescription {
-  width: 100%;
-  padding: 0 80px;
-}
-
-.hofEntry {
-  display: none;
-  flex-direction: column;
-  padding: 40px;
-}
-.hofEntry h2 {
-  font-family: "aldo the apache", sans-serif;
-}
-.hofEntry h3 {
-  font-family: "Playball", cursive;
-}
-.hofEntry h4 {
-  align-self: center;
-}
-
 #logo {
   display: none;
   position: fixed;
@@ -452,35 +393,6 @@ th {
     opacity: 1;
   }
 }
-.nav__burger {
-  position: absolute;
-  display: none;
-  padding: 2px;
-  width: 24px;
-  height: 24px;
-  cursor: pointer;
-}
-
-.nav__burger div {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-
-.nav__burger div div {
-  width: 100%;
-  height: 2px;
-  background-color: white;
-}
-
-ul.nav__links.open {
-  display: flex;
-  height: fit-content;
-  width: 100vw;
-}
-
 /*# sourceMappingURL=styles.scss.map */
 
 /*# sourceMappingURL=styles.css.map */

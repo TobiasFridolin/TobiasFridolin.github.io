@@ -1,0 +1,81 @@
+@use 'colors';
+
+.hofContainer{
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0 80px 80px 80px;
+    //background-color: $dark1;
+    justify-content: center;
+}
+  
+.hofElement{
+    display: flex;
+    flex-flow: column nowrap;
+    background-color: black;
+    width: 20%;
+    font-family: 'aldo the apache', sans-serif;
+    font-size: 2em;
+    overflow: hidden;
+    border: 2px solid white;
+    justify-content: space-between;
+}
+.hofImage{
+    // 300 x 240
+    display: flex;
+    width: 100%;  
+    object-fit: contain;
+    transform: scale(0.95);
+    filter: grayscale(100%);
+    margin: 0;
+}
+  
+.active{
+    filter: none;
+}
+  
+.hofImage:hover{
+    transition: ease-in-out 0.2s;
+    transform: scale(1);
+    filter: grayscale(0%);
+    //z-index: 1;
+}
+  
+.hofYear{
+    opacity: 1;
+    z-index: 1;
+    width: 100%;
+    background-color: colors.$dark2;
+    color: whitesmoke;
+
+    h3{
+        font-size: 0.8em;
+        text-align: center;
+        font-family: 'aldo the apache', sans-serif;
+        margin: 0;
+        padding: 0.2em;
+    }
+    margin: 0;
+    // padding: 0.2em;
+}
+
+#hofDescription{
+    width: 100%;
+    // background-color: $dark2;
+    padding: 0 80px;
+}
+
+.hofEntry{
+    display: none;
+    flex-direction: column;
+    padding: 40px;
+
+    h2{
+        font-family: 'aldo the apache', sans-serif;
+    }
+    h3{
+        font-family: 'Playball', cursive;
+    }
+    h4{
+        align-self: center;
+    }
+}

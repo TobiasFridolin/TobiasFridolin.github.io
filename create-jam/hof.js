@@ -2,10 +2,8 @@ $(document).ready(function(){
 
     var hofEntries = $(".hofEntry");
     var hofImages = $(".hofImage"); 
-    
+
     var showEntry = function(){
-    
-    
     
         // fjerner display på alle entries
         for(i = 0; i < hofEntries.length; i++){
@@ -30,8 +28,10 @@ $(document).ready(function(){
     for(i = 0; i < hofImages.length; i++){
         hofImages[i].onclick = showEntry;
     }
-    
 
+    console.log($("#spring2020"));
+    $("#spring2020").addClass("active");
+    $("#entry-spring2020").css("display", "flex");
 
 });
 
