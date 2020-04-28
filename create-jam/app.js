@@ -1,13 +1,19 @@
 
 $(document).ready(function(){
-    var logo = document.getElementById("logo");  
+
+
+    var logo = document.getElementById("logo");
+    
     welcome = document.getElementById("welcome");
+    
     console.log(document.getElementById("welcome").getBoundingClientRect().top);
     
     const headerAnimate = () =>{
         
         if($(document).scrollTop() > welcome.getBoundingClientRect().top + $(document).scrollTop()){      
             logo.style.display ="flex";
+            
+            
         }else{
             logo.style.display="none";
         }
