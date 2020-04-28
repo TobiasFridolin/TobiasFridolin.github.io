@@ -1,0 +1,14 @@
+@use 'colors';
+.banner {
+    background-image: url("../img/Intro.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 50vh;
+    width: 100%;
+  }
+  
+  .sponsors{
+    background-color: colors.$pink;
+    margin: 0;
+  }

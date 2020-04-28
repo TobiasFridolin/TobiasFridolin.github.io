@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<head>
+    <html lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Sen:wght@400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" media="screen and (max-width: 900px)" href="./styles/smallDesktops.css">
+    <link rel="stylesheet" media="screen and (max-width: 768px)" href="./styles/tablets.css">
+    <link rel="stylesheet" media="screen and (max-width: 450px)" href="./styles/smartphones.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="app.js"> </script>
+
+    <!-- Muli font? -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400&display=swap" rel="stylesheet">
+    <script src="header.js"></script>
+
+    <title>Create Jam</title>
+</head>
+<body>
+    <header class="header flex"></header>
+    <nav class="nav nav--top flex"></nav>
+
+    <div class="banner" style="background-image: url('./img/Intro.png');"></div>
+
+    <section class="animate-bottom" id="welcome">
+        <div class="row">
+            
+            <div class="col col--1 container">
+                <h2>  Welcome! </h2>
+        
+                <p>
+                    We are currently planning the next jam...
+                </p>
+                
+                <img 
+                    id="factory"
+                    src="./img/jam-factory-4.svg" 
+                    alt="Preparing jam"
+                    style="border: none; width: 90%; align-self: center;"
+                >
+                
+                <p style="text-align: center;">
+                    Prepare by having a look at our <a href="practical.html">practical guide</a>, or go to <a href="about.html">about</a> to get to know us better. 
+                </p>
+                
+
+                <div>
+                    <div class="flex" style="position: relative;">
+                        <button>
+                            <a style="font-size: 2em; padding: 0.5em;" href="registration.html"> SIGN UP </a>
+                        </button>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <div class="banner" style="background-image: url('./img/program2.jpg');"></div>
+    
+    <section>
+        <div class="row">
+            <div class="col col--1">
+                <h2>Program</h2>
+                <p>Here's a breakdown of the schedule for the weekend. If you have any questions, head over to our <a href="practical.html">practical guide</a>, or shoot us a message on email or facebook. </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col col--2">
+                <h3>Friday</h3>
+
+                <table class="table shadow">
+                    <tr>
+                        <th class="table__time blueHighlight">Time</th>
+                        <th class="table__activity blueHighlight">Activity</th>
+                        <th class="table__place blueHighlight">Place</th>
+                    </tr>
+                    <tr>
+                        <td>15:00</td>
+                        <td>Registration</td>
+                        <td>Lobby</td>
+                    </tr>
+                    <tr>
+                        <td>16:30</td>
+                        <td>Time to mingle</td>
+                        <td>Lobby</td>
+                    </tr>
+                    <tr>
+                        <td>17:00</td>
+                        <td>Intro presentation</td>
+                        <td>AUD 3.107</td>
+                    </tr>
+                    <!-- Line -->
+                    <tr>
+                        <td>17:30</td>
+                        <td>Break</td>
+                        <td></td>
+                    </tr>
+                    <!-- Line -->
+                    <tr>
+                        <td>17:35</td>
+                        <td>Keynote speaker</td>
+                        <td>AUD 3.107</td>
+                    </tr>
+                    <tr>
+                        <td>18:35</td>
+                        <td>Theme reveal</td>
+                        <td>AUD 3.107</td>
+                    </tr>
+                    <tr>
+                        <td>18:40</td>
+                        <td>Group forming</td>
+                        <td>Lobby</td>
+                    </tr>
+                    <tr>
+                        <td>20:00</td>
+                        <td>Jamming begins!</td>
+                        <td>Everywhere</td>
+                    </tr>
+                </table>
+    
+            </div>
+            <div class="col col--2">
+                <h3>Saturday</h3>
+                <table class="table shadow">
+                    <tr>
+                        <th class="table__time pinkHighlight">Time</th>
+                        <th class="table__activity pinkHighlight">Activity</th>
+                        <th class="table__place pinkHighlight">Place</th>
+                    </tr>
+                    <tr>
+                        <td>8:00 - 12:00 </td>
+                        <td>Breakfast</td>
+                        <td>Lobby</td>
+                    </tr>
+                    <tr>
+                        <td>12:00</td>
+                        <td>Dev meet</td>
+                        <td>AUD 3.107</td>
+                    </tr>
+                </table>
+    
+                <h3>Sunday</h3>
+                <table class="table shadow">
+                    <tr>
+                        <th class="table__time orangeHighlight">Time</th>
+                        <th class="table__activity orangeHighlight">Activity</th>
+                        <th class="table__place orangeHighlight">Place</th>
+                    </tr>
+                    <tr>
+                        <td>12:00</td>
+                        <td>Deadline</td>
+                    </tr>
+                    <tr>
+                        <td>12:30</td>
+                        <td>Showcase</td>
+                    </tr>
+                    <tr>
+                        <td>15:00</td>
+                        <td>Voting ends</td>
+                    </tr>
+                    <tr>
+                        <td>15:30</td>
+                        <td>Awards announcement</td>
+                        <td>AUD 3.107</td>
+                    </tr>
+                    <tr>
+                        <td>16:00</td>
+                        <td>Goodbye <span class="heart">&#10084;</span>  </td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div class="flex line">
+                <button>
+                    <a href="registration.html"> SIGN UP </a>
+                </button>
+            </div>
+       </div>
+    
+        <div class="row">
+            <div class="col col--2 container">
+                <h2 id="talks"> Keynote </h2>
+            
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+            </div>
+            <div class="col col--2 container">
+                <img class="shadow" src="./img/talk.png" alt="keynote">
+            </div>
+            <div class="flex line">
+                <button>
+                    <a href="registration.html"> SIGN UP </a>
+                </button>
+             </div>
+        </div>
+    </section>
+
+    <div class="banner" style="background-image: url('./img/Awards.png');"></div>
+
+    <section class="sponsors">
+        <div class="row">
+            <div class="col col--1">
+                <h2>
+                    Sponsors
+                </h2>
+                <p>
+                    Our sponsors help us make Create Jam what it is. 
+                    Create Jam is driven by a volunteers and is funded 100% through sponsorships, which also means no entrance fee for you. 
+                </p>
+                <p>
+                    We love all of our sponsors, partners and all the great people helping make Create Jam what it is.
+                    Most importantly, we would like to thank you, as create jam would not be here without you.
+                </p>
+                <div class="container">
+                    <h3>Our friends</h3>
+                    <p>
+                        Say hi to our friends in the game community:                    
+                    </p>
+                    <div class="row" style="justify-content: space-around;">
+                        <div>
+                            <img src="./img/nordic-gamejam.jpg" alt="" style="width: 160px;">
+                        </div>
+                                <p>
+                                    Game hub
+                                </p>
+                        <p>
+                            Spilhylden
+                        </p>
+                        <p>
+                            Dice 'n Drinks
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="col--2 footer__contact">
+            <div>
+                <h3>Contact</h3>
+            </div>
+            <div>
+                <p>Createjam@create.aau.dk</p>
+                <p>CREATE Aalborg University, Rendsburggade 14, 9000 Aalborg</p>
+            </div>
+        </div>
+        <div class="col--2">  
+            <div>
+                <h3>Find us on</h3>
+            </div>
+            <div class="footer__media">
+                <img src="./img/itch-logo-white.svg" alt="twitch">            
+                <img src="./img/facebook-logo.svg" alt="facebook">            
+                <img src="./img/twitter-logo.svg" alt="twitter">
+            </div>                
+        </div>
+
+    </footer>
+</body>
+</html>
