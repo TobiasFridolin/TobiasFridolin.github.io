@@ -1,0 +1,307 @@
+@use 'atoms';
+@use 'molecules';
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    width: 100vw;
+    overflow-x: hidden;
+    background-color: white;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ul{
+    height: 100%;
+    display: flex;
+    list-style: none;
+}
+
+li{
+    padding: 0 20px;
+    display: inline;
+}
+
+header a:hover{
+    border-bottom: 2px solid black;
+}
+
+h1, h2, h3{
+    font-family: 'Lato', sans-serif;
+}
+
+
+h2, h3{
+    padding-top: 2em;
+}
+
+.header{
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 0.5rem;
+    z-index: 1;
+    // box-shadow: 0px 10px 15px rgba($color: #000000, $alpha: 0.1);
+
+    &__links{
+        li{
+            a{
+                color: atoms.$black;
+            }
+        }
+    }
+}
+
+section{
+    padding: 6vh;
+    // min-height: 90vh;
+}
+
+h1{
+    font-size: 1.5em;
+    padding: 1em;
+}
+
+footer{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 5vh 15vw;
+    background-color: atoms.$black;
+    
+    a{
+        font-size: 1em;
+        color: white;
+    }
+    
+    h3{
+        font-size:  0.8em;
+        padding-top: 1em;
+        color: white;
+        
+    }
+
+    p{
+        color: white;
+    }
+ }
+
+
+#landing{
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    //background-image: url('../res/landing.png');
+    background-size: cover;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-left: 20px;
+}
+
+.col{
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    width: 50%;
+    margin-top: 20px;
+    padding-right: 20px;
+}
+
+.placeholder{
+    background-color: white;
+    height: 32px;
+    width: 32px;
+    margin: 8px;
+    border-radius: 100%;
+    content: "";
+}
+
+#signature{
+    width: 100px;
+    height: auto;
+    stroke: atoms.$black;
+    stroke-width: 15;
+}
+
+.signature{
+    font-size: 1.5rem;
+    height: auto;
+    @extend %handwriting;
+    padding: 0.5rem;
+    color: white;
+}
+
+.portfolio{
+    // min-height: 150vh;
+
+    // for absolute positioned children
+    position: relative;
+    background-color: atoms.$black;
+    color: white;
+    padding: 0;
+
+    p{
+        padding: 1.5rem;  
+    }
+
+    h3{
+        font-size: 2rem;
+        width: 100%;
+        padding: 1rem 0;
+        text-align: left;
+    }
+
+    
+    &__hero{
+        position: relative;
+        height: 100vh;
+        
+        h2{
+            position: absolute;
+            bottom: 4rem;
+            width: 100%;
+            text-align: center;
+            font-size: 3em;
+        }
+    }
+
+    &__background{
+        height: 100%;
+        opacity: 0.2;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+    &__bar{
+        height: 0.5rem;
+    }
+
+    &__content{
+        display: flex;
+        height: 100vh;
+        justify-content: center;
+
+        .col-1{
+            display: flex;
+            flex-direction: column;
+            width: 30;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .col-2{
+            width: 70%;
+            img{
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .col-3{
+            width: 12rem;
+        }
+    }
+
+    &__button{
+        position: absolute;
+        display: flex;
+        bottom: 2rem;
+        border:none;
+        border-radius: 0;
+        transition-duration: 0.4s;
+        padding: 2rem;
+        text-transform: uppercase;
+        background-color: atoms.$black;
+        z-index: 1;
+        
+        a{
+            font-size: 1rem;
+            color: white;
+        }
+
+        .close{
+            display: none;
+        }
+    }
+    
+    &__button:hover{
+        background-color: black;
+    }
+
+}
+
+button:hover{
+    background-color: black;
+}
+
+
+.animate-top{
+   // position: relative;
+    @include atoms.animation-name(animatetop);
+    @include atoms.animation-duration(1s);
+}
+
+@-webkit-keyframes animatetop{
+    from { top:-100px; opacity: 0;}
+    to { top:0px;opacity: 1;}
+}
+
+@keyframes animatetop{
+    from{ top:-100px; opacity: 0;}
+    to{ bottom:0; opacity:1;}
+}
+
+.animate-bottom {
+    position: relative;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 1s;
+    animation-name: animatebottom;
+    animation-duration: 1s
+  }
+  
+  @-webkit-keyframes animatebottom {
+    from { bottom:-100px; opacity:0 } 
+    to { bottom:0px; opacity:1 }
+  }
+  
+  @keyframes animatebottom { 
+    from{ bottom:-100px; opacity:0 } 
+    to{ bottom:0; opacity:1 }
+  }
+
+#naturbasen-prototype{
+    border: none;
+    width: 50%;
+    height: 700px;
+}
+

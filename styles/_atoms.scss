@@ -1,0 +1,47 @@
+
+// Variables
+$black: #1f1f1f;
+
+//  Extensions
+%handwriting{
+    // font-family: 'Alex Brush', cursive;
+    // // font-family: 'Great Vibes', cursive;
+    // font-family: 'Parisienne', cursive;
+    font-family: 'Sacramento', cursive;
+    // font-family: 'Stalemate', cursive;
+}
+
+.icon{
+    height: 32px;
+    width: 32px;
+    margin: 8px;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    font-family: 'Lato', sans-serif;
+    font-size: 0.8em;
+    color: $black;
+}
+
+p{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+    text-align: justify;
+    max-width: 40em;
+    padding: 1rem;
+}
+
+// Mixins
+
+@mixin animation-name($value) {
+    -webkit-animation-name: $value;
+    animation-name: $value;
+}
+
+@mixin animation-duration($value) {
+    -webkit-animation-duration: $value;
+    animation-duration: $value;
+}
