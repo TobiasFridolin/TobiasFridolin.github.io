@@ -18,15 +18,15 @@ function scroll(){
     var headerHeight = $(".header").innerHeight();
 
 
-    if(naturbasen.position().top - headerHeight < $(document).scrollTop()){
-        // document.getElementById("signature").style.stroke= "white";
-        $(".header__links li a").css("color", "white");
-        $(".signature").css("color", "white");
-    }
-    else{
-        $(".header__links li a").css("color", black);
-        $(".signature").css("color", black);
-    }
+    // if(naturbasen.position().top - headerHeight < $(document).scrollTop()){
+    //     // document.getElementById("signature").style.stroke= "white";
+    //     $(".header__links li a").css("color", "white");
+    //     $(".signature").css("color", "white");
+    // }
+    // else{
+    //     $(".header__links li a").css("color", black);
+    //     $(".signature").css("color", black);
+    // }
 }
 
 function app(jQuery){

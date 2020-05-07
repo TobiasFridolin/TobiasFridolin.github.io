@@ -2,18 +2,11 @@
   font-family: "Sacramento", cursive;
 }
 
-.icon {
-  height: 32px;
-  width: 32px;
-  margin: 8px;
-  box-sizing: border-box;
-}
-
 a {
   text-decoration: none;
-  font-family: "Lato", sans-serif;
-  font-size: 0.8em;
-  color: #1f1f1f;
+  font-size: 1rem;
+  font-family: "Source Sans Pro", sans-serif;
+  color: #1670A3;
 }
 
 p {
@@ -22,18 +15,22 @@ p {
   font-weight: 300;
   text-align: justify;
   max-width: 40em;
-  padding: 1rem;
+  margin-top: 1rem;
+  max-width: 32em;
+  color: #1f1f1f;
+}
+
+h1, h2, h3 {
+  font-family: "Lato", sans-serif;
 }
 
 a.button {
-  position: absolute;
   display: flex;
   bottom: 2rem;
   border: none;
   border-radius: 0;
   transition-duration: 0.4s;
   padding: 2rem;
-  text-transform: uppercase;
   background-color: #1f1f1f;
   z-index: 1;
   font-size: 1rem;
@@ -45,20 +42,28 @@ button:hover {
   background-color: black;
 }
 
+.icon {
+  height: 32px;
+  width: 32px;
+  margin: 8px;
+  box-sizing: border-box;
+}
+
+.header a {
+  font-family: "Lato", sans-serif;
+  font-size: 0.8em;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   width: 100vw;
   overflow-x: hidden;
-  background-color: white;
+  background-color: #394c70;
 }
 
 nav {
@@ -82,14 +87,6 @@ header a:hover {
   border-bottom: 2px solid black;
 }
 
-h1, h2, h3 {
-  font-family: "Lato", sans-serif;
-}
-
-h2, h3 {
-  padding-top: 2em;
-}
-
 .header {
   position: sticky;
   top: 0;
@@ -100,8 +97,11 @@ h2, h3 {
   padding: 0.5rem;
   z-index: 1;
 }
+.header .signature {
+  color: #f1f1f1;
+}
 .header__links li a {
-  color: #1f1f1f;
+  color: #f1f1f1;
 }
 
 section {
@@ -113,35 +113,66 @@ h1 {
   padding: 1em;
 }
 
-footer {
+.footer {
   display: flex;
+  flex-flow: column wrap;
   width: 100%;
-  justify-content: space-around;
+  justify-items: space-between;
   align-items: flex-start;
   padding: 5vh 15vw;
-  background-color: #1f1f1f;
+  background-color: #1c2736;
 }
-footer a {
+.footer a {
   font-size: 1em;
-  color: white;
+  color: #f1f1f1;
 }
-footer h3 {
-  font-size: 0.8em;
-  padding-top: 1em;
-  color: white;
+.footer h3 {
+  text-transform: uppercase;
+  color: #f1f1f1;
 }
-footer p {
-  color: white;
+.footer p {
+  color: #f1f1f1;
+  max-width: 20em;
+}
+.footer__button {
+  height: fit-content;
+  width: fit-content;
+  padding: 8px;
+  margin: 1em;
+  font-weight: 100;
+}
+.footer #linkedin {
+  background-color: #536E9F;
+  color: #f1f1f1;
+}
+.footer #email {
+  background-color: #EB6B74;
 }
 
 #landing {
-  height: 80vh;
+  position: relative;
+  padding: 0;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   text-align: center;
   background-size: cover;
+}
+.about {
+  position: absolute;
+  right: 5vw;
+  top: 30vh;
+  width: 32em;
+  color: #f1f1f1;
+}
+.about h1 {
+  font-size: 3rem;
+  padding: 0;
+  margin-bottom: 0.5em;
+}
+.about p {
+  color: #f1f1f1;
 }
 
 .row {
@@ -185,12 +216,13 @@ footer p {
 
 .portfolio {
   position: relative;
-  background-color: #1f1f1f;
+  background-color: #1c2736;
   color: white;
   padding: 0;
 }
 .portfolio p {
   padding: 1.5rem;
+  color: #f1f1f1;
 }
 .portfolio h3 {
   font-size: 2rem;
@@ -200,12 +232,15 @@ footer p {
 }
 .portfolio__hero {
   position: relative;
-  height: 100vh;
+  background-color: #394c70;
+  height: 70vh;
 }
 .portfolio__hero h2 {
+  font-size: 1rem;
   position: absolute;
   bottom: 4rem;
   width: 100%;
+  height: calc(50% - 0.5em);
   text-align: center;
   font-size: 3em;
 }
@@ -226,13 +261,13 @@ footer p {
 .portfolio__content .col-1 {
   display: flex;
   flex-direction: column;
-  width: 30;
+  width: 40%;
   align-items: center;
   justify-content: center;
   padding: 2rem;
 }
 .portfolio__content .col-2 {
-  width: 70%;
+  width: 60%;
 }
 .portfolio__content .col-2 img {
   display: flex;
@@ -245,26 +280,25 @@ footer p {
   width: 12rem;
 }
 .portfolio__button {
+  font-size: 1.4rem;
+  font-weight: 300;
   position: absolute;
   display: flex;
   bottom: 2rem;
-  border: none;
-  border-radius: 0;
   transition-duration: 0.4s;
-  padding: 2rem;
-  text-transform: uppercase;
-  background-color: #1f1f1f;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  background-color: #EB6B74;
   z-index: 1;
-}
-.portfolio__button a {
-  font-size: 1rem;
   color: white;
 }
 .portfolio__button .close {
   display: none;
 }
 .portfolio__button:hover {
-  background-color: black;
+  background-color: #FEB48B;
 }
 
 button:hover {
@@ -295,6 +329,26 @@ button:hover {
   }
   to {
     bottom: 0;
+    opacity: 1;
+  }
+}
+.loading-animation {
+  opacity: 0;
+  animation-name: loading;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in;
+}
+
+.animation-fade-in {
+  opacity: 1;
+  animation: fade-in 2s ease;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
     opacity: 1;
   }
 }

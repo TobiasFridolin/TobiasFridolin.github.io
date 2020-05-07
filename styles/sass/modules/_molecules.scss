@@ -1,14 +1,13 @@
 @use 'atoms';
 
 a.button{
-    position: absolute;
+    // position: absolute;
     display: flex;
     bottom: 2rem;
     border:none;
     border-radius: 0;
     transition-duration: 0.4s;
     padding: 2rem;
-    text-transform: uppercase;
     background-color: atoms.$black;
     z-index: 1;
     
@@ -20,4 +19,19 @@ a.button{
     
 button:hover{
     background-color: black;
+}
+
+.icon{
+    height: 32px;
+    width: 32px;
+    margin: 8px;
+    box-sizing: border-box;
+}
+
+.header{
+    a{
+        font-family: 'Lato', sans-serif;
+        font-size: 0.8em;
+
+    }
 }

@@ -1,6 +1,22 @@
 
 // Variables
 $black: #1f1f1f;
+$white: #f1f1f1;
+$blue: #1670A3;
+
+$orange: #FEB48B;
+$beige: #FFDEC8;
+$dark-blue: #536E9F;
+$dark-blue-2: #394c70;
+$darker-blue: #1c2736;
+$light-blue: #5992D6;
+$dark-red: #EB6B74;
+$light-red: #F28A83;
+
+$cj: #23233d;;
+$naturbasen: #1670A3;
+$gn: #1F3C61;;
+
 
 //  Extensions
 %handwriting{
@@ -11,19 +27,13 @@ $black: #1f1f1f;
     // font-family: 'Stalemate', cursive;
 }
 
-.icon{
-    height: 32px;
-    width: 32px;
-    margin: 8px;
-    box-sizing: border-box;
-}
-
 a{
     text-decoration: none;
-    font-family: 'Lato', sans-serif;
-    font-size: 0.8em;
-    color: $black;
+    font-size: 1rem;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: $blue;
 }
+
 
 p{
     font-family: 'Source Sans Pro', sans-serif;
@@ -31,8 +41,18 @@ p{
     font-weight: 300;
     text-align: justify;
     max-width: 40em;
-    padding: 1rem;
+    margin-top: 1rem;
+    max-width: 32em;
+    color: $black;
+
 }
+
+h1, h2, h3{
+    font-family: 'Lato', sans-serif;
+}
+
+
+
 
 // Mixins
 

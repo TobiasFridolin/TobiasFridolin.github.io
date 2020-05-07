@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Lato&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
 
     <!-- Handwriting fonts -->
@@ -23,11 +23,11 @@
 </head>
 <body>
     <header class="header animate-top" style="align-self: center;">
-
+        
         <div class="signature">
             Fridolin
         </div>
-
+        
         <nav>
             <ul class="header__links">
                 <li> <a href="#naturbasen"> PORTFOLIO </a> </li>
@@ -37,18 +37,37 @@
         </nav>
 
     </header>
-
-    <!-- <div style="width: 1px; height: 100%; position: fixed; top: 0; left: 50%; background-color: white; z-index: 5;"></div> -->
   
-    <section id="landing">   
+    <section id="landing" class="animation-fade-in" style="display: flex; align-items: center;">   
+            
+        <img src="res/abstract.svg" width="100%" height="100%" alt="">
+        <div class="about">
+            
+            <img width ="22%;" style="object-fit: contain;  display: block; clear: right; float: right; border-radius: 100%; margin-left: 1rem; margin-right: 1rem;" src="res/Profil.JPG" alt="Profil billede">
+            
+            <h1 style="text-align: center;">
+                Velkommen til min portfolio! 
+            </h1>
+
+
+    
+            <div style="justify-content: center;">
+                <p>
+                    Jeg er en interaktionsdesigner på 25 år, som er på udkig efter nye udfordringer. Tag et kig på mine projekter, og lær mere omkring hvordan jeg kan hjælpe jer.
+                </p>
+                <p>
+                    Interaktionsdesign (IXD) handler om at designe løsninger, som hjælper brugeren med at opnå deres mål, på en mere effektiv og tilfredstillende måde.
+                </p>
+            </div>
+        </div>
 
     </section>
 
     <section class="portfolio">
        
         <!-- <h2 id="animate" class="hidden" style="position: fixed; top: 50%; left: 50%; z-index: 1;">Naturbasen</h2> -->
-        <div class="portfolio__hero" style="background-color:#1670A3;">
-            <!-- <h2>Naturbasen</h2> -->
+        <div class="portfolio__hero">
+            <h2>Naturbasen</h2>
             <div class="portfolio__background" style="background-image: url('../res/naturbasen.png');"> </div>
         </div>
         <div id="naturbasen" class="portfolio__content">
@@ -61,11 +80,11 @@
                 </p>
             </div>
             
-            <div class="col-2">
-                <img src="../res/moneyshot-alt.jpg" alt="">
+            <div class="col-2" style="border-left: 0px solid #1670A3;">
+                <img src="../res/naturbasen/n4.jpg" alt="Naturbasen" >
             </div>
 
-            <a class="button" href="naturbasen.html">
+            <a class="portfolio__button" href="naturbasen.html">
                 Se prototypen
             </a>
 
@@ -74,9 +93,8 @@
     </section>
 
     <section class="portfolio">
-        <!-- <div class="portfolio__bar" style="background-color: #23233d;"></div> -->
-        <div class="portfolio__hero" style="background-color: #23233d;"> 
-            <!-- <h2>Create Jam app</h2> -->
+        <div class="portfolio__hero"> 
+            <h2>Create Jam app</h2>
             <div class="portfolio__background" style="background-image: url('../res/cj-app.png');"></div>
         </div>
 
@@ -93,7 +111,7 @@
                 </p>
             </div>
             <div class="col-3"></div>
-            <a class="button" href="cj-app.html">
+            <a class="portfolio__button" href="cj-app.html">
                 Se prototypen
             </a>
 
@@ -101,26 +119,25 @@
     </section>
 
     <section class="portfolio">
-        <!-- <div class="portfolio__bar" style="background-color: #1F3C61;"></div> -->
-        <div class="portfolio__hero" style="background-color: #1F3C61;">
-            <!-- <h2>GN A/S hjemmeside</h2> -->
+        <div class="portfolio__hero" >
+            <h2>GN A/S hjemmeside</h2>
             <div class="portfolio__background" style="background-image: url('../res/gn.png');"></div>
         </div>
 
         <div id="gn" class="portfolio__content">
             <div class="col-3"></div>
             <div class="col-1">
-                <h3 style="border-bottom: 1px solid rgb(42, 82, 134);;">Gunnar Nielsen A/S</h3>
+                <h3 style="border-bottom: 1px solid rgb(42, 82, 134);">Gunnar Nielsen A/S</h3>
                 <p>
                     I forbindelse med min tidsbegrænsede stilling som projektkonsulent i Gunnar Nielsen A/S, udarbejde jeg sammen med mine kollegaer en ny identitet til virksomheden. Baseret på vores fund udabejdede jeg en mockup i Figma, som forslag til et redesign af deres eksisterende hjemmeside. Mit fokus lå på kommunikation af den nye identitet. Derudover lavede jeg ændringer til navigationen af ydelser, baseret på en opdateret liste, og cardsorting med projektlederne i virksomheden. 
                 </p>
                 
             </div>
             <div class="col-2">
-                <img src="../res/moneyshot-alt.jpg" alt="">
+                <img src="../res/gn.jpg" alt="">
             </div>
 
-            <a class="button" href="gn.html">
+            <a class="portfolio__button" href="gn.html">
                     Se prototypen
             </a>
             <!-- <iframe style="border: none;" width="800" height="950" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FckXtrxCLMjtLlq6MovAnBl%2FGN-hjemmeside%3Fnode-id%3D11%253A9" allowfullscreen></iframe> -->
@@ -128,9 +145,8 @@
     </section>
 
     <section class="portfolio">
-        <!-- <div class="portfolio__bar" style="background-color: #23233d;"></div> -->
-        <div class="portfolio__hero" style="background-color: #23233d;">
-            <!-- <h2>Create Jam hjemmeside</h2> -->
+        <div class="portfolio__hero">
+            <h2>Create Jam hjemmeside</h2>
             <div class="portfolio__background" style="background-image: url('../res/cj-hjemmeside.png');"> </div>
         </div>
         <div id="cj-hjemmeside" class="portfolio__content">
@@ -138,14 +154,14 @@
                 <img src="../res/moneyshot-alt.jpg" alt="">
             </div>
             <div class="col-1">
-                <h3 border-bottom: 1px solid #5959a3;>Create Jam hjemmeside</h3>
+                <h3 style="border-bottom: 1px solid #5959a3;">Create Jam hjemmeside</h3>
                 <p>
                     Jeg står for hjemmesiden til Create Jam foreningen, som jeg er frivillig i. Jeg startede projektet som en måde, hvorpå jeg kunne blive bedre til webudvikling. Udover html og css har jeg brugt Sass og jQuery.
                 </p>
             </div>
             <div class="col-3"></div>
   
-            <a  class="button" href="cj-hjemmeside.html">
+            <a  class="portfolio__button" href="cj-hjemmeside.html">
                 Se prototypen
             </a>
             </button>              
@@ -154,23 +170,29 @@
 
     </section>
 
-    <footer>
-        <div style="flex-basis: 400px;">
-            <h3>KONTAKT</h2>
-            <p>
-                Smid mig en email eller giv mig et kald. Jeg er altid frisk på at høre nye ideer eller potentielle samarbejder.
-            </p>
-        </div>
-        <div>
-            <div style="display: flex; align-items: center;">
-                <div class="placeholder"></div>
-                <a href="">tobiasfridolin@gmail.com </a>
+    <footer class="footer">
+            
+            <div style="display: flex; justify-content: space-around; width: 100%;">
+                
+                <div style="display: flex; flex-direction: column;">
+                    <h3>Kontakt</h2>
+
+                    <p>
+                        Hvis du er interesseret i at høre mere, så smid mig en mail eller en besked på LinkedIn. Jeg er altid frisk på at høre nye ideer eller potentielle samarbejder.
+                    </p>
+                </div>
+
+                <div style="display: flex; align-items: center;">
+                    <a class="footer__button" id="linkedin" href="">
+                        Forbind på LinkedIn
+                    </a>
+                    <a class="footer__button" id="email" href="">
+                        Email
+                    </a>
+                </div>
+
             </div>
-            <div style="display: flex; align-items: center;">
-                <div class="placeholder"></div>
-                <a href=""> in/tobiasfridolin</a>
-            </div>
-        </div>
+        
     </footer>
     
 </body>
