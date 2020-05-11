@@ -89,12 +89,14 @@ header a:hover {
 
 .header {
   position: sticky;
+  height: 3.5rem;
   top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   text-align: center;
-  padding: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   z-index: 1;
 }
 .header .signature {
@@ -151,6 +153,7 @@ h1 {
 
 #landing {
   position: relative;
+  top: -3.5rem;
   padding: 0;
   width: 100%;
   display: flex;
@@ -162,7 +165,7 @@ h1 {
 .about {
   position: absolute;
   right: 5vw;
-  top: 30vh;
+  top: 45vh;
   width: 32em;
   color: #f1f1f1;
 }
@@ -236,13 +239,13 @@ h1 {
   height: 70vh;
 }
 .portfolio__hero h2 {
-  font-size: 1rem;
+  font-size: 3em;
   position: absolute;
   bottom: 4rem;
   width: 100%;
   height: calc(50% - 0.5em);
   text-align: center;
-  font-size: 3em;
+  z-index: 1;
 }
 .portfolio__background {
   height: 100%;
@@ -281,15 +284,16 @@ h1 {
 }
 .portfolio__button {
   font-size: 1.4rem;
-  font-weight: 300;
+  font-weight: 500;
   position: absolute;
   display: flex;
   bottom: 2rem;
   transition-duration: 0.4s;
-  padding-left: 1.5em;
-  padding-right: 1.5em;
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
+  padding-left: 1.2em;
+  padding-right: 1.2em;
+  padding-top: 0.4em;
+  padding-bottom: 0.4em;
+  border-radius: 4px;
   background-color: #EB6B74;
   z-index: 1;
   color: white;
