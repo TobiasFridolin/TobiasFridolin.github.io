@@ -41,7 +41,7 @@ p{
     font-weight: 300;
     text-align: justify;
     max-width: 40em;
-    margin-top: 1rem;
+    // margin-top: 1rem;
     max-width: 32em;
     color: $black;
 
@@ -64,4 +64,11 @@ h1, h2, h3{
 @mixin animation-duration($value) {
     -webkit-animation-duration: $value;
     animation-duration: $value;
+}
+
+@mixin transform($transforms){
+    transform: $transforms;
+    -webkit-transform: $transforms;
+    -o-transform: $transforms;
+    -moz-transform: $transforms;
 }

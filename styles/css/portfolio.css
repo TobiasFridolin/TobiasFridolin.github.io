@@ -1,17 +1,74 @@
-/* Error: Can't find stylesheet to import.
- *   ,
- * 1 | @use 'atoms';
- *   | ^^^^^^^^^^^^
- *   '
- *   sass/portfolio.scss 1:1  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Can't find stylesheet to import.\a   \2577 \a 1 \2502  @use 'atoms';\a   \2502  ^^^^^^^^^^^^\a   \2575 \a   sass/portfolio.scss 1:1  root stylesheet";
+a {
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: "Source Sans Pro", sans-serif;
+  color: #1670A3;
 }
+
+p {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  text-align: justify;
+  max-width: 40em;
+  max-width: 32em;
+  color: #1f1f1f;
+}
+
+h1, h2, h3 {
+  font-family: "Lato", sans-serif;
+}
+
+a.button {
+  display: flex;
+  bottom: 2rem;
+  border: none;
+  border-radius: 0;
+  transition-duration: 0.4s;
+  padding: 2rem;
+  background-color: #1f1f1f;
+  z-index: 1;
+  font-size: 1rem;
+  color: white;
+  text-decoration: none;
+}
+
+button:hover {
+  background-color: black;
+}
+
+.icon {
+  height: 32px;
+  width: 32px;
+  margin: 8px;
+  box-sizing: border-box;
+}
+
+.header a {
+  font-family: "Lato", sans-serif;
+  font-size: 0.8em;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1f1f1f;
+}
+
+main {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+}
+
+/*# sourceMappingURL=portfolio.css.map */

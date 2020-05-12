@@ -36,7 +36,6 @@ header a:hover{
 }
 
 
-
 .header{
     position: sticky;
     height: 3.5rem;
@@ -67,11 +66,6 @@ header a:hover{
     }
 }
 
-section{
-    padding: 6vh;
-    // min-height: 90vh;
-}
-
 h1{
     font-size: 1.5em;
     padding: 1em;
@@ -82,9 +76,12 @@ h1{
     flex-flow: column wrap;
     width: 100%;
     justify-items: space-between;
-    align-items: flex-start;
-    padding: 5vh 15vw;
-    background-color: atoms.$darker-blue;
+    padding-left: 15vw;
+    padding-right: 15vw;
+    padding-top: 15vh;
+
+    //make atom
+    background-color: #141B24;
 
     
     
@@ -207,24 +204,40 @@ h1{
 }
 
 .portfolio{
-    // min-height: 150vh;
 
     // for absolute positioned children
     position: relative;
     background-color: atoms.$darker-blue;
     color: white;
-    padding: 0;
 
     p{
-        padding: 1.5rem; 
+        padding: 1rem; 
+        // margin: 0.5rem;
         color: atoms.$white; 
+        position: relative;
+        background-color: atoms.$darker-blue;
     }
 
     h3{
         font-size: 2rem;
-        width: 100%;
-        padding: 1rem 0;
-        text-align: left;
+        // width: 100%;
+        padding: 0.5rem;
+        // text-align: left;
+    }
+
+    h4{
+        padding: 0.5rem;
+        font-family: lato;
+        font-size: 12px;
+        font-style: italic;
+        font-weight: 300;
+    }
+
+    h5{
+        padding: 0.5rem;
+        font-family: lato;
+        font-size: 12px;
+        font-weight: 300;
     }
 
     
@@ -258,19 +271,10 @@ h1{
     &__content{
         display: flex;
         height: 100vh;
-        justify-content: center;
 
-        .col-1{
-            display: flex;
-            flex-direction: column;
-            width: 40%;
-            align-items: center;
-            justify-content: center;
-            padding: 2rem;
-        }
-
-        .col-2{
+        .image{
             width: 60%;
+            
             img{
                 display: flex;
                 justify-content: center;
@@ -280,8 +284,95 @@ h1{
             }
         }
 
-        .col-3{
-            width: 12rem;
+        .description{
+            width: 40%;
+
+            .categories{
+                display: flex; 
+                flex-direction: row; 
+                // @include atoms.transform(translateY(18px));
+            }
+        }
+
+        .description{
+
+            .title{
+                display: flex; 
+                flex-direction: row; 
+                justify-content: flex-end;             
+                border-bottom: 4px solid #1670A3; 
+                align-items: flex-end; 
+            }
+            
+            align-self: center;
+        }
+
+        .portfolio__button{
+            @include atoms.transform(translateX(-50%));
+        }
+
+        &--left{
+            display: flex;
+
+            // should be centered
+            .description{
+                width: 40%;
+                padding-left: 120px;
+
+               .title{
+                    margin-right: 1rem;
+               }
+
+                .categories{
+                    justify-content: flex-start;
+                }
+
+                p{
+                    right: -3rem;
+                }
+            }
+
+            .portfolio__button{
+                @include atoms.transform(translateX(-50%));
+                left: 40%;
+            }
+
+        }
+
+        &--right{
+            display: flex;
+            
+            .description{
+                padding-right: 120px;
+                
+                .title{
+                    justify-content: flex-start;    
+                    margin-left: 1rem;       
+                }
+    
+                .categories{
+                    justify-content: flex-end;
+                }
+    
+                p{
+                    right: 3rem;
+                }
+            }
+
+            .portfolio__button{
+                @include atoms.transform(translateX(50%));
+                right: 40%;
+            }
+
+        }
+
+        .col-1{
+            display: flex;
+            flex-direction: column;
+            width: 40%;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
         }
     }
 
@@ -290,7 +381,9 @@ h1{
         font-weight: 500;
         position: absolute;
         display: flex;
-        bottom: 2rem;
+
+        margin-top: 2rem;
+        // bottom: 2rem;
 
 
         transition-duration: 0.4s;
@@ -298,7 +391,7 @@ h1{
         padding-right: 1.2em;
         padding-top: 0.4em;
         padding-bottom: 0.4em;
-        border-radius: 4px;
+        // border-radius: 4px;
         background-color: atoms.$dark-red;
         z-index: 1;
         color: white;
