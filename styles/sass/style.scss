@@ -211,7 +211,7 @@ h1{
     color: white;
 
     p{
-        padding: 1rem; 
+        padding: 0.5rem; 
         // margin: 0.5rem;
         color: atoms.$white; 
         position: relative;
@@ -295,20 +295,21 @@ h1{
         }
 
         .description{
+            width: 40%;
 
             .title{
                 display: flex; 
                 flex-direction: row; 
-                justify-content: flex-end;             
-                border-bottom: 4px solid #1670A3; 
-                align-items: flex-end; 
+                justify-content: flex-start;             
+                border-bottom: 1px solid #1670A3; 
+                align-items: baseline; 
             }
             
             align-self: center;
         }
 
         .portfolio__button{
-            @include atoms.transform(translateX(-50%));
+            bottom: 2rem;
         }
 
         &--left{
@@ -316,7 +317,6 @@ h1{
 
             // should be centered
             .description{
-                width: 40%;
                 padding-left: 120px;
 
                .title{
@@ -328,7 +328,8 @@ h1{
                 }
 
                 p{
-                    right: -3rem;
+                    // right: -1rem;
+                    margin-right: 1rem;
                 }
             }
 
@@ -346,16 +347,18 @@ h1{
                 padding-right: 120px;
                 
                 .title{
-                    justify-content: flex-start;    
                     margin-left: 1rem;       
                 }
     
                 .categories{
-                    justify-content: flex-end;
+                    // justify-content: flex-end;
+                    margin-left: 1rem;
                 }
     
                 p{
-                    right: 3rem;
+                    // right: 1rem;
+                    margin-left: 1rem;
+
                 }
             }
 
