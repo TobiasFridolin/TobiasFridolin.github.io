@@ -14,8 +14,6 @@ p {
   font-size: 1rem;
   font-weight: 300;
   text-align: justify;
-  max-width: 40em;
-  max-width: 32em;
   color: #1f1f1f;
 }
 
@@ -90,13 +88,8 @@ li {
   display: inline;
 }
 
-header a:hover {
-  border-bottom: 2px solid black;
-}
-
 .header {
   position: sticky;
-  height: 3.5rem;
   top: 0;
   display: flex;
   justify-content: space-between;
@@ -104,8 +97,8 @@ header a:hover {
   box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
   align-items: center;
   text-align: center;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
   z-index: 1;
 }
 .header .signature {
@@ -113,6 +106,10 @@ header a:hover {
 }
 .header__links li a {
   color: #f1f1f1;
+}
+.header__links li a:hover {
+  border-bottom: 4px solid white;
+  padding-bottom: 14px;
 }
 
 h1 {
@@ -192,6 +189,16 @@ h1 {
   color: #f1f1f1;
   max-width: 22em;
 }
+.about__button {
+  color: white;
+  padding: 0.5rem 1rem;
+  margin: 1rem;
+  border: 1px solid white;
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2);
+}
+.about__button:hover {
+  background-color: #1c2736;
+}
 
 #signature {
   width: 100px;
@@ -219,21 +226,22 @@ h1 {
   background-color: #1c2736;
 }
 .portfolio h3 {
-  font-size: 2rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 60px;
+  font-weight: 100;
   padding: 0.5rem;
+}
+.portfolio h4, .portfolio h5 {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  padding: 0.5rem;
+  font-family: lato;
+  font-size: 16px;
 }
 .portfolio h4 {
-  padding: 0.5rem;
-  font-family: lato;
-  font-size: 12px;
-  font-style: italic;
-  font-weight: 300;
+  font-weight: bold;
 }
 .portfolio h5 {
-  padding: 0.5rem;
-  font-family: lato;
-  font-size: 12px;
-  font-weight: 300;
+  font-weight: normal;
 }
 .portfolio__hero {
   position: relative;
@@ -260,67 +268,57 @@ h1 {
 }
 .portfolio__content {
   display: flex;
-  height: 100vh;
-  align-content: center;
+  flex-flow: row wrap;
+  min-height: 100vh;
+  align-items: flex-start;
+  padding: 15vh 5vw;
+  justify-content: center;
 }
 .portfolio__content .image {
-  width: 60%;
+  padding: 2rem;
+  width: 50%;
+  max-width: 35rem;
+  min-width: 400px;
+}
+@media screen and (max-width: 70rem) {
+  .portfolio__content .image {
+    width: 100%;
+  }
 }
 .portfolio__content .image img {
   display: flex;
   justify-content: center;
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
 }
 .portfolio__content .description {
-  width: 40%;
-  width: 40%;
-  align-self: center;
+  width: 50%;
+  max-width: 45rem;
+  padding: 2rem;
+}
+@media screen and (max-width: 70rem) {
+  .portfolio__content .description {
+    width: 100%;
+  }
 }
 .portfolio__content .description .categories {
   display: flex;
   flex-direction: row;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
 }
 .portfolio__content .description .title {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  border-bottom: 1px solid #1670A3;
   align-items: baseline;
 }
-.portfolio__content--left {
-  display: flex;
-}
-.portfolio__content--left .description {
-  padding-left: 120px;
-}
-.portfolio__content--left .description .title {
-  margin-right: 1rem;
-}
-.portfolio__content--left .description .categories {
-  justify-content: flex-start;
-}
-.portfolio__content--left .description p {
-  margin-right: 1rem;
-}
-.portfolio__content--right {
-  display: flex;
-}
-.portfolio__content--right .description {
-  padding-right: 120px;
-}
-.portfolio__content--right .description .title {
-  margin-left: 1rem;
-}
-.portfolio__content--right .description .categories {
-  margin-left: 1rem;
-}
-.portfolio__content--right .description p {
-  margin-left: 1rem;
+.portfolio__content .description p {
+  margin-top: 2rem;
 }
 .portfolio__button {
-  font-size: 1.4rem;
+  font-size: 22px;
   font-weight: 300;
   display: flex;
   width: fit-content;
