@@ -123,7 +123,7 @@ h1 {
   padding-left: 15vw;
   padding-right: 15vw;
   padding-top: 15vh;
-  background-color: #1c2736;
+  background-color: #141B24;
 }
 .footer a {
   font-size: 1em;
@@ -161,7 +161,8 @@ h1 {
   flex-direction: row;
   justify-content: flex-end;
   text-align: center;
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .about {
