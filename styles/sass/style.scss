@@ -39,21 +39,44 @@ nav{
     }
 }
 
-
+.nav__burger {
+    position: absolute;
+    right: 1rem;
+    display: none;
+    padding: 2px;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+  }
+  
+  .nav__burger div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  
+  .nav__burger div div {
+    width: 100%;
+    height: 2px;
+    background-color: white;
+  }
 
 
 .header{
+    display: flex;
     position: sticky;
     top: 0;
-    display: flex;
+    height: 4rem;
+
     justify-content: space-between;
     background-color: atoms.$darker-blue;
     
     box-shadow: 2px 2px 5px 1px rgba($color: #000000, $alpha: 0.2);
     align-items: center;
     text-align: center;
-    padding-left: 4rem;
-    padding-right: 4rem;
+
 
     z-index: 2;
 
@@ -61,6 +84,7 @@ nav{
     // box-shadow: 0px 10px 15px rgba($color: #000000, $alpha: 0.1);
 
     .signature{
+        padding-left: 1rem;
         color: atoms.$white;
     }
 
@@ -72,7 +96,7 @@ nav{
            
                 &:hover{
                     border-bottom: 4px solid white;
-                    padding-bottom: 14px;
+                    padding-bottom: 20px;
                 }
             }
 
@@ -84,6 +108,7 @@ h1{
     font-size: 1.5em;
     padding: 1em;
 }
+
 
 .footer{
     display: flex;
@@ -134,33 +159,72 @@ h1{
 
     #linkedin{
         background-color: atoms.$dark-blue;
-        color: atoms.$white;
+
+        &:hover{
+            background-color: atoms.$dark-blue-2;
+        }
     }
 
     #email{
         background-color: atoms.$dark-red;
+
+        &:hover{
+            background-color: atoms.$orange;
+        }
     }
  }
 
 #landing{
-    height: 100vh;
-    padding: 2vh 5vw;
-    position: relative;
-    width: 100%;
-    display: flex;
+    display: flex; 
     flex-direction: row;
     justify-content: flex-end;
+    align-items: center; 
     text-align: center;
-    background-size: contain;
-    background-repeat: no-repeat;
 
+    height: 100vh;
+    width: 100vw;
+    padding: 2vh 5vw;
+    position: relative;
+
+    // background-image: url("../../res/abstract.svg");
+    background-size: cover;
+
+    #profil{
+        width: 140px; 
+        object-fit: contain;  
+        display: block;  
+        border-radius: 100%; 
+        margin: 1rem;
+    }
+}
+
+.abstract{
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+
+    &__left{
+        left: 0;
+        width: 30%;
+        background-color: #FEB48B;
+    }
+
+    &__right{
+        right:0;
+        width: 70%;
+        background-color: #536E9F;
+    }
+}
+
+.landing__hero{
+    display: none;
 }
 
 .about{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2vh 4vw;
+    // padding: 2vh 4vw;
 
     color: atoms.$white;
 
@@ -180,21 +244,23 @@ h1{
    }
 
     p{
-        ma
         color: atoms.$white; 
         max-width: 22em;
     }
 
     &__button{
-        color: white;
+
+
+
         padding: 0.5rem 1rem;
         margin: 1rem;
         border: 1px solid white;
-        box-shadow: 2px 2px 5px 0px rgba($color: #000000, $alpha: 0.2);
         // background-color: atoms.$dark-blue-2;
+        
+
 
         &:hover{
-            background-color: atoms.$darker-blue;
+            background-color: atoms.$dark-blue-2;
         }
     }
 
@@ -212,7 +278,6 @@ h1{
     font-size: 1.5rem;
     height: auto;
     @extend %handwriting;
-    padding: 0.5rem;
     color: white;
 }
 
@@ -352,27 +417,23 @@ h1{
     }
 
     &__button{
-        font-size: 22px;
-        font-weight: 300;
         display: flex;
+
+        a{
+            font-size: 22px;
+            font-weight: 300;
+            padding-left: 1.2em; 
+            padding-right: 1.2em;
+            padding-top: 0.4em;
+            padding-bottom: 0.4em;
+        }
 
         width: fit-content;
         align-self: center;
         margin: auto;
         margin-top: 2rem;
-        // bottom: 2rem;
 
-
-        transition-duration: 0.4s;
-        padding-left: 1.2em; 
-        padding-right: 1.2em;
-        padding-top: 0.4em;
-        padding-bottom: 0.4em;
-        // border-radius: 4px;
         background-color: atoms.$dark-red;
-        z-index: 1;
-        color: white;
-    
 
         .close{
             display: none;
@@ -445,4 +506,67 @@ button:hover{
     border: none;
     width: 50%;
     height: 700px;
+}
+
+@media screen and (max-width: 1439px){
+    #landing{
+        flex-direction: column;
+        background-image: none;
+        justify-content: flex-end;
+    }
+
+    .landing__hero{
+        display: flex;
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        background-image: url("../../res/abstract.svg");
+        height: 30%;
+        width: 100%;
+    }
+
+    #profil{
+        width: 300px;
+        padding-bottom: 2rem;
+    }
+
+    .about{
+        p{
+            max-width: 35em;
+            padding-bottom: 2rem;
+        }
+        padding-bottom: 4rem;
+    }
+
+    .portfolio__hero{
+        h2{
+            font-size: 60px;
+        }
+        
+    }
+
+    .portfolio__content{
+        h3{
+           font-size: 48px;
+        }
+    }
+
+    .nav__burger{
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 399px){
+
+    .portfolio__button{
+        // width: 100%;
+    }
+
+    .button{
+        width: 100%;
+    }
+
+    .header__links{
+        display: none;
+    }
 }

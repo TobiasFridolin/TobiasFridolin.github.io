@@ -36,15 +36,32 @@
             </ul>
         </nav>
 
+        <div class="nav__burger">
+            <div>
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </div>
+
     </header>
   
-    <section id="landing" class="animation-fade-in" style="display: flex; align-items: center; background-image:url(res/abstract.svg)">   
+    <section id="landing" class="animation-fade-in">   
+
+       <div class="abstract abstract__left"></div>
+       <div class="abstract abstract__right"></div> 
+       <img src="res/abstract.svg" width="60%;" height ="auto;" style="position: absolute; left:0; top: 50%; transform: translateY(-50%); z-index: -1;"> </img>    
+
+            
+        <div class="landing__hero">
+
+        </div>
             
         <!-- <img src="res/abstract.svg" width="100%" alt=""> -->
       
         <div class="about">
             
-            <img width ="140px;" style="object-fit: contain;  display: block; clear: right; float: right; border-radius: 100%; margin: 1rem;" src="res/Profil.JPG" alt="Profil billede">
+            <img id="profil" src="res/Profil.JPG" alt="Profil billede">
             
             <div style="justify-content: flex-start;">
 
@@ -64,8 +81,12 @@
                     Interaktionsdesign (IxD) handler om at designe løsninger, som hjælper brugeren med at opnå deres mål, på en mere effektiv og tilfredstillende måde.
                 </p>
                 <div style="display: flex; justify-content: center;">
-                    <a style="font-size: 18px;" class="about__button" href="">Portfolio</a>
-                    <a style="font-size: 18px;"  class="about__button" href="">Kontakt</a> 
+                    <div  class="button about__button">
+                        <a style="font-size: 18px;" href="#naturbasen">Portfolio</a>
+                    </div>
+                    <div  class="button about__button">
+                        <a style="font-size: 18px;"  href="mailto:tobiasfridolin@gmail.com?subject=Hej, jeg så din portfolio" target="_blank">Kontakt</a> 
+                    </div>
                 </div>
                 </div>
             </div>
@@ -113,9 +134,11 @@
                     </p>
                 </div>
 
-                <a class="portfolio__button" href="https://www.figma.com/proto/92unqdwpdNwMa2DW1wGlVH/Naturbasen?node-id=242%3A1029&scaling=min-zoom">
-                    Se prototypen
-                </a>   
+                <div class="button portfolio__button">
+                    <a class="" href="https://www.figma.com/proto/92unqdwpdNwMa2DW1wGlVH/Naturbasen?node-id=242%3A1029&scaling=min-zoom">
+                        Se prototypen
+                    </a>   
+                </div>
                 
             </div>
             
@@ -161,9 +184,11 @@
                     Create Jam forening som afholder begivenheder, hvor personer af forskellige kreative baggrunde mødes for at lave spil i løbet af en weekend. En gruppe software studerende udviklede en voterings app for forenningen, hvor jeg havde rollen som product owner, da jeg er frivillig i foreningen. Vi mødtes ugentligt for at tale fremskridt og ændringer, hvor jeg havde ansvaret for at prioritere de features som gav størst værdi brugerne. Jeg designede en visuel guideline for appen i Figma, som udviklerne fulgte.
                 </p>
     
-                <a class="portfolio__button" href="https://www.figma.com/proto/Hu4L1TvKCw5Sw3UdDAZ07x/CJ-App?node-id=28%3A95&scaling=min-zoom">
-                    Se prototypen
-                </a>
+                <div class="button portfolio__button">
+                    <a  href="https://www.figma.com/proto/Hu4L1TvKCw5Sw3UdDAZ07x/CJ-App?node-id=28%3A95&scaling=min-zoom">
+                        Se prototypen
+                    </a>
+                </div>
 
             </div>
 
@@ -195,9 +220,11 @@
                     I forbindelse med min tidsbegrænsede stilling som projektkonsulent i Gunnar Nielsen A/S, udarbejde jeg sammen med mine kollegaer en ny identitet til virksomheden. Baseret på vores fund udabejdede jeg en mockup i Figma, som forslag til et redesign af deres eksisterende hjemmeside. Mit fokus lå på kommunikation af den nye identitet. Derudover lavede jeg ændringer til navigationen af ydelser, baseret på en opdateret liste, og cardsorting med projektlederne i virksomheden. 
                 </p>
                 
-                <a class="portfolio__button" href="https://www.figma.com/proto/ckXtrxCLMjtLlq6MovAnBl/GN-hjemmeside?node-id=174%3A421&viewport=160%2C293%2C0.06609665602445602&scaling=min-zoom">
+                <div class="button portfolio__button">
+                    <a  href="https://www.figma.com/proto/ckXtrxCLMjtLlq6MovAnBl/GN-hjemmeside?node-id=174%3A421&viewport=160%2C293%2C0.06609665602445602&scaling=min-zoom">
                         Se prototypen
-                </a>
+                    </a>
+                </div>
 
             </div>
 
@@ -238,9 +265,11 @@
                     Jeg står for hjemmesiden til Create Jam foreningen, som jeg er frivillig i. Jeg startede projektet som en måde, hvorpå jeg kunne blive bedre til webudvikling. Udover html og css har jeg brugt Sass og jQuery.
                 </p>
 
-                <a  class="portfolio__button" href="vip/create-jam/CJ.html">
-                    Se hjemmesiden
-                </a>
+                <div class="button portfolio__button">
+                    <a href="vip/create-jam/CJ.html">
+                        Se hjemmesiden
+                    </a>
+                </div>
             </div>
 
             <!-- <iframe style="width:50%; height: 100%" src="https://tobiasfridolin.github.io/create-jam/CJ.html" frameborder="0"></iframe> -->
@@ -250,7 +279,7 @@
 
     <footer class="footer" style="position: relative;">
             
-        <img src="res/coffee.svg" height="100%" alt="" style="position: absolute; left: 60px; top: 50%; transform: translateY(-50%); padding: 4rem;">
+        <!-- <img src="res/coffee.svg" height="100%" alt="" style="position: absolute; left: 60px; top: 50%; transform: translateY(-50%); padding: 4rem;"> -->
 
             <div style="display: flex; justify-content: space-around; width: 100%;">
 
@@ -264,12 +293,18 @@
                 </div>
 
                 <div style="display: flex; align-items: center; padding: 5vh;">
-                    <a class="footer__button" id="linkedin" href="">
-                        Forbind på LinkedIn
-                    </a>
-                    <a class="footer__button" id="email" href="">
-                        Email
-                    </a>
+
+                    <div id="linkedin" class="button footer__button">
+                        <a  href="https://www.linkedin.com/in/tobias-fridolin/" target="_blank">
+                            Forbind på LinkedIn
+                        </a>
+                    </div>
+
+                    <div id="email" class="button footer__button" >
+                        <a  href="mailto:tobiasfridolin@gmail.com?subject=Hej, jeg så din portfolio" target="_blank">
+                            Email
+                        </a>
+                    </div>
                 </div>
 
             </div>
