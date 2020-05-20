@@ -17,6 +17,15 @@ function scroll(){
     var naturbasen = $("#naturbasen");
     var headerHeight = $(".header").innerHeight();
 
+    console.log($(document).scrollTop())
+
+    if($(document).scrollTop() != 0){
+        $(".header").addClass("header--scrolling");
+    }else{
+        $(".header").removeClass("header--scrolling");
+
+    }
+
 
     // if(naturbasen.position().top - headerHeight < $(document).scrollTop()){
     //     // document.getElementById("signature").style.stroke= "white";
@@ -31,6 +40,11 @@ function scroll(){
 
 function app(jQuery){
     $(document).scroll(scroll);
+    
+    $('.nav__burger').on("click", function(){
+        $('.header').css("height", "100%")
+        $('.nav').toggle('nav--open');
+    });
 
     var controller = new ScrollMagic.Controller();
 
@@ -41,9 +55,8 @@ function app(jQuery){
     .addTo(controller);
 }
 
-
-
-
-
-
 $(app);
+
+
+// Header
+

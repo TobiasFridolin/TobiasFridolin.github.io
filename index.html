@@ -18,7 +18,7 @@
     <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js" integrity="sha256-3arngJBQR3FTyeRtL3muAGFaGcL8iHsubYOqq48mBLw=" crossorigin="anonymous"></script>
    
-    <script src="../js/app.js"></script>
+    <script src="./js/app.js"></script>
     <title>Portfolio</title>
 </head>
 <body>
@@ -28,72 +28,80 @@
             Fridolin
         </div>
         
-        <nav>
-            <ul class="header__links">
-                <li> <a href="#naturbasen"> PORTFOLIO </a> </li>
-                <li> <a href="./cv.html"> CV </a></li>
-                <li> <a href=""> KONTAKT </a> </li>
-            </ul>
-        </nav>
+        <nav class="nav">
 
-        <div class="nav__burger">
-            <div>
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
+            <ul class="nav__links">
+                <li> <a href="#naturbasen"> PORTFOLIO </a> </li>
+                <li> <a href=""> KONTAKT </a> </li>
+                <li> <a href="./cv.html"> CV </a></li>
+            </ul>
+
+            <ul class="nav--open">
+                <li><a href="">PORTFOLIO</a></li>                
+                <li><a href="#naturbasen"> Naturbasen</a></li>
+                <li><a href="#cj-app">Create Jam app</a></li>
+                <li><a href="#gn">Gunnar Nielsen A/S</a></li>
+                <li><a href="cj-hjemmeside">Create Jam hjemmeside</a></li>
+                <div style="width: 50%; position: relative; left: 25%; height: 1px; background-color: white; margin: 0.5rem;"></div>
+                <li><a href="CV">CV</a></li>
+                <div style="width: 50%; position: relative; left: 25%; height: 1px; background-color: white; margin: 0.5rem;"></div>
+                <li><a href="mailto:tobiasfridolin@gmail.com">Tobiasfridolin@gmail.com</a></li>
+            </ul>
+
+            <div class="nav__burger">
+                <div>
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
             </div>
-        </div>
+
+        </nav>
 
     </header>
   
     <section id="landing" class="animation-fade-in">   
+        
+        <div class="landing__hero" style="background-image: url('res/skitser.png'); background-size: cover; background-position: center; background-repeat: no-repeat; opacity: 0.4;"></div>
 
        <div class="abstract abstract__left"></div>
-       <div class="abstract abstract__right"></div> 
-       <img src="res/abstract.svg" width="60%;" height ="auto;" style="position: absolute; left:0; top: 50%; transform: translateY(-50%); z-index: -1;"> </img>    
-
-            
-        <div class="landing__hero">
-
-        </div>
-            
-        <!-- <img src="res/abstract.svg" width="100%" alt=""> -->
-      
-        <div class="about">
-            
-            <img id="profil" src="res/Profil.JPG" alt="Profil billede">
-            
-            <div style="justify-content: flex-start;">
-
-                <div style="margin-bottom: 1rem;">
-                    <h1 style="text-align: center;">
-                        Tobias Fridolin
-                    </h1>
-                    <h2>Cand.Scient Interaktionsdesign</h2>
-                </div>
-    
-                <p>
-                    Jeg er en interaktionsdesigner på 25 år, som er på udkig efter nye udfordringer. Tag et kig på mine projekter, og lær mere omkring hvordan jeg kan hjælpe jer.
-    
-                </p>
-
-                <p>
-                    Interaktionsdesign (IxD) handler om at designe løsninger, som hjælper brugeren med at opnå deres mål, på en mere effektiv og tilfredstillende måde.
-                </p>
-                <div style="display: flex; justify-content: center;">
-                    <div  class="button about__button">
-                        <a style="font-size: 18px;" href="#naturbasen">Portfolio</a>
+       <div class="abstract abstract__right">
+            <div class="about">    
+                <img id="profil" src="res/Profil.JPG" alt="Profil billede">
+                
+                <div style="justify-content: flex-start;">
+                    <div style="margin-bottom: 1rem;">
+                        <h1 style="text-align: center;">
+                            Tobias Fridolin
+                        </h1>
+                        <h2>Cand.Scient Interaktionsdesign</h2>
                     </div>
-                    <div  class="button about__button">
-                        <a style="font-size: 18px;"  href="mailto:tobiasfridolin@gmail.com?subject=Hej, jeg så din portfolio" target="_blank">Kontakt</a> 
+
+                    <p>
+                        Jeg er en interaktionsdesigner på 25 år, som er på udkig efter nye udfordringer. Tag et kig på mine projekter, og lær mere omkring hvordan jeg kan hjælpe jer.
+
+                    </p>
+
+                    <p>
+                        Interaktionsdesign (IxD) handler om at designe løsninger, som hjælper brugeren med at opnå deres mål, på en mere effektiv og tilfredstillende måde.
+                    </p>
+                    <div style="display: flex; justify-content: center;">
+                        <div  class="button about__button">
+                            <a style="font-size: 18px;"  href="mailto:tobiasfridolin@gmail.com?subject=Hej, jeg så din portfolio" target="_blank">Kontakt</a> 
+                        </div>
+                        <div  class="button about__button">
+                            <a style="font-size: 18px;" href="./cv.html">CV &DownArrowBar;</a>
+                        </div>
+                    </div>
                     </div>
                 </div>
-                </div>
-            </div>
-
+        </div>
+       <img class="abstract" src="res/abstract.svg" width="60%;" height ="auto;" style="position: absolute; left:0; top: 50%; transform: translateY(-50%); z-index: 0;"> </img>    
 
             
-        </div>
+            
+        
+  
 
     </section>
 
@@ -281,9 +289,7 @@
             
         <!-- <img src="res/coffee.svg" height="100%" alt="" style="position: absolute; left: 60px; top: 50%; transform: translateY(-50%); padding: 4rem;"> -->
 
-            <div style="display: flex; justify-content: space-around; width: 100%;">
-
-                
+            <!-- <div style="display: flex; justify-content: space-around; width: 100%;"> -->
                 <div style="display: flex; flex-direction: column;">
                     <h3>Kontakt</h2>
 
@@ -306,8 +312,7 @@
                         </a>
                     </div>
                 </div>
-
-            </div>
+            <!-- </div> -->
         
     </footer>
     

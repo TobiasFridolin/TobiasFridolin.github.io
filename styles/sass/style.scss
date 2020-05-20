@@ -22,58 +22,102 @@ body{
     background-color: atoms.$dark-blue-2;
 }
 
-nav{
+
+.nav{
     display: flex;
     align-items: center;
     justify-content: center;
 
+
     ul{
+        list-style: none;
+    }
+
+    &__links{
         height: 100%;
         display: flex;
-        list-style: none;
-
+    
         li{
             padding: 0 20px;
             display: inline;
+            
+            a{
+                font-weight: bold;
+                letter-spacing: 2px;
+                color: atoms.$white;
+                // color: atoms.$black;
+            
+                &:hover{
+                    color: atoms.$orange;
+                }
+            }
+    
         }
+
+        @media screen and (max-width: 1439px){
+            display: none;;
+         }
+    }
+
+    &--open{
+        position: absolute;
+        width: 100%;
+        top: 4rem;
+        height: 96vh;
+        background-color: atoms.$darker-blue;
+        flex-direction: column;
+        justify-content: center;
+        left: 0;
+    
+        li{
+            padding: 2rem;
+            text-align: right;    
+        }
+        
     }
 }
 
 .nav__burger {
-    position: absolute;
-    right: 1rem;
-    display: none;
-    padding: 2px;
+    display: flex;
+    margin: 2em;
     width: 24px;
     height: 24px;
     cursor: pointer;
-  }
-  
-  .nav__burger div {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-  }
-  
-  .nav__burger div div {
-    width: 100%;
-    height: 2px;
-    background-color: white;
-  }
 
+    &:hover{
+        div{
+            div{
+                background-color: atoms.$orange;
+            }
+        }
+    }
 
+    div{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        div{
+            width: 100%;
+            height: 2px;
+            background-color: white;
+        }
+    }
+}
+  
 .header{
     display: flex;
-    position: sticky;
+    position: fixed;
+    width: 100%;
     top: 0;
     height: 4rem;
+    transition-duration: 0.4s;
 
     justify-content: space-between;
-    background-color: atoms.$darker-blue;
+
     
-    box-shadow: 2px 2px 5px 1px rgba($color: #000000, $alpha: 0.2);
     align-items: center;
     text-align: center;
 
@@ -88,21 +132,21 @@ nav{
         color: atoms.$white;
     }
 
-    &__links{
-        li{
-            a{
-                color: atoms.$white;
-                // color: atoms.$black;
-           
-                &:hover{
-                    border-bottom: 4px solid white;
-                    padding-bottom: 20px;
-                }
-            }
+    &--scrolling{
+        background-color: atoms.$darker-blue;
+        box-shadow: 2px 2px 5px 1px rgba($color: #000000, $alpha: 0.2);
 
+        a{
+            &:hover{
+                border-bottom: 4px solid atoms.$orange;
+                padding-bottom: 20px;
+            }
         }
     }
+
 }
+
+
 
 h1{
     font-size: 1.5em;
@@ -175,56 +219,92 @@ h1{
  }
 
 #landing{
-    display: flex; 
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center; 
-    text-align: center;
+
 
     height: 100vh;
     width: 100vw;
-    padding: 2vh 5vw;
     position: relative;
 
-    // background-image: url("../../res/abstract.svg");
     background-size: cover;
 
     #profil{
         width: 140px; 
-        object-fit: contain;  
+        height: 140px;
+        object-fit: cover;
         display: block;  
         border-radius: 100%; 
         margin: 1rem;
+
+        @media screen and (max-width: 1439px){
+            position: absolute;
+            width: 100px; 
+            height: 100px;
+            top: 3rem;
+            left: 0.5rem;
+         }
+
+    }
+}
+
+
+img.abstract{
+    @media screen and (max-width: 1439px){
+       display: none;;
     }
 }
 
 .abstract{
+    display: flex;
+    flex-flow: row nowrap;
     height: 100%;
-    position: absolute;
-    z-index: -1;
+    margin: 0;
 
     &__left{
-        left: 0;
         width: 30%;
         background-color: #FEB48B;
+        float: left;
+
+        @media screen and (max-width: 1439px){
+            height: 0%;
+        }
     }
 
     &__right{
-        right:0;
+        justify-content: center;
+        align-items: center;
         width: 70%;
         background-color: #536E9F;
+
+        @media screen and (max-width: 1439px){
+            width: 100%;
+            height: 70%;
+            align-items: flex-start;
+        }
     }
 }
 
 .landing__hero{
     display: none;
+
+    @media screen and (max-width: 1439px){
+
+        display: flex;
+        align-self: flex-start;
+        overflow: hidden;
+        z-index: -1;
+        height: 30%;
+        width: 100vw;
+
+    }
 }
 
 .about{
     display: flex;
     flex-direction: column;
     align-items: center;
-    // padding: 2vh 4vw;
+    z-index: 1;
+
+    padding: 4rem 2rem; 
 
     color: atoms.$white;
 
@@ -245,7 +325,8 @@ h1{
 
     p{
         color: atoms.$white; 
-        max-width: 22em;
+        max-width: 28em;
+        margin-bottom: 1em;
     }
 
     &__button{
@@ -363,8 +444,6 @@ h1{
             padding: 2rem;
             width: 50%;
             max-width: 35rem;
-
-            min-width: 400px;
 
             @media screen and (max-width: 70rem){
                 width: 100%;
@@ -510,32 +589,7 @@ button:hover{
 
 @media screen and (max-width: 1439px){
     #landing{
-        flex-direction: column;
         background-image: none;
-        justify-content: flex-end;
-    }
-
-    .landing__hero{
-        display: flex;
-        position: absolute;
-        z-index: -1;
-        top: 0;
-        background-image: url("../../res/abstract.svg");
-        height: 30%;
-        width: 100%;
-    }
-
-    #profil{
-        width: 300px;
-        padding-bottom: 2rem;
-    }
-
-    .about{
-        p{
-            max-width: 35em;
-            padding-bottom: 2rem;
-        }
-        padding-bottom: 4rem;
     }
 
     .portfolio__hero{
@@ -554,19 +608,16 @@ button:hover{
     .nav__burger{
         display: flex;
     }
+
 }
 
 @media screen and (max-width: 399px){
-
-    .portfolio__button{
-        // width: 100%;
-    }
 
     .button{
         width: 100%;
     }
 
-    .header__links{
+    .nav__links{
         display: none;
     }
 }
