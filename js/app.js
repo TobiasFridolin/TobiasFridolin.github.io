@@ -42,7 +42,7 @@ function app(jQuery){
     $(document).scroll(scroll);
     
     $('.nav__burger').on("click", function(){
-        $('.header').css("height", "100%")
+        // $('.header').css("height", "100%")
         $('.nav').toggle('nav--open');
     });
 
