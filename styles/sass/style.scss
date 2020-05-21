@@ -27,10 +27,19 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-right: 1em;
 
 
     ul{
         list-style: none;
+    }
+
+    li{
+        a{
+            &:hover{
+                color: atoms.$orange;
+            }
+        }
     }
 
     &__links{
@@ -48,62 +57,77 @@ body{
                 // color: atoms.$black;
             
                 &:hover{
-                    color: atoms.$orange;
+                    padding-bottom: 20px;
                 }
             }
     
         }
 
         @media screen and (max-width: 1439px){
-            display: none;;
-         }
+            display: none;
+        }
     }
 
     &--open{
+        display: none;
         position: absolute;
+        top: 0;
         width: 100%;
-        top: 4rem;
-        height: 96vh;
+        min-height: 100vh;
+        padding: 4rem;
+
         background-color: atoms.$darker-blue;
         flex-direction: column;
         justify-content: center;
         left: 0;
-    
+
+        h1{
+            text-transform: uppercase;
+            padding-top: 1em;
+        }
+
         li{
-            padding: 2rem;
+            padding-top: 2rem;
+            font-size: 22px;
+            letter-spacing: 2px;
             text-align: right;    
+        }
+
+        a{
+            color: atoms.$white;
         }
         
     }
+
+    @media screen and (max-width: 1439px){
+        padding: 0;
+     }
 }
 
 .nav__burger {
-    display: flex;
+    display: none;
     margin: 2em;
     width: 24px;
     height: 24px;
     cursor: pointer;
+    z-index: 2;
 
-    &:hover{
-        div{
-            div{
-                background-color: atoms.$orange;
-            }
+    &--open{
+        stroke: atoms.$white;
+
+        &:hover{
+            stroke: atoms.$orange;
         }
+
     }
 
-    div{
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
+    &--collabsed{
+        fill: atoms.$white;
 
-        div{
-            width: 100%;
-            height: 2px;
-            background-color: white;
+        &:hover{
+            fill: atoms.$orange;
         }
+
     }
 }
   
@@ -128,19 +152,16 @@ body{
     // box-shadow: 0px 10px 15px rgba($color: #000000, $alpha: 0.1);
 
     .signature{
-        padding-left: 1rem;
+        padding-left: 2rem;
         color: atoms.$white;
     }
 
     &--scrolling{
         background-color: atoms.$darker-blue;
         box-shadow: 2px 2px 5px 1px rgba($color: #000000, $alpha: 0.2);
-
-        a{
-            &:hover{
-                border-bottom: 4px solid atoms.$orange;
-                padding-bottom: 20px;
-            }
+        
+        a:hover{
+            border-bottom: 4px solid atoms.$orange;
         }
     }
 
@@ -150,7 +171,6 @@ body{
 
 h1{
     font-size: 1.5em;
-    padding: 1em;
 }
 
 
@@ -185,7 +205,7 @@ h1{
 
     p{
         color: atoms.$white;
-        max-width: 20em;
+        max-width: 45em;
     }
 
     &__button{

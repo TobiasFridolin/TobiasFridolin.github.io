@@ -43,16 +43,23 @@ function app(jQuery){
     
     $('.nav__burger').on("click", function(){
         // $('.header').css("height", "100%")
-        $('.nav').toggle('nav--open');
+        // animate burger closed
+
+        // change header style (background color, height to fit new content)
+        $('.nav--open').toggle();
+
+        // Switch burger menu icons
+        $('.nav__burger--open').toggle();
+        $('.nav__burger--collabsed').toggle();
+
     });
 
-    var controller = new ScrollMagic.Controller();
-
-    var scene = new ScrollMagic.Scene({
-        triggerElement: "#naturbasen"
-    })
-    .setTween("#animate", 0.5, {opacity: "0"})
-    .addTo(controller);
+    // close menu when selecting a link
+    $('.nav--open a').on("click", function(){
+        $('.nav--open').toggle();
+        $('.nav__burger--open').toggle();
+        $('.nav__burger--collabsed').toggle();
+    });
 }
 
 $(app);

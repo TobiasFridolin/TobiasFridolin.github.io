@@ -24,9 +24,7 @@
 <body>
     <header class="header animate-top" style="align-self: center;">
         
-        <div class="signature">
-            Fridolin
-        </div>
+        <div class="signature">Fridolin</div>
         
         <nav class="nav">
 
@@ -37,24 +35,28 @@
             </ul>
 
             <ul class="nav--open">
-                <li><a href="">PORTFOLIO</a></li>                
+                <div class="signature" style="position: absolute; top: 1rem; left: 0rem;">Fridolin</div>
+                <li><a href=""><h1>Portfolio</h1></a></li>
                 <li><a href="#naturbasen"> Naturbasen</a></li>
                 <li><a href="#cj-app">Create Jam app</a></li>
                 <li><a href="#gn">Gunnar Nielsen A/S</a></li>
-                <li><a href="cj-hjemmeside">Create Jam hjemmeside</a></li>
-                <div style="width: 50%; position: relative; left: 25%; height: 1px; background-color: white; margin: 0.5rem;"></div>
-                <li><a href="CV">CV</a></li>
-                <div style="width: 50%; position: relative; left: 25%; height: 1px; background-color: white; margin: 0.5rem;"></div>
-                <li><a href="mailto:tobiasfridolin@gmail.com">Tobiasfridolin@gmail.com</a></li>
+                <li><a href="#cj-hjemmeside">Create Jam hjemmeside</a></li> 
+                <li><a href="mailto:tobiasfridolin@gmail.com"><h1>Kontakt</h1></a></li>
+                <li><a href="cv.html"><h1>CV</h1></a></li>
             </ul>
 
-            <div class="nav__burger">
-                <div>
-                    <div class="line1"></div>
-                    <div class="line2"></div>
-                    <div class="line3"></div>
-                </div>
-            </div>
+            <div class="icon nav__burger ">
+                <svg class="nav__burger--collabsed"  width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect y="3" width="24" height="2" />
+                    <rect y="19" width="24" height="2" />
+                    <rect y="11" width="24" height="2" />
+                </svg>
+                                   
+                <svg class="nav__burger--open" style="display: none;" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 3L21 21" stroke-width="2"/>
+                    <path d="M21 3L3 21" stroke-width="2"/>
+                </svg>                
+            </div>  
 
         </nav>
 
@@ -64,8 +66,8 @@
         
         <div class="landing__hero" style="background-image: url('res/skitser.png'); background-size: cover; background-position: center; background-repeat: no-repeat; opacity: 0.4;"></div>
 
-       <div class="abstract abstract__left"></div>
-       <div class="abstract abstract__right">
+        <div class="abstract abstract__left"></div>
+        <div class="abstract abstract__right">
             <div class="about">    
                 <img id="profil" src="res/Profil.JPG" alt="Profil billede">
                 
@@ -105,7 +107,7 @@
 
     </section>
 
-    <section class="portfolio">
+    <section id="naturbasen" class="portfolio">
 
         <!-- <div style="width: 1px; background-color: white; height: 100vh; position: fixed; top: 0; left: 40%; content: '';"> </div> -->
        
@@ -120,7 +122,7 @@
 
 
 
-        <div id="naturbasen" class="portfolio__content portfolio__content--left">
+        <div class="portfolio__content portfolio__content--left">
 
             <div class="description col">
 
@@ -159,7 +161,7 @@
 
     </section>
 
-    <section class="portfolio">
+    <section id="cj-app" class="portfolio">
 
         <!-- <div style="width: 1px; background-color: white; height: 100vh; position: fixed; top: 0; left: 60%; content: '';"> </div> -->
 
@@ -168,7 +170,7 @@
             <div class="portfolio__background" style="background-image: url('../res/cj-app.png');"></div>
         </div>
 
-        <div id="cj-app" class="portfolio__content portfolio__content--right">
+        <div class="portfolio__content portfolio__content--right">
             <!-- <iframe style="border: none;" width="450" height="950" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FHu4L1TvKCw5Sw3UdDAZ07x%2FCJ-App%3Fnode-id%3D28%253A95%26scaling%3Dmin-zoom" allowfullscreen></iframe> -->
            
             <div class="image">
@@ -189,7 +191,7 @@
                 </div>
 
                 <p>
-                    Create Jam forening som afholder begivenheder, hvor personer af forskellige kreative baggrunde mødes for at lave spil i løbet af en weekend. En gruppe software studerende udviklede en voterings app for forenningen, hvor jeg havde rollen som product owner, da jeg er frivillig i foreningen. Vi mødtes ugentligt for at tale fremskridt og ændringer, hvor jeg havde ansvaret for at prioritere de features som gav størst værdi brugerne. Jeg designede en visuel guideline for appen i Figma, som udviklerne fulgte.
+                    Create Jam forening som afholder begivenheder, hvor personer af forskellige kreative baggrunde mødes for at lave spil i løbet af en weekend. En gruppe software studerende udviklede en voterings app for foreningen, hvor jeg havde rollen som product owner, da jeg er frivillig i foreningen. Vi mødtes ugentligt for at tale fremskridt og ændringer, hvor jeg havde ansvaret for at prioritere de features som gav størst værdi for brugerne. Jeg designede en visuel guideline for appen i Figma, som udviklerne fulgte.
                 </p>
     
                 <div class="button portfolio__button">
@@ -203,13 +205,13 @@
         </div>
     </section>
 
-    <section class="portfolio">
+    <section id="gn" class="portfolio">
         <div class="portfolio__hero" >
             <h2>Gunnar Nielsen A/S</h2>
             <div class="portfolio__background" style="background-image: url('../res/gn.png');"></div>
         </div>
 
-        <div id="gn" class="portfolio__content portfolio__content--left">
+        <div class="portfolio__content portfolio__content--left">
 
             <div class="description">
 
@@ -244,13 +246,13 @@
         </div>
     </section>
 
-    <section class="portfolio">
+    <section id="cj-hjemmeside" class="portfolio">
         <div class="portfolio__hero">
             <h2>Create Jam</h2>
             <div class="portfolio__background" style="background-image: url('../res/cj-hjemmeside.png');"> </div>
         </div>
 
-        <div id="cj-hjemmeside" class="portfolio__content portfolio__content--right">
+        <div class="portfolio__content portfolio__content--right">
          
             <div class="image">
                 <img src="../res/moneyshot-alt.jpg" alt="">
