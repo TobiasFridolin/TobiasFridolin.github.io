@@ -21,21 +21,15 @@ function scroll(){
 
     if($(document).scrollTop() != 0){
         $(".header").addClass("header--scrolling");
-    }else{
-        $(".header").removeClass("header--scrolling");
-
     }
 
+    if($(document).scrollTop() == 0 && $('.portfolio-subnav').css("display") == "none" && $('.nav--open').css("display") == "none"){
+        $(".header").removeClass("header--scrolling");
+    }
 
-    // if(naturbasen.position().top - headerHeight < $(document).scrollTop()){
-    //     // document.getElementById("signature").style.stroke= "white";
-    //     $(".header__links li a").css("color", "white");
-    //     $(".signature").css("color", "white");
-    // }
-    // else{
-    //     $(".header__links li a").css("color", black);
-    //     $(".signature").css("color", black);
-    // }
+    // if h1 is halfway on y, start animating from 0 opacity to 1 when top
+
+    
 }
 
 function app(jQuery){
@@ -60,6 +54,27 @@ function app(jQuery){
         $('.nav__burger--open').toggle();
         $('.nav__burger--collabsed').toggle();
     });
+
+    $('#portfolio-navlink').on("click", function(){
+
+        $('.portfolio-subnav').toggle();
+
+        if($('.portfolio-subnav').css("display") == "block"){
+            $(".header").addClass("header--scrolling");
+        }else if($(document).scrollTop() == 0){
+            $(".header").removeClass("header--scrolling");
+
+        }
+    });
+
+    $('.portfolio-subnav a').on("click", function(){
+        $('.portfolio-subnav').toggle();
+    });
+
+    $('.signature a').on("click", function(){
+        $('.portfolio-subnav').css("display", "none");
+    });
+
 }
 
 $(app);

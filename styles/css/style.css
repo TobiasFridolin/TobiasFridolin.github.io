@@ -1,4 +1,4 @@
-.signature {
+.header .signature a {
   font-family: "Sacramento", cursive;
 }
 
@@ -56,6 +56,7 @@ button:hover {
 html {
   overflow-x: hidden;
   overflow-y: auto;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -100,13 +101,13 @@ body {
   display: none;
   position: absolute;
   top: 0;
+  left: 0;
   width: 100%;
   min-height: 100vh;
   padding: 4rem;
-  background-color: #1c2736;
+  background-color: rgba(28, 39, 54, 0.8);
   flex-direction: column;
   justify-content: center;
-  left: 0;
 }
 .nav--open h1 {
   text-transform: uppercase;
@@ -148,6 +149,28 @@ body {
   fill: #FEB48B;
 }
 
+.portfolio-subnav {
+  display: none;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 4rem;
+  z-index: 0;
+  justify-content: center;
+  background-color: #1c2736;
+  opacity: 0.8;
+}
+.portfolio-subnav li {
+  list-style: none;
+  padding: 2em;
+  font-size: 22px;
+  letter-spacing: 2px;
+}
+.portfolio-subnav a {
+  color: #f1f1f1;
+}
+
 .header {
   display: flex;
   position: fixed;
@@ -161,8 +184,14 @@ body {
   z-index: 2;
 }
 .header .signature {
+  font-size: 1.5rem;
   padding-left: 2rem;
-  color: #f1f1f1;
+}
+.header .signature a {
+  color: white;
+}
+.header .signature a:hover {
+  border: none;
 }
 .header--scrolling {
   background-color: #1c2736;
@@ -333,12 +362,6 @@ h1 {
   stroke-width: 15;
 }
 
-.signature {
-  font-size: 1.5rem;
-  height: auto;
-  color: white;
-}
-
 .portfolio {
   position: relative;
   background-color: #1c2736;
@@ -382,7 +405,7 @@ h1 {
 .portfolio__background {
   height: 100%;
   opacity: 0.2;
-  background-size: cover;
+  background-size: contain;
   background-attachment: fixed;
 }
 .portfolio__bar {
