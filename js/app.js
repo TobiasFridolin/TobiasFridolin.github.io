@@ -75,6 +75,10 @@ function app(jQuery){
         $('.portfolio-subnav').css("display", "none");
     });
 
+    $('.close').on("click", function(){
+        $('.nav--open').toggle();
+    });
+
 }
 
 $(app);
