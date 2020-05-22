@@ -488,7 +488,7 @@ img.abstract{
         flex-flow: row wrap;
 
         min-height: 100vh;
-        align-items: flex-start;
+        align-items: center;
 
         padding: 15vh 5vw;
 
@@ -497,6 +497,7 @@ img.abstract{
         .image{
             padding: 2rem;
             width: 50%;
+            height: auto;
             max-width: 40rem;
 
             @media screen and (max-width: 70rem){
