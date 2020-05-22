@@ -17,8 +17,6 @@ function scroll(){
     var naturbasen = $("#naturbasen");
     var headerHeight = $(".header").innerHeight();
 
-    console.log($(document).scrollTop())
-
     if($(document).scrollTop() != 0){
         $(".header").addClass("header--scrolling");
     }
@@ -28,7 +26,6 @@ function scroll(){
     }
 
     // if h1 is halfway on y, start animating from 0 opacity to 1 when top
-
     
 }
 
@@ -78,7 +75,6 @@ function app(jQuery){
     $('.close').on("click", function(){
         $('.nav--open').toggle();
     });
-
 }
 
 $(app);
