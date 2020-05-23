@@ -409,6 +409,7 @@ h1 {
   height: 70vh;
 }
 .portfolio__hero h2 {
+  display: none;
   font-size: 96px;
   font-weight: 100;
   position: absolute;
@@ -506,6 +507,7 @@ button:hover {
 }
 
 .animate-top {
+  position: relative;
   -webkit-animation-name: animatetop;
   animation-name: animatetop;
   -webkit-animation-duration: 1s;

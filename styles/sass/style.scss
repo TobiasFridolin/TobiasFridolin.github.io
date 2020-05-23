@@ -461,6 +461,9 @@ img.abstract{
         height: 70vh;
         
         h2{
+            //for animation
+            display: none;
+
             font-size: 96px;
             font-weight: 100;
             position: absolute;
@@ -586,7 +589,7 @@ button:hover{
 
 
 .animate-top{
-   // position: relative;
+   position: relative;
     @include atoms.animation-name(animatetop);
     @include atoms.animation-duration(1s);
 }

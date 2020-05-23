@@ -13,6 +13,9 @@
 
 
 function scroll(){
+
+    
+
     var black = "#1f1f1f";
     var naturbasen = $("#naturbasen");
     var headerHeight = $(".header").innerHeight();
@@ -25,11 +28,36 @@ function scroll(){
         $(".header").removeClass("header--scrolling");
     }
 
-    // if h1 is halfway on y, start animating from 0 opacity to 1 when top
-    
+
+    // adjust threshold
+    if($(document).scrollTop() > previousScrollPosition && $(document).scrollTop() > 500){
+        $(".header").css("opacity","0");
+    }else{
+        $(".header").css("opacity","1");
+    }
+
+    previousScrollPosition = $(document).scrollTop()
+
+
+
+    console.log();
+
+    function headerAnimate(elem){
+
+        if($(elem).offset().top < $(document).scrollTop() + $(window).height() / 2 && $(elem).find("h2").css("display") == "none"){
+            $(elem).find("h2").fadeIn();
+        }
+    }
+
+    headerAnimate("#naturbasen");
+    headerAnimate("#gn");
+    headerAnimate("#cj-app");
+    headerAnimate("#cj-hjemmeside");
 }
 
 function app(jQuery){
+    previousScrollPosition = 0;
+
     $(document).scroll(scroll);
     
     $('.nav__burger').on("click", function(){
@@ -75,6 +103,7 @@ function app(jQuery){
     $('.close').on("click", function(){
         $('.nav--open').toggle();
     });
+
 }
 
 $(app);
