@@ -29,11 +29,16 @@ function scroll(){
     }
 
 
-    // adjust threshold
-    if($(document).scrollTop() > previousScrollPosition && $(document).scrollTop() > 500){
-        $(".header").css("opacity","0");
+    // transform.translateY ud af view, istedet for opacity
+    if($(document).scrollTop() > previousScrollPosition && $(document).scrollTop() > 500) {
+
+        if($('.portfolio-subnav').css("display") == "none"){
+            // $(".header").css("opacity","0");
+            $(".header").addClass("header--hidden");
+        }
     }else{
-        $(".header").css("opacity","1");
+        // $(".header").css("opacity","1");
+        $(".header").removeClass("header--hidden");
     }
 
     previousScrollPosition = $(document).scrollTop()
