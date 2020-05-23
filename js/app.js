@@ -45,7 +45,7 @@ function scroll(){
     function headerAnimate(elem){
 
         if($(elem).offset().top < $(document).scrollTop() + $(window).height() / 2 && $(elem).find("h2").css("display") == "none"){
-            $(elem).find("h2").fadeIn();
+            $(elem).find("h2").fadeIn("slow");
         }
     }
 

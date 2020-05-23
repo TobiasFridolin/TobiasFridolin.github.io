@@ -70,9 +70,13 @@ body {
   align-items: center;
   justify-content: center;
   padding-right: 1em;
+  cursor: pointer;
 }
 .nav ul {
   list-style: none;
+}
+.nav li a {
+  padding: 1.5em 1em;
 }
 .nav li a:hover {
   color: #FEB48B;
