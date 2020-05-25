@@ -204,7 +204,7 @@ body{
     }
 
     &--hidden{
-        transform: translateY(-100%);
+        @include atoms.transform(translateY(-100%));
     }
 
 }
@@ -284,10 +284,10 @@ h1{
         height: 140px;
 
         @media screen and (max-width: 70rem){
-            position: absolute;
-            width: 200px; 
-            height: 200px;
-            top: 15%;
+            // position: absolute;
+            // width: 200px; 
+            // height: 200px;
+            // transform: translateY(-50%);
         }
 
     }
