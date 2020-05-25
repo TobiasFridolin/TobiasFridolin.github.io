@@ -109,17 +109,16 @@ body {
   left: 0;
   width: 100%;
   min-height: 100vh;
-  padding: 4rem;
+  padding: 4rem 3rem;
   background-color: rgba(28, 39, 54, 0.8);
   flex-direction: column;
   justify-content: center;
 }
 .nav--open h1 {
   text-transform: uppercase;
-  padding-top: 1em;
 }
 .nav--open li {
-  padding-top: 2rem;
+  padding-top: 1em;
   font-size: 22px;
   letter-spacing: 2px;
   text-align: right;

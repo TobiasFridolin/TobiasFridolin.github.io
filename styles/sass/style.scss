@@ -78,7 +78,7 @@ body{
         left: 0;
         width: 100%;
         min-height: 100vh;
-        padding: 4rem;
+        padding: 4rem 3rem;
         // padding-left: 8rem;
 
         background-color: rgba($color:  atoms.$darker-blue, $alpha: 0.8);
@@ -88,11 +88,10 @@ body{
 
         h1{
             text-transform: uppercase;
-            padding-top: 1em;
         }
 
         li{
-            padding-top: 2rem;
+            padding-top: 1em;
             font-size: 22px;
             letter-spacing: 2px;
             text-align: right;    
@@ -101,6 +100,8 @@ body{
         a{
             color: atoms.$white;
         }
+
+
         
     }
 
