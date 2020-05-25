@@ -32,7 +32,7 @@ function scroll(){
     // transform.translateY ud af view, istedet for opacity
     if($(document).scrollTop() > previousScrollPosition && $(document).scrollTop() > 500) {
 
-        if($('.portfolio-subnav').css("display") == "none"){
+        if($('.portfolio-subnav').css("display") == "none" && $('.nav--open').css("display") == "none"){
             // $(".header").css("opacity","0");
             $(".header").addClass("header--hidden");
         }
@@ -47,17 +47,17 @@ function scroll(){
 
     console.log();
 
-    function headerAnimate(elem){
+    function headingAnimate(elem){
 
         if($(elem).offset().top < $(document).scrollTop() + $(window).height() / 2 && $(elem).find("h2").css("display") == "none"){
             $(elem).find("h2").fadeIn("slow");
         }
     }
 
-    headerAnimate("#naturbasen");
-    headerAnimate("#gn");
-    headerAnimate("#cj-app");
-    headerAnimate("#cj-hjemmeside");
+    headingAnimate("#naturbasen");
+    headingAnimate("#gn");
+    headingAnimate("#cj-app");
+    headingAnimate("#cj-hjemmeside");
 }
 
 function app(jQuery){
