@@ -280,7 +280,7 @@ h1 {
 .abstract {
   display: flex;
   flex-flow: row nowrap;
-  height: 100%;
+  min-height: 100vh;
   margin: 0;
 }
 .abstract__left {
