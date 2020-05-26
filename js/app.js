@@ -1,35 +1,18 @@
-// $(document).on("click", ".portfolio__button", function(){
-
-//     // create a div in body with class = 
-//     $(this).css("position","fixed");
-//     $(this).css("top","0");
-//     $(this).css("left","0");
-//     $(this).css("width","100%");
-//     $(this).css("height","100%");
-//     $(this).css("margin","0");
-//     $(document).css("overflow-y", "hidden");
-//     $("a").toggle();
-// })
-
 
 function scroll(){
 
-    
-
-    var black = "#1f1f1f";
-    var naturbasen = $("#naturbasen");
-    var headerHeight = $(".header").innerHeight();
-
+    // if document is not at top, header--scrolling
     if($(document).scrollTop() != 0){
         $(".header").addClass("header--scrolling");
     }
 
+    // if document at top and none of the navs are open, remove header scrolling
     if($(document).scrollTop() == 0 && $('.portfolio-subnav').css("display") == "none" && $('.nav--open').css("display") == "none"){
         $(".header").removeClass("header--scrolling");
     }
 
 
-    // transform.translateY ud af view, istedet for opacity
+    // if scrolling up and less than 500 px from top, hide header if no menu is open, if a menu is open, remove header--hidden.
     if($(document).scrollTop() > previousScrollPosition && $(document).scrollTop() > 500) {
 
         if($('.portfolio-subnav').css("display") == "none" && $('.nav--open').css("display") == "none"){
@@ -42,10 +25,6 @@ function scroll(){
     }
 
     previousScrollPosition = $(document).scrollTop()
-
-
-
-    console.log();
 
     function headingAnimate(elem){
 
@@ -66,11 +45,11 @@ function app(jQuery){
     $(document).scroll(scroll);
     
     $('.nav__burger').on("click", function(){
-        // $('.header').css("height", "100%")
-        // animate burger closed
 
-        // change header style (background color, height to fit new content)
         $('.nav--open').toggle();
+        $('.nav--open').css("display") == "block" ? $('body').css("overflow-y", "hidden") : $('body').css("overflow-y", "auto");
+
+        
 
         // Switch burger menu icons
         $('.nav__burger--open').toggle();
@@ -81,6 +60,8 @@ function app(jQuery){
     // close menu when selecting a link
     $('.nav--open a').on("click", function(){
         $('.nav--open').toggle();
+        $('.nav--open').css("display") == "block" ? $('body').css("overflow-y", "hidden") : $('body').css("overflow-y", "auto");
+
         $('.nav__burger--open').toggle();
         $('.nav__burger--collabsed').toggle();
     });
@@ -107,6 +88,8 @@ function app(jQuery){
 
     $('.close').on("click", function(){
         $('.nav--open').toggle();
+        $('.nav--open').css("display") == "block" ? $('body').css("overflow-y", "hidden") : $('body').css("overflow-y", "auto");
+
     });
 
 }
