@@ -478,9 +478,9 @@ img.abstract{
             font-size: 96px;
             font-weight: 100;
             position: absolute;
-            bottom: 4rem;
+            bottom: calc(50%);
+            @include atoms.transform(translateY(50%));
             width: 100%;
-            height: calc(50% - 0.48px);
             text-align: center;
             z-index: 1;
         }
