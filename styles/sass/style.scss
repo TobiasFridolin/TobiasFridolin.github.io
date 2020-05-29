@@ -294,13 +294,6 @@ h1{
     }
 }
 
-.about{
-    @media screen and (max-width: 70rem){
-        transform: translateY( -79px);
-    }
-}
-
-
 img.abstract{
     @media screen and (max-width: 70rem){
        display: none;;
@@ -333,7 +326,7 @@ img.abstract{
         @media screen and (max-width: 70rem){
             width: 100%;
             height: 70vh;
-            align-items: center;
+            align-items: flex-start;
         }
     }
 }
@@ -359,7 +352,7 @@ img.abstract{
     align-items: center;
     z-index: 1;
 
-    padding: 0 2rem; 
+    padding: 2rem; 
 
     color: atoms.$white;
 
@@ -373,10 +366,10 @@ img.abstract{
          // margin-bottom: 0.5em;
    }
 
-   h2{
+    h2{
        font-size: 1.4rem;
        font-weight: 100;
-   }
+    }
 
     p{
         color: atoms.$white; 
