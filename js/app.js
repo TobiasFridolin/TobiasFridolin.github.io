@@ -105,6 +105,7 @@ function app(jQuery){
 
         if($('.portfolio-subnav').css("display") == "block"){
             $('.portfolio-subnav').slideToggle();
+            $('#portfolio-navlink').toggleClass("active");
         }
     })
 
