@@ -89,6 +89,8 @@ function app(jQuery){
 
     $('.portfolio-subnav a').on("click", function(){
         $('.portfolio-subnav').toggle();
+        $('#portfolio-navlink').toggleClass("active");
+
     });
 
     $('.signature a').on("click", function(){
