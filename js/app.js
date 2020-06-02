@@ -68,14 +68,23 @@ function app(jQuery){
 
     $('#portfolio-navlink').on("click", function(){
 
-        $('.portfolio-subnav').toggle();
+        // toggle this
+        // $(this).css("color", "#FEB48B");
+        // $(this).css("border-bottom", "4px solid #FEB48B");      
+          
+        // vent indtil animation end
+        $(this).toggleClass("active");
+
+        $('.portfolio-subnav').slideToggle(function(){
+            if($('.portfolio-subnav').css("display") == "none" && $(document).scrollTop() == 0){
+                $(".header").removeClass("header--scrolling");
+            }
+        });
 
         if($('.portfolio-subnav').css("display") == "block"){
             $(".header").addClass("header--scrolling");
-        }else if($(document).scrollTop() == 0){
-            $(".header").removeClass("header--scrolling");
-
         }
+
     });
 
     $('.portfolio-subnav a').on("click", function(){
@@ -91,6 +100,13 @@ function app(jQuery){
         $('.nav--open').css("display") == "block" ? $('body').css("overflow-y", "hidden") : $('body').css("overflow-y", "auto");
 
     });
+
+    $('section').on("click", function(){
+
+        if($('.portfolio-subnav').css("display") == "block"){
+            $('.portfolio-subnav').slideToggle();
+        }
+    })
 
 }
 
