@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Lato&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet">
+
     
     
     <link rel="icon" href="/res/favicon.png">
@@ -36,7 +37,7 @@
                 <li> <a id="portfolio-navlink"> PORTFOLIO </a> </li>
                 <li> <a href="mailto:tobiasfridolin@gmail.com" target="_blank"> KONTAKT </a> </li>
                 <li> <a href="res/CV.pdf" target="_blank"> CV </a></li>
-                <li> <a href="en.html"> EN</a></li>
+                <li> <a style="font-weight: bold;" href="index.html"> DA </a> <a href="en.html"> EN</a> </li>
             </ul>
 
             <ul class="nav--open">
@@ -72,19 +73,26 @@
         </nav>
 
     </header>
+
   
     <section id="landing" class="animation-fade-in">   
         
         <div class="landing__hero" style="background-image: url('res/skitser.png'); background-size: cover; background-position: center; background-repeat: no-repeat; opacity: 0.4;"></div>
 
-        <div class="abstract abstract__left"></div>
+        <div style="position: relative" class="abstract abstract__left">
+            <div style="position: absolute; bottom: 0; margin: 0 0 1.5em 2.5em; display: flex; justify-content: center;">
+            
+                <!-- <a style="text-align: center;  letter-spacing: 2px; font-family: lato; font-size: 12px; font-weight: 400; text-transform: uppercase;" href=""> Tobiasfridolin@gmail.com</a> -->
+            </div>
+        </div>
+
         <div class="abstract abstract__right">
            
             <div class="about">   
 
                 <img id="profil" src="res/Profil.JPG" alt="Profil billede">
                 
-                <div style="justify-content: flex-start;">
+                <div>
                     <div style="margin-bottom: 1rem;">
                         <h1>
                             Tobias Fridolin
@@ -100,17 +108,30 @@
                         Interaktionsdesign (IxD) handler om at designe løsninger, som hjælper brugeren med at opnå deres mål, på en mere effektiv og tilfredstillende måde.
                     </p>
                     
-                    <div class="flex-child flex-child--row" style="justify-content: center;">
+                    <!-- <div class="flex-child flex-child--row" style="justify-content: center;">
                         <div  class="button about__button">
                             <a href="mailto:tobiasfridolin@gmail.com?subject=Hej, jeg så din portfolio" target="_blank">Kontakt</a> 
                         </div>
                         <div  class="button about__button">
-                            <a href="./cv.html">CV</a>
+                            <a href="res/CV.pdf" target="_blank"> CV </a>
                         </div>
-                    </div>
-                    </div>
+                    </div> -->
+
+                    <!-- <div style="margin-top: 8em;">
+                        <p style="text-transform: uppercase; text-align: center; letter-spacing: 2px; font-size: 14px; font-family: lato;"> Se mine projekter</p>
+                        <p style="text-transform: uppercase; text-align: center; letter-spacing: 2px; font-size: 14px; font-family: 'source sans pro';">↓</p>
+                    </div> -->
+
+
                 </div>
-        </div>
+
+            </div>
+            
+            <div class="scrollFeedforward">
+                <p style="font-family: lato;"> Se mine portfolio</p>
+                <p style="font-family: 'source sans pro';">↓</p>
+            </div>
+
        <img class="abstract" src="res/abstract.svg" width="60%;" height ="auto;" style="position: absolute; left:0; top: 50%; transform: translateY(-50%); z-index: 0;"> </img>    
     </section>
 
@@ -312,9 +333,10 @@
 
     <footer class="footer">
             
-        <!-- <img src="res/coffee.svg" height="100%" alt="" style="position: absolute; left: 60px; top: 50%; transform: translateY(-50%); padding: 4rem;"> -->
+        <img id="coffee" src="res/coffee.svg" alt="" height="100" style="margin: 1em 1em 2em 1em;">
 
         <div class="flex-child flex-child--column">
+            
             <h3>Kontakt</h2>
 
             <p>

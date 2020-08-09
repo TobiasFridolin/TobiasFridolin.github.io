@@ -28,6 +28,7 @@ h1, h2, h3 {
   justify-content: center;
   white-space: nowrap;
 }
+
 .button a {
   color: white;
 }
@@ -70,23 +71,29 @@ body {
   padding-right: 2rem;
   cursor: pointer;
 }
+
 .nav ul {
   list-style: none;
 }
+
 .nav li a {
   padding: 0.2em;
 }
+
 .nav li a:hover {
   color: #FEB48B;
 }
+
 .nav__links {
   height: 100%;
   display: flex;
 }
+
 .nav__links li {
   padding: 0 16px;
   display: inline;
 }
+
 .nav__links li a {
   padding: 20px 1em;
   font-weight: 400;
@@ -94,6 +101,7 @@ body {
   letter-spacing: 2px;
   color: #f1f1f1;
 }
+
 @media screen and (max-width: 70rem) {
   .nav__links {
     display: none;
@@ -112,24 +120,27 @@ body {
   flex-direction: column;
   justify-content: center;
 }
+
 .nav--open h1 {
   text-transform: uppercase;
 }
+
 .nav--open li {
   padding-top: 1em;
   font-size: 22px;
   letter-spacing: 2px;
   text-align: right;
 }
+
 .nav--open a {
   color: #f1f1f1;
 }
+
 @media screen and (max-width: 1439px) {
   .nav {
     padding: 0;
   }
 }
-
 .nav__burger {
   display: none;
   margin: 2em;
@@ -138,24 +149,28 @@ body {
   cursor: pointer;
   z-index: 2;
 }
+
 .nav__burger--open {
   stroke: #f1f1f1;
 }
+
 .nav__burger--open:hover {
   stroke: #FEB48B;
 }
+
 .nav__burger--collabsed {
   fill: #f1f1f1;
 }
+
 .nav__burger--collabsed:hover {
   fill: #FEB48B;
 }
+
 @media screen and (max-width: 70rem) {
   .nav__burger {
     display: flex;
   }
 }
-
 .portfolio-subnav {
   display: none;
   width: 100vw;
@@ -168,12 +183,14 @@ body {
   background-color: rgba(28, 39, 54, 0.8);
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
+
 .portfolio-subnav li {
   list-style: none;
   padding: 2em;
   font-size: 22px;
   letter-spacing: 2px;
 }
+
 .portfolio-subnav a {
   color: #f1f1f1;
 }
@@ -190,27 +207,34 @@ body {
   text-align: center;
   z-index: 2;
 }
+
 .header:hover {
   background-color: #1c2736;
 }
+
 .header .signature {
   font-size: 1.5rem;
   padding-left: 1.5em;
 }
+
 .header .signature a {
   color: white;
   font-size: 0.8em;
 }
+
 .header .signature a:hover {
   border: none;
 }
+
 .header a:hover {
   border-bottom: 4px solid #FEB48B;
 }
+
 .header--scrolling {
   background-color: #1c2736;
   box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
 }
+
 .header--hidden {
   transform: translateY(-100%);
   -webkit-transform: translateY(-100%);
@@ -243,22 +267,27 @@ h1 {
   padding: 3rem;
   background-color: #141B24;
 }
+
 .footer .flex-child {
   padding: 1rem;
 }
+
 .footer a {
   font-size: 1em;
   color: #f1f1f1;
 }
+
 .footer h3 {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   padding-bottom: 0.5em;
   color: #f1f1f1;
 }
+
 .footer p {
   color: #f1f1f1;
   max-width: 30em;
 }
+
 .footer__button {
   height: fit-content;
   width: fit-content;
@@ -267,23 +296,25 @@ h1 {
   margin: 1em;
   font-weight: 100;
 }
+
 .footer__button:hover {
   background-color: #1670A3;
 }
+
 @media screen and (max-width: 399px) {
   .footer__button {
     margin: 0.5em;
     width: 50%;
   }
 }
-
 #landing {
+  height: fit-content;
   min-height: 100vh;
   width: 100vw;
   position: relative;
-  background-color: #FEB48B;
   background-size: cover;
 }
+
 #landing #profil {
   object-fit: cover;
   display: block;
@@ -298,23 +329,19 @@ h1 {
     display: none;
   }
 }
-
 .abstract {
   display: flex;
   flex-flow: row nowrap;
   min-height: 100vh;
   margin: 0;
 }
-@media screen and (max-width: 70rem) {
-  .abstract {
-    min-height: 70vh;
-  }
-}
+
 .abstract__left {
   width: 30%;
   background-color: #FEB48B;
   float: left;
 }
+
 @media screen and (max-width: 70rem) {
   .abstract__left {
     height: 0;
@@ -327,17 +354,18 @@ h1 {
   width: 70%;
   background-color: #536E9F;
 }
+
 @media screen and (max-width: 70rem) {
   .abstract__right {
-    padding: 2em;
     width: 100%;
+    height: 70vh;
     align-items: flex-start;
   }
 }
-
 .landing__hero {
   display: none;
 }
+
 @media screen and (max-width: 70rem) {
   .landing__hero {
     display: flex;
@@ -348,15 +376,15 @@ h1 {
     width: 100vw;
   }
 }
-
 .about {
   display: flex;
   flex-direction: column;
   align-items: center;
   z-index: 1;
-  margin: 4em;
+  padding: 2rem;
   color: #f1f1f1;
 }
+
 .about h1, .about h2 {
   width: fit-content;
   font-size: 2rem;
@@ -366,28 +394,34 @@ h1 {
   width: 100%;
   text-align: center;
 }
+
 .about h2 {
   font-size: 1.4rem;
   font-weight: 100;
 }
+
 .about p {
   color: #f1f1f1;
   max-width: 28em;
   margin-bottom: 1em;
 }
+
 .about__button {
   padding: 0.5rem 1.5rem;
   margin: 1rem;
   border: 1px solid white;
 }
+
 .about__button a {
   font-size: 16px;
   font-weight: 300;
   letter-spacing: 1px;
 }
+
 .about__button:hover {
   background-color: #394c70;
 }
+
 @media screen and (max-width: 1439px) {
   .about h1 {
     font-size: 2.2rem;
@@ -397,28 +431,12 @@ h1 {
   .about h1 {
     font-size: 1.5rem;
   }
+
   .about h2 {
     font-size: 0.8rem;
     font-weight: 100;
   }
 }
-
-.scrollFeedforward {
-  position: absolute;
-  bottom: 0;
-  padding-bottom: 1em;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.scrollFeedforward p {
-  color: #f1f1f1;
-  text-transform: uppercase;
-  text-align: center;
-  letter-spacing: 2px;
-  font-size: 12px;
-}
-
 #signature {
   width: 100px;
   height: auto;
@@ -435,10 +453,12 @@ a#portfolio-navlink.active {
   background-color: #1c2736;
   color: white;
 }
+
 .portfolio p {
   margin-top: 0.5em;
   color: #f1f1f1;
 }
+
 .portfolio h3 {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 3rem;
@@ -447,19 +467,23 @@ a#portfolio-navlink.active {
   border-bottom: 1px solid rgba(255, 255, 255, 0.4);
   margin-bottom: 1rem;
 }
+
 .portfolio h4, .portfolio h5 {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 14px;
   font-weight: lighter;
 }
+
 .portfolio b {
   padding-right: 0.5em;
 }
+
 .portfolio__hero {
   position: relative;
   background-color: #394c70;
   height: 70vh;
 }
+
 .portfolio__hero h2 {
   display: none;
   font-size: 4rem;
@@ -474,6 +498,7 @@ a#portfolio-navlink.active {
   text-align: center;
   z-index: 1;
 }
+
 @media screen and (max-width: 399px) {
   .portfolio__hero {
     height: 30vh;
@@ -486,9 +511,11 @@ a#portfolio-navlink.active {
   background-attachment: fixed;
   background-position: center;
 }
+
 .portfolio__bar {
   height: 0.5rem;
 }
+
 .portfolio__content {
   display: flex;
   flex-flow: row wrap;
@@ -497,12 +524,14 @@ a#portfolio-navlink.active {
   padding: 15vh 5vw;
   justify-content: center;
 }
+
 .portfolio__content .image {
   padding: 2rem;
   width: 50%;
   height: auto;
   max-width: 40rem;
 }
+
 @media screen and (max-width: 70rem) {
   .portfolio__content .image {
     width: 100%;
@@ -515,11 +544,13 @@ a#portfolio-navlink.active {
   height: auto;
   object-fit: cover;
 }
+
 .portfolio__content .description {
   width: 50%;
   max-width: 45rem;
   padding: 2rem;
 }
+
 @media screen and (max-width: 70rem) {
   .portfolio__content .description {
     width: 100%;
@@ -531,6 +562,7 @@ a#portfolio-navlink.active {
   padding-bottom: 0.5em;
   padding-top: 2.5em;
 }
+
 .portfolio__button {
   display: flex;
   width: fit-content;
@@ -539,6 +571,7 @@ a#portfolio-navlink.active {
   margin-top: 2rem;
   background-color: #EB6B74;
 }
+
 .portfolio__button a {
   font-size: 22px;
   font-weight: 300;
@@ -547,9 +580,11 @@ a#portfolio-navlink.active {
   padding-top: 0.4em;
   padding-bottom: 0.4em;
 }
+
 .portfolio__button .close {
   display: none;
 }
+
 .portfolio__button:hover {
   background-color: #FEB48B;
 }
@@ -670,9 +705,11 @@ button:hover {
   .portfolio__content h3 {
     font-size: 1.8rem;
   }
+
   .portfolio__content .description {
     padding: 1rem;
   }
+
   .portfolio__content .description .categories {
     padding-top: 0;
   }
@@ -680,12 +717,15 @@ button:hover {
   .footer {
     padding: 3rem 1rem 2rem 1rem;
   }
+
   .footer h3 {
     font-size: 24px;
   }
+
   .footer .flex-child--row {
     width: 100%;
   }
 }
+/*# sourceMappingURL=style.css.map */
 
 /*# sourceMappingURL=style.css.map */

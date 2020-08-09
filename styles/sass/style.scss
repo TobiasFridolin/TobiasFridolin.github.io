@@ -20,7 +20,7 @@ body{
     // width: 100vw;
     max-height: 100vh;
     // background-color: atoms.$white;
-    background-color: atoms.$dark-blue-2;
+    background-color: atoms.$darker-blue;
 }
 
 
@@ -51,12 +51,14 @@ body{
         display: flex;
     
         li{
-            padding: 0 20px;
+            padding: 0 16px;
             display: inline;
             
             a{
                 padding: 20px 1em;
-                font-weight: bold;
+                font-weight: 400;
+                font-size: 0.8em;
+
                 letter-spacing: 2px;
                 color: atoms.$white;
             }
@@ -76,10 +78,11 @@ body{
         left: 0;
         width: 100%;
         min-height: 100vh;
-        padding: 4rem 3rem;
+        padding: 0 3rem 4rem 3rem;
+        margin-top: 4rem;
         // padding-left: 8rem;
         
-        background-color: rgba($color:  atoms.$darker-blue, $alpha: 0.8);
+        background-color: rgba($color:  atoms.$darker-blue, $alpha: 0.9);
 
         flex-direction: column;
         justify-content: center;
@@ -192,11 +195,12 @@ body{
 
     .signature{
         font-size: 1.5rem;
-        padding-left: 2rem;
+        padding-left: 1.5em;
     
         a{
             @extend %handwriting;
             color: white;
+            font-size: 0.8em;
 
             &:hover{
                 border: none;
@@ -234,6 +238,7 @@ h1{
 .flex-child--row{
     flex-direction: row wrap;
     align-items: center;
+    justify-content: center;
 }
 
 .flex-child--column{
@@ -244,7 +249,8 @@ h1{
     display: flex;
     flex-flow: row wrap;
 
-    justify-content: space-around;
+    justify-content: center;
+    
 
     padding: 3rem;
 
@@ -287,15 +293,19 @@ h1{
         padding: 8px;
         margin: 1em;
         font-weight: 100;
+
+        @media screen and ( max-width: 399px){
+            margin: 0.5em;
+            width: 50%;
+        }
     }
  }
 
 #landing{
-
-    height: fit-content;
     min-height: 100vh;
     width: 100vw;
     position: relative;
+    background-color: atoms.$orange;
 
     background-size: cover;
 
@@ -304,8 +314,8 @@ h1{
         display: block;  
         border-radius: 100%; 
         margin: 1rem;
-        width: 140px;
-        height: 140px;
+        width: 200px;
+        height: 200px;
     }
 }
 
@@ -320,6 +330,10 @@ img.abstract{
     flex-flow: row nowrap;
     min-height: 100vh;
     margin: 0;
+
+    @media screen and (max-width: 70rem){
+        min-height: 70vh;
+    }
 
     &__left{
         width: 30%;
@@ -339,8 +353,8 @@ img.abstract{
         background-color: #536E9F;
 
         @media screen and (max-width: 70rem){
+            padding: 2em;
             width: 100%;
-            height: 70vh;
             align-items: flex-start;
         }
     }
@@ -366,18 +380,20 @@ img.abstract{
     flex-direction: column;
     align-items: center;
     z-index: 1;
+    margin: 4em;
 
-    padding: 2rem; 
+    // padding: 2rem; 
 
     color: atoms.$white;
 
     h1, h2{
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         width: fit-content;
         font-size: 2rem;
         font-weight: 800;
         padding: 0;
         text-transform: uppercase;
+        width: 100%;
+        text-align: center;
          // margin-bottom: 0.5em;
    }
 
@@ -414,22 +430,35 @@ img.abstract{
         h1{
             font-size: 2.2rem;
         }
-        h1, h2{
-            text-align: center;
-            width: 100%;
-        }
     }
 
     @media screen and (max-width: 399px){
         h1{
-            font-size: 2rem;
+            font-size: 1.5rem;
         }
         h2{
-            font-size: 1.1rem;
+            font-size: 0.8rem;
             font-weight: 100;
         }
     }
 
+}
+
+.scrollFeedforward{
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 1em;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center;
+    
+    p{
+        color: atoms.$white;
+        text-transform: uppercase; 
+        text-align: center; 
+        letter-spacing: 2px; 
+        font-size: 12px;
+    }
 }
 
 #signature{
@@ -457,7 +486,7 @@ a#portfolio-navlink.active{
 
     h3{
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        font-size: 60px;
+        font-size: 3rem;
         font-weight: 400;
         padding-bottom: 0.2em;
         border-bottom: 1px solid rgba($color: white, $alpha: 0.4); 
@@ -488,8 +517,8 @@ a#portfolio-navlink.active{
             //for animation
             display: none;
 
-            font-size: 96px;
-            font-weight: 100;
+            font-size: 4rem;
+            font-weight: 400;
             position: absolute;
             bottom: calc(50%);
             @include atoms.transform(translateY(50%));
@@ -677,7 +706,7 @@ button:hover{
 
     .portfolio__content{
         h3{
-           font-size: 48px;
+           font-size: 2.4rem;
         }
     }
 
@@ -695,15 +724,37 @@ button:hover{
 
     .portfolio__hero{
         h2{
-            font-size: 48px;
+            font-size: 36px;
         }
         
     }
 
     .portfolio__content{
         h3{
-           font-size: 36px;
+           font-size: 1.8rem;
+        }
+
+        .description{
+            padding: 1rem;
+ 
+            .categories{
+                padding-top: 0;
+            }
+        }
+
+    }
+
+    .footer{
+        padding: 3rem 1rem 2rem 1rem;
+
+        h3{
+            font-size: 24px;
+        }
+
+        .flex-child--row{
+            width: 100%;
         }
     }
+    
 }
 

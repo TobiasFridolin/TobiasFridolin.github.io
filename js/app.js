@@ -7,8 +7,8 @@ function scroll(){
     }
 
     // if document at top and none of the navs are open, remove header scrolling
-    if($(document).scrollTop() == 0 && $('.portfolio-subnav').css("display") == "none" && $('.nav--open').css("display") == "none"){
-        $(".header").removeClass("header--scrolling");
+    if($(document).scrollTop() == 0 && ( $('.portfolio-subnav').css("display") == "none" || $('.nav--open').css("display") == "none") ){
+            $(".header").removeClass("header--scrolling");
     }
 
 
