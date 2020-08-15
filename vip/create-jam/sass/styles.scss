@@ -31,10 +31,28 @@ table, .row{
 }
 
 .header {
+
   background-color: colors.$dark1;
+  // background-color: rgba($color: #000000, $alpha: 0.0);
   flex-direction: column;
   align-items: center;
   z-index: 3;
+}
+
+.banner {
+  background-image: url("./img/Intro.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 50vh;
+  width: 100%;
+  // position: absolute;
+  // top: 0;
+}
+
+.sponsors{
+  background-color: colors.$pink;
+  margin: 0;
 }
 
 .nav{

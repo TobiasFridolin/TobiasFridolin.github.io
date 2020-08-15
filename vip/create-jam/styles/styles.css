@@ -33,6 +33,20 @@ table, .row {
   z-index: 3;
 }
 
+.banner {
+  background-image: url("./img/Intro.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 50vh;
+  width: 100%;
+}
+
+.sponsors {
+  background-color: #ee7aa5;
+  margin: 0;
+}
+
 .nav a {
   color: whitesmoke;
   font-family: "Sen", sans-serif;
