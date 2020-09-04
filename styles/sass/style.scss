@@ -510,8 +510,8 @@ a#portfolio-navlink.active{
 
     &__hero{
         position: relative;
-        background: linear-gradient(180deg, rgba(83,110,159,0.7) 0%, rgba(29,36,46,0.2) 100%);
-        // background-color: atoms.$dark-blue-2;
+        // background: linear-gradient(180deg, rgba(83,110,159,0.7) 0%, rgba(29,36,46,0.2) 100%);
+        background-color: atoms.$dark-blue-2;
         height: 70vh;
         
         h2{
