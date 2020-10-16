@@ -1,0 +1,115 @@
+@use 'atoms';
+
+.header{
+    .heading-1{
+        color: atoms.$white-full;
+    }
+    .subtitle{
+        color: atoms.$white-full;
+    }
+}
+
+.hero{
+    background-image: url('../../Resources/About_Hero\ 1440x440.png');
+}
+
+.header{
+    position: static;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    margin-top: 0;
+
+    &-container{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        text-shadow: 2px 2px 4px rgba(black, 0.15);
+        margin-bottom: 3em;
+
+        @include atoms.breakpoint(medium){
+            margin-bottom: 2em;
+        }
+
+        @include atoms.breakpoint(small){
+            margin-bottom: 1em;
+        }
+
+        @include atoms.breakpoint(smallest){
+            margin-bottom: 8px;
+        }
+    }
+}
+
+section{
+    margin-bottom: 8px;
+}
+
+.cases{
+    display: flex;
+    justify-content: center;
+    padding: 1em 0;
+    margin: 32px 0;
+    border-radius: 4px;
+    border: 2px solid atoms.$white-toned;
+    transition: background-color 200ms, color 200ms;
+    &:hover{
+        background-color: atoms.$white-almost;
+        border: 2px solid atoms.$white-almost;
+    }
+
+    @include atoms.breakpoint(small){
+        margin: 16px 0;
+    }
+}
+
+.primer{
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    position: relative;
+    
+    padding: 1rem; 
+    margin-bottom: 4rem; 
+    background-color: rgba($color: atoms.$primary-weak, $alpha: 0.07);
+
+    border-left: 8px solid rgba($color: atoms.$primary-strong, $alpha: 0.4);
+    height: 100%;
+
+    transform: translateX(-4em);
+
+    .lead{
+        color: #858db8;
+        max-width: 28em;
+
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+        font-weight: 400;
+    }
+
+    .lead:first-child{
+        font-weight: 600;
+        color: #6f7aa3;
+        // color: #8796bd;        
+    }   
+
+    @include atoms.breakpoint(medium){
+        transform: translateX(0);
+        .lead{
+            font-size: 1.2rem;
+        }
+    }
+
+    @include atoms.breakpoint(small){
+        margin: 64px 0;
+
+        .lead{
+            font-size: 1rem;
+        }
+    }
+
+    @include atoms.breakpoint(smallest){
+        margin: 40px 0;
+    }
+
+}

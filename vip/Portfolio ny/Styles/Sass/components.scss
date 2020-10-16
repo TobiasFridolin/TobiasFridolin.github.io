@@ -1,0 +1,394 @@
+@use 'atoms';
+
+$margin-bigger: 240px;
+$margin-big: 120px;
+$margin-medium: 64px;
+$margin-small: 32px;
+$margin-smallest: 16px;
+
+
+
+
+a{
+    color: atoms.$hyperlink;
+    text-decoration: none;
+
+}
+
+main{
+    //responsive
+    margin: 80px $margin-bigger;
+
+    @include atoms.breakpoint(big){
+        margin: 80px $margin-big;
+    }
+
+    @include atoms.breakpoint(medium){
+        margin: 80px $margin-medium;
+    }
+
+    @include atoms.breakpoint(small){
+        margin: 80px $margin-small
+    }
+
+    @include atoms.breakpoint(smallest){
+        margin: 80px $margin-smallest;
+    }
+}
+
+// Classes
+
+.nav{
+    width: fit-content;
+    float: right;
+    position: sticky;
+    top: 0;
+    padding: 8px;
+    margin-left: 2em;
+    z-index: 2;
+
+    // responsive
+
+    ul{
+        margin: 2em 0;
+        padding: 0;
+    }
+
+    li{
+        list-style: none;
+        display: inline-block;
+    }    
+
+    a{
+        display: block;
+    }
+
+    &__icon{
+        padding: 8px;
+        // margin-right: 8px;
+        width: 28px;
+        height: 28px;
+         
+        fill: atoms.$black-toned;
+
+        &:hover{
+            fill: atoms.$primary-strong;
+        }
+    }
+
+    .flex{
+        margin: 2em 0;
+    }
+
+    @include atoms.breakpoint(small){
+        display: none;
+    }
+}
+
+.nav__burger{
+    display: none;
+
+    @include atoms.breakpoint(small){
+        display: flex;
+    }
+}
+
+.naturbasen{
+    .hero{
+        background-image: url("../Resources/Naturbasen_Hero\ 1440x440.png");
+    }
+}
+
+.navigation-link{
+    text-transform: uppercase;
+    color: atoms.$grey-50;    
+    padding: 8px;
+    margin: 8px 0;
+    transition: background-color 200ms, color 200ms;
+
+    &:hover{
+        color: atoms.$black-full;    
+        background-color: atoms.$white-toned;
+    }
+
+    &--selected{
+        padding-left: 8px;
+        border-left: 4px solid atoms.$primary-strong;   
+        color: atoms.$black-full;       
+    }
+}
+
+.navigation-link.hyperlink{
+    display: inline;
+    color: atoms.$hyperlink;
+    text-transform: none;
+}
+
+.outline{
+    padding-left: 8px;
+
+    a{
+        margin: 1em 0;
+    }
+
+    .heading-3{
+        margin: 0;
+    }
+}
+
+.hero{
+    //responsive
+    height: 400px;
+    width: 100vw;
+    background-size: cover;
+
+    @include atoms.breakpoint(medium){
+        height: 320px;
+    }
+
+    @include atoms.breakpoint(small){
+        height: 280px;
+    }
+
+    @include atoms.breakpoint(smallest){
+        height: 224px;
+    }
+}
+
+.header{
+    position: sticky;
+    top: 0;
+    margin-top: 80px;
+    z-index: 100;
+    min-height: 120px;
+
+    display: flex;
+    align-content: center;
+
+    &-container{
+        display: flex;
+        margin: 0 $margin-bigger 0 $margin-bigger; 
+
+        .heading-1{
+            transform: translateX(-2px);
+        }
+    
+        &-container{
+            padding: 0 8px;
+        }
+
+        @include atoms.breakpoint(big){
+            margin: 0 $margin-big;
+        }
+    
+        @include atoms.breakpoint(medium){
+            margin: 0 $margin-medium;
+        }
+    
+        @include atoms.breakpoint(small){
+            margin: 0 $margin-small;
+        }
+    
+        @include atoms.breakpoint(smallest){
+            margin: 0 $margin-smallest;
+        }
+    }
+}
+
+.content{
+    margin: 80px 0;
+
+    @include atoms.breakpoint(small){
+        margin: 64px 0;
+    }
+
+    @include atoms.breakpoint(smallest){
+        margin: 40px 0;
+    }
+}
+
+.about-info{
+    display: flex;
+    margin: 8px 0;
+    // border-top: 1px solid atoms.$white-toned;
+    padding: 8px 0;
+    position: relative;
+    align-items: center;
+    // background-color: rgba(atoms.$primary-strong, 0.05);
+
+
+    .container{
+        display: inline-flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        // padding-top: 16px; 
+
+        img, div{
+            padding: 1rem;
+        }
+
+        img:hover{
+            src: url("/Resources/profil2.jpeg")
+        }
+
+        > div{
+            margin-left: 2em; 
+            align-items: center;
+        }
+
+    }
+    
+    ul{
+        list-style: none; 
+        padding: 0;
+    }
+    
+    li{
+        font-family: atoms.$lato;
+        line-height: 1.5rem;
+        font-size: 0.8rem;
+        font-weight: 200;
+        color: atoms.$grey-50;
+
+        a{
+            font-size: 0.9rem;   
+        }
+
+        p{
+            display: inline;
+            padding: 0 4px;
+        }
+        
+        &:first-child{
+            font-weight: 400;
+            font-size: 1rem;
+            font-family: atoms.$josefin-sans;
+            color: atoms.$black-toned;
+            line-height: 1.5rem;
+        }
+    }
+    
+    img{
+        width: 180px;
+        height: 180px;
+        border-radius: 100%;
+        object-fit: cover;
+        object-position: 50% 50%;
+        transition: scale(1.5);
+    }
+
+    @include atoms.breakpoint(small){
+        padding: 8px;
+    }
+
+    hr{
+        background-color: white;
+    }
+}
+
+.article{
+    display: flex; 
+    flex-direction: column;
+    max-width: 40em;
+
+    @include atoms.breakpoint(small){
+        max-width: none;
+    }
+}
+
+.footer{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    text-align: center;
+    background-color: atoms.$white-toned;
+    padding: 80px;
+
+    h1{
+        font-family: atoms.$cardo;
+        font-size: 1em;
+        font-weight: normal;
+        letter-spacing: 0.1em;
+        margin-bottom: 24px;
+        color: atoms.$grey-30;
+    }
+
+    .body-copy{
+        text-align: center;
+        margin: auto;
+        margin-bottom: 24px;
+        max-width: 40em;
+        color: atoms.$black-almost;
+    }
+
+    .button{
+        color: atoms.$white-full;
+        background-color: atoms.$primary-strong;
+        width: fit-content;
+        margin: auto;
+        border-radius: 4px;
+        padding: 8px 16px;
+
+        &:hover{
+            color: atoms.$white-toned;
+        }
+    }
+
+    img{
+        position: relative;
+        top: 0;
+        transform: translateY(-50%);
+        left: 120px;
+    }
+
+    @include atoms.breakpoint(small){
+        padding: 60px;
+
+        .button{
+            margin: 1em auto;
+        }
+    }
+
+    @include atoms.breakpoint(smallest){
+        margin-top: 0;
+        padding: 32px;
+
+        // .body-copy{
+        //     text-align: justify;
+        // }
+
+        .button{
+            padding: 16px;
+            width: auto;
+            margin: 8px 0;
+        }
+
+        h1{
+            margin-bottom: 8px;
+        }
+    }
+}
+
+.image-placeholder{
+    background-color: rgba(atoms.$grey-50, 0.15);
+    height: 420px;
+    max-width: 630px;
+    margin-bottom: 1em;
+    border-radius: 4px;
+}
+
+section{
+    margin-bottom: 16px;
+}
+
+.flex{
+    display: flex;
+}
+
+
+hr{
+    margin: 4px 0;
+    height: 1px;
+    border: none;
+    background-color: atoms.$white-toned;
+}

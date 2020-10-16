@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Cardo&family=Josefin+Sans:wght@400;600;700&family=Lato&family=Source+Sans+Pro:ital,wght@0,300;0,400;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="../Styles/Css/components.css">
+    <link rel="stylesheet" href="../Styles/Css/portfolio-case.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- <script src="../Scripts/portfolio-header--scrolling.js"></script> -->
+
+    <title>Naturbasen</title>
+</head>
+<body class="naturbasen">
+    <div class="hero" style="background-image: url(../Resources/Naturbasen_Hero\ 1440x440.png);"></div>
+    
+
+    <main>        
+        <div class="content">
+            <div class="header" id="header">
+                <div class="header-container">
+                    <div>
+                        <h1 class="heading-1" style="display: inline;"> Naturbasen</h1>
+                    </div>
+                    <h2 class="subtitle">18 August - 20 Juli 2020</h2>
+                </div>
+            </div>
+            <div class="nav">
+                <ul>
+                    <a class="navigation-link" href="index.html"><li>Home</li></a>
+                    <a class="navigation-link" href="portfolio.html"><li class="navigation-link--selected">Portfolio</li></a>
+                    <a class="navigation-link" href="about.html" ><li>About Me</li></a>
+                    <a class="navigation-link" target="_blank" href="CV.pdf"><li>CV</li></a>
+                </ul>
+                <ul class="outline">
+                    <li class="outline heading-3">Contents</li>
+                    <a class="outline outline-item outline--selected" href="#sec1"><li>The Challenge</li></a>
+                    <a class="outline outline-item" href="#sec2"><li>The Process</li></a>
+                    <a class="outline outline-item" href="#sec3"><li>The User Experience</li></a>
+                    <a class="outline outline-item" href="#sec4"><li>Possible Improvements</li></a>
+                    <a class="outline outline-item" href="#sec5"><li>Final Reflections</li></a>
+                </ul>
+            </div>   
+            
+            <div class="article">
+                <section>
+                    <h2 class="heading-2" id="sec1">The Challenge</h2>
+                    <p class="body-copy">
+                        <a class="hyperlink" href="https://www.naturbasen.dk/" target="_blank">Naturbasen</a> is a citizen science project, where users can report animal sightings on their phone, when they are in nature or walking around a city. Users are also able to see where they are, what animals have been reported in the area, if the area is a sanctuary or protected, and they can take a picture of the animal and have their smartphone try to identify it for them. 
+                        I set out to redesign as I wanted to explore how it would be like to work as a digital designer, i.e. mainly working with the graphical design of an interface.                         
+
+                    </p>
+                    <h3 class="heading-3">Criteria for Success</h3>
+                    <ul class="body-copy">
+                        <li>The process should be fun.</li>
+                        <li>I should be able to do the complete redesign in a week.</li>
+                        <li>I had to feel proud of the end result.</li>
+                    </ul>
+                    <p class="body-copy">
+                        As a different goal, I wanted to become better at creating digital prototypes and develop my intuition for graphical design.
+                    </p>
+                    <figure>
+                        <img src="../Resources/nb-challenge.png" alt="The existing design.">
+                        <figcaption> <em>The existing design - </em>From the left: the landing page, "what can I see here" and species details.</figcaption>
+                    </figure>
+                </section>
+    
+                <section>
+                    <h2 class="heading-2" id="sec2">The Process</h2>
+                    <p class="body-copy">
+                        I downloaded the app, took screen shots of each screen, and created a prototype of the app in Figma.
+                        This way I had an overview. From what I'm told, a digital designer usually works from a set of wireframes, and this was kind of like that - working from the standpoint of the information architecture of the app.
+                    </p>
+                    <p class="body-copy">
+                        I inspected the app, while imagining the different use cases and writing down my thoughts as I went along. 
+                        I wrote notes about ideas for the graphical design, but a lot of it was about the usability, and how I thought it could be improved.
+                        Whenever I had the opportunity, I showed the app to others, asked them to use it, and asked them what they made of it.
+                        Some of my inital suspicions were confirmed - there was room for improvement on the usability side of things.
+                    </p>
+                    <p class="body-copy">
+                        The remaining time I worked in Figma. I created the different screen in a more or less sequential process. 
+                        I broke the design down into different components, which were used multiple times throughout the design.
+                        This made it easy to update the entire design across all screens, when making an adjustment to a main component, say the main component of the header.
+                        But it also allowed for an easy way to make alternative designs - components could easily be swapped out.
+                        Creating different designs and comparing them in order to figure out what worked and what didn't was the underlying process of creating the design.
+                        Other than that, I created a design system, inspired by <a class="hyperlink" href="https://bradfrost.com/blog/post/atomic-web-design/" target="_blank">Atomic Design by Brad Frost</a>, and <a class="hyperlink" href="https://material.io/" target="_blank">Google's Material Design</a>.
+                    </p>
+                 </section>
+    
+                <section>
+                    <h2 class="heading-2" id="sec3">The User Experience</h2>
+                    <h3 class="heading-3">Where am I?</h3>
+                    <p class="body-copy">
+                        Knowing your location seemed pivotal for the app, seeing as a map is to be found on several of the screens.
+                        I decided to move the map to the landing page.
+                        This decision was also guided by the proximity principle, as it gives some much needed context to the icons.
+                        These icons light up according to the type of area the user is currently located in, e.g. a bird sanctuary.
+                    </p>
+                    <img src="../Resources/nb-omraadetyper.png" alt="the redesigning landing page">
+                    <h3 class="heading-3">Search</h3>
+                    <p class="body-copy">
+                        To be consistent with other apps, and to free up space, I decided to move the search function to a search bar, placed in the top of the screen.
+                        This consistency, together with the fact that it is visually distinct from the buttons, hopefully makes it easier to find, for users.
+                    </p>
+                    <h3 class="heading-3">What can I see here?</h3>
+                    <p class="body-copy">
+                        I added a picture for each list item, giving the user some visual feedback, along with making the app more visually appealing.
+                        A common use case might be that the user wants to know what animals they can see in the area, not knowing the names. Having a picture helps out.
+                        They might also use the function when spotting an animal, wanting to narrow down the possibilities. Here it also makes sense to have a picture, making it easier for the user to report the animal, and making them more confident that they picked the right one.
+                        I also added a subtitle with the taxonomic name of the animal.
+                    </p>
+                    <h3 class="Protected areas"></h3>
+                    <p class="body-copy">
+                        If you are in a protected area, the repective icon will light up. Since it is possible that the user is in an area which is protected in more that one way, the user can select which area should be lit up on the map.
+                        This is done by pressing an active icon, which prompts a menu with the given active areas. Here the user can see more information about what type of area they are located in, and they can switch between which type is shown on the map.
+                        If the user presses an icon which is not lit up, a messsage is show about the type of area the icon indicates. This was an important change from the original design, since nothing happened when trying to press an icon.
+                    </p>
+                    <h3 class="heading-3">Report</h3>
+                    <p class="body-copy">
+
+                        <ul class="body-copy">
+                            <li> Lists with many elements should be sorted alphabetically, so it faster to search through.</li>
+                            <li> Added a default image of the animal which the user is about to report. It provides some extra feedback to the user, ensuring them that they have selected the right animal.</li>
+                            <li> Added an 'edit report' funktion. Use case: user is reporting an animal, but discover that they have put in the wrong species or location. They should be able to easiely go back and change this, without discarding the other information about the report. In other words, it allows the user an easy way to correct mistakes.</li>
+                        </ul>
+
+                    </p>
+                    <figure>
+                        <img src="../Resources/nb-user-experience-1.png" alt="'What can I see here' and reporting.">
+                        <figcaption> <em>The new design - </em> Left: 'what can I see here', now with pictures and subtitle. Right: report an observation, with an option to edit and a default image.  </figcaption>
+                    </figure>
+                    <h3 class="heading-3">My observations</h3>
+                    <p class="body-copy"> The update funciton is system-oriented instead of user-centered - when pressing "update", a lengthy message appears explaining what the system is doing, with a warning about using the function.
+                        Instead, the app should automatically try to synchronize with the online database, whenever there is internet coverage. 
+                        In order to provide feedback about this, a system message should be displayed in the bottom, notifying the user if there is coverage, it is trying to synchronise, or if it completed synchronising.
+                    </p>
+                </section>
+    
+                <section>
+                    <h2 class="heading-2" id="sec4">Possible Improvements</h2>
+                    <p class="body-copy">
+                        I did't conduct any user testing following the biggest change I made to the app - the landing page. This should ideally be done, but since the focus was mainly (at least in the beginning) on the graphical design, I let it slide.
+                    </p>            
+                    <p class="body-copy">
+                        It could very well be that I put too much information on the landing page, and that it makes more sense to have a seperate page for the map. Having the map on the landing page, might also affect the user experience in a different way - it might use up more power, if the user spends more time on the landing page, and displaying the map is costly, computational wise.
+                    </p>
+                    <p class="body-copy">
+                        After having showed my design to several people, I realise that even though the area types are better explained, the colored areas on the map tend to be overlooked.
+                    </p>
+                </section>
+    
+                <section>
+               
+                    <h2 class="heading-2" id="sec5">Final Reflections</h2>
+                    <p class="body-copy">
+                        Jeg syntes at resultatet var en klar forbedring af det forhenværende design, især med de nye farver, som virker mindre som udvasket blå og i stedet er gået hen og blevet mere kontrastfyldt. 
+                        Tidsmæssigt tog det mere end en uge fra starten af projektet til slutningen. Det var mere omkring to. 
+                        Men siden det ikke var alle dage jeg arbejdede 8 timer på projektet, føler jeg at den endelige arbejdsindsats lå på omkring 7 arbejdsdage, hvilket jeg så som en succes. 
+                        Nok det vigtigste kriterie som jeg havde sat mig selv, blev opfyldt - nemlig at det skulle være sjovt at arbejde med. 
+                        Der var dage hvor jeg fuldstændigt mistede tidsfornemmelsen og løb tør for musik album at lytte til, imens jeg arbejdede på projektet. 
+                        Og det var nok det største udbytte. 
+                    </p>
+                    <p class="body-copy">
+                        I forhold til spørgsmålet om specialisering vs generalisering, så blev spørgsmålet svaret på rimelig hurtigt undervejs. 
+                        Værdien i det endelige produkt ligger for mig mindst lige så meget i de forbedringer i brugeroplevelsen som i det grafiske redesign. 
+                        Det er en lektion som senere hen er gået igen til de kaffemøder jeg har været til. Man skal fokusere på det man er god til. 
+                        Hvis man er mere generalist end specialist, giver det mere mening at søge ind steder hvor der er brug for en bredere faglighed, end at man konkurrere med andre som f.eks. har en specifik baggrund inden for f.eks. grafisk design. 
+                        Grafisk design er stadig noget jeg finder meget spændende, og noget som jeg både vil lære mere om og blive bedre til, men i mit tilfælde giver det mening også at ligge vægt på mine kompetencer inden for f.eks. brugerinddragelse.
+                    </p>
+                    <figure class="prototype">
+                        <img src="../Resources/play-prototype-big.svg" width="100px" height="100px" alt="play prototype">
+                        <figcaption>
+                            Play the prototype in Figma.
+                        </figcaption>
+                    </figure>
+                </section>
+                <!-- <hr> -->
+            </div>
+        </div>
+        <div class="about-info">
+            <div class="container">
+                <img src="/Resources/musikkens hus 1.jpeg" alt="profile">
+                <div class="flex">
+                    <ul>
+                        <li>Tobias Fridolin</li>
+                        <li>MSc in Interaction Design</li>
+                        <li>Currently living in Aalborg, Denmark</li>
+                        <hr>
+                        <li>UI Designer at I-Gis A/S</li>
+                        <hr>
+                        <li><a class="hyperlink" href="mailto:tobiasfridolin@gmail.com" target="_blank">LinkedIn</a> <p>|</p> <a class="hyperlink"href="https://www.linkedin.com/in/tobias-fridolin/"> Email</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+    <hr>
+    <div class="other-cases">
+        <div>
+            <a style="background-image: url('../Resources/Naturbasen.png');"></a>
+            <p class="button">Next Case</p>
+        </div>
+        <div>
+            <a class="button" style="background-image: url('../Resources/Naturbasen_Hero 1440x440.png');"> Previous Case </a>
+        </div>
+    </div>
+    <div class="footer">
+        <h1>~get in touch~</h1>
+        <h2 class="heading-2">Let's Grab a Cup of Coffee</h2>
+        <p class="body-copy">I am always up for meeting new people and hearing about new projects. Shoot me an email or send me a message on LinkedIn, and let’s talk over a cup of coffee.</p>
+        <a class="button" href="https://www.linkedin.com/in/tobias-fridolin/">Connect on LinkedIn</a>
+    </div>
+    
+</body>
+</html>
