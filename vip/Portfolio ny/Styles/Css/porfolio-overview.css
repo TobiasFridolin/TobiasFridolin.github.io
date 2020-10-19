@@ -41,7 +41,7 @@
   line-height: 2rem;
   font-weight: 600;
   font-family: "Josefin Sans", sans-serif;
-  color: #1E2834;
+  color: #393D49;
 }
 
 .lead {
@@ -128,6 +128,12 @@ figcaption {
   color: rgba(0, 0, 0, 0.3);
   line-height: 1rem;
   margin: 0.5rem;
+  text-align: center;
+  font-style: italic;
+}
+figcaption em {
+  font-style: normal;
+  font-weight: bold;
 }
 
 body, .header {
@@ -148,6 +154,11 @@ main {
   display: flex;
   justify-content: center;
   margin: 0 120px;
+}
+@media screen and (max-width: 1024px) {
+  main hr {
+    display: none;
+  }
 }
 @media screen and (max-width: 768px) {
   main {
@@ -270,11 +281,12 @@ main {
   flex-direction: row-reverse;
 }
 .case .button {
+  display: block;
   font-size: 18px;
   text-align: center;
   color: #EDEDED;
   width: fit-content;
-  padding: 4px 16px;
+  padding: 12px 40px;
   background-color: rgba(102, 77, 192, 0.7);
   margin: 2rem auto;
   transition: background-color 200ms;
@@ -287,6 +299,9 @@ main {
     margin-bottom: 2rem;
   }
   .case .button {
+    width: auto;
+  }
+  .case hr {
     display: none;
   }
 }
@@ -303,7 +318,7 @@ main {
     margin: 64px 0;
   }
   .case .text-container {
-    margin: 0;
+    margin-bottom: 64px;
   }
 }
 

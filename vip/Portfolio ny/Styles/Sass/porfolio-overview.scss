@@ -18,6 +18,12 @@ main{
     justify-content: center;
     margin: 0 120px;
 
+    @include atoms.breakpoint(medium){
+        hr{
+            display: none;
+        }
+    }
+
     @include atoms.breakpoint(small){
         margin: 0;
 
@@ -148,11 +154,12 @@ main{
    }
 
    .button{
+        display: block;
         font-size: 18px;
         text-align: center;
         color: atoms.$white-toned;
         width: fit-content;
-        padding: 4px 16px;
+        padding: 12px 40px;
         background-color: rgba(atoms.$primary-strong, 0.7);
         margin: 2rem auto;
         transition: background-color 200ms;
@@ -162,15 +169,15 @@ main{
    @include atoms.breakpoint(medium){
         flex-direction: column;
 
-        &--1{
-            // flex-direction: column-reverse;
-        }
-
         .text-container{
             margin-bottom: 2rem;
         }
 
        .button{
+           width: auto;
+       }
+
+       hr{
            display: none;
        }
    }
@@ -191,8 +198,7 @@ main{
             .body-copy{
                 // display: none;
             }
-
-            margin: 0;
+            margin-bottom: 64px;
         }
     }
 
