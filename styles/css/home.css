@@ -201,8 +201,7 @@ body {
 }
 
 .landing {
-  background-image: url("../../Resources/Home.png");
-  background-image: url("../../Resources/landing.jpeg");
+  background-image: url("/resources/landing.jpeg");
   background-size: cover;
   background-position: 50% 50%;
   position: relative;
@@ -210,7 +209,7 @@ body {
 }
 @media screen and (max-width: 768px) {
   .landing {
-    background-image: url("../../Resources/musikkens hus 2 mobile.jpeg");
+    background-image: url("/resources/musikkens hus 2 mobile.jpeg");
     height: 100vh;
     width: 100vw;
     position: absolute;
