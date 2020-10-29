@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Cardo&family=Josefin+Sans:wght@400;600;700&family=Lato&family=Source+Sans+Pro:ital,wght@0,300;0,400;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@1,300&display=swap" rel="stylesheet">
+
+
+
+    <link rel="stylesheet" href="../Styles/Css/components.css">
+    <link rel="stylesheet" href="../Styles/Css/portfolio-case.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- TITLE -->
+    <title>Ascendancy Games</title>
+</head>
+
+<!-- ID -->
+<body id="ascendancy-games">
+    <div class="hero" style="background-image: url(../Resources/ascendancy-games/ascendancy-games-hero.png);"></div>
+
+    <main>        
+        <div class="content">
+            <div class="header" id="header">
+                <div class="header-container">
+                    <div>
+                        <!-- HEADING -->
+                        <h1 class="heading-1">Realm Lords</h1>
+                    </div>
+                    <div>
+                        <!-- ROLE, COMPANY/CLIENT/STAKEHOLDER -->
+                        <h2 class="subtitle">UI Designer & Art Lead Ascendancy Games</h2>
+
+                        <!-- DATE -->
+                        <h2 class="date">June 18 - August 21 2020</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="nav">
+                <ul>
+                    <a class="navigation-link" href="index.html"><li>Home</li></a>
+                    <a class="navigation-link" href="portfolio.html"><li class="navigation-link--selected">Portfolio</li></a>
+                    <a class="navigation-link" href="about.html" ><li>About Me</li></a>
+                    <a class="navigation-link" target="_blank" href="CV.pdf"><li>CV</li></a>
+                </ul>
+                <ul class="outline">
+                    <li class="outline heading-3">Contents</li>
+
+                    <!-- OUTLINE LINKS -->
+                    <a class="outline outline-item" href="#sec1"><li>The Project</li></a>
+                    <a class="outline outline-item" href="#sec2"><li>My Role</li></a>
+                    <a class="outline outline-item" href="#sec3"><li>The Creative Process</li></a>
+                    <a class="outline outline-item" href="#sec4"><li>Creating the Board</li></a>
+                    <a class="outline outline-item" href="#sec5"><li>Sound Design</li></a>
+                    <a class="outline outline-item" href="#sec6"><li>Visual Effects</li></a>
+                    <a class="outline outline-item" href="#sec7"><li>Creating the Cards</li></a>
+                    <a class="outline outline-item" href="#sec8"><li>Outcomes</li></a>
+
+                </ul>
+            </div>   
+            
+            <div class="article">
+
+                <!-- SECTIONS, ID -->
+                <p class="lead">
+                    This was an intense project with a lot of decisions to be made, so it is a bit of a longer read than my other cases.
+                    The first part of this case describes the project and the creative process in general.
+                    The middle is more specific to my work, while the last part is about the process of collaborating with the other artists on creating the sound, visual effects and cards.
+                    I hope you enjoy the read.
+                </p>
+
+                <section>
+                    <h2 class="heading-2" id="sec1">The Project</h2>
+                    <p class="body-copy">
+                        <em>“Think Hearthstone, but three players against one”.</em>
+                        That is roughly how the game was pitched to me by Casper Hoegalmen. 
+                        He had worked on the game as a prototype <a href="https://www.casperhoegalmen.com/realmlord-asymmetrical-card-game-1" target="_blank">for about two years</a>, and was now looking to use the project to get some experience as a game producer.
+                        Even for a prototype, this was a very ambitious project.
+                        On top of that, we had a two months deadline. 
+                        But we were a bunch of motivated people with some freetime during the summer, and a passion for making games.
+                    </p>
+
+                    <h3 class="heading-3">The Team</h3>
+                    <p class="body-copy">
+                        The team was quite small considering the scope of the project. 
+                        We had our game producer, who was in charge of making sure the project was on track, and two teams - the art team and the programming team. 
+                        The programming team consisted of a UI programmer, three backend programmers, and one networking programmer. 
+                        On the other team, the art team, we had two UI artists as well as one concept artist, and myself as UI designer and team lead. 
+                        Music & sound effects were going to be covered by someone outside our team. 
+                        Our level of skill ranged from novice to intermediate, but all of us were excited to work together and develop our skills.
+                    </p>
+
+                    <h3 class="heading-3">The Goal</h3>
+                    <p class="body-copy">
+                        Of course the underlying goal of the project was to deliver a playable prototype of a card game, but there was a different, underlying goal. 
+                        From the very beginning, our producer made it clear that the motivation behind was making an environment where each of us could improve on our respective skillsets.
+                        Making the prototype was just a means toward that end - getting a sense of how it is to work as a team to deliver a game within a set deadline. 
+                        The project was not intended to become anything more than what we could do during the two months, but we did aim for releasing a playable prototype on the itch.io games platform.
+                    </p>
+                    <p class="body-copy">
+                        Personally, one of my goals was become better at photoshop, and skeuomorphic UI design. 
+                        That is, create a UI which resembles physical objects, which could belong in the game setting.
+                    </p>
+                    <figure>
+                        <img src="../Resources/ascendancy-games/ascendancy-money-shot.png" alt="">
+                        <figcaption>UI Deliverable - what the UI looks like when playing from the ally perspective.</figcaption>
+                    </figure>
+                </section>
+
+                <section>
+                    <h2 class="heading-2" id="sec2">My Role</h2>
+                    <p class="body-copy">
+                        I had two main responsibilities. 
+                        As the UI designer, I had to figure out the best way to communicate game information to players, using graphics and sound. 
+                        As the art lead on the other hand, I had to define the aesthetic vision of the game together with the rest of the team, and I had to make sure that we could deliver. 
+                        This meant I had to understand the capabilities and personal goals of my team members, and take the game in a direction that was feasible. 
+                    </p>
+
+                    <h3 class="heading-3">The Challenges</h3>
+                    <p class="body-copy">
+                        We lacked an artist to work on the in game environment, with aspects such as lighting, 3D modelling and 2D textures, which make up a big part of the game’s visual appeal. 
+                        Apart from that, we only had one concept artist to work and the art for about 80 distinct cards in the game (he actually managed to make all of the cards!). 
+                        This made it a challenge to deliver something polished, with a visual appeal, even though it was just a prototype. 
+                        Our solution was to leverage our lack of resources and make the game’s aesthetic around the what we had.
+                    </p>
+                    <p class="body-copy">
+                        From the outset of the project, the game had actually been worked on for around 2 years. 
+
+                        This initial prototype which had been tested, was made using Tabletop simulator. 
+
+                        Abstract tokens were used to communicate information to players, and keep track of the game’s complex rules. 
+
+                        My job was to figure out the best way to communicate information to players using graphics and sound.  
+                        This meant figuring out how to communicate the rules of the game, quite a few of which are novel and therefore had to be learned initially (by myself as well). 
+                        I had to map out the different states in the game, and consider feedforward for available actions the players can take, as well as feedback from the game.
+                    </p>
+                </section>
+
+                <section>
+                    <h2 class="heading-2" id="sec3">The Creative Process</h2>
+                    <p class="body-copy">
+                        I like to think about design (and creative processes in general) as working with different constraints. 
+                        By constraints, I mean the underlying considerations which inform the direction of the design. 
+                        As an example, when trying to implement a new diet, you might think about nutrition, affordability and time, as the main factors determining what might be an acceptable choice of a food item. 
+                        Identifying these parameters helps by narrowing down the problemspace. 
+                        Since constraints are sometimes conflicting (which is common in creative processes), finding the right balance requires strategic consideration and some trial on error. 
+                        I find that the best way to work with constraints is to first identify as many as possible and then work as abstract and quickly as possible, going through different  ideas - different configurations of how the constraints might be fulfilled. 
+                        During this process, constraints are weighted in importance and new ones are discovered, as you learn more about the problem.
+                    </p>
+                    <h3 class="heading-3">Constraints</h3>
+                    <p class="body-copy">
+                        What makes constraints useful is also what makes them hard to work with. 
+                        They help by narrowing down the problemspace.
+                        When you make a decision, it has to satisfy all the constraints - fit within the whole.
+                        If you discover a new constraint, previous design choices you've made might not satisfy it.
+                    </p>
+                    <p class="body-copy">
+                        In the context of this project, screen space was one of the highest weighted constraining factors. 
+                        This was something I had to be aware of from the very beginning. 
+                        I had to make sure I knew all the rules of the game which had to be conveyed graphically, so that I could allocate the adequate space for it in the design. 
+                        More than once, I discovered a new rule which had to be conveyed, and I had to adjust the design accordingly. 
+                        Sometimes this meant I had to scrap a previous design for UI component, since there was no longer space for it. 
+                        The silver lining here is that in working with any creative endeavour, it is useful to work from the abstract to the concrete, and not put too much effort into early designs. 
+                        Instead, early designs should be used as quick tools to explore the problemspace and uncover the underlying constraints.
+                    </p>
+                    <h3 class="heading-3">Player Resources</h3>
+                    <p class="body-copy">
+                        One example of this is when I was considering how to represent the players’ resources - mana and health. 
+                        I had the idea going with the style of gothic RPGs and use orbs which contained a liquid and a number, both telling the player how much mana or health they have. 
+                        It all started out according to the textbook, sketching on paper at first. 
+                    </p>
+                    <figure>
+                        <img src="../Resources/ascendancy-games/ascendancy-resources.jpg" alt="">
+                        <figcaption>Sketching how to represent player resources.</figcaption>
+                    </figure>
+                    <p class="body-copy">
+                    Then I started elaborating the design in Figma, and exploring how to represent “shared mana” - one of the game’s novelty rules. 
+                    After a good amount of time and creating different designs, I realised that the idea was inherently flawed. In gothic RPGs, mana and health is typically counted in the hundreds, thousands and even millons. 
+                    In our game, we only had to work with a range of perhaps 0 to 40. 
+                    In the case of mana, you start the game with as low as two. 
+                    I had broken a constraint which might be thought of as “the graphical representation of player resources should fit the range of numbers”.
+                    </p>
+                    <figure>
+                        <img src="../Resources/ascendancy-games/ascendancy-orb.jpg" alt="">
+                        <figcaption>The sketch of representing health and mana as an orb, which was later created in Figma.</figcaption>
+                    </figure>
+                    <p class="body-copy">
+                        Shared mana is one of the novelties in the game, which encourages teamplay between the allies.
+                        If no unit has been played in a lane since the beginning of the round, that lane contains mana.
+                        A player will then unlock that mana by playing a unit in that lane, and can use that mana up front.
+                        If the mana is not used up front, it is added to a shared mana pool between the allies.
+                        Having this shared mana system adds a level of strategy as the players have to consider playing their cards in a certain way.
+                        They also have to talk together, in order to find out who should use the mana.  
+                        But I also had to consider how to show the shared mana in the UI.
+                        For a while, the idea was to show the shared mana at each allies, since this is were the other resources are displayed.
+                        But this made a disconnect with the fact that the mana is shared between players, and not individual.
+                        The solution was to one UI element represent the amount of mana in the shared mana pool.
+                    </p>
+                    <figure>
+                        <img src="../Resources/ascendancy-games/ascendancy-games-player-resources-figma.png" alt="">
+                        <figcaption>Differerent versions for representing player resources. The final version is shown at the bottom. Player portraits were made by our concept artist Frederik Becker.</figcaption>
+                    </figure>
+                    <h3 class="heading-3">Establishing a Visual Heirarchy</h3>
+                    <p class="body-copy">
+                        Working with the screen space constraint I had to establish a visual hierarchy and decide which information is most important, and therefore should take up the most screen space.
+                        I looked at other digital card games to see how the problem had been solved before.
+                        I remembered a <a href="https://www.youtube.com/watch?v=YISKcRDcDJg&t=1186s&ab_channel=GDC" target="_blank">GDC Talk</a> I had seen on the subject, and decided to give it a rewatch. 
+                        The talk by Zach Gage is on building games that can be understood at a glance, with the main take away that the visual hierarchy should be seperated into three distinct levels of importance.
+                        He calls it 'The Three Reads'. 
+                        The first read is what you see at first, and should ideally describe the core gameplay - what kind of game it is.
+                        The second read is for unintuitive rules - rules which are novel and unique to the game, and therefore have to be learned.
+                        Finally, the third read is for contextual rules, and should take up the least space.
+                        Using this rule of thumb, I created a list containing a description of the UI components, sorted in three levels based on how important they were to the game.
+                        <ul class="body-copy">
+                            <em>First read</em>
+                            <li>The players' hand</li>
+                            <li>The battlefield, containing the units.</li>
+                            <em>Second read</em>
+                            <li>The 'End Round' button</li>
+                            <li>Player Avatars</li>
+                            <li>Player powers</li>
+                            <li>Health</li>
+                            <li>Manacosts</li>
+                            <li>Shared mana</li>
+                            <em>Third read</em>
+                            <li>Deck sizes</li>
+                            <li>Unit states</li>
+                            <li>Enchantment slots</li>
+                            <li>Turn history</li>
+                            <li>Teammate's status on passing the turn</li>
+                            <li>Menu button</li>
+                            <li>..And everything else</li>
+                        </ul>
+                        <p class="body-copy">
+                            Having decided on the visual heirarchy, I was better equipped with dealing with the screen space constraint.
+                        </p>
+                    </p>
+                </section>
+                <section>
+                    <h2 class="heading-2" id="sec4">Creating the Board</h2>
+                    <p class="body-copy">
+                        The nature of the game meant that there would be three lanes - one for each player on the “Ally” team.  
+                        Each lane would have an Ally side and an “Overlord” side, each side with 2 rows. 
+                        Each of these rows can contain up to four units. 
+                        This means that 48 units should be able to be displayed on the “battlefield” when each spot has been taken. 
+                        Each of these units should of course also have their attack and defence stats displayed, as well as their resistance type and damage type. 
+                        Furthermore, when in combat, “Teammate”, “Self” and “Enemy” should be differentiated, as well as the state of the unit - can it attack or not? Or in case of enemy units, can it be attacked?  
+                        On top of this, certain keyword effects should also be displayed - perhaps the unit is weaker or stronger due to some permanent effect. 
+                        I quickly realised that screen space would be one of the biggest constraints.
+                    </p>
+                    <h3 class="heading-3">Perspective & Representing Units</h3>
+                    <p class="body-copy">
+                        The first decision that had to be made, which would inform later decisions, was how to represent the battlefield.
+                        We knew that there was going to be three straight lanes, with the the allies on one side and the overlord on the other.
+                        From here we narrowed it down to two options, having an orthographic camera, or going with perspective.
+                        On one hand, going with perspective would support the feel we were going for - we wanted the game to feel like a battle.
+                        Having a perspective would help towards this end, as it would feel more life-like than having an othographic camera.
+                        On the other hand, showing it in perspective mean that the units would be distorted - as units become smaller the farther they are away from the camera.
+                        In the end, we went with perspective.
+                        Units on the battlefield were not going to look like cards, as in other card games.
+                        Instead the silhouette of the artwork would be used to represent the unit on the battlefield - inspired by cardboard cutouts one might use for table top RPGs.
+                        The reasoning behind this, was again to support the feel of being on a battlefield. 
+                        We felt like having cards on the battlefield took away from this feeling, and this was the chance to do something new.
+                        The decision to go with silhouettes was due to our limited time and manpower. 
+                        Since we reused the art that was going on the cards, we circomventet having to make 3D models, or something similar.
+                    </p>
+                    <figure>
+                        <img src="../Resources/ascendancy-games/ascendancy-screen-space.png" alt="">
+                        <figcaption>An early sketch exploring the proportions of different elements on the screen. The dark grey rectangles indicate space taken up by environmental 3D models. The actions history on the top left ended up being scrapped due to time constraints.</figcaption>
+                    </figure>
+                    <h3 class="heading-3">Unit Resistances & Damage Types</h3>
+                    <p class="body-copy">
+                        One of the rules for the game, which was a challenge to design for was the concept of unit resistances.
+                        There are two types of resistances - physical and magical.
+                        A unit with physical resistance takes less damage from a source which deals physical damage, depending on how much resistance it has.
+                        The same with magical resistance.
+                        On top of that, there is a damage type called true. 
+                        True damage ignores resistance types.
+                    </p>
+                    <p class="body-copy">
+                        My inital idea was to make icons, representing physical, magical and true damage/resistance.
+                        But the idea was scratched, as it looked to noisy, when looking at the battlefield, with 48 units.
+                    </p>
+                    <figure>
+                        <img src="../Resources/ascendancy-games/ascendancy-games-resistance-damage-icons.png" alt="">
+                        <figcaption>Icons were considered, but later scratched as they made the battlefield too cluttered. The three icons on the right were considered for indicating true, magical and physical damage.</figcaption>
+                    </figure>
+                    <p class="body-copy">
+                        In addition, there was a different aspect to the resistance/damage system which I hadn't considered.
+                        Cards could have both types of resistances at the same time.
+                        Also, some cards didn't have resistances at all, and this also had to be communicated.
+                        The solution was to have a colour indicate which kind of resistance and damage type the unit has.
+                        If the player wants to know how much resistance the card has, they would have to hover over the card.
+                    </p>
+
+                    <figure>
+                        <img src="../Resources/ascendancy-games/ascendancy-damage-resistance-design-components.png" alt="">
+                        <figcaption>The final UI components for the resistance / damage system. Physical (red), magical (blue), physical & magical (red & blue, or purple), true (amber) and none (grey).</figcaption>
+                    </figure>
+                    <h3 class="heading-3">Unit States</h3>
+                    <p class="body-copy">
+                        A unit has different attributes which had to be indicated. 
+                        Some units can attack, while others cannot. 
+                        Since the allies can play their units in the same lane, there had to be a visual seperation between who controls which units.
+                        Furthermore, during different states of the game, different information becomes important.
+                        When deciding which unit to attack with, for example, you want to see which units can attack.
+                        When having selected a unit to attack with, there should be some feedback that you have indeed selected the unit, and some indication of which units you can attack - percieved affordance. 
+                        Going through the different states and how to represent them was a team effort.
+                        We looked to how other games have solved this problem, we sketched different ideas for visuals, and we created a list of what needed to be indicated.
+                    </p>
+                    <figure>
+                        <img src="../Resources/ascendancy-games/ascendancy-games-unit-states.png" alt="">
+                        <figcaption>Graphic detailing how unit states are communicated during the different phases of the game.</figcaption>
+                    </figure>
+                </section>
+
+                <section>
+                    <h2 class="heading-2" id="sec5">Sound Design</h2>
+                    <p class="body-copy">
+                        Auditory feedback is very important for a game, communicating game states and adding a level of enjoyment.
+
+                        We had a out-of-house musician, who had already made a some soundtracks, who was going to create the sound effects (SFX).
+
+                        I brainstormed the different actions and states in the game, which needed feedback, and had the team look over it.
+
+                        By the end I had a list on the blackboard, with some items put into categories, according to their function in the game.
+
+                        I decided on the different categories, and wrote up the entire thing in Figma, where I also prioritised it according to three levels of importance.
+                    </p>
+
+                    <figure>
+                        <img src="../Resources/ascendancy-games/ascendancy-sfx-list.png" alt="">
+                        <figcaption>All the considered sound effects put into different catergories. Prioritisation: Crucial (1) is for the most important player / game interactions, Important (2) is for other important feedback while Aesthetic (3) is related to SFX which are mostly for making the game more satisfying to play. </figcaption>
+                    </figure>
+
+                    <p class="body-copy">
+                        I wrote a description for each SFX, to give the artist an idea of what I was going for.
+                        
+                        In order to make sure we had enough time for implementing the effect, I talked to one of the programmers, about how much time it would time him to implement a sound effect system.
+
+                        I then added some documentation about the reasoning for having three priorities, as well as suggested a timeframe for making the effects.
+
+                        At this point we were at the very end of the project, with a couple of weeks left, so the plan was to have the 'crucial' effects done, and hopefully some of the 'important'.
+                        
+                        At a our initial meeting, we discussed the effects and their descriptions as well as the timeframe.
+
+                        We agreed that he would deliver the SFX within a couple of days.
+                    </p>
+
+                    <figure>
+                        <img src="../Resources/ascendancy-games/ascendancy-sfx-1.png" alt="">
+                        <figcaption>The list with priority 1 SFX, with a description for each effect.</figcaption>
+                    </figure>
+
+                    <p class="body-copy">
+                        During the last week of the project, we couldn't get a hold of the sound designer.
+
+                        Since I have a background in making electronic music, my producer asked me if I could make the effects.
+
+                        I new what had to be made, and an idea of what I wanted it to sound like, and at this point I was satisfied with what I had made on the graphical UI side of things.
+
+                        On the last day of the project I recorded some audio, did some editing and processing and created most of the sound effects from priorities 1 and 2.
+
+                        You can give them a listen here below.
+                    </p>
+
+                    <button type="button" class="collapsible__button">+ Show audio clips</button>
+
+                    <div class="collapsible__content">
+                        <div class="audio">
+                            <h4>Card on play</h4>
+                            <audio controls><source src="../Resources/ascendancy-games/audio/CardOnPlay.wav" type="audio/wav">This audio is not supported by your browser.</audio>
+                        </div>
+    
+                        <div class="audio">
+                            <h4>Combat</h4>
+                            <audio controls> <source src="../Resources/ascendancy-games/audio/Combat.wav" type="audio/wav"> This audio is not supported by your browser. </audio>
+                        </div>
+    
+                        <div class="audio">
+                            <h4>Gain action point</h4>
+                            <audio controls> <source src="../Resources/ascendancy-games/audio/GainActionPoint.wav" type="audio/wav"> This audio is not supported by your browser.</audio>
+                        </div>
+    
+                        <div class="audio">
+                            <h4>Gain action points</h4>
+                            <audio controls> <source src="../Resources/ascendancy-games/audio/GainActionPoints.wav" type="audio/wav"> This audio is not supported by your browser.</audio>
+                        </div>
+    
+                        <div class="audio">
+                            <h4>Gain mana</h4>
+                            <audio controls> <source src="../Resources/ascendancy-games/audio/GainMana.wav" type="audio/wav"> This audio is not supported by your browser.</audio>
+                        </div>
+    
+                        <div class="audio">
+                            <h4>Invalid action</h4>
+                            <audio controls> <source src="../Resources/ascendancy-games/audio/InvalidAction.wav" type="audio/wav"> This audio is not supported by your browser.</audio>
+                        </div>
+    
+                        <div class="audio">
+                            <h4>Mouse click</h4>
+                            <audio controls> <source src="../Resources/ascendancy-games/audio/MouseClick.wav" type="audio/wav"> This audio is not supported by your browser.</audio>
+                        </div>
+                        
+                        <div class="audio">
+                            <h4>New round</h4>
+                            <audio controls> <source src="../Resources/ascendancy-games/audio/New Round_1.wav" type="audio/wav"> This audio is not supported by your browser.</audio>  
+                        </div>
+                        
+                        <div class="audio">
+                            <h4>New turn</h4>
+                            <audio controls> <source src="../Resources/ascendancy-games/audio/New Turn.wav" type="audio/wav"> This audio is not supported by your browser.</audio>        
+                        </div>
+                        
+                        <div class="audio">
+                            <h4>Select card</h4>
+                            <audio controls> <source src="../Resources/ascendancy-games/audio/Select Card.wav" type="audio/wav"> This audio is not supported by your browser.</audio>
+                        </div>
+                        
+                        <div class="audio">
+                            <h4>Select unit</h4>
+                            <audio controls> <source src="../Resources/ascendancy-games/audio/Select Unit.wav" type="audio/wav"> This audio is not supported by your browser.</audio>
+                        </div>
+                      
+                        <div class="audio">
+                            <h4>Spending an action</h4>
+                            <audio controls> <source src="../Resources/ascendancy-games/audio/SpendingAction.wav" type="audio/wav"> </audio>
+                        </div>
+                        
+                        <div class="audio">
+                            <h4>Timer complete</h4>
+                            <audio controls> <source src="../Resources/ascendancy-games/audio/Timer Complete.wav" type="audio/wav"> </audio>
+                        </div>
+                       
+                        <div class="audio">
+                            <h4>Timer loop</h4>
+                            <audio controls> <source src="../Resources/ascendancy-games/audio/Timer Loop.wav" type="audio/wav"> </audio>
+                        </div>
+                       
+                        <div class="audio">
+                            <h4>Timer start</h4>
+                            <audio controls> <source src="../Resources/ascendancy-games/audio/Timer Start.wav" type="audio/wav"> </audio>
+                        </div>     
+                    </div>
+
+                </section>
+                <section>
+                    <h2 class="heading-2" id="sec6">Visual Effects</h2>
+                    <p class="body-copy">
+                        Initial brainstorm of the different effects which had to be in the game.
+                        
+                        Since visual effects act as feedback for the player, it is important to consider which are the most important.
+    
+                        Since we weren't familiar with the cards in the beginning, apart from two playtests, there was a lot of back and forth with the game producer.
+    
+                        We brainstormed and sketched the different visual effects (VFX). 
+    
+                        The list was then prioritised with the producer, and he assigned them into sprints based on their importance.
+    
+                        It was my job to ensure that the art team had what they needed to deliver, and to ensure that everyone was on track.
+    
+                        Each time we had to make new effects, we discussed the direction and different ideas.
+    
+                        We then decided who made what, based on individual skills, time and personal goals for the project.
+    
+                        Progress was tracked in our time management system.
+                    </p>
+    
+                    <figure>
+                        <img src="" alt="">
+                        <figcaption></figcaption>
+                    </figure>
+                </section>
+
+                <section>
+                    <h2 class="heading-2" id="sec7">Creating the Cards</h2>
+                    <p class="body-copy">
+
+                    </p>
+                </section>
+
+                <section>
+                    <h2 class="heading-2" id="sec8">Outcomes</h2>
+                    <p class="body-copy"></p>
+                </section>
+
+            </div>
+        </div>
+
+        <!-- Component -->
+        <div class="about-info">
+            <div class="container">
+                <img src="../Resources/profil2.jpeg" alt="profile">
+
+                <div class="flex">
+                    <ul>
+                        <li>Tobias Fridolin</li>
+                        <li>MSc in Interaction Design</li>
+                        <li>Currently living in Aalborg, Denmark</li>
+                        <li><a class="hyperlink" href="mailto:tobiasfridolin@gmail.com" target="_blank">LinkedIn</a> <p>|</p> <a class="hyperlink"href="https://www.linkedin.com/in/tobias-fridolin/"> Email</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+   
+    <!-- <hr> -->
+
+    <!-- Component -->
+    <!-- <div class="other-cases">
+        <div>
+            <a style="background-image: url('../Resources/Naturbasen.png');"></a>
+            <p class="button">Next Case</p>
+        </div>
+        <div>
+            <a class="button" style="background-image: url('../Resources/Naturbasen_Hero 1440x440.png');"> Previous Case </a>
+        </div>
+    </div> -->
+
+    <!-- Component -->
+    <div class="footer">
+        <h1>~get in touch~</h1>
+        <h2 class="heading-2">Let's Grab a Cup of Coffee</h2>
+        <p class="body-copy">I am always up for meeting new people and hearing about new projects. Shoot me an email or send me a message on LinkedIn, and let’s talk over a cup of coffee.</p>
+        <a class="button" href="https://www.linkedin.com/in/tobias-fridolin/" target="_blank">Connect on LinkedIn</a>
+    </div>
+    
+    <script>
+        var coll = document.getElementsByClassName("collapsible__button");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            
+            coll[i].addEventListener("click", function() {
+
+                this.classList.toggle("active");
+                
+                if(this.classList.contains("active")){
+                    this.innerHTML = "-  Hide audio clips";
+                }else{
+                    this.innerHTML = "+  Show audio clips"
+                }
+
+                var content = this.nextElementSibling;
+                
+                if (content.style.display === "block") {
+                content.style.display = "none";
+                } else {
+                content.style.display = "block";
+                }
+            
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,284 @@
+@use 'atoms';
+
+.content{
+    padding-top: 0;
+    margin: 0;
+    box-shadow: 4px 4px 4px 0 rgb(255, 255, 255, 0.2);
+}
+
+section{
+
+    .heading-2{
+        padding-top: 16px;
+    }
+    
+    figure{
+        margin: 32px 0;
+    }
+
+    img{
+        width: 100%;
+        border-radius: 4px;
+    }
+
+    ul{
+        padding: 0;
+    }
+
+    li {
+        margin-left: 2rem;
+    }
+
+    ul em{
+        line-height: 200%;
+    }
+}
+
+.lead{
+    margin: 24px 0;
+}
+
+.button{
+
+    .container{
+        display: inline-flex; 
+        align-items: center;
+        color: atoms.$black-almost;
+        margin: 0;
+        padding-right: 0.5em;
+    }
+}
+
+.header{
+    background-color: white;
+    position: sticky;
+    position: relative;
+    top: 0;
+    
+    &-container{
+        margin:0;
+        padding: 16px 0;
+        
+        flex-direction: column; 
+        justify-content: center;
+        
+        .heading-1, .heading-2{
+            display: inline;
+            color: atoms.$black-almost;
+        }
+
+        div:last-child{
+            margin: 1rem 0;
+        }
+        
+    }
+
+    .subtitle{
+        font-family: atoms.$josefin-sans;
+        text-transform: uppercase;
+        font-size: 0.9rem;
+    }
+}
+
+figure.prototype{
+    background-color: rgba($color: atoms.$hyperlink, $alpha: 0.04);
+    padding: 32px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    
+    img{
+        opacity: 0.5;
+    }
+}
+
+
+.other-cases{
+    display: flex;
+    flex-flow: row;
+    width: 100vw;
+    padding: 80px 0 120px 0;
+    justify-content: center;
+
+    > div{
+        width: 50%;
+        max-width: 450px;
+        height: 200px;
+        overflow: hidden;
+        margin: 0 32px;
+        border-radius: 4px;
+
+    }
+
+    p{
+        position: relative;
+        text-align: center;
+        bottom: 32px;
+    }
+    
+    a{
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        
+        height: 100%;
+        width: 100%;
+        
+        text-align: center;
+
+        background-size: cover;
+        background-position: 50% 50%;
+        transform-origin: 50% 100%;
+        transition: ease-in transform 200ms, color 200ms;
+
+        &:hover{
+            transform: scale(1.05);
+            color: black;
+        }
+    }
+
+    @include atoms.breakpoint(small){
+        margin: 60px 0;
+    }
+
+    @include atoms.breakpoint(smallest){
+        flex-direction: column;
+        margin: 40px 0 60px 0;
+
+        div{
+            width: auto;
+            margin: 1rem 0;
+        }
+    }   
+}
+
+.audio{
+    margin: 40px 16px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h4{
+        margin-left: 8px;
+        font-family: atoms.$lora;
+        font-weight: 400;
+        font-size: 0.9rem;
+        color: atoms.$grey-50;
+    }
+}
+
+audio{
+    display: block;
+    margin: 8px 0;
+    width: 608px;
+
+    @include atoms.breakpoint(medium){
+        width: 440px;
+    }
+
+    @include atoms.breakpoint(small){
+        width: 390px;
+    }
+
+    @include atoms.breakpoint(smallest){
+        width: 300px;
+    }
+}
+
+@mixin colorpalette ($id: name) {
+    $color: black;
+    
+    @if $id == flyfotos{
+        $color: atoms.$flyfotos;
+    }
+
+    @else if $id == ascendancy-games{
+        $color: atoms.$ascendancy-games;
+    }
+    
+    @else if $id == naturbasen{
+        $color: atoms.$naturbasen;
+    }   
+    
+    @else if $id == icu{
+        $color: atoms.$icu;
+    }
+
+    .navigation-link--selected{
+        border-color: $color;
+    }
+
+    figure.prototype{
+        background-color: rgba($color, 0.04);
+    }
+
+    .header{
+
+        .subtitle{
+            color: $color;
+        }
+    }
+
+    .footer{
+        .button{
+            background-color: $color;
+            
+            &:hover{
+                background-color: rgba($color, 0.9);
+            }
+        }
+    }
+}
+
+#flyfotos{
+    @include colorpalette ($id: flyfotos);
+}
+
+#naturbasen{
+    @include colorpalette ($id: naturbasen);
+}
+
+#ascendancy-games{
+    @include colorpalette($id: ascendancy-games);
+}
+
+#res-dmg-list{
+    list-style: none;
+}
+
+#physical::before{
+    content: "\2022";
+    font-weight: bold;
+    color: red;
+    margin: 1em;
+}
+
+#magical::before{
+    content: "\2022";
+    font-weight: bold;
+    color: blue;
+    margin: 1em;
+}
+
+#both::before{
+    content: "\2022";
+    font-weight: bold;
+    color: purple;
+    margin: 1em;
+}
+
+#true::before{
+    content: "\2022";
+    font-weight: bold;
+    color: orange;
+    margin: 1em;
+}
+
+#none::before{
+    content: "\2022";
+    font-weight: bold;
+    color: grey;
+    margin: 1em;
+}

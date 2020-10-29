@@ -1,368 +1,88 @@
 <!DOCTYPE html>
-<html lang="da">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cardo&family=Josefin+Sans:wght@600;700&family=Lato&family=Source+Sans+Pro:ital,wght@0,300;0,400;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Styles/Css/components.css">
+    <link rel="stylesheet" href="../Styles/Css/home.css">
 
-    
-    
-    <link rel="icon" href="/res/favicon.png">
-
-    <!-- Handwriting fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Great+Vibes&family=Parisienne&family=Sacramento&family=Stalemate&display=swap" rel="stylesheet">
-
-    <!-- jQuery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
-    
-    <!-- ScrollMagic -->
-    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
-    
-    <!-- GSAP -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js" integrity="sha256-3arngJBQR3FTyeRtL3muAGFaGcL8iHsubYOqq48mBLw=" crossorigin="anonymous"></script>
-   
-    <script src="./js/app.js"></script>
-    <title>Portfolio</title>
+    <title>Home</title>
 </head>
-<body>
-    <header class="header" style="align-self: center;">
-        
-        <div class="signature"><a href="#">Fridolin</a></div>
-        
-        <nav class="nav">
 
-            <ul class="nav__links">
-                <li> <a id="portfolio-navlink"> PORTFOLIO </a> </li>
-                <li> <a href="mailto:tobiasfridolin@gmail.com" target="_blank"> KONTAKT </a> </li>
-                <li> <a href="res/CV.pdf" target="_blank"> CV </a></li>
-                <!-- <li> <a href="vip/Portfolio ny/Pages/index.html"> V2</a></li> -->
-                <li> <a style="font-weight: bold;" href="index.html"> DA </a> <a href="en.html"> EN</a> </li>
-            </ul>
-
-            <ul class="nav--open">
-                <li><a><h1>Portfolio</h1></a></li>
-                <li><a href="#naturbasen"> Naturbasen</a></li>
-                <li><a href="#cj-app">Create Jam app</a></li>
-                <li><a href="#gn">Gunnar Nielsen A/S</a></li>
-                <li><a href="#cj-hjemmeside">Create Jam hjemmeside</a></li> 
-                <li><a href="mailto:tobiasfridolin@gmail.com"><h1>Kontakt</h1></a></li>
-                <li><a href="res/CV.pdf" target="_blank"><h1>CV</h1></a></li>
-            </ul>
-
-            <div class="portfolio-subnav">
-                <li><a href="#naturbasen"> Naturbasen</a></li>
-                <li><a href="#cj-app">Create Jam app</a></li>
-                <li><a href="#gn">Gunnar Nielsen A/S</a></li>
-                <li><a href="#cj-hjemmeside">Create Jam hjemmeside</a></li> 
+<body class="home">
+    <div class="header">
+        <div class="header-container">
+            <div>
+                <h1 class="heading-1">Tobias Fridolin</h1>
+                <h2 class="subtitle">Interaction Designer</h2>
             </div>
-
-            <div class="icon nav__burger ">
-                <svg class="nav__burger--collabsed"  width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <div class="icon nav__burger">
+                <svg class="nav__burger--collabsed"  width="24" height="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
                     <rect y="3" width="24" height="2" />
                     <rect y="19" width="24" height="2" />
                     <rect y="11" width="24" height="2" />
                 </svg>
                                    
-                <svg class="nav__burger--open" style="display: none;" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="nav__burger--open" style="display: none;" width="24" height="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
                     <path d="M3 3L21 21" stroke-width="2"/>
                     <path d="M21 3L3 21" stroke-width="2"/>
                 </svg>                
             </div>  
-
-        </nav>
-
-    </header>
-
-  
-    <section id="landing" class="animation-fade-in">   
-        
-        <div class="landing__hero" style="background-image: url('res/skitser.png'); background-size: cover; background-position: center; background-repeat: no-repeat; opacity: 0.4;"></div>
-
-        <div style="position: relative" class="abstract abstract__left">
-            <div style="position: absolute; bottom: 0; margin: 0 0 1.5em 2.5em; display: flex; justify-content: center;">
+        </div>
+    </div>
+   
+   
+    <main>
+        <div class="landing">
             
-                <!-- <a style="text-align: center;  letter-spacing: 2px; font-family: lato; font-size: 12px; font-weight: 400; text-transform: uppercase;" href=""> Tobiasfridolin@gmail.com</a> -->
+            <div class="contact-info">
+                <div class="container">
+                    <div>
+                        <a href="mailto:tobiasfridolin@gmail.com" target="_blank">
+                            Tobiasfridolin@gmail.com
+                        </a>    
+                    </div>
+                    <div>
+                        <a href="https://www.linkedin.com/in/tobias-fridolin" target="_blank">
+                            in/tobias-fridolin
+                        </a>
+                    </div>
+                    <div>
+                        <a href="tel:+45-60-18-11-87">
+                            +45 60 18 11 87
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="nav">
+                <ul>
+                    <a class="navigation-link" href="index.html"><li class="navigation-link--selected">Home</li></a>
+                    <a class="navigation-link" href="pages/portfolio.html"><li>Portfolio</li></a>
+                    <a class="navigation-link" href="pages/about.html"><li>About Me</li></a>
+                    <a class="navigation-link" target="_blank" href="CV.pdf"><li>CV</li></a>
+                </ul>
             </div>
         </div>
 
-        <div class="abstract abstract__right">
-           
-            <div class="about">   
-
-                <img id="profil" src="res/Profil.JPG" alt="Profil billede">
-                
+        <div class="container">
+            <div class="alert">
+                <svg id="i" width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M16 2C8.26801 2 2 8.26801 2 16C2 23.732 8.26801 30 16 30C23.732 30 30 23.732 30 16C30 8.26801 23.732 2 16 2ZM0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16Z" fill="white"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M16 13C17.1046 13 18 12.1046 18 11C18 9.89543 17.1046 9 16 9C14.8954 9 14 9.89543 14 11C14 12.1046 14.8954 13 16 13ZM12 14H18V21L20 23H12L14 21V16L12 14Z" fill="white"/>
+                </svg>
+                    
                 <div>
-                    <div style="margin-bottom: 1rem;">
-                        <h1>
-                            Tobias Fridolin
-                        </h1>
-                        <h2>Cand.Scient Interaktionsdesign</h2>
-                    </div>
-
                     <p>
-                        Jeg er en interaktionsdesigner på 25 år, som er på udkig efter nye udfordringer. Tag et kig på mine projekter, og lær mere omkring hvordan jeg kan hjælpe jer.
+                        This is a newer version of my portfolio, which is a work in progress. 
+                        Feel free to reach out, if you see something that needs to be fixed.
                     </p>
-
-                    <p>
-                        Interaktionsdesign (IxD) handler om at designe løsninger, som hjælper brugeren med at opnå deres mål, på en mere effektiv og tilfredstillende måde.
-                    </p>
-                    
-                    <!-- <div class="flex-child flex-child--row" style="justify-content: center;">
-                        <div  class="button about__button">
-                            <a href="mailto:tobiasfridolin@gmail.com?subject=Hej, jeg så din portfolio" target="_blank">Kontakt</a> 
-                        </div>
-                        <div  class="button about__button">
-                            <a href="res/CV.pdf" target="_blank"> CV </a>
-                        </div>
-                    </div> -->
-
-                    <!-- <div style="margin-top: 8em;">
-                        <p style="text-transform: uppercase; text-align: center; letter-spacing: 2px; font-size: 14px; font-family: lato;"> Se mine projekter</p>
-                        <p style="text-transform: uppercase; text-align: center; letter-spacing: 2px; font-size: 14px; font-family: 'source sans pro';">↓</p>
-                    </div> -->
-
-
-                </div>
-
-            </div>
-            
-            <div class="scrollFeedforward">
-                <a href="#naturbasen"> 
-                    <p style="font-family: lato;"> Se min portfolio</p>  
-                    <p style="font-family: 'source sans pro';">↓</p>
-                </a>
-            </div>
-
-       <img class="abstract" src="res/abstract.svg" width="60%;" height ="auto;" style="position: absolute; left:0; top: 50%; transform: translateY(-50%); z-index: 0;"> </img>    
-    </section>
-
-    <main>
-        <section id="naturbasen" class="portfolio">
-
-            <div class="portfolio__hero">
-                <h2>Naturbasen</h2>
-                <div 
-                    class="portfolio__background" 
-                    style="background-image: url('../res/portfolioHero/naturbasen1280px.png');"> 
                 </div>
             </div>
+        </div>
 
-
-
-            <div class="portfolio__content portfolio__content--left">
-            
-                <div class="description col">
-
-                    <h3 >UI Redesign</h3>
-
-                    
-                    <div class="categories">
-                        <span>
-                            <h4> <b>Dato:</b> Marts 2020</h4>
-                            <h4> <b>Emner:</b> Design, Prototyping</h4>
-                        </span>
-                    </div>
-
-                    <div>
-                        <p>
-                            Naturbasen er en app som lader brugeren indberette observationer om den danske flora og fauna, og danner et overblik over hvilke dyr og områdetyper der findes i nærheden af brugeren. 
-                        </p>
-                        <p>
-                            Denne case er et grafisk redesign af Naturbasen, hvilket var et forslag der kom til mig efter et kaffemøde med en virksomhed.
-                            Resultatet er en prototype udarbejdet i Figma, med fokus på et grafisk redesign, men også nogle funktionelle ændringer, som bidrager til en bedre brugeroplevelse.  
-                        </p>
-                    </div>
-
-                    <div class="button portfolio__button">
-                        <a class="" href="https://www.figma.com/proto/92unqdwpdNwMa2DW1wGlVH/Naturbasen?node-id=242%3A1029&scaling=min-zoom" target="_blank">
-                            Se prototypen
-                        </a>   
-                    </div>
-                    
-                </div>
-                
-                <div class="image col">
-                    <img src="../res/naturbasen-moneyshot.png" alt="Naturbasen" >
-                    <div style="width: 100%; display: flex;">
-                        <div style="text-align: center; width:50%; padding-right: 1rem;">
-                            <h4>Nuværende</h4>
-                        </div>
-                        <div style="text-align: center; width: 50%; padding-left: 1rem;">
-                            <h4>Redesign</h4>
-                        </div>
-                    </div>
-                </div>
-
-
-            </div>
-
-        </section>
-
-        <section id="cj-app" class="portfolio">
-
-            <!-- <div style="width: 1px; background-color: white; height: 100vh; position: fixed; top: 0; left: 60%; content: '';"> </div> -->
-
-            <div class="portfolio__hero"> 
-                <h2>Create Jam</h2>
-                <div class="portfolio__background" style="background-image: url('../res/portfolioHero/cj-app.png');"></div>
-            </div>
-
-            <div class="portfolio__content portfolio__content--right">
-                <!-- <iframe style="border: none;" width="450" height="950" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FHu4L1TvKCw5Sw3UdDAZ07x%2FCJ-App%3Fnode-id%3D28%253A95%26scaling%3Dmin-zoom" allowfullscreen></iframe> -->
-            
-                <div class="image">
-                    <img src="../res/cj-app-moneyshot.png" alt="" style="padding: 0 25%;">
-                </div>
-
-                <div class="description">
-
-                    <div class="title">
-                        <h3> UI Design</h3>
-                    </div>
-
-                    <div class="categories">
-                        <span>
-                            <h4> <b>Dato:</b> November 2019</h4>
-                            <h4> <b>Emner:</b> Scrum, Grafisk Design, Prototyping </h4>
-                        </span>
-                    </div>
-
-                    <p>
-                        Denne case omhandlede en app til Create Jam, som er en organisation som afholder begivenheder, hvor personer af forskellige kreative baggrunde mødes, for at lave et spil på under 48 timer. 
-                        Appen's primære use case er at gennemse spillene, samt at stemme på det spil, man mener fortjener første præmien.
-                    </p>
-                    <p>
-                        Som aktivt medlem af organisationen, var det naturligt for mig at være product owner på projektet. Som product owner havde jeg ansvaret for at prioritere udviklingen af de features som gav størst værdi for brugerne. Jeg stod også for det grafiske design, og udviklede en design guideline i Figma, som udviklerne kunne følge.
-                    </p>
-        
-                    <div class="button portfolio__button">
-                        <a  href="https://www.figma.com/proto/Hu4L1TvKCw5Sw3UdDAZ07x/CJ-App?node-id=28%3A95&scaling=min-zoom" target="_blank">
-                            Se prototypen
-                        </a>
-                    </div>
-
-                </div>
-
-            </div>
-        </section>
-
-        <section id="gn" class="portfolio">
-            <div class="portfolio__hero" >
-                <h2>Gunnar Nielsen A/S</h2>
-                <div class="portfolio__background" style="background-image: url('../res/portfolioHero/gn.png');"></div>
-            </div>
-
-            <div class="portfolio__content portfolio__content--left">
-
-                <div class="description">
-
-                    <div class="title">
-                        <h3>Hjemmeside Mockup</h3>
-                    </div>
-
-                    <div class="categories">
-                        <span>
-                            <h4> <b>Dato:</b> December 2019</h4>
-                            <h4> <b>Emner:</b> Design, Prototyping, Brugertests</h4>
-                        </span>
-                    </div>
-
-                    <p>
-                        I forbindelse med min tidsbegrænsede stilling som projektkonsulent i Gunnar Nielsen A/S, udarbejde jeg sammen med mine kollegaer en ny identitet til virksomheden. Baseret på vores fund udabejdede jeg en mockup i Figma, som forslag til et redesign af deres eksisterende hjemmeside. Mit fokus lå på kommunikation af den nye identitet. Derudover lavede jeg ændringer til navigationen af ydelser, baseret på en opdateret liste, og cardsorting med projektlederne i virksomheden. 
-                    </p>
-                    
-                    <div class="button portfolio__button">
-                        <a  href="https://www.figma.com/proto/ckXtrxCLMjtLlq6MovAnBl/GN-hjemmeside?node-id=174%3A421&viewport=160%2C293%2C0.06609665602445602&scaling=min-zoom" target="_blank">
-                            Se prototypen
-                        </a>
-                    </div>
-
-                </div>
-
-                <div class="image">
-                    <img src="../res/gn.jpg" alt="">
-                </div>
-
-                <!-- <iframe style="border: none;" width="800" height="950" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FckXtrxCLMjtLlq6MovAnBl%2FGN-hjemmeside%3Fnode-id%3D11%253A9" allowfullscreen></iframe> -->
-            </div>
-        </section>
-
-        <section id="cj-hjemmeside" class="portfolio">
-            <div class="portfolio__hero">
-                <h2>Create Jam</h2>
-                <div class="portfolio__background" style="background-image: url('../res/portfolioHero/cj-hjemmeside.png');"> </div>
-            </div>
-
-            <div class="portfolio__content portfolio__content--right">
-            
-                <div class="image">
-                    <img src="../res/cj-hjemmeside-moneyshot.png" alt="">
-                    <div style="text-align: center;">
-                        <h4>Under udarbejdelse</h4>
-                    </div>
-                </div>
-
-                <div class="description">
-
-                    <div class="title">
-                        <h3>Hjemmeside</h3>
-                    </div>
-
-                    <div class="categories">
-                        <span>
-                            <h4> <b>Dato:</b> Igangværende</h4>
-                            <h4> <b>Emner:</b> Design, Programmering</h4>
-                        </span>
-                    </div>
-
-                    <p>
-                        Jeg står for hjemmesiden til Create Jam foreningen, som jeg er frivillig i. Jeg startede projektet som en måde, hvorpå jeg kunne blive bedre til webudvikling. Udover html og css har jeg brugt Sass og jQuery.
-                    </p>
-
-                    <div class="button portfolio__button">
-                        <a href="vip/create-jam/CJ.html" target="_blank">
-                            Se hjemmesiden
-                        </a>
-                    </div>
-                </div>
-
-                <!-- <iframe style="width:50%; height: 100%" src="https://tobiasfridolin.github.io/create-jam/CJ.html" frameborder="0"></iframe> -->
-            </div>
-
-        </section>
     </main>
 
-    <footer class="footer">
-            
-        <img id="coffee" src="res/coffee.svg" alt="" height="100" style="margin: 1em 1em 2em 1em;">
-
-        <div class="flex-child flex-child--column">
-            
-            <h3>Kontakt</h2>
-
-            <p>
-                Hvis du er interesseret i at høre mere, så smid mig en mail eller en besked på LinkedIn. Jeg er altid frisk på at høre nye ideer eller potentielle samarbejder.
-            </p>
-        </div>
-
-        <div class="flex-child flex-child--row">
-
-            <div id="linkedin" class="button footer__button">
-                <a  href="https://www.linkedin.com/in/tobias-fridolin/" target="_blank">
-                    Forbind på LinkedIn
-                </a>
-            </div>
-
-            <div id="email" class="button footer__button" >
-                <a  href="mailto:tobiasfridolin@gmail.com?subject=Hej, jeg så din portfolio" target="_blank">
-                    Email
-                </a>
-            </div>
-        </div>
-        
-    </footer>
-    
 </body>
 </html>
+
