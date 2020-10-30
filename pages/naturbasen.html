@@ -6,6 +6,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Cardo&family=Josefin+Sans:wght@400;600;700&family=Lato&family=Source+Sans+Pro:ital,wght@0,300;0,400;1,600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@1,300&display=swap" rel="stylesheet">
+
 
 
     <link rel="stylesheet" href="/styles/css/components.css">
@@ -37,7 +39,7 @@
                     <a class="navigation-link" href="/index.html"><li>Home</li></a>
                     <a class="navigation-link" href="portfolio.html"><li class="navigation-link--selected">Portfolio</li></a>
                     <a class="navigation-link" href="about.html" ><li>About Me</li></a>
-                    <!-- <a class="navigation-link" target="_blank" href="CV.pdf"><li>CV</li></a> -->
+                    <a class="navigation-link" href="cv.html"><li>CV</li></a>
                 </ul>
                 <ul class="outline">
                     <li class="outline heading-3">Contents</li>
@@ -50,6 +52,12 @@
             </div>   
             
             <div class="article">
+                <p class="lead">
+                    This is one of the first personal UI design projects I did, and a lot has changed since then.
+                    I am happy to say that the app has now been redesigned in line with some of the design changes I have suggested here.                 
+                </p>
+
+
                 <section>
                     <h2 class="heading-2" id="sec1">The Challenge</h2>
                     <p class="body-copy">
@@ -71,7 +79,7 @@
                         <li>I had to feel proud of the end result.</li>
                     </ul>
                     <p class="body-copy">
-                        I also wanted to become more proficient at creating digital prototypes as well as develop my intuition for graphical design.
+                        I also wanted to become more proficient at creating digital prototypes as well as develop my intuition for graphic design.
                     </p>
                     <figure class="prototype">
                         <a href="https://www.figma.com/proto/92unqdwpdNwMa2DW1wGlVH/Naturbasen?node-id=242%3A1029&viewport=3992%2C2762%2C0.4868549704551697&scaling=scale-down" target="_blank">
@@ -86,8 +94,9 @@
                 <section>
                     <h2 class="heading-2" id="sec2">The Process</h2>
                     <p class="body-copy">
-                        I downloaded the app, took screen shots of each screen, and created a prototype of the app in <a href="https://www.figma.com/" target="_blank">Figma</a>, my design tool of choice.
-                        This way I had an overview. From what I'm told, a digital designer usually works from a set of wireframes, and this was kind of like that - working from the standpoint of the information architecture of the app.
+                        I downloaded the app, took screenshots of each screen, and created a prototype of the app in <a href="https://www.figma.com/" target="_blank">Figma</a>, my design tool of choice.
+                        This provided me with an overview of what had to be designed. 
+                        From what I'm told, a digital designer usually works from a set of wireframes, handed over by the UX designers. 
                     </p>
                     <h3 class="heading-3">First Impressions</h3>
                     <p class="body-copy">
@@ -101,17 +110,17 @@
                         <figcaption>
                             Five icons on the landing page.
                             Nothing actually happens when pressing the icons. 
-                            Each icon resemples a specific type of protected area, and will light up if the user is located in one.
+                            Each icon specifies a different type of protected area, and will light up if the user is located in one.
                             This is described on the 'Where am I' screen (shown in green). 
                         </figcaption>
                     </figure>
                     <h3 class="heading-3">Working in Figma</h3>
                     <p class="body-copy">
-                        I spend the remaining time working in Figma, creating the different screen in a more or less sequential process. 
+                        I spent the remaining time working in Figma, creating the different screens in a more or less sequential process. 
                         I broke the design down into the different components which were used multiple times throughout the design.
                         This made it easy to update the entire design across all screens, when making an adjustment to a main component, say the main component of the header.
                         But it also allowed for an easy way to make alternative designs - components could easily be swapped out.
-                        Creating different designs and comparing them in order to figure out what worked and what didn't was the underlying process of creating the design.
+                        Comparing different versions in order to figure out what worked and what didn't was the underlying process of creating the design.
                     </p>
                     <h3 class="heading-3">Creating a Design System</h3>
                     <p class="body-copy">
@@ -139,7 +148,8 @@
                         Knowing your location seems pivotal for the app, seeing as a map is accesible on multiple screens.
                         I decided to move the map to the landing page, so it is accesible from a single place, removing the "where am I?" screen.
                         Having the map on the landing page also gives some much needed context to the icons.
-                        These icons light up according to the type of area the user is currently located in, e.g. a bird sanctuary.
+                        These icons light up according to the type of area the user is currently located in. 
+                        For example, if the user is currently standing in a bird sanctuary, the corresponding icon will light up.
                     </p>
                     <figure>
                         <img src="../resources/naturbasen/nb-omraadetyper.png" alt="the redesigning landing page">
@@ -163,9 +173,12 @@
                     </figure>
                     <h3 class="heading-3">Protected areas</h3>
                     <p class="body-copy">
-                        If you are in a protected area, the repective icon will light up. Since it is possible that the user is in an area which is protected in more that one way, the user can select which area should be lit up on the map.
-                        This is done by pressing an active icon, which prompts a menu with the given active areas. Here the user can see more information about what type of area they are located in, and they can switch between which type is shown on the map.
-                        If the user presses an icon which is not lit up, a messsage is show about the type of area the icon indicates. This was an important change from the original design, since nothing happened when trying to press an icon.
+                        If you are in a protected area, the respective icon will light up. 
+                        Since it is possible that the user is in an area which is protected in more that one way, the user can select which area should be lit up on the map.
+                        This is done by pressing an active icon, which prompts a menu with the given active areas. 
+                        Here the user can see more information about what type of area they are located in, and they can switch between which type is shown on the map.
+                        If the user presses an icon which is not lit up, a messsage is show about the type of area the icon indicates. 
+                        This was an important change from the original design, since nothing happened when trying to press an icon.
                     </p>
                     <figure>
                         <img src="../resources/naturbasen/nb-protected-areas.png" alt="Protected areas">
@@ -178,8 +191,10 @@
                     <p class="body-copy">
                         Lists with many elements should be ordered in some way, which makes it easier and faster for a user to sort through. 
                         So, I ordered the list of species and the input lists alphabetically.
-                        Secondly, I added an image of the species which the user is about to report. This provides the user with some extra feedback, ensuring them that they have selected the right animal.
-                        When reporting, I added an 'edit' function, having the following use case in mind: the user is reporting a species, but discovers that they have put the wrong name, or location. They want to easily change this, without going back and discarding the other information, which they have already spent time providing.
+                        Secondly, I added an image of the species which the user is about to report. 
+                        This provides the user with some extra feedback, letting them know that they did indeed select the species they had in mind.
+                        When reporting, I added an 'edit' function, having the following use case in mind: the user is reporting a species, but discovers that they have put the wrong name, or location. 
+                        They want to easily change this, without going back and discarding the other information, which they have already spent time providing.
                         These last two changes conform to <a class="hyperlink" href="https://www.nngroup.com/articles/ten-usability-heuristics/" target="_blank">Jakob Nielsen's 10 usability heuristics</a>, of helping users recognize, diagnose, and recover from errors.
                     </p>
                     <figure>
@@ -201,7 +216,7 @@
                     <h2 class="heading-2" id="sec4">Possible Improvements</h2>
                     <p class="body-copy">
                         Ideally, user testing should be made after any changes to the design, including changes to the graphical design, as it has an affect on the user experience.
-                        However, since my personal goal for this case was to develop an intution for graphical design and become more proficient at prototyping, I chose to not do any follow up testing with users.
+                        However, since my personal goal for this case was to develop an intution for graphic design and become more proficient at prototyping, I chose to not do any follow up testing with users.
                         Because of this, I have reflected on some of the bigger changes I have made to the app.
                     </p>            
                     <p class="body-copy">
@@ -219,13 +234,13 @@
                
                     <h2 class="heading-2" id="sec5">Final Reflections</h2>
                     <p class="body-copy">
-                        Creating alternatives and comparing them is a great way to know that you are making the right decision, but developing an intuition about graphical design can make the process more effecient. 
-                        I find that it is something that comes with practise, and why projects like this one has been important for my skills to get where they are today.
+                        Creating alternatives and comparing them is a great way to know that you are making the right decision, but developing an intuition about graphic design can make the process more effecient. 
+                        I find that it is something that comes with practise, and why projects like these have been important for my skills to get where they are today.
                     </p>
                     <p class="body-copy">
-                        Overall, I find the design more visually appealing that the existing one. 
+                        Overall, I find the design more visually appealing than the existing one. 
                         The design could have been more bold, opting for green instead of blue for example, and more stylised fonts.
-                        However, considering that the target group I think I made the right choices. 
+                        However, considering the demographic of users, I think I made the right choices. 
                     </p>
                     <p class="body-copy">
                         The project took about 7 workdays, but I have made some adjustments following that. 
@@ -234,15 +249,13 @@
                     </p>
                     <p class="body-copy">
                         I quickly found that I focused a lot on the user experience and my knowledge of interaction design informed some design changes not related to the graphical design.
-                        In fact, I think that the value in the final product is least as much in the usability changes as in the updated visual design.
+                        In fact, I think that the value of the final product is at least as much in the usability changes as in the updated visual design.
                     </p>
                     <p class="body-copy">
-                        In conclusion, I developed my skills with graphical design, but the main outcome of the project is that I should focus more on what I'm good at.
+                        In conclusion, I developed my skills with graphic design, but the main outcome of the project is that I should focus more on what I'm good at.
                         I hope that you enjoyed the read, and if you haven't already, check out the prototype.
                     </p>
-                    <p class="post-script">
-                        Update: the existing app has been redesigned since I did this case. In particular, the list of species you can see in the area now includes the species' name i latin as well as a picture.
-                    </p>
+                  
                     <figure class="prototype">
                         <a href="https://www.figma.com/proto/92unqdwpdNwMa2DW1wGlVH/Naturbasen?node-id=242%3A1029&viewport=3992%2C2762%2C0.4868549704551697&scaling=scale-down" target="_blank"><img src="../resources/svg/play-prototype-big.svg" width="100px" height="100px" alt="play prototype"></a>                        
                         <figcaption>Play the prototype in Figma.</figcaption>

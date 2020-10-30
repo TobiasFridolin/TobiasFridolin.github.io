@@ -35,7 +35,8 @@ section{
 }
 
 .lead{
-    margin: 24px 0;
+    margin: 32px 0;
+    text-align: left;
 }
 
 .button{
@@ -57,7 +58,7 @@ section{
     
     &-container{
         margin:0;
-        padding: 16px 0;
+        // padding: 16px 0;
         
         flex-direction: column; 
         justify-content: center;

@@ -1,0 +1,266 @@
+@use 'atoms';
+
+:root{
+    --margin: 240px;
+    --offset: 80px;
+    --offset-margin: 32px;
+    --padding: 32px;
+}
+
+@include atoms.breakpoint(small){
+    $offset: 40px;
+}
+
+.heading-1{
+    font-size: 1.4rem;
+    padding: 0.5rem 0;
+    color: atoms.$grey-80;
+    font-weight: 300;
+}
+
+h2{
+    font-family: atoms.$josefin-sans;
+    font-weight: 600;
+    font-size: 2.5rem;
+    line-height: 125%;
+    color: atoms.$grey-80;
+    padding: 0 var(--padding);
+}
+
+h3{
+    font-family: atoms.$lato;
+    font-size: 0.8rem;
+    letter-spacing: 0.02rem;
+    font-weight: 400;
+    line-height: 2.5rem;
+    color: atoms.$grey-50;
+    text-transform: uppercase;
+}
+
+h4, h5{
+    font-family: atoms.$lora;
+    font-size: 1.25rem;
+    line-height: 1.7rem;
+    color: atoms.$grey-80;
+}
+
+h5{
+    color: atoms.$grey-30;
+    width: var(--offset);
+    font-size: 0.8rem;
+    text-align: right;
+    transform: translateX(calc(-1 * var(--offset-margin)));
+}
+
+p{
+    font-family: atoms.$lora;
+    font-size: 0.9rem;
+    font-weight: 400;
+    line-height: 175%;
+    letter-spacing: 0.02rem;
+    color: atoms.$grey-70;
+    text-align: left;
+    margin: 0.5rem 0;
+}
+
+section{
+    margin-bottom: 0;
+    
+    display: flex;
+    flex-direction: column;
+    padding: 120px 0;
+
+    .container{
+        min-width: 24rem;
+        display: flex;
+        flex-flow: row wrap;
+
+        > div{
+            max-width: 28rem;
+            // margin-left: $offset + $offset-margin;
+            padding: var(--padding);
+
+            @include atoms.breakpoint(small){
+                padding: 24px 8px;
+            }
+
+
+            > div{
+                height: 28px;
+
+            }
+            
+        }
+    }
+}
+
+.education{
+    background-color: rgba(black, 0.015);
+
+
+
+    h2, h4{
+        color: atoms.$primary-strong;
+    }
+
+    h5{
+        text-align: center;
+        transform: translate(0, 0);
+        width: auto;
+        color: atoms.$grey-50;
+        font-size: 0.9rem;
+    }
+}
+
+.references{
+    // background-color: rgba(atoms.$primary-strong,0.04);
+    
+
+
+    h2, h3{
+        color: atoms.$primary-weak;
+    }
+
+    h3{
+        font-family: atoms.$lora;
+        font-size: 0.9rem;
+        line-height: 1.7rem;
+        // color: atoms.$grey-80;
+        // text-transform: none;
+    }
+
+    h4{
+        font-size: 1rem;
+        color: atoms.$grey-70;
+    }
+
+    h5{
+        transform: translate(0, 0);
+        width: auto;
+        color: atoms.$grey-50;
+        font-size: 0.9rem;
+        text-align: center;
+    }
+}
+
+.offset{
+    margin: 80px 0;
+
+    h2{
+        margin-left: calc(var(--offset) + var(--offset-margin));
+        color: rgba(#000000, 0.12);
+        font-size: 3.25rem;
+        text-align: left;
+
+
+        @include atoms.breakpoint(small){
+            font-size: 3rem;
+        }
+    }
+
+    .container{
+        > div{
+            margin-left: calc(var(--offset) + var(--offset-margin));
+
+            > div{
+                display: flex;
+                transform: translateX( calc( -1 * var(--offset) ) );
+            }
+        }
+    }
+
+    @include atoms.breakpoint(small){
+        h2{
+            margin: 0 var(--offset-margin);
+        }
+    }
+}
+
+.centered{
+    text-align: center;
+
+    h2{
+        opacity: 0.9;
+    }
+
+    h4, h3{
+        opacity: 0.8;
+    }
+
+    > div{
+        justify-content: center;
+        width: fit-content;
+        margin: 0 auto;
+
+        > div{
+            width: 300px;
+        }
+    }
+}
+
+.header{
+    opacity: 100%;
+    margin: 0;
+    z-index: 100;
+    background-color: white;
+}
+
+.header-container{
+
+    margin: 0 calc(var(--offset) + var(--offset-margin));
+    padding: 0 var(--padding);
+
+    > div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    @include atoms.breakpoint(small){
+        padding: 0 8px;
+    } 
+
+    @include atoms.breakpoint(smallest){
+        padding: 0 var(--padding);
+        margin: 0;
+    }
+}
+
+main{
+    margin: 0;
+    section:first-child{
+        padding-top: 0;
+    }
+}
+
+hr{
+    margin: 0 var(--offset) + var(--offset-margin);
+
+    @include atoms.breakpoint(small){
+        margin: 0 var(--offset-margin);
+    }
+}
+
+.footer{
+    background-color: rgba(atoms.$primary-weak,0.02);
+    padding: 80px var(--offset) + var(--offset-margin);
+
+    a{
+        padding: 16px;
+        font-size: 0.9rem;
+        margin: 0 16px;
+    }
+
+    p{
+        padding: 16px;
+        max-width: 28em;
+        margin: 0  auto;
+        font-family: atoms.$lora;
+        font-size: 0.9rem;
+        font-weight: 400;
+        line-height: 150%;
+        letter-spacing: 0.02rem;
+        color: atoms.$grey-30;
+        text-align: center;
+    }
+}

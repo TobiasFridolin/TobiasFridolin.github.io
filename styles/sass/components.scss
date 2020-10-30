@@ -211,18 +211,15 @@ main{
 .about-info{
     display: flex;
     margin: 8px 0;
-    // border-top: 1px solid atoms.$white-toned;
     padding: 8px 0;
     position: relative;
     align-items: center;
-    // background-color: rgba(atoms.$primary-strong, 0.05);
 
 
     .container{
         display: inline-flex;
         flex-wrap: wrap;
         justify-content: center;
-        // padding-top: 16px; 
 
         img, div{
             padding: 1rem;

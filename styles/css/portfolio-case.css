@@ -7,14 +7,13 @@
 /* Fonts */
 /* Text Components */
 .body-copy {
-  font-family: "Cardo", serif;
   font-family: "Lora", serif;
   font-size: 1rem;
   text-align: justify;
   margin-bottom: 1rem;
   line-height: 150%;
   letter-spacing: 0.02rem;
-  color: #1E2834;
+  color: rgba(0, 0, 0, 0.9);
 }
 .body-copy li {
   margin-bottom: 0.2rem;
@@ -65,7 +64,7 @@
   line-height: 2.2rem;
   font-style: italic;
   font-weight: 300;
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 0.6);
   text-align: center;
 }
 
@@ -186,7 +185,8 @@ section ul em {
 }
 
 .lead {
-  margin: 24px 0;
+  margin: 32px 0;
+  text-align: left;
 }
 
 .button .container {
@@ -205,7 +205,6 @@ section ul em {
 }
 .header-container {
   margin: 0;
-  padding: 16px 0;
   flex-direction: column;
   justify-content: center;
 }
