@@ -417,7 +417,9 @@ main {
   color: rgba(0, 0, 0, 0.5);
 }
 .about-info li a {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  font-family: "Lato", sans-serif;
 }
 .about-info li p {
   display: inline;

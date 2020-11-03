@@ -254,7 +254,9 @@ main{
         color: atoms.$grey-50;
 
         a{
-            font-size: 0.9rem;   
+            font-size: 0.8rem;  
+            text-transform: uppercase; 
+            font-family: atoms.$lato;
         }
 
         p{

@@ -8,13 +8,6 @@
     <link rel="stylesheet" href="/styles/css/porfolio-overview.css">
     <link rel="icon" href="/favicon.png">
 
-    <script>
-        function goBack() {
-          window.history.back();
-            console.log(window.history.length);
-        }
-    </script>
-
     <title>Portfolio</title>
 </head>
 <body class="portfolio">
@@ -22,15 +15,8 @@
         <div class="header">
             <div class="header-container">
                 <div>
-                    <a class="button" onclick="goback()">Home</a>
+                    <a class="button" onclick="goBack()">Back</a>
                     <h1 class="heading-1">Portfolio</h1>
-                </div>
-                <div class="close" onclick="goBack()" style="display: none;">
-                    <a href=""><svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M2 2L26 26" stroke="#B4B4B4" stroke-width="3"/>
-                        <path d="M26 2L2 26" stroke="#B4B4B4" stroke-width="3"/>
-                        </svg>    
-                    </a>
                 </div>
             </div>
         </div>
@@ -192,6 +178,16 @@
             </div>
         </div>
     </main>
+
+    <script>
+        function goBack() {
+            if(window.history.length > 1){
+                window.history.back();
+            }else{
+                window.location.href = '/index.html';
+            }
+        }
+    </script>
 
 </body>
 </html>
