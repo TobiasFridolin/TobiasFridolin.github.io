@@ -1,0 +1,33 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "portfolio-icon";
+  src: url("/resources/fonts/portfolio-icon.eot?8619gb");
+  src: url("/resources/fonts/portfolio-icon.eot?8619gb#iefix") format("embedded-opentype"), url("/resources/fonts/portfolio-icon.ttf?8619gb") format("truetype"), url("/resources/fonts/portfolio-icon.woff?8619gb") format("woff"), url("/resources/fonts/portfolio-icon.svg?8619gb#portfolio-icon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+[class^=icon-], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "portfolio-icon" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  font-size: 32px;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-close:before {
+  content: "";
+}
+
+.icon-download:before {
+  content: "";
+}
+
+/*# sourceMappingURL=icon-style.css.map */

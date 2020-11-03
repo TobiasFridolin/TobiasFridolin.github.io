@@ -10,6 +10,7 @@
 
     <link rel="stylesheet" href="/styles/css/components.css">
     <link rel="stylesheet" href="/styles/css/portfolio-case.css">
+    <link rel="stylesheet" href="/styles/css/icon-style.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- <script src="../Scripts/portfolio-header--scrolling.js"></script> -->
@@ -44,8 +45,9 @@
                     <a class="outline outline-item" href="#sec1"><li>Introduction</li></a>
                     <a class="outline outline-item" href="#sec2"><li>The Product</li></a>
                     <a class="outline outline-item" href="#sec3"><li>Approach</li></a>
-                    <a class="outline outline-item" href="#sec4"><li>Design</li></a>
-                    <a class="outline outline-item" href="#sec5"><li>Outcomes</li></a>
+                    <a class="outline outline-item" href="#sec4"><li>Design Process</li></a>
+                    <a class="outline outline-item" href="#sec5"><li>Icon System</li></a>
+                    <a class="outline outline-item" href="#sec6"><li>Outcomes</li></a>
                 </ul>
             </div>   
             
@@ -54,7 +56,7 @@
                     <h2 class="heading-2" id="sec1">Introduction</h2>
                     <p class="body-copy">
                         During the summer of 2020, I focused on two things. 
-                        I had joined a game developer team as UI Designer, working on a prototype for the game <a href="realm-lords.html">Realm Lords</a>,
+                        I had joined a game developer team as UI Designer, working on a prototype for the game <a href="ascendant-games.html">Realm Lords</a>,
                         and I had started a new job hunting campaign - contacting companies and arranging so-called coffee meetings.
                     </p>
                     <p class="body-copy">
@@ -65,11 +67,14 @@
                     <p class="body-copy">
                         My first meeting that summer was with I-GIS, a company which specialises in developing geographical information systems (GIS).
                         I had an online meeting with the CEO, which went very well. It was very exciting hearing about the kind of work the company does, and since they didn't already have a designer, it seemed like a great opportunity to show the value in having one. By the end of the meeting we got to talk about a potential internship, and I ended up starting in late september. 
-                        During my internship I mainly worked on a WebGIS for the website FlyFotosDK, which this case is about.
+                    </p>
+                    <p class="body-copy">
+                        This case is about my work on a WebGIS for the website FlyFotosDK, which was my main focus during the internship.
                     </p>
 
                     <figure>
-                        <img src="/resources/flyfotos/flyfotos-design.png" alt="play prototype">
+                        <span class="icon-close close"></span>
+                        <img class="fullscreen-able" src="/resources/flyfotos/flyfotos-design.png" alt="play prototype">
                         <figcaption>
                             The final design in Figma.
                         </figcaption>
@@ -80,9 +85,9 @@
                     <h2 class="heading-2" id="sec2">The Product</h2>
                     <p class="body-copy">
                         FlyFotos WebGIS is a web-based solution for displaying aerial photos of Denmark, with full coverage dating back to the 1940’s all the way to 2000.
-                        The primary customer segment for the product is the public sector and other organisations which have interest in the history of a specific area.
-                        Its uses include land restoration, inspecting for potential pollution, city development and coastal management.
-                        Then there are also users who are private citizens and hobbyists.
+                        The primary customer segment for the product is the public sector, as well as other organisations which hold an interest in the history of a specific area.
+                        It can be used for purposes such as land restoration, inspecting for potential pollution, city development and coastal management.
+                        Then there are users who use the product during their leisure, in relation to their hobbies or just out of curiosity.
                     </p>
                     <p class="body-copy">
                         In addition to FlyFotos WebGIS, FlyFotosDK provides a WMS (Web Maps Service), which is tailed to the customer’s individual needs. 
@@ -92,17 +97,24 @@
                     <p class="body-copy">
                         The main focus of FlyFotos WebGIS, is to act as an easy-to-use, simple way of viewing the different maps, without too many expert features.
                         Instead, the customer will use the WMS and use their own GIS, if needed.
-                        Smaller clients, or clients with fewer needs may wish to use the WebGIS if they do not already a GIS within the company.                                            
+                        Smaller clients, or clients with fewer needs, may wish to use the WebGIS if they do not already have a GIS within the company.                                            
                     </p>
                 </section>
                     
                 <section>
-                    <h2 class="heading-2">Approach</h2>
+                    <h2 class="heading-2" id="sec3" >Approach</h2>
                     <p class="body-copy">
                         When I started my internship, the project was already underway. 
                         It was based on an earlier product and used much of the same functionality, but the visual design needed to be updated. 
                         As there was no other designer at the company I really had the opportunity to show what I could do. 
                     </p>    
+
+                    <figure>
+                        <span class="icon-close close"></span>
+                        <img class="fullscreen-able" src="/resources/flyfotos/flyfotos-old.png" alt="old version">
+                        <figcaption>The version which FlyFotos WebGIS was based on.</figcaption>
+                    </figure>
+
                     <!-- <p class="body-copy">
                         I-GIS is a smaller company, so I quickly became familiar with my colleagues. 
                         I was situated in one of the offices, which usually houses four developers.
@@ -123,18 +135,28 @@
                         In other words, they would have become used to some suboptimal aspects of the design.
                     </p>
                     <p class="body-copy">
-                        I then created a list of use cases:
+                        After the tests I wrote down some notes, about what could be improved in the new version.
+                        It was only a few things relating to system feedback, but the tests also gave me a better understanding of the product.
+
+                        With this new knowledge I created a list of use cases:
                         <ul class="body-copy">
-                            <em style="line-height: 200%;">The user wants to...</em> 
+                            <em>The user wants to...</em> 
                             <li>find a specific location on the map.</li>
                             <li>compare two maps, e.g. from two different time periods.</li>
                         </ul>
                     </p>
 
                     <p class="body-copy">
+                        This is captures the typical use of the product, in broad strokes. 
+                        In most cases, the users has a specific location in mind, which they would like to inspect.
+                        For example, they might want to see what the area looked like in the past, to see if there is some indication of potential pollution.
+                        The user might just explore the map without a specific location in mind, but this was not a primary concern.
+                    </p>
+                    
+                    <p class="body-copy">
                         I then made a list of the different interactions with the system, which would lead to fulfilling these goals:
                         <ul class="body-copy">
-                            <em style="line-height: 200%;">The user can...</em>
+                            <em>The user can...</em>
                             <li>Use a search function to find a specific location on the map.</li>
                             <li>Use a search function to find a specific map.</li>
                             <li>Navigate the maps by clicking and dragging to pan, and scrolling to zoom.</li>
@@ -150,18 +172,65 @@
                     </p>
                     <p class="body-copy">
                         Most of these functions were already implemented in the old GIS (and the list was based on the functions in that GIS, to some degree). 
-                        The list provided a good sanity check, to make sure that the new design met all the criteria. 
+                        This was a good checklist to make sure that the new design met all the criteria. 
                     </p>
                 </section>
 
                 <section>
-                    <h2 class="heading-2">Design</h2>
+                    <h2 class="heading-2" id="sec4">Design Process</h2>
                     <p class="body-copy">
-                        As the design was mostly the same, functionally, as the existing one, most of the changes I made was related to the visual design, and making the product follow the same visual identity as the website.
+                        Functionally, the design would be similar to the exisiting one, so most of the changes I made was related to the visual design, and making the product follow the same visual identity as the website.
+                        The layer manager was the biggest part of the design, so I chose to focus on that.
                     </p>
-                    <h3 class="heading-3">Icon System</h3>
+                    <figure>
+                        <span class="icon-close close"></span>
+                        <img class="fullscreen-able" src="/resources/flyfotos/flyfotos-alternativer.png" alt="layer manager alternatives">
+                        <figcaption>Some of the first designs of the layer manager, created during the first couple of days.</figcaption>
+                    </figure>
                     <p class="body-copy">
-                        I got to work with something which I had wanted to explore for a while: icons for the web. 
+                        I quickly realised that keeping a clear visual heirarchy would be the biggest challenge.
+                        This was also restated by my colleagues, who reminded me of the fact that the layer manager could contain several hundred maps at once.
+                        The project was a good exercise in using whitespace, fonts and colours in order to seperate the different information which was going to be presented to the user. 
+                    </p>
+                    <p class="body-copy">
+                        I also found that the icons needed to be updated. 
+                        Checkboxes and toggle switches seemed to general, and didn't look to slick when having multiple items in the layer manager.
+
+                    </p>
+                    <h3 class="heading-3">Design Alternatives</h3>
+                    <p class="body-copy">
+                        When posed with a specific design challenge, I like to make different versions, in order to learn more and see what works the best.
+                        This project was no exception, and there was a lot of decisions which came up.
+                        For example what changing the opacity of a map would look like:
+                    </p>
+                    <figure>
+                        <span class="icon-close close"></span>
+                        <img class="fullscreen-able" src="/resources/flyfotos/flyfotos-opacity.png" alt="opacity">
+                        <figcaption>Alternatives: changing map opacity.</figcaption>
+                    </figure>
+                    <p class="body-copy">
+                        Adding a text description and fine control:
+                    </p>
+                    <figure>
+                        <span class="icon-close close"></span>
+                        <img class="fullscreen-able" src="/resources/flyfotos/flyfotos-opacity-fine-control.png" alt="opacity fine control">
+                        <figcaption>Alternatives: opacity fine control.</figcaption>
+                    </figure>
+                    <p class="body-copy">
+                        Creating and comparing different versions like this, was my process for making some of the bigger decisions in the design.
+                        It was also a great way to get feedback from others.
+                        It is easier to describe what you like or dislike about a design, if you can point to a different version.
+                    </p>
+                    <p class="body-copy">
+                        Going through designs like this also prompted me to think about how the user would interact with the system.
+                        This also lead to some considerations and changes to the design, which I had not thought of beforehand.
+                    </p>
+                </section>
+                <section>
+                    <h2 class="heading-2" id="sec5">Icon System</h2>
+                    <p class="body-copy">
+                        As mentioned previously, updating the icons was another big focus of this case.
+                        I was exicted to work with icons, since icons for the web was a topic I had wanted to explore for a while. 
                         I had read a little about the subject, since I used some icons on my personal website, but not enough to warrant the use of a system.
                         So far, I had just used inline SVGs, which kind of bothered me, since they were tedious to keep track of and reuse.
                         But on FlyFotos WebGIS, I had the opportunity to explore the topic of icon systems some more, since I had to create a bunch of icons which should be easy for the developer to implement.
@@ -169,6 +238,11 @@
                         I know of some other approach, were you create one main SVG with all the icons, which you refer to in the HTML, but I wasn’t too sold on the idea.
                         An icon font system seemed slick and easy to implement, so I was very eager to dive into it.
                     </p>
+                    <figure>
+                        <span class="icon-close close"></span>
+                        <img class="fullscreen-able" src="/resources/flyfotos/flyfotos-icons.png" alt="icons in figma">
+                        <figcaption>The finished icons in Figma. I considered different types of icons, and went over several iterations.</figcaption> 
+                    </figure>
                     <h3 class="heading-3">Icon Fonts</h3>
                     <p class="body-copy">
                         The idea behind an icon font is pretty clever. You create a custom font, where each glyph represents an icon. 
@@ -178,11 +252,16 @@
                         Since the icon is practically a font, you can use the font-size CSS property to set its size. 
                         Similarly, you can use the color property to color it. No more fill or stroke for styling an SVG.
                     </p>
-                    <h3 class="heading-3">Iconmoon</h3>
+                    <figure>
+                        <span class="icon-close close"></span>
+                        <img class="fullscreen-able" src="/resources/flyfotos/flyfotos-icon-code.png" alt="iconfont code">
+                        <figcaption>And example use of an iconfont. An icon is simply a span element with the corresponding class.</figcaption>
+                    </figure>
+                    <h3 class="heading-3">Icomoon</h3>
                     <p class="body-copy">
                         In order to make the process of creating an icon font simpler, there are some different tools. 
-                        I chose the first one I came across, Iconmoon, which seemed to worked fine (other than the fact that you have to give your icon’s CSS classes a prefix, and I had already given my files that. My first icons turned out like icon-icon-name).
-                        Using iconmoon, I just had to export my icons from my design system in Figma, upload them to iconmoon, make some adjustments and download the font. 
+                        I chose the first one I came across, Icomoon, which seemed to worked fine (other than the fact that you have to give your icon’s CSS classes a prefix, and I had already given my files that. My first icons turned out like icon-icon-name).
+                        Using <a href="https://icomoon.io/app/" target="_blank">Icomoon</a>, I just had to export my icons from my design system in Figma, upload them to Icomoon, make some adjustments and download the font. 
                         Then the font file and CSS stylesheet can be linked in the HTML, and the icons are ready to use.
                     </p>
                 </section>
@@ -193,48 +272,69 @@
 
                         At the time, there was a consensus that there were three types of customers - private, company and private premium. 
 
-                        You can use the product without an account, as long as you are a private person. Instead of paying for the product, you would be shown advertisements.
+                        You can use the product without an account, as long as you are a private citizen. Instead of paying for the product, you would be shown advertisements.
                         The premium users on the other hand, would get rid of the ads, and unlock more features.
                         Lastly, the B2B customers would have to pay in order to get an account, based on the number of users within the company.
 
-                        Early on, I tried to support these three types of customers, but somewhere during me last two weeks, I had become sceptical of the second type of customer.
+                        Early on, I tried to support these three types of customers, but somewhere during my last two weeks, I had become sceptical of the second type of customer.
 
-                        I suddenly had a hard time imagining that a private person would use the product so extensively, that they would want to create an account.
+                        I suddenly had a hard time imagining that a private citizen would use the product so extensively, that they would want to create an account.
 
                         The small amount of potential customers in this segment, together with the costs of getting up a payment service, seemed to outweigh the potential income.
 
                         In the end, the design for making an account focused solely on B2B customers and free to use for private customers (with ads).
                     </p>
+                    <figure class="prototype">
+                        <a href="https://www.figma.com/proto/gIBzOUgOtoEl6oaKELZ0oV/Flyfotos?node-id=367%3A23&viewport=-235%2C192%2C0.0565531849861145&scaling=min-zoom" target="_blank">
+                            <img src="../resources/svg/play-prototype-big.svg" width="100px" height="100px" alt="play prototype">
+                        </a>
+                        <figcaption>
+                            Play the prototype - signing in from the website.
+                        </figcaption>
+                    </figure>
                 </section>
                 <section> 
-                    <h2 class="heading-2" id="sec5">Outcomes</h2>
+                    <h2 class="heading-2" id="sec6">Outcomes</h2>
+                    
                     <h3 class="heading-3">Demo</h3>
                     <p class="body-copy">
-                        The second to last friday of my internship, I held an online demo, showing my work to all of my colleagues, who in turn had the opportunity to comment on the design.
+                        The second to last friday of my internship, I held a demo, showing my work to all of my colleagues, who in turn had the opportunity to comment on the design.
                         The demo was held online, over Teams and took 30 minutes.
                         There was some good, actionable feedback, which prompted some changes to the design, relating to the consistency of icons and the conceptual model of how the search function should work.
                     </p>
+
                     <h3 class="heading-3">Design Document</h3>
                     <p class="body-copy">
                         The remaining week, I spend working on some other projects, as well as tidying up the design document, so it was ready to handover to the developer.
                     </p>
 
+                    <figure>
+                        <span class="icon-close close"></span>
+                        <img class="fullscreen-able"src="/resources/flyfotos/flyfotos-design-document.png" alt="design system">
+                        <figcaption>The design system with some notes made up the design document, which was handed over to the developer.</figcaption>
+                    </figure>
+
+                    <h3 class="heading-3">Prototypes</h3>
+
+                    <ul class="body-copy">
+                        <em>Prototype deliverables for the project.</em>
+                        <li><a href="https://www.figma.com/proto/gIBzOUgOtoEl6oaKELZ0oV/Flyfotos?node-id=505%3A60950&viewport=734%2C370%2C0.2832604646682739&scaling=min-zoom" target="_blank">Hover States</a></li>
+                        <li><a href="https://www.figma.com/proto/gIBzOUgOtoEl6oaKELZ0oV/Flyfotos?node-id=367%3A23&viewport=-234%2C204%2C0.0565531849861145&scaling=min-zoom" target="_blank">Sign in from website</a></li>
+                        <li><a href="https://www.figma.com/proto/gIBzOUgOtoEl6oaKELZ0oV/Flyfotos?node-id=251%3A6992&viewport=256%2C512%2C0.3106164336204529&scaling=min-zoom" target="_blank">Sign in from GIS</a></li>
+                        <li><a href="https://www.figma.com/proto/gIBzOUgOtoEl6oaKELZ0oV/Flyfotos?node-id=525%3A19475&viewport=224%2C411%2C0.2767775356769562&scaling=min-zoom" target="_blank">Close layer manager</a></li>
+                        <li><a href="https://www.figma.com/proto/gIBzOUgOtoEl6oaKELZ0oV/Flyfotos?node-id=251%3A4500&viewport=527%2C126%2C0.30720254778862&scaling=min-zoom" target="_blank">Layer options</a> (for future features)</li>
+                    </ul>
+
+                    <h3 class="heading-3">A heading</h3>
                     <p class="body-copy">
-                        At I-GIS they do a lot of consultanting and support work on a daily basis, and their consultants have backgrounds in geology or geophysics.
-                        The fact that they have highly domain specific knowledge and interact with their customers on a daily basis, informs the way they think when they build their software - they think in therms of what the users want to accomplish.
-                        I found that they are aware of some of the usability issues in their products, but that they have to prioritise their work efforts, since they are a small company.
-                        The usability of their products could definitely be improved, and their developers are also aware of possible improvements.
-                        But at the end of the day, they have to prioritise where to put their efforts.
+                        The first week of the internship was the most exciting.
+                        There was a lot to learn, and a lot of possibilities to explore in the design.
+                        It was hard putting down work during my 1 hour and 20 minutes train ride back home, even though I had allocated this time to work on my portfolio and applying for jobs.
+                        During the second week, I felt that I had most of the design done, and things started to slow down.
+                        I looked to other things that could get my drive back, like it was during the first week.
+                        Being able to tie a knot on a project and deliver is something I came to terms with, that I have to do, even though I do not find it fun in the same way, as exploring different designs.
+                        But after making the switch, and cleaning up the design document, finishing the different prototypes and downloading the last version of the iconfont, was satisfying in its own way.
                     </p>
-
-
-                    <!-- <figure class="prototype">
-                        <a href="https://www.figma.com/proto/92unqdwpdNwMa2DW1wGlVH/Naturbasen?node-id=242%3A1029&viewport=3992%2C2762%2C0.4868549704551697&scaling=scale-down" target="_blank">
-                            <img src="../resources/svg/play-prototype-big.svg" width="100px" height="100px" alt="play prototype">
-                        </a>                        <figcaption>
-                            Play the prototype in Figma.
-                        </figcaption>
-                    </figure> -->
 
                 </section>
             </div>
@@ -274,5 +374,7 @@
         <a class="button" href="https://www.linkedin.com/in/tobias-fridolin/" target="_blank">Connect on LinkedIn</a>
     </div>
     
+    <script src="/scripts/image-fullscreen.js"></script>
+
 </body>
 </html>

@@ -243,14 +243,14 @@ hr{
     }
 }
 
-#ascendancy-games{
+#ascendant-games{
     .subtitle{
-        color: atoms.$ascendancy-games;
+        color: atoms.$ascendant-games;
     }
     .button{
-        background-color: rgba(atoms.$ascendancy-games, 0.7);
+        background-color: rgba(atoms.$ascendant-games, 0.7);
         &:hover{
-            background-color: rgba(atoms.$ascendancy-games, 0.85);
+            background-color: rgba(atoms.$ascendant-games, 0.85);
         }
     }
 }

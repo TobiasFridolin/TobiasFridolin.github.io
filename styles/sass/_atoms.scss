@@ -1,3 +1,5 @@
+@use 'icon-style';
+
 *{
     margin: 0;
 }
@@ -48,8 +50,8 @@ $primary-weak: #475bc3;
 $primary-strong: #664DC0;
 $primary-text: #B5A3F9;
 $primary-weak_on-black: #A0AFFF;
-$ascendancy-games: #7cc96d;
-$ascendancy-games: #d32d2d;
+$ascendant-games: #7cc96d;
+$ascendant-games: #d32d2d;
 $flyfotos: #6a9ace;
 $naturbasen: #789fe6;
 $musical-composition: #fab16c;

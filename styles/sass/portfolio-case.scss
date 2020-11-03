@@ -195,8 +195,8 @@ audio{
         $color: atoms.$flyfotos;
     }
 
-    @else if $id == ascendancy-games{
-        $color: atoms.$ascendancy-games;
+    @else if $id == ascendant-games{
+        $color: atoms.$ascendant-games;
     }
     
     @else if $id == naturbasen{
@@ -230,6 +230,8 @@ audio{
                 background-color: rgba($color, 0.9);
             }
         }
+
+        background-color: rgba($color, 0.075);
     }
 }
 
@@ -241,8 +243,8 @@ audio{
     @include colorpalette ($id: naturbasen);
 }
 
-#ascendancy-games{
-    @include colorpalette($id: ascendancy-games);
+#ascendant-games{
+    @include colorpalette($id: ascendant-games);
 }
 
 #res-dmg-list{
@@ -282,4 +284,48 @@ audio{
     font-weight: bold;
     color: grey;
     margin: 1em;
+}
+
+.fullscreen-able.fullscreen{
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 101%;
+    object-fit: contain;
+    z-index: 100;
+    background-color: atoms.$grey-80;
+
+    border-radius: 0;
+    
+    &:hover{
+        border: none;
+        margin: 0;
+    }
+}
+
+.fullscreen-able{
+    cursor: pointer;
+
+    &:hover{
+        border: 4px solid rgba(atoms.$hyperlink, 0.5);
+        margin: -4px;
+    }
+}
+
+.close{
+    cursor: pointer;
+    display: none;
+    position: fixed;
+    padding: 16px;
+    top: 0;
+    right: 0;
+    z-index: 101;
+
+    color: white;
+    background-color: atoms.$grey-50;
+}
+
+.locked-in-fullscreen{
+    overflow-y: hidden;
 }

@@ -147,8 +147,9 @@ section{
     margin: 80px 0;
 
     h2{
+        margin: 1rem 0;
         margin-left: calc(var(--offset) + var(--offset-margin));
-        color: rgba(#000000, 0.12);
+        color: rgba(#000000, 0.1);
         font-size: 3.25rem;
         text-align: left;
 
@@ -228,6 +229,7 @@ section{
 
 main{
     margin: 0;
+
     section:first-child{
         padding-top: 0;
     }
