@@ -58,6 +58,9 @@ $naturbasen: #789fe6;
 $musical-composition: #fab16c;
 $icu: #ff4848;
 
+@mixin box-shadow {
+    box-shadow: 2px 2px 12px 4px $grey-30;
+}
 
 
 /* Fonts */

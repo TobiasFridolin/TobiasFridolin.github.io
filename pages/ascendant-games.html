@@ -41,6 +41,28 @@
                     </div>
                 </div>
             </div>
+
+            <svg class="nav__burger--collabsed"  width="24" height="24" viewBox="0 0 24 24" fill="black" xmlns="http://www.w3.org/2000/svg">
+                <rect y="3" width="24" height="2" />
+                <rect y="19" width="24" height="2" />
+                <rect y="11" width="24" height="2" />
+            </svg>
+
+            <svg class="nav__burger--open" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 3L21 21" stroke="black" stroke-width="2"/>
+                <path d="M21 3L3 21" stroke="black" stroke-width="2"/>
+                </svg>
+                
+
+            <div class="burger-menu">
+                <ul class="burger-menu__items">
+                    <a class="navigation-link" href="/index.html"><li>Home</li></a>
+                    <a class="navigation-link" href="portfolio.html"><li class="navigation-link--selected">Portfolio</li></a>
+                    <a class="navigation-link" href="about.html" ><li>About Me</li></a>
+                    <a class="navigation-link" href="cv.html"><li>CV</li></a>
+                </ul>  
+            </div>
+            
             <div class="nav">
                 <ul>
                     <a class="navigation-link" href="/index.html"><li>Home</li></a>
@@ -78,8 +100,8 @@
                     <h2 class="heading-2" id="sec1">The Project</h2>
                     <p class="body-copy">
                         <em>“Think Hearthstone, but three players against one”.</em>
-                        That is roughly how the game was pitched to me by Casper Hoegalmen. 
-                        He had worked on the game as a prototype <a href="https://www.casperhoegalmen.com/realmlord-asymmetrical-card-game-1" target="_blank">for about two years</a>, and was now looking to use the project to get some experience as a game producer.
+                        That was roughly how the game was pitched to me by Casper Hoegalmen. 
+                        He had worked on the game as a prototype <a href="https://www.casperhoegalmen.com/realmlord-asymmetrical-card-game-1" target="_blank">for about two years</a>, and was now looking to use the project to get some further experience as a game producer.
                         Even for a prototype, this was a very ambitious project.
                         On top of that, we had a two months deadline. 
                         But we were a bunch of motivated people with some freetime during the summer, and a passion for making games.
@@ -139,6 +161,11 @@
                         My job was to figure out the best way to communicate information to players using graphics and sound.  
                         This meant figuring out how to communicate the rules of the game, quite a few of which are novel and therefore had to be learned initially (by myself as well). 
                         I had to map out the different states in the game, and consider feedforward for available actions the players can take, as well as feedback from the game.
+                    </p>
+                    <p class="body-copy">
+                        Regarding the game design, the three-against-one aspect meant that the game was <em>unbalanced</em>, which in itself is hard to design for, but the game also had a lot of complexities and novel rules.
+                        I found from the beginning that the game design had a lot of work left to be done, but this was one of the main motivating factors for me to join the project.
+                        It was like a lot of interconnected problems which had to be solved in the right way.
                     </p>
                 </section>
 
@@ -543,6 +570,8 @@
     
     <script src="/scripts/image-fullscreen.js"></script>
     <script src="/scripts/collabsible-list.js"></script>
-    
+    <script src="/scripts/burger-menu.js"></script>
+
+
 </body>
 </html>

@@ -20,6 +20,27 @@
                     <h1 class="heading-1">Tobias Fridolin</h1>
                     <h2 class="subtitle">Interaction Designer</h2>
                 </div>
+
+                <svg class="nav__burger--collabsed"  width="24" height="24" viewBox="0 0 24 24" fill="black" xmlns="http://www.w3.org/2000/svg">
+                    <rect y="3" width="24" height="2" />
+                    <rect y="19" width="24" height="2" />
+                    <rect y="11" width="24" height="2" />
+                </svg>
+    
+                <svg class="nav__burger--open" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 3L21 21" stroke="black" stroke-width="2"/>
+                    <path d="M21 3L3 21" stroke="black" stroke-width="2"/>
+                    </svg>
+                    
+    
+                <div class="burger-menu">
+                    <ul class="burger-menu__items">
+                        <a class="navigation-link" href="/index.html"><li>Home</li></a>
+                        <a class="navigation-link" href="portfolio.html"><li class="navigation-link--selected">Portfolio</li></a>
+                        <a class="navigation-link" href="about.html" ><li>About Me</li></a>
+                        <a class="navigation-link" href="cv.html"><li>CV</li></a>
+                    </ul>  
+                </div>
                
                 <div class="icon nav__burger">
                     <svg class="nav__burger--collabsed"  width="24" height="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
@@ -133,5 +154,6 @@
         <p class="body-copy">I am always up for meeting new people and hearing about new projects. Shoot me an email or send me a message on LinkedIn, and let’s talk over a cup of coffee.</p>
         <a class="button" href="https://www.linkedin.com/in/tobias-fridolin/" target="_blank">Connect on LinkedIn</a>
     </div>
+    <script src="/scripts/burger-menu.js"></script>
 </body>
 </html>

@@ -35,17 +35,25 @@
                 </div>
             </div>
 
-            <div class="burger-menu__bar">
-                <svg class="nav__burger--collabsed"  width="24" height="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
-                    <rect y="3" width="24" height="2" />
-                    <rect y="19" width="24" height="2" />
-                    <rect y="11" width="24" height="2" />
+            <svg class="nav__burger--collabsed"  width="24" height="24" viewBox="0 0 24 24" fill="black" xmlns="http://www.w3.org/2000/svg">
+                <rect y="3" width="24" height="2" />
+                <rect y="19" width="24" height="2" />
+                <rect y="11" width="24" height="2" />
+            </svg>
+
+            <svg class="nav__burger--open" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 3L21 21" stroke="black" stroke-width="2"/>
+                <path d="M21 3L3 21" stroke="black" stroke-width="2"/>
                 </svg>
-                                   
-                <svg class="nav__burger--open" style="display: none;" width="24" height="24" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M3 3L21 21" stroke-width="2"/>
-                    <path d="M21 3L3 21" stroke-width="2"/>
-                </svg>    
+                
+
+            <div class="burger-menu">
+                <ul class="burger-menu__items">
+                    <a class="navigation-link" href="/index.html"><li>Home</li></a>
+                    <a class="navigation-link" href="portfolio.html"><li class="navigation-link--selected">Portfolio</li></a>
+                    <a class="navigation-link" href="about.html" ><li>About Me</li></a>
+                    <a class="navigation-link" href="cv.html"><li>CV</li></a>
+                </ul>  
             </div>
 
             <div class="nav">
@@ -438,36 +446,8 @@
         <a class="button" href="https://www.linkedin.com/in/tobias-fridolin/" target="_blank">Connect on LinkedIn</a>
     </div>
     
-    <script src="/scripts/image-fullscreen.js"></script>
-    <script>
-        //nav__burger--collabsed
-        var collabsed = document.querySelector('.nav__burger--collabsed');
-        var open = document.querySelector('.nav__burger--open');
-
-        // collabsed.addEventListener('click', event => {
-        //     collabsed.style.display = 'none';
-        //     open.style.display = 'flex';
-        // } )
-
-
-        switching = (event) => {
-            
-            console.log(event);
-
-            // if(this.classList.contains('nav__burger--collabsed')){
-            //     console.log("collabsed was clicked");
-            // }else if(this.classList.contains('nav__burger--open')){
-            //     console.log("open was clicked");
-            // }
-        }
-
-        collabsed.addEventListener('click', switching(event));
-        open.addEventListener('click', switching(event));
-
-       
-
-        //nav__burger--open
-    </script>
+    <script src="/scripts/image-fullscreen.js"></script>    
+    <script src="/scripts/burger-menu.js"></script>
 
 </body>
 </html>

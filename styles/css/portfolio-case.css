@@ -247,6 +247,11 @@ section ul em {
   margin: 32px 0;
   text-align: left;
 }
+@media screen and (max-width: 768px) {
+  .lead {
+    text-align: justify;
+  }
+}
 
 .button .container {
   display: inline-flex;
@@ -490,6 +495,12 @@ audio {
   border: none;
   margin: 0;
 }
+@media screen and (max-width: 1024px) {
+  .fullscreen-able.fullscreen {
+    width: 800px;
+    background-color: black;
+  }
+}
 
 .fullscreen-able {
   cursor: pointer;
@@ -520,7 +531,7 @@ audio {
 }
 
 .header {
-  margin: 24px 0;
+  margin: 120px 0 24px 0;
 }
 
 /*# sourceMappingURL=portfolio-case.css.map */

@@ -37,6 +37,10 @@ section{
 .lead{
     margin: 32px 0;
     text-align: left;
+    
+    @include atoms.breakpoint(small){
+        text-align: justify;
+    }
 }
 
 .button{
@@ -302,6 +306,11 @@ audio{
         border: none;
         margin: 0;
     }
+
+    @include atoms.breakpoint(medium){
+        width: 800px;
+        background-color: black;
+    }
 }
 
 .fullscreen-able{
@@ -335,5 +344,5 @@ audio{
 }
 
 .header{
-    margin: 24px 0;
+    margin: 120px 0 24px 0;
 }
