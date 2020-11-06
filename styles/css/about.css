@@ -1,8 +1,8 @@
 @charset "UTF-8";
 @font-face {
   font-family: "portfolio-icon";
-  src: url("/resources/fonts/portfolio-icon.eot?8619gb");
-  src: url("/resources/fonts/portfolio-icon.eot?8619gb#iefix") format("embedded-opentype"), url("/resources/fonts/portfolio-icon.ttf?8619gb") format("truetype"), url("/resources/fonts/portfolio-icon.woff?8619gb") format("woff"), url("/resources/fonts/portfolio-icon.svg?8619gb#portfolio-icon") format("svg");
+  src: url("/resources/fonts/portfolio-icon.eot?905b08");
+  src: url("/resources/fonts/portfolio-icon.eot?905b08#iefix") format("embedded-opentype"), url("/resources/fonts/portfolio-icon.ttf?905b08") format("truetype"), url("/resources/fonts/portfolio-icon.woff?905b08") format("woff"), url("/resources/fonts/portfolio-icon.svg?905b08#portfolio-icon") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -14,12 +14,36 @@
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
+  font-size: 32px;
   text-transform: none;
   line-height: 1;
-  font-size: 32px;
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-close--bg .path1:before {
+  content: "";
+  color: black;
+  opacity: 0.5;
+}
+
+.icon-close--bg .path2:before {
+  content: "";
+  margin-left: -1em;
+  color: white;
+}
+
+.icon-close--bg .path3:before {
+  content: "";
+  margin-left: -1em;
+  color: white;
+}
+
+.icon-close--bg .path4:before {
+  content: "";
+  margin-left: -1em;
+  color: white;
 }
 
 .icon-close:before {
@@ -99,9 +123,13 @@
   text-align: center;
 }
 
-.hyperlink {
+.hyperlink, .hyperlink--black {
   font-family: "Lora", serif;
   color: #1158BF;
+}
+
+.hyperlink--black {
+  color: #1564db;
 }
 
 .topics {

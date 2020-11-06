@@ -8,7 +8,10 @@
 }
 
 @include atoms.breakpoint(small){
-    $offset: 40px;
+    :root{
+        --offset: 40px;
+    }
+
 }
 
 .heading-1{
@@ -46,10 +49,8 @@ h4, h5{
 
 h5{
     color: atoms.$grey-30;
-    width: var(--offset);
     font-size: 0.8rem;
     text-align: right;
-    transform: translateX(calc(-1 * var(--offset-margin)));
 }
 
 p{
@@ -63,43 +64,36 @@ p{
     margin: 0.5rem 0;
 }
 
+
+
 section{
     margin-bottom: 0;
     
     display: flex;
     flex-direction: column;
     padding: 120px 0;
-
+    
     .container{
-        min-width: 24rem;
         display: flex;
         flex-flow: row wrap;
 
         > div{
             max-width: 28rem;
-            // margin-left: $offset + $offset-margin;
             padding: var(--padding);
 
             @include atoms.breakpoint(small){
                 padding: 24px 8px;
             }
-
-
-            > div{
-                height: 28px;
-
-            }
-            
         }
     }
 }
 
 .education{
-    background-color: rgba(black, 0.015);
+    background-color: rgba(black, 0.02);
 
 
 
-    h2, h4{
+    h4{
         color: atoms.$primary-strong;
     }
 
@@ -117,7 +111,7 @@ section{
     
 
 
-    h2, h3{
+    h3{
         color: atoms.$primary-weak;
     }
 
@@ -149,30 +143,69 @@ section{
     h2{
         margin: 1rem 0;
         margin-left: calc(var(--offset) + var(--offset-margin));
-        color: rgba(#000000, 0.1);
         font-size: 3.25rem;
         text-align: left;
+    }
 
-
-        @include atoms.breakpoint(small){
-            font-size: 3rem;
-        }
+    h5{
+        width: var(--offset);
+        transform: translateX(calc(-1 * var(--offset-margin)));
     }
 
     .container{
-        > div{
-            margin-left: calc(var(--offset) + var(--offset-margin));
+        justify-content: center;
+        margin: 0 8px;
+    }
 
-            > div{
-                display: flex;
-                transform: translateX( calc( -1 * var(--offset) ) );
-            }
+    .item{
+        margin-left: calc(var(--offset) + var(--offset-margin));
+        width: 24rem;
+
+        > div{
+            display: flex;
+            transform: translateX( calc( -1 * var(--offset) ) );
+            height: 28px;
         }
     }
 
     @include atoms.breakpoint(small){
+
         h2{
             margin: 0 var(--offset-margin);
+            font-size: 3rem;
+        }
+
+        h2, h3, h4, p{
+            text-align: center;
+        }
+
+        h5{
+            width: auto;
+            transform: translate(0, 0);
+            text-align: center;
+        }
+
+        .container{
+
+            > div{
+
+                > div{
+                    text-align: center;
+                    flex-direction: column-reverse;
+                    transform: translate(0,);
+                    height: auto;
+                }
+            }
+        }
+
+        .item{
+            margin: 8px;
+        }
+    }
+
+    @include atoms.breakpoint(smallest){
+        h2{
+            font-size: 2.5rem;
         }
     }
 }

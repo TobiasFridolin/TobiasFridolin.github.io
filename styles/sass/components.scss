@@ -90,14 +90,6 @@ main{
     }
 }
 
-.nav__burger{
-    display: none;
-
-    @include atoms.breakpoint(small){
-        display: flex;
-    }
-}
-
 .naturbasen{
     .hero{
         background-image: url("../Resources/Naturbasen_Hero\ 1440x440.png");
@@ -427,4 +419,34 @@ figure{
     display: none;
     border: 1px solid atoms.$white-toned;
     margin-bottom: 32px;
+}
+
+.burger-menu__bar{
+    height: 48px;
+    width: 100vw;
+    display: none;
+
+    // only when scrolling past hero height
+    background-color: atoms.$grey-50;
+    position: fixed;
+    top: 0;
+    left: 0;
+    justify-content: flex-end;
+    z-index: 100;
+}
+
+.nav__burger{
+    margin: 8px;
+    display: none;
+}
+
+.nav__burger--open, .nav__burger--collabsed{
+    @extend .nav__burger;
+}
+
+.nav__burger--collabsed{
+
+    @include atoms.breakpoint(small){
+        display: flex;
+    }
 }

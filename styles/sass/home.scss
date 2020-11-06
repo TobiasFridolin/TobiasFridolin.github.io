@@ -174,20 +174,25 @@ main{
     
     
     p, a{
-        color: rgba(white, 0.7);
         font-family: atoms.$lato;
-        letter-spacing: 0.02rem;
+        letter-spacing: 0.03rem;
+        line-height: 150%;
         font-size: 0.85rem;
-        text-align: center;
+        text-align: left;
     }
     
     p{
         padding: 0 1rem;
+        color: rgba(white, 0.7);
     }
- 
 
     a{
-        text-decoration: underline;
+        padding-left: 4px;
+    }
+
+    em{
+        font-style: italic;
+        font-weight: bold;
     }
 
     @include atoms.breakpoint(smallest){

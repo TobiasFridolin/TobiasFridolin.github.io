@@ -46,6 +46,7 @@ $white-almost: #F5F5F5;
 $white-toned: #EDEDED;
 $white-70: rgba(white, 0.7);
 $hyperlink: #1158BF;
+$hyperlink_on-black: #1564db;
 $primary-weak: #475bc3;
 $primary-strong: #664DC0;
 $primary-text: #B5A3F9;
@@ -133,7 +134,11 @@ $source-sans-pro: 'Source Sans Pro', sans-serif;
 .hyperlink{
     font-family: $lora;
     color: $hyperlink;
-    // font-weight: 700;
+}
+
+.hyperlink--black{
+    @extend .hyperlink;
+    color: $hyperlink_on-black;
 }
 
 .topics{

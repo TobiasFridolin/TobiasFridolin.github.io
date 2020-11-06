@@ -1,8 +1,8 @@
 @charset "UTF-8";
 @font-face {
   font-family: "portfolio-icon";
-  src: url("/resources/fonts/portfolio-icon.eot?8619gb");
-  src: url("/resources/fonts/portfolio-icon.eot?8619gb#iefix") format("embedded-opentype"), url("/resources/fonts/portfolio-icon.ttf?8619gb") format("truetype"), url("/resources/fonts/portfolio-icon.woff?8619gb") format("woff"), url("/resources/fonts/portfolio-icon.svg?8619gb#portfolio-icon") format("svg");
+  src: url("/resources/fonts/portfolio-icon.eot?905b08");
+  src: url("/resources/fonts/portfolio-icon.eot?905b08#iefix") format("embedded-opentype"), url("/resources/fonts/portfolio-icon.ttf?905b08") format("truetype"), url("/resources/fonts/portfolio-icon.woff?905b08") format("woff"), url("/resources/fonts/portfolio-icon.svg?905b08#portfolio-icon") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -14,12 +14,36 @@
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
+  font-size: 32px;
   text-transform: none;
   line-height: 1;
-  font-size: 32px;
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-close--bg .path1:before {
+  content: "";
+  color: black;
+  opacity: 0.5;
+}
+
+.icon-close--bg .path2:before {
+  content: "";
+  margin-left: -1em;
+  color: white;
+}
+
+.icon-close--bg .path3:before {
+  content: "";
+  margin-left: -1em;
+  color: white;
+}
+
+.icon-close--bg .path4:before {
+  content: "";
+  margin-left: -1em;
+  color: white;
 }
 
 .icon-close:before {
@@ -99,9 +123,13 @@
   text-align: center;
 }
 
-.hyperlink {
+.hyperlink, .hyperlink--black {
   font-family: "Lora", serif;
   color: #1158BF;
+}
+
+.hyperlink--black {
+  color: #1564db;
 }
 
 .topics {
@@ -196,6 +224,11 @@ figcaption em {
   --padding: 32px;
 }
 
+@media screen and (max-width: 768px) {
+  :root {
+    --offset: 40px;
+  }
+}
 .heading-1 {
   font-size: 1.4rem;
   padding: 0.5rem 0;
@@ -231,10 +264,8 @@ h4, h5 {
 
 h5 {
   color: rgba(0, 0, 0, 0.3);
-  width: var(--offset);
   font-size: 0.8rem;
   text-align: right;
-  transform: translateX(calc(-1 * var(--offset-margin)));
 }
 
 p {
@@ -255,7 +286,6 @@ section {
   padding: 120px 0;
 }
 section .container {
-  min-width: 24rem;
   display: flex;
   flex-flow: row wrap;
 }
@@ -268,14 +298,11 @@ section .container > div {
     padding: 24px 8px;
   }
 }
-section .container > div > div {
-  height: 28px;
-}
 
 .education {
-  background-color: rgba(0, 0, 0, 0.015);
+  background-color: rgba(0, 0, 0, 0.02);
 }
-.education h2, .education h4 {
+.education h4 {
   color: #664DC0;
 }
 .education h5 {
@@ -286,7 +313,7 @@ section .container > div > div {
   font-size: 0.9rem;
 }
 
-.references h2, .references h3 {
+.references h3 {
   color: #475bc3;
 }
 .references h3 {
@@ -312,25 +339,52 @@ section .container > div > div {
 .offset h2 {
   margin: 1rem 0;
   margin-left: calc(var(--offset) + var(--offset-margin));
-  color: rgba(0, 0, 0, 0.1);
   font-size: 3.25rem;
   text-align: left;
 }
-@media screen and (max-width: 768px) {
-  .offset h2 {
-    font-size: 3rem;
-  }
+.offset h5 {
+  width: var(--offset);
+  transform: translateX(calc(-1 * var(--offset-margin)));
 }
-.offset .container > div {
+.offset .container {
+  justify-content: center;
+  margin: 0 8px;
+}
+.offset .item {
   margin-left: calc(var(--offset) + var(--offset-margin));
+  width: 24rem;
 }
-.offset .container > div > div {
+.offset .item > div {
   display: flex;
   transform: translateX(calc( -1 * var(--offset) ));
+  height: 28px;
 }
 @media screen and (max-width: 768px) {
   .offset h2 {
     margin: 0 var(--offset-margin);
+    font-size: 3rem;
+  }
+  .offset h2, .offset h3, .offset h4, .offset p {
+    text-align: center;
+  }
+  .offset h5 {
+    width: auto;
+    transform: translate(0, 0);
+    text-align: center;
+  }
+  .offset .container > div > div {
+    text-align: center;
+    flex-direction: column-reverse;
+    transform: translate(0);
+    height: auto;
+  }
+  .offset .item {
+    margin: 8px;
+  }
+}
+@media screen and (max-width: 481px) {
+  .offset h2 {
+    font-size: 2.5rem;
   }
 }
 
