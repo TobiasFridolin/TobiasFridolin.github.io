@@ -10,6 +10,7 @@
 @include atoms.breakpoint(small){
     :root{
         --offset: 40px;
+        --margin: 80px;
     }
 
 }
@@ -99,7 +100,7 @@ section{
 
     h3{
         @extend %lato-small-caps;
-        padding: 16px;
+        padding: 0 16px;
     }
 
     p{
@@ -121,6 +122,16 @@ section{
         align-items: center;
     }
 
+    @include atoms.breakpoint(small){
+
+        h2{
+            text-align: center;
+        }
+        
+        p{
+            text-align: justify;
+        }
+    }
 }
 
 .education{
