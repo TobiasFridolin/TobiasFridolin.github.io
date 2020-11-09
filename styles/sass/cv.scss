@@ -14,6 +14,23 @@
 
 }
 
+%lato-small-caps{
+    font-family: atoms.$lato;
+    font-size: 0.8rem;
+    letter-spacing: 0.02rem;
+    font-weight: 400;
+    line-height: 2.5rem;
+    color: atoms.$grey-50;
+    text-transform: uppercase;
+}
+
+%lora-heading{
+    font-family: atoms.$lora;
+    font-size: 1.25rem;
+    line-height: 1.7rem;
+    color: atoms.$grey-80;
+}
+
 .heading-1{
     font-size: 1.4rem;
     padding: 0.5rem 0;
@@ -30,24 +47,8 @@ h2{
     padding: 0 var(--padding);
 }
 
-h3{
-    font-family: atoms.$lato;
-    font-size: 0.8rem;
-    letter-spacing: 0.02rem;
-    font-weight: 400;
-    line-height: 2.5rem;
-    color: atoms.$grey-50;
-    text-transform: uppercase;
-}
-
-h4, h5{
-    font-family: atoms.$lora;
-    font-size: 1.25rem;
-    line-height: 1.7rem;
-    color: atoms.$grey-80;
-}
-
 h5{
+    @extend %lora-heading;
     color: atoms.$grey-30;
     font-size: 0.8rem;
     text-align: right;
@@ -93,10 +94,11 @@ section{
     padding-bottom: 120px;
 
     h2{
-        text-align: center;
+        margin: 0 var(--margin);
     }
 
     h3{
+        @extend %lato-small-caps;
         padding: 16px;
     }
 
@@ -124,7 +126,12 @@ section{
 .education{
     background-color: rgba(black, 0.04);
 
+    h3{
+        @extend %lato-small-caps;
+    }
+
     h4{
+        @extend %lora-heading;
         color: atoms.$primary-strong;
     }
 
@@ -139,18 +146,17 @@ section{
 
 .references{
     background-color: rgba(black, 0.04);    
-
+    
     h3{
+        @extend %lato-small-caps;
         color: atoms.$primary-weak;
-    }
-
-    h3{
         font-family: atoms.$lora;
         font-size: 0.9rem;
         line-height: 1.7rem;
     }
 
     h4{
+        @extend %lora-heading;
         font-size: 1rem;
         color: atoms.$grey-70;
     }
@@ -172,6 +178,14 @@ section{
         margin-left: calc(var(--offset) + var(--offset-margin));
         font-size: 3.25rem;
         text-align: left;
+    }
+
+    h3{
+        @extend %lato-small-caps;
+    }
+
+    h4{
+        @extend %lora-heading;
     }
 
     h5{
@@ -259,7 +273,7 @@ section{
     }
 }
 
-.tools{
+.skills{
     display: flex;
     flex-direction: column;
     background-color: rgba(atoms.$primary-weak, 0.75);
@@ -267,17 +281,20 @@ section{
     h2{
         color: white;
         text-align: center;
+        margin: 0 var(--margin);
     }
 
     h3{
+        @extend %lora-heading;
         font-size: 1.5rem;
         text-align: center;
         color: atoms.$white-toned;
+        margin: 0;
     }
 
     h4{
+        @extend %lato-small-caps;
         color: atoms.$white-toned;
-        
     }
 
     .container{
@@ -285,6 +302,23 @@ section{
 
         >div{
             justify-items: center;
+            text-align: center;
+        }
+
+        div:first-child{
+            text-align: right;
+
+            h3{
+                text-align: right;
+            }
+        }
+
+        div:last-child{
+            text-align: left;
+            
+            h3{
+                text-align: left;
+            }
         }
     }
 }

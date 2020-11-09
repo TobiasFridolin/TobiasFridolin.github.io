@@ -205,6 +205,23 @@ figcaption em {
     --offset: 40px;
   }
 }
+.skills h4, .offset h3, .references h3, .education h3, .intro h3 {
+  font-family: "Lato", sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.02rem;
+  font-weight: 400;
+  line-height: 2.5rem;
+  color: rgba(0, 0, 0, 0.5);
+  text-transform: uppercase;
+}
+
+.skills h3, .offset h4, .references h4, .education h4, h5 {
+  font-family: "Lora", serif;
+  font-size: 1.25rem;
+  line-height: 1.7rem;
+  color: rgba(0, 0, 0, 0.8);
+}
+
 .heading-1 {
   font-size: 1.4rem;
   padding: 0.5rem 0;
@@ -219,23 +236,6 @@ h2 {
   line-height: 125%;
   color: rgba(0, 0, 0, 0.8);
   padding: 0 var(--padding);
-}
-
-h3 {
-  font-family: "Lato", sans-serif;
-  font-size: 0.8rem;
-  letter-spacing: 0.02rem;
-  font-weight: 400;
-  line-height: 2.5rem;
-  color: rgba(0, 0, 0, 0.5);
-  text-transform: uppercase;
-}
-
-h4, h5 {
-  font-family: "Lora", serif;
-  font-size: 1.25rem;
-  line-height: 1.7rem;
-  color: rgba(0, 0, 0, 0.8);
 }
 
 h5 {
@@ -275,13 +275,12 @@ section .container > div {
   }
 }
 
-
 .intro {
   display: flex;
   padding-bottom: 120px;
 }
 .intro h2 {
-  text-align: center;
+  margin: 0 var(--margin);
 }
 .intro h3 {
   padding: 16px;
@@ -322,8 +321,6 @@ section .container > div {
 }
 .references h3 {
   color: #475bc3;
-}
-.references h3 {
   font-family: "Lora", serif;
   font-size: 0.9rem;
   line-height: 1.7rem;
@@ -413,28 +410,43 @@ section .container > div {
   width: 300px;
 }
 
-.tools {
+.skills {
   display: flex;
   flex-direction: column;
   background-color: rgba(71, 91, 195, 0.75);
 }
-.tools h2 {
+.skills h2 {
   color: white;
   text-align: center;
+  margin: 0 var(--margin);
 }
-.tools h3 {
+.skills h3 {
   font-size: 1.5rem;
   text-align: center;
   color: #EDEDED;
+  margin: 0;
 }
-.tools h4 {
+.skills h4 {
   color: #EDEDED;
 }
-.tools .container {
+.skills .container {
   justify-content: space-around;
 }
-.tools .container > div {
+.skills .container > div {
   justify-items: center;
+  text-align: center;
+}
+.skills .container div:first-child {
+  text-align: right;
+}
+.skills .container div:first-child h3 {
+  text-align: right;
+}
+.skills .container div:last-child {
+  text-align: left;
+}
+.skills .container div:last-child h3 {
+  text-align: left;
 }
 
 .header {
