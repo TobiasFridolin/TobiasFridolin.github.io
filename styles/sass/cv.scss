@@ -88,10 +88,41 @@ section{
     }
 }
 
+.intro{
+    display: flex;
+    padding-bottom: 120px;
+
+    h2{
+        text-align: center;
+    }
+
+    h3{
+        padding: 16px;
+    }
+
+    p{
+        margin: 16px;
+        max-width: 32em;
+        font-size: 1.1em;
+        text-align: left;
+    }
+
+    img{
+        padding: 8px;
+        margin: 16px;
+        border-radius: 100%;
+        object-fit: cover;
+    }
+
+    .container{
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+
 .education{
-    background-color: rgba(black, 0.02);
-
-
+    background-color: rgba(black, 0.04);
 
     h4{
         color: atoms.$primary-strong;
@@ -107,9 +138,7 @@ section{
 }
 
 .references{
-    // background-color: rgba(atoms.$primary-strong,0.04);
-    
-
+    background-color: rgba(black, 0.04);    
 
     h3{
         color: atoms.$primary-weak;
@@ -119,8 +148,6 @@ section{
         font-family: atoms.$lora;
         font-size: 0.9rem;
         line-height: 1.7rem;
-        // color: atoms.$grey-80;
-        // text-transform: none;
     }
 
     h4{
@@ -232,6 +259,36 @@ section{
     }
 }
 
+.tools{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(atoms.$primary-weak, 0.75);
+
+    h2{
+        color: white;
+        text-align: center;
+    }
+
+    h3{
+        font-size: 1.5rem;
+        text-align: center;
+        color: atoms.$white-toned;
+    }
+
+    h4{
+        color: atoms.$white-toned;
+        
+    }
+
+    .container{
+        justify-content: space-around;
+
+        >div{
+            justify-items: center;
+        }
+    }
+}
+
 .header{
     opacity: 100%;
     margin: 0;
@@ -262,10 +319,6 @@ section{
 
 main{
     margin: 0;
-
-    section:first-child{
-        padding-top: 0;
-    }
 }
 
 hr{
@@ -278,12 +331,14 @@ hr{
 
 .footer{
     background-color: rgba(atoms.$primary-weak,0.02);
+    background-color: atoms.$black-portfolio;    
     padding: 80px var(--offset) + var(--offset-margin);
 
     a{
         padding: 16px;
         font-size: 0.9rem;
         margin: 0 16px;
+        color: atoms.$hyperlink_on-black;
     }
 
     p{
@@ -291,11 +346,12 @@ hr{
         max-width: 28em;
         margin: 0  auto;
         font-family: atoms.$lora;
-        font-size: 0.9rem;
+        font-size: 0.8em;
         font-weight: 400;
         line-height: 150%;
         letter-spacing: 0.02rem;
         color: atoms.$grey-30;
+        color: rgba(white, 0.4);
         text-align: center;
     }
 }

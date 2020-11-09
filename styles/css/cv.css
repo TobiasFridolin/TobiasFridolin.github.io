@@ -1,8 +1,8 @@
 @charset "UTF-8";
 @font-face {
   font-family: "portfolio-icon";
-  src: url("/resources/fonts/portfolio-icon.eot?905b08");
-  src: url("/resources/fonts/portfolio-icon.eot?905b08#iefix") format("embedded-opentype"), url("/resources/fonts/portfolio-icon.ttf?905b08") format("truetype"), url("/resources/fonts/portfolio-icon.woff?905b08") format("woff"), url("/resources/fonts/portfolio-icon.svg?905b08#portfolio-icon") format("svg");
+  src: url("/resources/fonts/portfolio-icon.eot?z8794v");
+  src: url("/resources/fonts/portfolio-icon.eot?z8794v#iefix") format("embedded-opentype"), url("/resources/fonts/portfolio-icon.ttf?z8794v") format("truetype"), url("/resources/fonts/portfolio-icon.woff?z8794v") format("woff"), url("/resources/fonts/portfolio-icon.svg?z8794v#portfolio-icon") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -14,36 +14,12 @@
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
-  font-size: 32px;
   text-transform: none;
+  font-size: 40px;
   line-height: 1;
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-.icon-close--bg .path1:before {
-  content: "";
-  color: black;
-  opacity: 0.5;
-}
-
-.icon-close--bg .path2:before {
-  content: "";
-  margin-left: -1em;
-  color: white;
-}
-
-.icon-close--bg .path3:before {
-  content: "";
-  margin-left: -1em;
-  color: white;
-}
-
-.icon-close--bg .path4:before {
-  content: "";
-  margin-left: -1em;
-  color: white;
 }
 
 .icon-close:before {
@@ -299,8 +275,35 @@ section .container > div {
   }
 }
 
+.intro {
+  display: flex;
+  padding-bottom: 120px;
+}
+.intro h2 {
+  text-align: center;
+}
+.intro h3 {
+  padding: 16px;
+}
+.intro p {
+  margin: 16px;
+  max-width: 32em;
+  font-size: 1.1em;
+  text-align: left;
+}
+.intro img {
+  padding: 8px;
+  margin: 16px;
+  border-radius: 100%;
+  object-fit: cover;
+}
+.intro .container {
+  justify-content: center;
+  align-items: center;
+}
+
 .education {
-  background-color: rgba(0, 0, 0, 0.02);
+  background-color: rgba(0, 0, 0, 0.04);
 }
 .education h4 {
   color: #664DC0;
@@ -313,6 +316,9 @@ section .container > div {
   font-size: 0.9rem;
 }
 
+.references {
+  background-color: rgba(0, 0, 0, 0.04);
+}
 .references h3 {
   color: #475bc3;
 }
@@ -406,6 +412,30 @@ section .container > div {
   width: 300px;
 }
 
+.tools {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(71, 91, 195, 0.75);
+}
+.tools h2 {
+  color: white;
+  text-align: center;
+}
+.tools h3 {
+  font-size: 1.5rem;
+  text-align: center;
+  color: #EDEDED;
+}
+.tools h4 {
+  color: #EDEDED;
+}
+.tools .container {
+  justify-content: space-around;
+}
+.tools .container > div {
+  justify-items: center;
+}
+
 .header {
   opacity: 100%;
   margin: 0;
@@ -437,9 +467,6 @@ section .container > div {
 main {
   margin: 0;
 }
-main section:first-child {
-  padding-top: 0;
-}
 
 hr {
   margin: 0 var(--offset)var(--offset-margin);
@@ -452,23 +479,26 @@ hr {
 
 .footer {
   background-color: rgba(71, 91, 195, 0.02);
+  background-color: #252a31;
   padding: 80px var(--offset)var(--offset-margin);
 }
 .footer a {
   padding: 16px;
   font-size: 0.9rem;
   margin: 0 16px;
+  color: #1564db;
 }
 .footer p {
   padding: 16px;
   max-width: 28em;
   margin: 0 auto;
   font-family: "Lora", serif;
-  font-size: 0.9rem;
+  font-size: 0.8em;
   font-weight: 400;
   line-height: 150%;
   letter-spacing: 0.02rem;
   color: rgba(0, 0, 0, 0.3);
+  color: rgba(255, 255, 255, 0.4);
   text-align: center;
 }
 

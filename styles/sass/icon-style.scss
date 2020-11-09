@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: '#{$icomoon-font-family}';
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?905b08');
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?905b08#iefix') format('embedded-opentype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?905b08') format('truetype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?905b08') format('woff'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?905b08##{$icomoon-font-family}') format('svg');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?z8794v');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?z8794v#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?z8794v') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?z8794v') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?z8794v##{$icomoon-font-family}') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -19,8 +19,8 @@
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
-  font-size: 32px;
   text-transform: none;
+  font-size: 40px;
   line-height: 1;
 
   /* Better Font Rendering =========== */
@@ -28,34 +28,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-close--bg .path1 {
-  &:before {
-    content: $icon-close--bg-path1;  
-    color: rgb(0, 0, 0);  
-    opacity: 0.5;
-  }
-}
-.icon-close--bg .path2 {
-  &:before {
-    content: $icon-close--bg-path2;  
-    margin-left: -1em;  
-    color: rgb(255, 255, 255);
-  }
-}
-.icon-close--bg .path3 {
-  &:before {
-    content: $icon-close--bg-path3;  
-    margin-left: -1em;  
-    color: rgb(255, 255, 255);
-  }
-}
-.icon-close--bg .path4 {
-  &:before {
-    content: $icon-close--bg-path4;  
-    margin-left: -1em;  
-    color: rgb(255, 255, 255);
-  }
-}
 .icon-close {
   &:before {
     content: $icon-close; 
