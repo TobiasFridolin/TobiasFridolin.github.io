@@ -193,19 +193,6 @@ figcaption em {
   font-weight: bold;
 }
 
-:root {
-  --margin: 240px;
-  --offset: 80px;
-  --offset-margin: 32px;
-  --padding: 32px;
-}
-
-@media screen and (max-width: 768px) {
-  :root {
-    --offset: 40px;
-    --margin: 80px;
-  }
-}
 .skills h4, .offset h3, .references h3, .education h3, .intro h3 {
   font-family: "Lato", sans-serif;
   font-size: 0.8rem;
@@ -225,7 +212,7 @@ figcaption em {
 
 .heading-1 {
   font-size: 1.4rem;
-  padding: 0.5rem 0;
+  padding: 8px 0;
   color: rgba(0, 0, 0, 0.8);
   font-weight: 300;
 }
@@ -236,7 +223,6 @@ h2 {
   font-size: 2.5rem;
   line-height: 125%;
   color: rgba(0, 0, 0, 0.8);
-  padding: 0 var(--padding);
 }
 
 h5 {
@@ -260,7 +246,7 @@ section {
   margin-bottom: 0;
   display: flex;
   flex-direction: column;
-  padding: 120px 0;
+  padding: 120px 8px;
 }
 section .container {
   display: flex;
@@ -268,23 +254,28 @@ section .container {
 }
 section .container > div {
   max-width: 28rem;
-  padding: var(--padding);
+  padding: 32px;
 }
 @media screen and (max-width: 768px) {
   section .container > div {
-    padding: 24px 8px;
+    padding: 24px 16px;
   }
 }
 
 .intro {
   display: flex;
-  padding-bottom: 120px;
+  padding-bottom: 0;
 }
 .intro h2 {
-  margin: 0 var(--margin);
+  text-align: center;
 }
 .intro h3 {
   padding: 0 16px;
+  padding-top: 8px;
+  line-height: 1.5em;
+  color: rgba(0, 0, 0, 0.3);
+  letter-spacing: 0.04rem;
+  text-transform: none;
 }
 .intro p {
   margin: 16px;
@@ -302,12 +293,23 @@ section .container > div {
   justify-content: center;
   align-items: center;
 }
+.intro .container:last-child {
+  width: fit-content;
+  margin: 32px auto;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
 @media screen and (max-width: 768px) {
   .intro h2 {
     text-align: center;
   }
   .intro p {
     text-align: justify;
+  }
+}
+@media screen and (max-width: 481px) {
+  .intro h3 {
+    width: 100%;
+    text-align: center;
   }
 }
 
@@ -350,31 +352,35 @@ section .container > div {
   margin: 80px 0;
 }
 .offset h2 {
-  margin: 1rem 0;
-  margin-left: calc(var(--offset) + var(--offset-margin));
+  margin: 1rem 240px;
   font-size: 3.25rem;
   text-align: left;
 }
 .offset h5 {
-  width: var(--offset);
-  transform: translateX(calc(-1 * var(--offset-margin)));
+  width: 80px;
+  transform: translateX(-32px);
 }
 .offset .container {
   justify-content: center;
   margin: 0 8px;
 }
 .offset .item {
-  margin-left: calc(var(--offset) + var(--offset-margin));
+  margin-left: 112px;
   width: 24rem;
 }
 .offset .item > div {
   display: flex;
-  transform: translateX(calc( -1 * var(--offset) ));
+  margin-left: -80px;
   height: 28px;
+}
+@media screen and (max-width: 1024px) {
+  .offset h2 {
+    margin: 1rem 160px;
+  }
 }
 @media screen and (max-width: 768px) {
   .offset h2 {
-    margin: 0 var(--offset-margin);
+    margin: 0 32px;
     font-size: 3rem;
   }
   .offset h2, .offset h3, .offset h4, .offset p {
@@ -388,7 +394,7 @@ section .container > div {
   .offset .container > div > div {
     text-align: center;
     flex-direction: column-reverse;
-    transform: translate(0);
+    margin-left: 0;
     height: auto;
   }
   .offset .item {
@@ -416,7 +422,7 @@ section .container > div {
   margin: 0 auto;
 }
 .centered > div > div {
-  width: 300px;
+  max-width: 300px;
 }
 
 .skills {
@@ -427,11 +433,10 @@ section .container > div {
 .skills h2 {
   color: white;
   text-align: center;
-  margin: 0 var(--margin);
 }
 .skills h3 {
   font-size: 1.5rem;
-  text-align: center;
+  line-height: 3rem;
   color: #EDEDED;
   margin: 0;
 }
@@ -441,21 +446,23 @@ section .container > div {
 .skills .container {
   justify-content: space-around;
 }
-.skills .container > div {
+.skills .item {
   justify-items: center;
   text-align: center;
 }
-.skills .container div:first-child {
+.skills .item:first-child {
   text-align: right;
 }
-.skills .container div:first-child h3 {
-  text-align: right;
-}
-.skills .container div:last-child {
+.skills .item:last-child {
   text-align: left;
 }
-.skills .container div:last-child h3 {
-  text-align: left;
+@media screen and (max-width: 768px) {
+  .skills .item {
+    width: 100%;
+  }
+  .skills .item h3, .skills .item h4 {
+    text-align: center;
+  }
 }
 
 .header {
@@ -466,8 +473,7 @@ section .container > div {
 }
 
 .header-container {
-  margin: 0 calc(var(--offset) + var(--offset-margin));
-  padding: 0 var(--padding);
+  margin: 0 80px;
 }
 .header-container > div {
   display: flex;
@@ -481,7 +487,7 @@ section .container > div {
 }
 @media screen and (max-width: 481px) {
   .header-container {
-    padding: 0 var(--padding);
+    padding: 0 32px;
     margin: 0;
   }
 }
@@ -491,18 +497,17 @@ main {
 }
 
 hr {
-  margin: 0 var(--offset)var(--offset-margin);
+  margin: 0 120px;
 }
 @media screen and (max-width: 768px) {
   hr {
-    margin: 0 var(--offset-margin);
+    margin: 0 32px;
   }
 }
 
 .footer {
-  background-color: rgba(71, 91, 195, 0.02);
   background-color: #252a31;
-  padding: 80px var(--offset)var(--offset-margin);
+  padding: 80px 120px;
 }
 .footer a {
   padding: 16px;
@@ -522,6 +527,11 @@ hr {
   color: rgba(0, 0, 0, 0.3);
   color: rgba(255, 255, 255, 0.4);
   text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .footer {
+    padding: 40px 16px;
+  }
 }
 
 /*# sourceMappingURL=cv.css.map */

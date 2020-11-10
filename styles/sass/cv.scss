@@ -1,19 +1,12 @@
 @use 'atoms';
 
-:root{
-    --margin: 240px;
-    --offset: 80px;
-    --offset-margin: 32px;
-    --padding: 32px;
-}
+$margin-big: 240px;
+$margin-small: 80px;
 
-@include atoms.breakpoint(small){
-    :root{
-        --offset: 40px;
-        --margin: 80px;
-    }
-
-}
+$offset: 80px;
+$offset-margin: 32px;
+$padding: 32px;
+$padding-big: 120px;
 
 %lato-small-caps{
     font-family: atoms.$lato;
@@ -34,7 +27,7 @@
 
 .heading-1{
     font-size: 1.4rem;
-    padding: 0.5rem 0;
+    padding: 8px 0;
     color: atoms.$grey-80;
     font-weight: 300;
 }
@@ -45,7 +38,6 @@ h2{
     font-size: 2.5rem;
     line-height: 125%;
     color: atoms.$grey-80;
-    padding: 0 var(--padding);
 }
 
 h5{
@@ -70,10 +62,9 @@ p{
 
 section{
     margin-bottom: 0;
-    
     display: flex;
     flex-direction: column;
-    padding: 120px 0;
+    padding: $padding-big 8px;
     
     .container{
         display: flex;
@@ -81,10 +72,11 @@ section{
 
         > div{
             max-width: 28rem;
-            padding: var(--padding);
+            padding: $padding;
 
+            // padding small?
             @include atoms.breakpoint(small){
-                padding: 24px 8px;
+                padding: 24px 16px;
             }
         }
     }
@@ -92,15 +84,20 @@ section{
 
 .intro{
     display: flex;
-    padding-bottom: 120px;
+    padding-bottom: 0;
 
     h2{
-        margin: 0 var(--margin);
+        text-align: center;
     }
 
     h3{
         @extend %lato-small-caps;
         padding: 0 16px;
+        padding-top: 8px;
+        line-height: 1.5em;
+        color: atoms.$grey-30;
+        letter-spacing: 0.04rem;
+        text-transform: none;
     }
 
     p{
@@ -122,6 +119,13 @@ section{
         align-items: center;
     }
 
+    .container:last-child{
+        // margin-top: 80px;
+        width: fit-content;
+        margin: 32px auto;
+        border-top: 1px solid rgba(black, 0.1);
+    }
+
     @include atoms.breakpoint(small){
 
         h2{
@@ -130,6 +134,13 @@ section{
         
         p{
             text-align: justify;
+        }
+    }
+
+    @include atoms.breakpoint(smallest){
+        h3{
+            width: 100%;
+            text-align: center;
         }
     }
 }
@@ -185,8 +196,7 @@ section{
     margin: 80px 0;
 
     h2{
-        margin: 1rem 0;
-        margin-left: calc(var(--offset) + var(--offset-margin));
+        margin: 1rem $margin-big;
         font-size: 3.25rem;
         text-align: left;
     }
@@ -200,8 +210,8 @@ section{
     }
 
     h5{
-        width: var(--offset);
-        transform: translateX(calc(-1 * var(--offset-margin)));
+        width: $offset;
+        transform: translateX(-$offset-margin);
     }
 
     .container{
@@ -210,20 +220,26 @@ section{
     }
 
     .item{
-        margin-left: calc(var(--offset) + var(--offset-margin));
+        margin-left: $offset + $offset-margin;
         width: 24rem;
 
         > div{
             display: flex;
-            transform: translateX( calc( -1 * var(--offset) ) );
+            margin-left: -$offset;
             height: 28px;
+        }
+    }
+
+    @include atoms.breakpoint(medium){
+        h2{
+            margin: 1rem 160px;
         }
     }
 
     @include atoms.breakpoint(small){
 
         h2{
-            margin: 0 var(--offset-margin);
+            margin: 0 $offset-margin;
             font-size: 3rem;
         }
 
@@ -244,7 +260,7 @@ section{
                 > div{
                     text-align: center;
                     flex-direction: column-reverse;
-                    transform: translate(0,);
+                    margin-left: 0;
                     height: auto;
                 }
             }
@@ -279,7 +295,7 @@ section{
         margin: 0 auto;
 
         > div{
-            width: 300px;
+            max-width: 300px;
         }
     }
 }
@@ -292,13 +308,13 @@ section{
     h2{
         color: white;
         text-align: center;
-        margin: 0 var(--margin);
+
     }
 
     h3{
         @extend %lora-heading;
         font-size: 1.5rem;
-        text-align: center;
+        line-height: 3rem;
         color: atoms.$white-toned;
         margin: 0;
     }
@@ -310,25 +326,28 @@ section{
 
     .container{
         justify-content: space-around;
+    }
 
-        >div{
-            justify-items: center;
-            text-align: center;
-        }
+    .item{
+        justify-items: center;
+        text-align: center;
+    }
 
-        div:first-child{
-            text-align: right;
+    .item:first-child{
+        text-align: right;
+    }
 
-            h3{
-                text-align: right;
-            }
-        }
+    .item:last-child{
+        text-align: left;
+    }
 
-        div:last-child{
-            text-align: left;
-            
-            h3{
-                text-align: left;
+    @include atoms.breakpoint(small){
+
+        .item{
+            width: 100%;
+
+            h3, h4{
+                text-align: center;
             }
         }
     }
@@ -343,8 +362,7 @@ section{
 
 .header-container{
 
-    margin: 0 calc(var(--offset) + var(--offset-margin));
-    padding: 0 var(--padding);
+    margin: 0 $margin-small;
 
     > div{
         display: flex;
@@ -357,7 +375,7 @@ section{
     } 
 
     @include atoms.breakpoint(smallest){
-        padding: 0 var(--padding);
+        padding: 0 $padding;
         margin: 0;
     }
 }
@@ -367,17 +385,16 @@ main{
 }
 
 hr{
-    margin: 0 var(--offset) + var(--offset-margin);
+    margin: 0  $padding-big;
 
     @include atoms.breakpoint(small){
-        margin: 0 var(--offset-margin);
+        margin: 0 $offset-margin;
     }
 }
 
 .footer{
-    background-color: rgba(atoms.$primary-weak,0.02);
     background-color: atoms.$black-portfolio;    
-    padding: 80px var(--offset) + var(--offset-margin);
+    padding: 80px $padding-big;
 
     a{
         padding: 16px;
@@ -398,5 +415,9 @@ hr{
         color: atoms.$grey-30;
         color: rgba(white, 0.4);
         text-align: center;
+    }
+
+    @include atoms.breakpoint(small){
+        padding: 40px 16px;
     }
 }
