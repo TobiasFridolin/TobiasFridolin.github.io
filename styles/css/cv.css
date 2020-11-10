@@ -356,6 +356,9 @@ section .container > div {
   font-size: 3.25rem;
   text-align: left;
 }
+.offset h3 {
+  color: rgba(102, 77, 192, 0.8);
+}
 .offset h5 {
   width: 80px;
   transform: translateX(-32px);

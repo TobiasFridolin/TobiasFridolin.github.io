@@ -203,6 +203,7 @@ section{
 
     h3{
         @extend %lato-small-caps;
+        color: rgba(atoms.$primary-strong, 0.8);
     }
 
     h4{
