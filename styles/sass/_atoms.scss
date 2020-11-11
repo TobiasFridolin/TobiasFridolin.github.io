@@ -134,13 +134,23 @@ $source-sans-pro: 'Source Sans Pro', sans-serif;
     text-align: center;
 }
 
+a{
+    text-decoration: none;
+}
+
 .hyperlink{
-    font-family: $lora;
-    color: $hyperlink;
+    color: rgba($hyperlink, 0.8);
+
+    &:hover{
+        color: $hyperlink;
+    }
+
+    &:active{
+        color: $primary-strong;
+    }
 }
 
 .hyperlink--black{
-    @extend .hyperlink;
     color: $hyperlink_on-black;
 }
 
@@ -159,8 +169,7 @@ $source-sans-pro: 'Source Sans Pro', sans-serif;
 
 .navigation-link, .button{
     font-family: $lato;
-    font-size: 1.125rem;
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
 .button{

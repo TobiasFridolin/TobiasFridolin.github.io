@@ -99,9 +99,18 @@
   text-align: center;
 }
 
-.hyperlink, .hyperlink--black {
-  font-family: "Lora", serif;
+a {
+  text-decoration: none;
+}
+
+.hyperlink {
+  color: rgba(17, 88, 191, 0.8);
+}
+.hyperlink:hover {
   color: #1158BF;
+}
+.hyperlink:active {
+  color: #664DC0;
 }
 
 .hyperlink--black {
@@ -121,10 +130,9 @@
   font-weight: 600;
 }
 
-.navigation-link, .button {
+.navigation-link, .navigation-link--selected, .button {
   font-family: "Lato", sans-serif;
-  font-size: 1.125rem;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 .button {
@@ -193,11 +201,6 @@ figcaption em {
   font-weight: bold;
 }
 
-a {
-  color: #1158BF;
-  text-decoration: none;
-}
-
 body {
   width: 100vw;
   overflow-x: hidden;
@@ -243,6 +246,7 @@ main {
 .nav li {
   list-style: none;
   display: inline-block;
+  margin: 8px 0;
 }
 .nav a {
   display: block;
@@ -265,16 +269,19 @@ main {
   }
 }
 
-.navigation-link {
-  text-transform: uppercase;
+.navigation-link, .navigation-link--selected {
   color: rgba(0, 0, 0, 0.5);
-  padding: 8px;
-  margin: 8px 0;
-  transition: background-color 200ms, color 200ms;
 }
-.navigation-link:hover {
+.navigation-link li, .navigation-link--selected li {
+  text-transform: uppercase;
+  transition: background-color 200ms, color 200ms;
+  margin: 4px 0;
+  padding: 8px;
+  width: 100%;
+}
+.navigation-link li:hover, .navigation-link--selected li:hover {
   color: #000000;
-  background-color: #EDEDED;
+  background-color: #F5F5F5;
 }
 .navigation-link--selected {
   padding-left: 8px;
@@ -282,20 +289,17 @@ main {
   color: #000000;
 }
 
-.navigation-link.hyperlink {
+.navigation-link.hyperlink, .hyperlink.navigation-link--selected {
   display: inline;
   color: #1158BF;
   text-transform: none;
 }
 
-.outline {
-  padding-left: 8px;
-}
-.outline a {
-  margin: 1em 0;
-}
 .outline .heading-3 {
   margin: 0;
+}
+.outline li:active {
+  color: #000000;
 }
 
 .hero {

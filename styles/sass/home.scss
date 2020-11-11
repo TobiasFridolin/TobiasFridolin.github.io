@@ -76,16 +76,19 @@ body{
     
     
     .navigation-link{
-        text-transform: uppercase;
-        color: atoms.$white-full;
+        color: rgba(white, 0.8);
 
         &--selected{
             color: atoms.$white-full;
         }
 
-        &:hover{
-            background-color: atoms.$primary-strong;
+        li{    
+            &:hover{
+                background-color: rgba(atoms.$primary-strong, 0.5);
+                color: white;
+            }
         }
+
     }
 }
 

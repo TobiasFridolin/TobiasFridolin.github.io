@@ -87,6 +87,7 @@ section{
     padding-bottom: 0;
 
     h2{
+        font-size: 3.5rem;
         text-align: center;
     }
 
@@ -193,7 +194,8 @@ section{
 }
 
 .offset{
-    margin: 80px 0;
+    padding: 80px 0;
+    // background: linear-gradient(180deg, white 0%, atoms.$white-almost 100%);
 
     h2{
         margin: 1rem $margin-big;

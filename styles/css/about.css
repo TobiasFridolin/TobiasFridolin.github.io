@@ -99,9 +99,18 @@
   text-align: center;
 }
 
-.hyperlink, .hyperlink--black {
-  font-family: "Lora", serif;
+a {
+  text-decoration: none;
+}
+
+.hyperlink {
+  color: rgba(17, 88, 191, 0.8);
+}
+.hyperlink:hover {
   color: #1158BF;
+}
+.hyperlink:active {
+  color: #664DC0;
 }
 
 .hyperlink--black {
@@ -123,8 +132,7 @@
 
 .navigation-link, .button {
   font-family: "Lato", sans-serif;
-  font-size: 1.125rem;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 .button {

@@ -99,9 +99,18 @@
   text-align: center;
 }
 
-.hyperlink, .hyperlink--black {
-  font-family: "Lora", serif;
+a {
+  text-decoration: none;
+}
+
+.hyperlink {
+  color: rgba(17, 88, 191, 0.8);
+}
+.hyperlink:hover {
   color: #1158BF;
+}
+.hyperlink:active {
+  color: #664DC0;
 }
 
 .hyperlink--black {
@@ -123,8 +132,7 @@
 
 .navigation-link, .button {
   font-family: "Lato", sans-serif;
-  font-size: 1.125rem;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 .button {
@@ -262,14 +270,14 @@ body {
   background-color: rgba(0, 0, 0, 0.3);
 }
 .nav .navigation-link {
-  text-transform: uppercase;
-  color: #FFFFFF;
+  color: rgba(255, 255, 255, 0.8);
 }
 .nav .navigation-link--selected {
   color: #FFFFFF;
 }
-.nav .navigation-link:hover {
-  background-color: #664DC0;
+.nav .navigation-link li:hover {
+  background-color: rgba(102, 77, 192, 0.5);
+  color: white;
 }
 
 main {

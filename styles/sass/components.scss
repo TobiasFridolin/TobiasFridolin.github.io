@@ -9,12 +9,6 @@ $margin-smallest: 16px;
 
 
 
-a{
-    color: atoms.$hyperlink;
-    text-decoration: none;
-
-}
-
 body{
     width: 100vw;
     overflow-x: hidden;
@@ -41,7 +35,6 @@ main{
     }
 }
 
-// Classes
 
 .nav{
     width: fit-content;
@@ -52,8 +45,6 @@ main{
     margin-left: 2em;
     z-index: 2;
 
-    // responsive
-
     ul{
         margin: 2em 0;
         padding: 0;
@@ -62,6 +53,7 @@ main{
     li{
         list-style: none;
         display: inline-block;
+        margin: 8px 0;
     }    
 
     a{
@@ -70,7 +62,6 @@ main{
 
     &__icon{
         padding: 8px;
-        // margin-right: 8px;
         width: 28px;
         height: 28px;
          
@@ -91,18 +82,25 @@ main{
 }
 
 .navigation-link{
-    text-transform: uppercase;
     color: atoms.$grey-50;    
-    padding: 8px;
-    margin: 8px 0;
-    transition: background-color 200ms, color 200ms;
 
-    &:hover{
-        color: atoms.$black-full;    
-        background-color: atoms.$white-toned;
+    li{
+        text-transform: uppercase;
+        transition: background-color 200ms, color 200ms;
+        margin: 4px 0;
+
+        padding: 8px;
+        width: 100%;
+
+        
+        &:hover{
+            color: atoms.$black-full;    
+            background-color: atoms.$white-almost;
+        }
     }
 
     &--selected{
+        @extend .navigation-link;
         padding-left: 8px;
         border-left: 4px solid atoms.$primary-strong;   
         color: atoms.$black-full;       
@@ -116,15 +114,16 @@ main{
 }
 
 .outline{
-    padding-left: 8px;
-
-    a{
-        margin: 1em 0;
-    }
 
     .heading-3{
         margin: 0;
     }
+
+    li:active{
+        color: atoms.$black-full;
+    }
+
+    
 }
 
 .hero{
