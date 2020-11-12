@@ -145,6 +145,10 @@ main{
                 color: atoms.$white-toned;
             }
         }
+
+        @media screen and (max-height: 580px){
+            display: none;
+        }
     }
 }
 

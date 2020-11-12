@@ -285,7 +285,7 @@ main{
     }
 }
 
-.footer{
+.contact{
     display: flex;
     flex-flow: column;
     justify-content: center;
@@ -381,6 +381,42 @@ hr{
 
 figure{
     margin: 16px 0;
+}
+
+footer{
+    background-color: rgba(atoms.$black-almost, 0.9);    
+    padding: 16px;
+
+    div{
+        display: flex;
+        justify-content: center;
+    }
+
+    a.hyperlink{
+        display: none;
+        padding: 8px;
+        font-size: 0.9rem;
+        margin: 0 16px;
+        color: atoms.$hyperlink_on-black;
+    }
+
+    p{
+        padding: 16px;
+        max-width: 28em;
+        margin: 0  auto;
+        font-family: atoms.$lora;
+        font-size: 0.8em;
+        font-weight: 400;
+        line-height: 150%;
+        letter-spacing: 0.02rem;
+        color: atoms.$grey-30;
+        color: rgba(white, 0.4);
+        text-align: center;
+    }
+
+    @include atoms.breakpoint(small){
+        padding: 40px 16px;
+    }
 }
 
 .collapsible__button{

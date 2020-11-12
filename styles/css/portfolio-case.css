@@ -377,13 +377,13 @@ audio {
 #flyfotos .header .subtitle {
   color: #6a9ace;
 }
-#flyfotos .footer {
+#flyfotos .contact {
   background-color: rgba(106, 154, 206, 0.075);
 }
-#flyfotos .footer .button {
+#flyfotos .contact .button {
   background-color: #6a9ace;
 }
-#flyfotos .footer .button:hover {
+#flyfotos .contact .button:hover {
   background-color: rgba(106, 154, 206, 0.9);
 }
 
@@ -396,13 +396,13 @@ audio {
 #naturbasen .header .subtitle {
   color: #789fe6;
 }
-#naturbasen .footer {
+#naturbasen .contact {
   background-color: rgba(120, 159, 230, 0.075);
 }
-#naturbasen .footer .button {
+#naturbasen .contact .button {
   background-color: #789fe6;
 }
-#naturbasen .footer .button:hover {
+#naturbasen .contact .button:hover {
   background-color: rgba(120, 159, 230, 0.9);
 }
 
@@ -415,13 +415,13 @@ audio {
 #ascendant-games .header .subtitle {
   color: #d32d2d;
 }
-#ascendant-games .footer {
+#ascendant-games .contact {
   background-color: rgba(211, 45, 45, 0.075);
 }
-#ascendant-games .footer .button {
+#ascendant-games .contact .button {
   background-color: #d32d2d;
 }
-#ascendant-games .footer .button:hover {
+#ascendant-games .contact .button:hover {
   background-color: rgba(211, 45, 45, 0.9);
 }
 

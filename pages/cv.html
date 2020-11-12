@@ -17,7 +17,7 @@
 </head>
 <body>
 
-    <div class="header">
+    <div class="header" id="header">
         <div class="header-container">
             <div>
                 <a class="button" href="/index.html">Home</a>                
@@ -204,12 +204,26 @@
         </div>
        </section>
     </main>
-    <footer class="footer">
+    <footer>
+        <p>Designed & Developed by Tobias Fridolin | 2020</p>
         <div>
             <a class="hyperlink" href="mailto:tobiasfridolin@gmail.com" target="_blank">LinkedIn</a> 
             <a class="hyperlink"href="https://www.linkedin.com/in/tobias-fridolin/"> Email</a>
         </div>
-        <p>Designed and Developed by Tobias Fridolin with the help of html, css, javascript and a lot of coffee.</p>
     </footer>
+
+    <script>
+        var prevScrollTop = 0;
+        var header = document.getElementById("header");
+        document.addEventListener("scroll", function(){
+            var scrollTop = document.documentElement.scrollTop;
+            if(scrollTop > prevScrollTop){
+                header.style.top = "-200px";
+            }else{
+                header.style.top = "0px";
+            }
+            prevScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+        }, false);
+    </script>
 </body>
 </html>

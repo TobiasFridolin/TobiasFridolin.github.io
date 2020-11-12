@@ -357,13 +357,19 @@ section{
 }
 
 .header{
+    position: sticky;
     opacity: 100%;
+    min-height: 0;
+    width: 100vw;
     margin: 0;
     z-index: 100;
     background-color: white;
+
+    transition: top 500ms ease-out 100ms;
 }
 
 .header-container{
+    padding: 16px;
 
     margin: 0 $margin-small;
 
@@ -374,17 +380,23 @@ section{
     }
 
     @include atoms.breakpoint(small){
-        padding: 0 8px;
+        padding: 16px 8px;
     } 
 
     @include atoms.breakpoint(smallest){
-        padding: 0 $padding;
+        padding: 16px $padding;
         margin: 0;
     }
 }
 
 main{
     margin: 0;
+}
+
+footer{
+    a.hyperlink{
+        display: flex;
+    }
 }
 
 hr{
@@ -395,32 +407,3 @@ hr{
     }
 }
 
-.footer{
-    background-color: atoms.$black-portfolio;    
-    padding: 80px $padding-big;
-
-    a{
-        padding: 16px;
-        font-size: 0.9rem;
-        margin: 0 16px;
-        color: atoms.$hyperlink_on-black;
-    }
-
-    p{
-        padding: 16px;
-        max-width: 28em;
-        margin: 0  auto;
-        font-family: atoms.$lora;
-        font-size: 0.8em;
-        font-weight: 400;
-        line-height: 150%;
-        letter-spacing: 0.02rem;
-        color: atoms.$grey-30;
-        color: rgba(white, 0.4);
-        text-align: center;
-    }
-
-    @include atoms.breakpoint(small){
-        padding: 40px 16px;
-    }
-}

@@ -332,6 +332,11 @@ main {
 .contact-info .container a:hover {
   color: #EDEDED;
 }
+@media screen and (max-height: 580px) {
+  .contact-info .container {
+    display: none;
+  }
+}
 
 .container {
   display: flex;
