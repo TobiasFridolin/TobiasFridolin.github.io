@@ -90,7 +90,7 @@
 
                 <!-- SECTIONS, ID -->
                 <p class="lead">
-                    A lot of decisions had to be made during this project, so it is a bit of a longer read than my other cases.
+                    This is a bit of a longer read than my other cases.
                     The first part of this case describes the project and the creative process in general.
                     The middle is more specific to my work, while the last part is about the process of collaborating with the other artists on creating the sound, visual effects and artwork for the cards.
                     I hope you enjoy the read.
@@ -291,14 +291,14 @@
                 <section>
                     <h2 class="heading-2" id="sec4">Creating the Board</h2>
                     <p class="body-copy">
-                        The nature of the game meant that there would be three lanes - one for each player on the “Ally” team.  
-                        Each lane would have an Ally side and an “Overlord” side, each side with 2 rows. 
+                        The nature of the game meant that there would be three lanes - one for each player on the <em>ally</em> team.  
+                        Each lane would have an <em>ally</em> side and an <em>overlord</em> side, each side with 2 rows. 
                         Each of these rows can contain up to four units. 
-                        This means that 48 units should be able to be displayed on the “battlefield” when each spot has been taken. 
+                        This means that 48 units should be able to be displayed on the battlefield when each spot has been taken. 
                     </p>
                     <p class="body-copy">        
                         Each of these units should of course also have their attack and defence stats displayed.
-                        Since the game has a resistance / damage type system, this had to be communicated as well.
+                        Since the game has a resistance/damage type system, this had to be communicated as well.
                     </p>
                     <figure>
                         <span class="icon-close close"></span>
@@ -306,20 +306,26 @@
                         <figcaption>An early sketch exploring the proportions of different elements on the screen. The dark grey rectangles indicate space taken up by environmental 3D models. The actions history on the top left ended up being scrapped due to time constraints.</figcaption>
                     </figure>
                     <p class="body-copy">
-                        Furthermore, when in combat, “Teammate”, “Self” and “Enemy” should be differentiated, as well as the state of the unit - can it attack or not? Or in case of enemy units, can it be attacked?  
+                        Furthermore, when in combat, <em>teammate</em>, <em>self</em> and <em>enemy</em> should be differentiated, as well as the state of the unit - can it attack or not? Or in case of enemy units, can it be attacked?  
                         On top of this, certain keyword effects should also be displayed - perhaps the unit is weaker or stronger due to some permanent effect. 
+                        These are some of the decisions I will go over now.
                     </p>
                     <h3 class="heading-3">Perspective & Representing Units</h3>
                     <p class="body-copy">
                         The first decision that had to be made, which would inform later decisions, was how to represent the battlefield.
                         We knew that there was going to be three straight lanes, with the the allies on one side and the overlord on the other.
                         From here we narrowed it down to two options, having an orthographic camera, or going with perspective.
-                        On one hand, going with perspective would support the feel we were going for - we wanted the game to feel like a battle.
-                        Having a perspective would help towards this end, as it would feel more life-like than having an othographic camera.
-                        On the other hand, showing it in perspective means that the units would become smaller the farther they are away from the camera.
+                        On one hand, going with perspective would support the feel we were going for - we wanted the game to feel like a battle taking place between the overlord and the three allies.
+                        Using a perspective camera would help towards this end, as it would feel more life-like than having an othographic camera.
+                        On the other hand, it would also mean that the units would become smaller the farther they are away from the camera, which would not be ideal.
                     </p>    
+                    <figure>
+                        <span class="icon-close close"></span>
+                        <img class="fullscreen-able" src="/resources/ascendant-games/ascendant-games-orthographic.png" alt="orthographic camera">
+                        <figcaption>A sketch approximating the view of an orthographic camera.</figcaption>
+                    </figure>
                     <p class="body-copy">
-                        In the end, we went with perspective.
+                        In the end, we went with a perspective camera.
                         Units on the battlefield were not going to look like cards, as in other card games.
                         Instead the silhouette of the artwork would be used to represent the unit on the battlefield - inspired by cardboard cutouts one might use for table top RPGs.
                         The reasoning behind this, was again to support the feel of being on a battlefield. 
@@ -327,19 +333,32 @@
                         Silhouettes also played into our limited time and manpower - it was easier to implement. 
                         We reused the art that was going on the cards for the silhuettes and circumventet having to make 3D models, or something similar.
                     </p>
+                    <p class="body-copy">
+                        We still wanted the units take up the same amount of screenspace, something an othographic camera accomplishes, but not one in perspective.
+                        So, the UI programmers made a script, which made the units face the camera as well as resizing them based on the distance from it.
+                    </p>
                     <h3 class="heading-3">Unit Resistances & Damage Types</h3>
                     <p class="body-copy">
                         The concept of unit resistances and the encompassing damage system posed another challenge.
-                        There are two types of resistances - physical and magical.
-                        A unit with physical resistance takes less damage from a source which deals physical damage, depending on how much resistance it has.
-                        The same is true with magical resistance.
-                        On top of that, there is a damage type called true. 
-                        True damage ignores resistance types.
-                        This system had to be communicated in some way, to the player.
+                        There are two types of resistances - <em>physical</em> and <em>magical</em>.
+                        A unit with physical resistance takes less damage from a source which deals physical damage, depending on how much resistance the defending unit has.
+                        The same goes for magical resistance.
+                        On top of that, there is a damage type called <em>true</em>, which ignores resistance types.
                     </p>
                     <p class="body-copy">
+                        This resistance system had to be communicated in some way, to the player.
+                        In fact, in the Tabletop Simulator prototype, it was a known issue that the system was not expressed clearly.
+                        As a result, players would become confused when attacking with a unit, dealing less damage than they had expected.
+                        That prototype relied on a colour coding system - red means physical, blue magical, and orange for true.
+                    </p>
+                    <figure>
+                        <span class="icon-close close"></span>
+                        <img class="fullscreen-able" src="/resources/ascendant-games/ascendancy-res-old.png" alt="old resistance system" width="300">
+                        <figcaption>A cardframe from the Tabletop Simulator prototype. Attack stats are displayed at bottom left, and health is displayed bottom right.</figcaption>
+                    </figure>
+                    <p class="body-copy">
                         My inital idea was to make icons, representing physical, magical and true damage/resistance.
-                        But the idea was scratched, as it looked to noisy, when looking at the battlefield, with 48 units.
+                        But the idea was scratched, as it simply looked to noisy, when looking at the battlefield, with 48 units.
                     </p>
                     <figure>
                         <span class="icon-close close"></span>
@@ -350,15 +369,22 @@
                         In addition, there was an aspect to the resistance/damage system which I hadn't considered.
                         Cards could have both types of resistances at the same time.
                         Also, some cards didn't have resistances at all, and this also had to be communicated.
-                        The solution was to have a colour indicate which kind of resistance and damage type the unit has.
-                        Instead of displaying the resistance of units in detail on the battlefield, players would have to hover on a unit to reveal this information.
+                        The solution was to back to a colour coding system, and try to express it more clearly.
+                        It was also clear, that displaying the resistances of units in detail on the battlefield, would not be an option.
+                        It was simply too much information. 
+                        Instead, players would have to hover on the unit to reveal its details.
                     </p>
-
                     <figure>
                         <span class="icon-close close"></span>
                         <img class="fullscreen-able" src="../resources/ascendant-games/ascendant-damage-resistance-design-components.png" alt="resistance / damage components">
                         <figcaption>The final UI components for the resistance / damage system. Physical (red), magical (blue), physical & magical (red & blue, or purple), true (amber) and none (grey).</figcaption>
                     </figure>
+                    <figure>
+                        <span class="icon-close close"></span>
+                        <img class="fullscreen-able" src="/resources/ascendant-games/ascendancy-dragonlord.png" alt="Dragonlord Marlorian" width="540" height="429">
+                        <figcaption>The final card UI. There is a good constrast, between the number and colour, indicating resistance and damage type.</figcaption>
+                    </figure>
+
                     <h3 class="heading-3">Unit States</h3>
                     <p class="body-copy">
                         A unit has different attributes which had to be indicated. 
@@ -369,6 +395,9 @@
                         When having selected a unit to attack with, there should be some feedback that you have indeed selected the unit, and some indication of which units you can attack - percieved affordance. 
                         Going through the different states and how to represent them was a team effort.
                         We looked to how other games have solved this problem, we sketched different ideas for visuals, and we created a list of what needed to be indicated.
+                    </p>
+                    <p class="body-copy">
+                        After exploring different configurations of how to represent the states, I summed up the final choices in the following diagram:
                     </p>
                     <figure>
                         <span class="icon-close close"></span>
@@ -382,15 +411,15 @@
                     <p class="body-copy">
                         Auditory feedback is very important for a game, for communicating events as well as for adding a level of enjoyment.
 
-                        We had a out-of-house musician, who had already made some soundtracks, who was going to create the sound effects (SFX).
+                        We had an out-of-house musician, who had already made some soundtracks, and was going to create the sound effects (SFX).
 
                         I had to make a detailed list of the sound effects, prioritise them, and coordinate with the sound designer.
 
-                        I brainstormed the different actions and states in the game which needed auditory feedback, and had the team look over it.
+                        I started by brainstorming the different actions and states in the game which needed auditory feedback, and had the team look over it, to see if they had anything to add.
 
                         By the end I had a list on the blackboard, with some items put into categories, according to their function in the game.
 
-                        I decided on the different categories, and wrote up the entire thing in Figma, where I also prioritised it according to three levels of importance.
+                        I decided on the different categories and wrote up the entire thing in Figma, where I also prioritised it according to three levels of importance.
                     </p>
 
                     <figure>
@@ -516,6 +545,14 @@
                 <section>
                     <h2 class="heading-2" id="sec6">Visual Effects</h2>
                     <p class="body-copy">
+                        As lead for the art team, I was responsible defining the visual direction for each effect, make sure that we were on track, and keep our producer in the loop.
+
+                        Our producer already had a good idea of which effects he would like in the game, which was a good start, because the rest of us had yet to become familiar with the specific cards.
+
+                        We quickly made a backlog of visual effects.
+
+                        Our producer prioritised the effects and assigned them to sprints, according to their priority and estimated time.
+
                         Initial brainstorm of the different effects which had to be in the game.
                         
                         Since visual effects act as feedback for the player, it is important to consider which are the most important.
@@ -567,7 +604,7 @@
                         <li>Tobias Fridolin</li>
                         <li>MSc in Interaction Design</li>
                         <li>Currently living in Aalborg, Denmark</li>
-                        <li><a class="hyperlink" href="mailto:tobiasfridolin@gmail.com" target="_blank">LinkedIn</a> <p>|</p> <a class="hyperlink"href="https://www.linkedin.com/in/tobias-fridolin/"> Email</a></li>
+                        <li><a class="hyperlink" href="https://www.linkedin.com/in/tobias-fridolin/">LinkedIn</a> <p>|</p> <a class="hyperlink" href="mailto:tobiasfridolin@gmail.com" target="_blank"> Email</a></li>
                     </ul>
                 </div>
             </div>

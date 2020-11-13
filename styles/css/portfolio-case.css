@@ -212,9 +212,12 @@ section .heading-2 {
 }
 section figure {
   margin: 32px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 section img {
-  width: 100%;
+  max-width: 100%;
   border-radius: 4px;
 }
 section ul {
@@ -468,6 +471,7 @@ audio {
   position: fixed;
   left: 0;
   top: 50%;
+  width: 100%;
   transform: translateY(-50%);
   height: 101%;
   object-fit: contain;
