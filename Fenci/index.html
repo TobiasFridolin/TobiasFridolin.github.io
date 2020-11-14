@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rock+Salt&display=swap" rel="stylesheet">    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <title>Fenci Le</title>
 </head>
 <body>
@@ -32,26 +33,26 @@
             </div>
         </section>
         <section id="om">
-            <h1>Content creator</h1>
+            <h1 class="t">Content creator</h1>
             <div class="container">
-                <p>
+                <p class="t">
                     <b>Den kommunikative indholdskaber</b>, der hovedsageligt har hænderne nede i driftrummet, hvor der udtænkes og skabes video-, billede-, grafisk- og lydindhold til, eksempelvis, opslag på LinkedIn, annoncer på Facebook, nyhedsbreve og andet content. 
                 </p>
                 <img src="profil1.png" alt="profil" width="456" height="425">
             </div>
         </section>
-        <section class="hook">
+        <section id="hook-1">
             <img src="1.jpg" alt="billede" heigth="668" width="536">
             
             <div class="container">
-                <h1>Fokus på modtageren.</h1>
-                <p>
+                <h1 class="t">Fokus på modtageren.</h1>
+                <p class="t"> 
                     <b>Med stort engagement og kvalitetsbevidsthed</b> går jeg systematisk til opgaverne. Mit mål er at give mine modtagere en god oplevelse gennem det indhold jeg producerer. Jeg stræber efter at gøre indholdet relevant, og budskabet klart og vedkommende.
                 </p>
             </div>
         </section>
         <section id="udtalelser">
-            <h1>Udtalelser</h1>
+            <h1 class="t">Udtalelser</h1>
 
             <div class="bla">
                 <div id="udtagelse-1" class="container inactive">
@@ -143,5 +144,53 @@
             </ul>
         </footer>
     </main>
+    <script>
+        console.log(om);
+
+        console.log(window.innerHeight);
+
+        $(document).scroll(function(){
+            var omTop = $("#om").offset().top;
+            var hook1Top = $("#hook-1").offset().top;
+            var udtalelserTop = $("#udtalelser").offset().top;
+
+            // = 0 when omTop = window top
+            console.log(omTop - window.scrollY);
+
+            // thresshold
+            console.log(window.innerHeight / 2);
+
+            // skal aktiveres nogle pixels før
+            if(omTop - window.scrollY < window.innerHeight / 2){
+                $("#om").children("h1").addClass("t--on");
+                $("#om").find("p").addClass("t--on");
+            };
+
+            if(hook1Top - window.scrollY < window.innerHeight / 2){
+                $("#hook-1").find("h1").addClass("t--on");
+                $("#hook-1").find("p").addClass("t--on");
+            }
+
+            if(udtalelserTop - window.scrollY < window.innerHeight / 2){
+                $("#udtalelser").children("h1").addClass("t--on");
+            }
+        });
+
+        // Find alle elementer med en transition class
+        // Loop igennem elemnterne, og tildel dem en funktion
+        $(".t").each(function(index){
+            console.log(index + ": " + $(this).text());
+        });
+
+        // FUNKTION
+        // Hvis elem top er over et threshold
+        function transition(){
+            if($(this).offset().top - window.scrollY < window.innerHeight / 2){
+                console.log("active");
+            }
+        }
+        // Tilføj den gældende animations klasse
+
+    </script>
 </body>
 </html>
