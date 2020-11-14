@@ -246,7 +246,7 @@ body {
   flex-direction: column;
   align-content: center;
   justify-items: center;
-  background-image: url("/gaamed.png");
+  background-image: url("gaamed.png");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
