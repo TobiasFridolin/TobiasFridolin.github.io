@@ -28,7 +28,7 @@ section {
   flex-direction: column;
   justify-content: space-around;
   padding: 8px 0;
-  transition: transform 0.2s ease-in-out;
+  transition: transform 0.5s ease-in-out;
   border-radius: 24px;
   background-color: white;
   box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.2);
@@ -44,7 +44,7 @@ section {
   opacity: 0;
 }
 #somebar svg {
-  transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
   margin: 8px;
 }
 
@@ -109,24 +109,46 @@ body {
   justify-content: center;
   justify-content: space-around;
 }
-.brands h1 {
-  font-family: "Jost", sans-serif;
-  text-align: center;
-  width: 100%;
-  opacity: 0.3;
-  font-size: 1.25rem;
-  font-weight: 400;
-}
 .brands .container {
-  padding: 80px;
+  padding: 40px;
   display: flex;
   justify-content: space-around;
 }
+.brands img {
+  width: 60px;
+  height: 60px;
+  transition: transform 0.2s ease-in-out;
+}
+.brands img:hover {
+  transform: scale(1.1);
+  filter: none;
+}
 
-.brand-placeholder {
-  height: 120px;
-  width: 120px;
-  background-color: grey;
+#brands-2 {
+  margin: 80px 120px;
+}
+#brands-2 h1 {
+  padding: 16px;
+  font-family: "Jost", sans-serif;
+  text-align: center;
+  width: 100%;
+  color: rgba(0, 0, 0, 0.2);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+#brands-2 b {
+  font-size: 1.75em;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.5);
+  padding-right: 12px;
+}
+#brands-2 .container {
+  flex-wrap: wrap;
+}
+#brands-2 img {
+  width: 80px;
+  height: 80px;
+  margin: 16px;
 }
 
 #om {
@@ -201,13 +223,16 @@ body {
 #udtalelser h2 {
   font-family: "Jost", sans-serif;
   margin-top: 16px;
+  padding: 0 8px;
   font-weight: 300;
   font-size: 1.125rem;
+  color: rgba(255, 255, 255, 0.8);
   text-transform: uppercase;
 }
 #udtalelser h3 {
   font-family: "Jost", sans-serif;
   font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.4);
   text-transform: uppercase;
 }
 #udtalelser p {
@@ -309,12 +334,11 @@ body {
 
 .stemning {
   width: 100vw;
-  height: 400px;
+  padding: 160px 80px;
   overflow: hidden;
   display: flex;
-  flex-direction: column;
-  align-content: center;
-  justify-items: center;
+  align-items: center;
+  justify-content: center;
   background-image: url("gaamed.png");
   background-size: cover;
   background-position: center;
@@ -324,16 +348,30 @@ body {
 }
 .stemning h1 {
   color: white;
-  margin: 80px;
+  margin: 32px;
   font-size: 3rem;
   font-family: "Raleway", sans-serif;
   font-style: oblique;
-  font-weight: 700;
+  font-weight: 600;
   text-align: center;
 }
+.stemning p {
+  color: white;
+  max-width: 32em;
+  font-family: "Raleway", sans-serif;
+  line-height: 2em;
+  text-align: center;
+  margin: 16px auto;
+}
 .stemning .button {
+  margin: 32px auto;
   color: white;
   border-color: rgba(255, 255, 255, 0.5);
+  font-size: 1.5rem;
+}
+.stemning .container {
+  display: flex;
+  flex-direction: column;
 }
 
 #kontakt {
@@ -341,16 +379,20 @@ body {
   background-color: rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: center;
-  text-align: right;
+  align-items: center;
 }
 #kontakt h1 {
   font-family: "Jost", sans-serif;
   font-size: 3.5rem;
   font-weight: 500;
+  text-align: center;
   text-transform: uppercase;
 }
 #kontakt p {
   font-family: "Raleway", sans-serif;
+  text-align: right;
+  line-height: 1.5em;
+  margin: 16px;
   max-width: 32rem;
 }
 #kontakt .container {
@@ -358,15 +400,19 @@ body {
   display: flex;
   flex-direction: column;
 }
+#kontakt .profil {
+  background-image: url("profil2.png");
+  height: fit-content;
+}
+#kontakt .profil > div {
+  width: 251px;
+  height: 342px;
+  opacity: 0.5;
+  margin: 4px;
+  border: 4px solid white;
+}
 #kontakt img {
   filter: none;
-}
-
-footer ul {
-  list-style: none;
-}
-footer li {
-  text-decoration: none;
 }
 
 img {
@@ -408,6 +454,16 @@ footer li:hover {
   transform: translateY(150px);
 }
 .t--on {
+  opacity: 1;
+  transform: translateY(0%);
+}
+
+.t-2 {
+  transition: transform 1s, opacity 1.5s;
+  opacity: 0;
+  transform: translateY(-60px);
+}
+.t-2--on {
   opacity: 1;
   transform: translateY(0%);
 }

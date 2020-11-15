@@ -38,14 +38,16 @@
             </header>
             <h2>Knivskarp Formidling</h2>
         </section>
-        <section class="brands">
+        <section class="brands" id="brands-1">
             <div class="container">
-                <div class="brand-placeholder"></div>
-                <div class="brand-placeholder"></div>
-                <div class="brand-placeholder"></div>
-                <div class="brand-placeholder"></div>
-                <div class="brand-placeholder"></div>
-                <div class="brand-placeholder"></div>
+                <a class="t-2"><img src="batalla.png" width="80" height="82" alt="batalla"></a>
+                <a class="t-2"><img src="boss-lady.png" width="80" height="81" alt="boss lady"></a>
+                <a class="t-2"><img src="raat-og-godt.png" width="80" height="81" alt="råt og godt"></a>
+                <a class="t-2"><img src="sd90.png" width="80" height="81" alt="sd90"></a>
+                <a class="t-2"><img src="syndikatet.png" width="80" height="81" alt="syndikatet"></a>
+                <a class="t-2" href=""><img src="team-business.png" width="80" height="81" alt="team business"></a>
+                <a class="t-2" href=""><img src="walk-and-talk.png" width="80" height="81" alt="walk and talk"></a>
+                <a class="t-2" href=""><img src="gaa-med-det--on-white.png" width="80" height="80" alt="ga med det"></a>
             </div>
         </section>
         <section id="om">
@@ -129,27 +131,34 @@
             </div>
         </section>
         <section class="stemning">
-            <h1>Hvad venter du på?</h1>
-            <a class="button" href="">Kontakt</a>
-        </section>
-        <section class="brands">
-            <h1> <b>Kom ind i varmen</b>, her er hyggeligt...</h1>
             <div class="container">
-                <div class="brand-placeholder"></div>
-                <div class="brand-placeholder"></div>
-                <div class="brand-placeholder"></div>
-                <div class="brand-placeholder"></div>
-                <div class="brand-placeholder"></div>
-                <div class="brand-placeholder"></div>
+                <h1>Skal vi ikke arbejde sammen?</h1>
+                <p>Bacon ipsum dolor amet flank brisket kielbasa pastrami alcatra pig short ribs strip steak chuck boudin pork belly tenderloin jerky buffalo. Short loin chicken pork frankfurter meatball drumstick. Tenderloin hamburger brisket, turkey tail boudin pork chop pork loin fatback. </p>
+                <a class="button" href="">Kontakt</a>
             </div>
         </section>
         <section id="kontakt">
             <div class="container">
                 <h1>Kaff'?</h1>
-                <p>Bacon ipsum dolor amet t-bone pork chop swine pig, landjaeger sirloin doner turkey strip steak ham hock jerky biltong meatball short ribs venison. </p>
+                <p>Bacon ipsum dolor amet flank brisket kielbasa pastrami alcatra pig short ribs strip steak chuck boudin pork belly tenderloin jerky buffalo. Short loin chicken pork frankfurter meatball drumstick. Tenderloin hamburger brisket, turkey tail boudin pork chop pork loin fatback. </p>
                 <a class="button" href="">Kontakt</a>
             </div>
-            <img src="profil2.png" alt="profil" width="251" height="342">
+            <div class="profil">
+                <div></div>
+            </div>    
+        </section>
+        <section class="brands" id="brands-2">
+            <h1> <b>Kom ind i varmen,</b> her er hyggeligt...</h1>
+            <div class="container">
+                <a class="t-2"><img src="batalla.png" width="80" height="82" alt="batalla"></a>
+                <a class="t-2"><img src="boss-lady.png" width="80" height="81" alt="boss lady"></a>
+                <a class="t-2"><img src="raat-og-godt.png" width="80" height="81" alt="råt og godt"></a>
+                <a class="t-2"><img src="sd90.png" width="80" height="81" alt="sd90"></a>
+                <a class="t-2"><img src="syndikatet.png" width="80" height="81" alt="syndikatet"></a>
+                <a class="t-2" href=""><img src="team-business.png" width="80" height="81" alt="team business"></a>
+                <a class="t-2" href=""><img src="walk-and-talk.png" width="80" height="81" alt="walk and talk"></a>
+                <a class="t-2" href=""><img src="gaa-med-det--on-white.png" width="80" height="80" alt="ga med det"></a>
+            </div>
         </section>
         <footer>
             <ul>
@@ -164,6 +173,15 @@
         console.log(om);
 
         console.log(window.innerHeight);
+
+        var brand1Animate = false;
+        var brand2Animate = false;
+
+        var animate = function(elem, c){
+            elem.addClass(c);
+            console.log("Animated element: " + elem);
+        }
+
 
         $(document).scroll(function(){
             var omTop = $("#om").offset().top;
@@ -187,17 +205,47 @@
         });
 
         $(document).scroll(function(){
-            console.log(window.scrollY);
+            // console.log($(document).height() + "document height");
+            // console.log(window.scrollY + "window scroll");
+            // console.log(window.innerHeight + "window height");
 
-            if(window.scrollY < 20){
+            if(window.scrollY < 20 || window.scrollY + window.innerHeight + 20 > $(document).height()){
                 $("#somebar").children(".container").addClass("container--active");
                 $("#somebar").children(".container").removeClass("container--inactive");
             }
-            else{
+            else if(window.scrollY > 20 || window.scrollY + window.innerHeight + 20 < $(document).height()){
                 $("#somebar").children(".container").addClass("container--inactive");
                 $("#somebar").children(".container").removeClass("container--active");
             }
-        })
+        });
+
+        $(document).scroll(function(){
+
+            if(window.scrollY > $("#brands-1").offset().top - window.innerHeight * 0.9 && !brand1Animate){
+
+                $("#brands-1").find(".t-2").each(function(index){
+
+                    var elem = $(this);
+
+                    setTimeout(function(){ animate(elem, "t-2--on")}, index * 100);
+                })
+                brand1Animate = true;
+            }
+        });
+
+        $(document).scroll(function(){
+
+            if(window.scrollY > $("#brands-2").offset().top - window.innerHeight * 0.9 && !brand2Animate){
+
+                $("#brands-2").find(".t-2").each(function(index){
+
+                    var elem = $(this);
+
+                    setTimeout(function(){ animate(elem, "t-2--on")}, index * 100);
+                })  
+            brand2Animate = true;
+            }   
+        });  
 
         // Find alle elementer med en transition class
         // Loop igennem elemnterne, og tildel dem en funktion
