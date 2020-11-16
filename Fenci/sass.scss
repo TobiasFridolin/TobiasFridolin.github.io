@@ -113,6 +113,7 @@ header, footer{
     ul{
         display: flex;
         list-style: none;
+        padding: 0 16px;
     }
 
     li{
@@ -121,7 +122,8 @@ header, footer{
         font-weight: 300;
         color: white;
         font-size: 0.875rem;
-        padding-left: 40px;
+        padding-left: 48px;
+        letter-spacing: 0.1em;
         &:hover{
             opacity: 0.8;
         }
@@ -138,17 +140,13 @@ header, footer{
     width: 100%;
     float: left;
     top: 0;
-    transition: top 0.4s ease-out, background-color 0.4s ease-in-out;
+    transition: top 0.4s ease-out, background-color 0.4s ease-in-out, box-shadow 0.4s;
 
     h1{
         color: white;
         font-family: 'Rock Salt', cursive;
         font-size: 1rem;
         font-weight: 300;
-    }
-
-    svg{
-        
     }
     
     .burger{
@@ -167,8 +165,14 @@ header, footer{
         }
     }
     
+    &--hidden{
+        top: -74px;
+    }
+
     &--scrolling{
-        top: -70px;
+        background: rgba(15,15,15, 0.85);
+        backdrop-filter: blur(2px);
+        box-shadow: $shadow-2;
     }
 }
 
@@ -528,7 +532,7 @@ body{
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    filter: grayscale(100%);
+    filter: grayscale(1);
     opacity: 0.9;
     
     h1{
@@ -561,6 +565,8 @@ body{
     .container{
         display: flex;
         flex-direction: column;
+        // background-color: $bordeux;
+
     }
 }
 
@@ -596,6 +602,7 @@ body{
     }
 
     .profil{
+        position: relative;
         background-image: url("profil2.png");
         height: fit-content;
         // box-shadow: 4px 4px 16px 0 rgba(black, 0.2);
@@ -603,9 +610,24 @@ body{
         > div{
             width: 251px;
             height: 342px;
-            opacity: 0.5;
+            opacity: 0.6;
             margin: 4px;
-            border: 4px solid white;
+            border: 3px solid white;
+        }
+
+        h2{
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background-color: rgba(black,0.5);
+            text-align: center;
+            color: white;
+            padding-bottom: 4px;
+            line-height: 2.5em;
+            font-family: $font-2;
+            font-style: oblique;
+            font-size: 0.85rem;
+            font-weight: 500;
         }
     }
 

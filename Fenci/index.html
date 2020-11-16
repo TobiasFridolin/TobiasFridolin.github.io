@@ -169,6 +169,7 @@
                 <a class="button" href="">Kontakt</a>
             </div>
             <div class="profil">
+                <h2>Fenci Le Axelsen</h2>
                 <div></div>
             </div>    
         </section>
@@ -268,13 +269,15 @@
 
                 if(window.scrollY > 0){
                     if(window.scrollY > scrollPrev){
-                        $("#header").addClass("header--scrolling");
+                        $("#header").addClass("header--hidden");
                     }else{
-                        $("#header").removeClass("header--scrolling");
+                        $("#header").removeClass("header--hidden");
                     }
-                    $("#header").css("background-color", "rgba(0,0,0,0.5)");
+                    if(window.scrollY > $("header").innerHeight()){
+                        $("#header").addClass("header--scrolling");
+                    }
                 }else{
-                    $("#header").css("background-color", "rgba(0,0,0,0)");
+                    $("#header").removeClass("header--scrolling");
                 }
                 scrollPrev = window.scrollY;
             });
