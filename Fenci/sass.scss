@@ -5,9 +5,40 @@ $shadow-2: 0 0 8px 4px rgba(black, 0.2);
 $shadow-3: 0 4px 16px 8px rgba(black, 0.2);
 $bordeux: rgb(104, 29, 54);
 
+@mixin breakpoint ($point) {
+    @if $point == smallest {
+        @media screen and (max-width: 481px){
+            @content;
+        }
+    }
+
+    @else if $point == small {
+        @media screen and (max-width: 768px){
+            @content;
+        }
+    }
+
+    @else if $point == medium {
+        @media screen and (max-width: 1024px){
+            @content;
+        }
+    }
+
+    @else if $point == big {
+        @media screen and (max-width: 1388px){
+            @content;
+        }
+    }
+}
+
+
 *{
     margin: 0;
     box-sizing: border-box;
+}
+
+main{
+    width: 100vw;
 }
 
 // for z-indexing
@@ -73,9 +104,11 @@ section{
 }
 
 header, footer{
+    box-sizing: border-box;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 16px;
 
     ul{
         display: flex;
@@ -87,8 +120,8 @@ header, footer{
         text-transform: uppercase;
         font-weight: 300;
         color: white;
-        padding: 0 16px;
         font-size: 0.875rem;
+        padding-left: 40px;
         &:hover{
             opacity: 0.8;
         }
@@ -99,31 +132,107 @@ header, footer{
     }
 }
 
+.header{
+    position: sticky;
+    z-index: 10;
+    width: 100%;
+    float: left;
+    top: 0;
+    transition: top 0.4s ease-out, background-color 0.4s ease-in-out;
+
+    h1{
+        color: white;
+        font-family: 'Rock Salt', cursive;
+        font-size: 1rem;
+        font-weight: 300;
+    }
+
+    svg{
+        
+    }
+    
+    .burger{
+        display: none;
+        fill: $bordeux;
+
+        &--open{
+            @extend .burger;
+            position: absolute;
+            top: 24px;
+            right: 16px;
+        }
+
+        &--collabsed{
+            @extend .burger;
+        }
+    }
+    
+    &--scrolling{
+        top: -70px;
+    }
+}
+
+#header{
+    @include breakpoint(small){
+        .burger--collabsed{
+            display: flex;
+        }
+        top: 0;
+    }
+}
+
+.nav-links{
+    @include breakpoint(small){
+        display: none;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: $bordeux;
+        // background-color: black;
+
+        justify-content: center;
+        align-items: center;
+
+        ul{
+            display: inline;
+        }
+
+        li{
+            font-size: 1rem;
+            padding: 16px;
+        }
+    }
+
+    &--open{
+        display: flex;
+    }
+}
+
 body{
     overflow-x: hidden;
 }
 
 .hero{
+    position: relative;
+
     color: white;    
     padding: 16px 32px;
     height: 100vh;
     width: 100vw;
     box-shadow: $shadow-3;
 
-    h1{
-        font-family: 'Rock Salt', cursive;
-        font-size: 1.5rem;
-        font-weight: 300;
-    }
-
     h2{
         font-family: $font-1;
-        font-size: 4rem;
+        font-size: 5rem;
         width: 400px;
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        margin-left: 80px;
+        margin-left: 60px;
+        text-shadow: 2px 2px 8px rgba(black, 0.15);
     }
 
     background-image: url("hero.jpg");
@@ -245,6 +354,11 @@ body{
         padding: 24px;
     }
 
+    img{
+        width: 33%;
+        height: auto;
+    }
+
 }
 
 #udtalelser{
@@ -340,7 +454,6 @@ body{
     font-size: 2.25rem;
     text-align: right;
     width: 100vw;
-    z-index: 1000;
     
     display: flex;
     

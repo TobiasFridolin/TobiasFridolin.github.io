@@ -25,17 +25,42 @@
                 </svg>                                                                             
         </div>  
     </div>
+    <header class="header" id="header">
+        <h1>Fenci Le</h1>
+        <div class="nav-links">
+            <ul>
+                <a href="#om"><li>Om</li></a>
+                <a href="#cases"><li>Cases</li></a>
+                <a href="#udtalelser"><li>Udtalelser</li></a>
+                <a href="#kontakt"><li>Kontakt</li></a>
+            </ul>
+            <svg class="burger--open" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M24 2H0V5H24V2Z" fill="white"/>
+                <path d="M20 19H0V22H20V19Z" fill="white"/>
+                <path d="M20 10.5H0V13.5H20V10.5Z" fill="white"/>
+                </svg>  
+        </div>
+        <svg class="burger--collabsed" width="32" height="28" viewBox="0 0 32 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g filter="url(#filter0_d)">
+            <path d="M28 4H4V7H28V4Z" />
+            <path d="M28 21H4V24H28V21Z" />
+            <path d="M28 12.5H4V15.5H28V12.5Z" />
+            </g>
+            <defs>
+            <filter id="filter0_d" x="0" y="-2" width="32" height="32" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+            <feOffset/>
+            <feGaussianBlur stdDeviation="2"/>
+            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+            </filter>
+            </defs>
+            </svg>  
+    </header>
     <main>
         <section class="hero">
-            <header>
-                <h1>Fenci Le</h1>
-                <ul>
-                    <a href="#om"><li>Om</li></a>
-                    <a href="#cases"><li>Cases</li></a>
-                    <a href="#udtalelser"><li>Udtalelser</li></a>
-                    <a href="#kontakt"><li>Kontakt</li></a>
-                </ul>
-            </header>
             <h2>Knivskarp Formidling</h2>
         </section>
         <section class="brands" id="brands-1">
@@ -170,10 +195,6 @@
         </footer>
     </main>
     <script>
-        console.log(om);
-
-        console.log(window.innerHeight);
-
         var brand1Animate = false;
         var brand2Animate = false;
 
@@ -188,7 +209,6 @@
             var hook1Top = $("#hook-1").offset().top;
             var udtalelserTop = $("#udtalelser").offset().top;
 
-            // skal aktiveres nogle pixels før
             if(omTop - window.scrollY < window.innerHeight / 2){
                 $("#om").children("h1").addClass("t--on");
                 $("#om").find("p").addClass("t--on");
@@ -202,12 +222,6 @@
             if(udtalelserTop - window.scrollY < window.innerHeight / 2){
                 $("#udtalelser").children("h1").addClass("t--on");
             }
-        });
-
-        $(document).scroll(function(){
-            // console.log($(document).height() + "document height");
-            // console.log(window.scrollY + "window scroll");
-            // console.log(window.innerHeight + "window height");
 
             if(window.scrollY < 20 || window.scrollY + window.innerHeight + 20 > $(document).height()){
                 $("#somebar").children(".container").addClass("container--active");
@@ -217,41 +231,24 @@
                 $("#somebar").children(".container").addClass("container--inactive");
                 $("#somebar").children(".container").removeClass("container--active");
             }
-        });
-
-        $(document).scroll(function(){
 
             if(window.scrollY > $("#brands-1").offset().top - window.innerHeight * 0.9 && !brand1Animate){
-
                 $("#brands-1").find(".t-2").each(function(index){
-
                     var elem = $(this);
-
                     setTimeout(function(){ animate(elem, "t-2--on")}, index * 100);
                 })
                 brand1Animate = true;
             }
-        });
-
-        $(document).scroll(function(){
+  
 
             if(window.scrollY > $("#brands-2").offset().top - window.innerHeight * 0.9 && !brand2Animate){
-
                 $("#brands-2").find(".t-2").each(function(index){
-
                     var elem = $(this);
-
                     setTimeout(function(){ animate(elem, "t-2--on")}, index * 100);
                 })  
-            brand2Animate = true;
+                brand2Animate = true;
             }   
         });  
-
-        // Find alle elementer med en transition class
-        // Loop igennem elemnterne, og tildel dem en funktion
-        $(".t").each(function(index){
-            // console.log(index + ": " + $(this).text());
-        });
 
         // FUNKTION
         // Hvis elem top er over et threshold
@@ -261,7 +258,51 @@
             }
         }
         // Tilføj den gældende animations klasse
+    </script>
+    <script>
+        
+        // header scroll
+        $(document).ready(function(){
+            var scrollPrev;
+            $(document).scroll(function(){
 
+                if(window.scrollY > 0){
+                    if(window.scrollY > scrollPrev){
+                        $("#header").addClass("header--scrolling");
+                    }else{
+                        $("#header").removeClass("header--scrolling");
+                    }
+                    $("#header").css("background-color", "rgba(0,0,0,0.5)");
+                }else{
+                    $("#header").css("background-color", "rgba(0,0,0,0)");
+                }
+                scrollPrev = window.scrollY;
+            });
+        });
+
+        // burger open
+        $(".burger--collabsed").click(function(){
+            $(".nav-links").addClass("nav-links--open");
+            $(".burger--open").show();
+            $("main").css("height", "100vh");
+            $("main").css("overflow", "hidden");
+        });
+
+        // burger close
+        $(".burger--open").click(function(){
+            $(".nav-links").removeClass("nav-links--open");
+            $(".burger--open").hide();
+            $("main").css("height", "auto");
+            $("main").css("overflow", "visible");
+        });
+
+        // clicking a nav link closes the menu
+        $(".nav-links").find("a").click(function(){
+            $(".nav-links").removeClass("nav-links--open");
+            $(".burger--open").hide();  
+            $("main").css("height", "auto");
+            $("main").css("overflow", "visible");
+        })
     </script>
 </body>
 </html>
