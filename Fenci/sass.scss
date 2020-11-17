@@ -3,7 +3,7 @@ $font-2: 'Raleway', sans-serif;
 $shadow-1: 0 0 8px 2px rgba(black, 0.2);
 $shadow-2: 0 0 8px 4px rgba(black, 0.2);
 $shadow-3: 0 4px 16px 8px rgba(black, 0.2);
-$bordeux: rgb(104, 29, 54);
+$bordeux: #681d36;
 
 @mixin breakpoint ($point) {
     @if $point == smallest {
@@ -31,6 +31,20 @@ $bordeux: rgb(104, 29, 54);
     }
 }
 
+@mixin filter($value) {
+    -webkit-filter: $value;
+       -moz-filter: $value;
+         -o-filter: $value;
+            filter: $value;
+}
+
+@mixin transition($args...) {
+    -webkit-transition: $args;
+    -moz-transition: $args;
+    -ms-transition: $args;
+    -o-transition: $args;
+    transition: $args;
+}
 
 *{
     margin: 0;
@@ -39,6 +53,16 @@ $bordeux: rgb(104, 29, 54);
 
 main{
     width: 100vw;
+    overflow: visible;
+    height: auto;
+}
+
+.nav-open{
+    height: 100vh;
+    overflow: hidden;
+    
+    // header height
+    transform: translateY(-70px);
 }
 
 // for z-indexing
@@ -57,14 +81,20 @@ section{
     
     display: flex;
 
+    svg{
+        filter: grayscale(1);
+        -webkit-filter: grayscale(1);
+
+        &:hover{
+            filter: none;
+            opacity: 1;
+        }
+    }
+
     &:hover{
         .container{
             transform: translate(0, 0);
             box-shadow: $shadow-2;
-       
-            svg{
-                opacity: 1;
-            }
         }
 
     }
@@ -125,6 +155,7 @@ header, footer{
         padding-left: 48px;
         letter-spacing: 0.1em;
         &:hover{
+            transition: opacity 0.2s;
             opacity: 0.8;
         }
     }
@@ -147,21 +178,43 @@ header, footer{
         font-family: 'Rock Salt', cursive;
         font-size: 1rem;
         font-weight: 300;
+        z-index: 1;
     }
     
     .burger{
         display: none;
-        fill: $bordeux;
+        fill: white;
 
         &--open{
-            @extend .burger;
+            display: block;
             position: absolute;
             top: 24px;
             right: 16px;
-        }
 
-        &--collabsed{
-            @extend .burger;
+            
+            #path-1{
+                transition: 0.2s;
+                d: path("M20 19H0V22H20V19Z");
+            }
+
+            #path-2{
+                transition: 0.2s;
+                d: path("M20 10.5H0V13.5H20V10.5Z");
+            }
+        }
+        
+        &--collapsed{
+            z-index: 2;
+
+            #path-1{
+                transition: 0.2s;
+                d: path("M24 19H0V22H24V19Z");
+            }
+
+            #path-2{
+                transition: 0.2s;
+                d: path("M24 10.5H0V13.5H24V10.5Z");
+            }
         }
     }
     
@@ -176,18 +229,31 @@ header, footer{
     }
 }
 
+
+// clean
 #header{
     @include breakpoint(small){
-        .burger--collabsed{
+        .burger--collapsed{
             display: flex;
         }
         top: 0;
     }
 }
 
-.nav-links{
+.nav-menu{
+    
+    .contact-info{
+        position: absolute;
+        bottom: 0;
+        svg{
+            margin: 8px;
+        }
+    }
+    
     @include breakpoint(small){
-        display: none;
+        display: flex;       
+        transition: transform 0.4s ease-in-out;
+        transform: translateY(-100vh);
 
         position: absolute;
         top: 0;
@@ -195,6 +261,9 @@ header, footer{
         width: 100vw;
         height: 100vh;
         background-color: $bordeux;
+        background-image: url("nav-menu.png");
+        background-size: cover;
+
         // background-color: black;
 
         justify-content: center;
@@ -205,13 +274,17 @@ header, footer{
         }
 
         li{
-            font-size: 1rem;
+            font-size: 1.5rem;
             padding: 16px;
         }
     }
-
+    
     &--open{
-        display: flex;
+        transform: translateY(0);
+
+        .contact-info, li{
+            display: hidden;
+        }
     }
 }
 
@@ -647,6 +720,7 @@ footer{
     justify-content: center;
     
     li{
+        transition: color 0.2s;
         color: rgb(136, 136, 136);
         &:hover{
             color: black;
@@ -691,5 +765,25 @@ footer{
         opacity: 1;
         transform: translateY(0%);
     }
+}
+
+.t-3{
+    transition: transform 0.8s, opacity 1s;
+    opacity: 0;
+    transform: translateX(-200px);
+
+    &--on{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.t-4{
+    transition: opacity 1s;
+    opacity: 0;
+
+    &--on{
+        opacity: 1;
+    }    
 }
 
