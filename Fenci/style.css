@@ -163,6 +163,10 @@ header a, footer a {
 .nav-menu .contact-info svg {
   margin: 8px;
 }
+.nav-menu li {
+  opacity: 1;
+  transform: translate(0);
+}
 @media screen and (max-width: 768px) {
   .nav-menu {
     display: flex;
@@ -183,8 +187,14 @@ header a, footer a {
     display: inline;
   }
   .nav-menu li {
+    opacity: 0;
+    transform: translateX(-200px);
     font-size: 1.5rem;
     padding: 16px;
+  }
+  .nav-menu li.t-3--on {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 .nav-menu--open {

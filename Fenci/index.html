@@ -261,14 +261,14 @@
             }   
         });  
 
-        // FUNKTION
-        // Hvis elem top er over et threshold
-        function transition(){
-            if($(this).offset().top - window.scrollY < window.innerHeight / 2){
-                console.log("active");
-            }
-        }
-        // Tilføj den gældende animations klasse
+        // // FUNKTION
+        // // Hvis elem top er over et threshold
+        // function transition(){
+        //     if($(this).offset().top - window.scrollY < window.innerHeight / 2){
+        //         console.log("active");
+        //     }
+        // }
+        // // Tilføj den gældende animations klasse
     </script>
     <script>
         
@@ -332,7 +332,6 @@
 
         // transition contact info in
         $("#nav-menu").on("transitionend", function(){
-            $(this).hasClass("nav-menu--open") ? console.log("is oopen") : console.log("is closed");
             $(this).hasClass("nav-menu--open") ? transitionNavLinks($(this)) : resetNavLinks($(this));
         });
 
