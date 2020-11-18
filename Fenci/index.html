@@ -39,8 +39,8 @@
         <div class="nav-menu" id="nav-menu">
             <ul class="nav-links">
                 <a href="#om"><li class="t-3">Om</li></a>
-                <a href="#cases"><li class="t-3">Cases</li></a>
                 <a href="#udtalelser"><li class="t-3">Udtalelser</li></a>
+                <a href="#cases"><li class="t-3">Cases</li></a>
                 <a href="#kontakt"><li class="t-3">Kontakt</li></a>
             </ul>
 
@@ -312,8 +312,18 @@
         });
 
         $(".nav-links").find("a").click(function(){
-            closeMenu();
+            if($("nav-menu").hasClass("nav-menu--open")){
+                closeMenu()
+            }else{
+                setTimeout(function(){ $(".header").removeClass("header--hidden")}, 20);
+            }
         })
+
+        $(document).mousemove(function(event){
+            if(event.clientY < ($(".header").innerHeight())){
+                $(".header").removeClass("header--hidden");
+            };
+        });
 
         function transitionNavLinks(navMenu){
 
