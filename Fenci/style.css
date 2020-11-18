@@ -2,6 +2,10 @@
   margin: 0;
   box-sizing: border-box;
 }
+* ::selection {
+  color: white;
+  background: #94225F;
+}
 
 main {
   width: 100vw;
@@ -18,15 +22,16 @@ main {
 section {
   position: relative;
   z-index: 0;
+  overflow: hidden;
 }
 
 #somebar {
+  display: flex;
   position: fixed;
   z-index: 5;
   right: 0;
   top: 50%;
   padding: 16px;
-  display: flex;
 }
 #somebar svg {
   filter: grayscale(1);
@@ -67,6 +72,11 @@ section {
   transition: opacity 0.5s ease-in-out;
   margin: 8px;
 }
+@media screen and (max-width: 768px) {
+  #somebar {
+    display: none;
+  }
+}
 
 header, footer {
   box-sizing: border-box;
@@ -78,16 +88,15 @@ header, footer {
 header ul, footer ul {
   display: flex;
   list-style: none;
-  padding: 0 16px;
 }
 header li, footer li {
+  color: white;
   font-family: "Jost", sans-serif;
   text-transform: uppercase;
   font-weight: 300;
-  color: white;
   font-size: 0.875rem;
-  padding-left: 48px;
   letter-spacing: 0.1em;
+  padding-left: 48px;
 }
 header li:hover, footer li:hover {
   transition: opacity 0.2s;
@@ -96,12 +105,15 @@ header li:hover, footer li:hover {
 header a, footer a {
   text-decoration: none;
 }
+header a:first-child li, footer a:first-child li {
+  padding: 0;
+}
 
 .header {
-  position: sticky;
+  position: fixed;
   z-index: 10;
   width: 100%;
-  float: left;
+  float: right;
   top: 0;
   transition: top 0.4s ease-out 25ms, background-color 0.4s ease-in-out, box-shadow 0.4s;
 }
@@ -111,6 +123,9 @@ header a, footer a {
   font-size: 1rem;
   font-weight: 300;
   z-index: 1;
+}
+.header ul {
+  padding: 0 16px;
 }
 .header .burger {
   display: none;
@@ -165,7 +180,7 @@ header a, footer a {
   display: none;
 }
 .nav-menu .contact-info svg {
-  margin: 8px;
+  margin: 16px;
 }
 .nav-menu li {
   opacity: 1;
@@ -181,7 +196,7 @@ header a, footer a {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: #681d36;
+    background-color: #94225F;
     background-image: url("nav-menu.png");
     background-size: cover;
     justify-content: center;
@@ -196,9 +211,15 @@ header a, footer a {
     font-size: 1.5rem;
     padding: 16px;
   }
+  .nav-menu a:first-child li {
+    padding: 16px;
+  }
   .nav-menu li.t-3--on {
     opacity: 1;
     transform: translateX(0);
+  }
+  .nav-menu .contact-info {
+    display: flex;
   }
 }
 .nav-menu--open {
@@ -342,7 +363,7 @@ body {
 #udtalelser {
   background-color: rgba(0, 0, 0, 0.8);
   color: white;
-  overflow: none;
+  overflow-x: hidden;
   box-shadow: 0 4px 16px 8px rgba(0, 0, 0, 0.2);
   z-index: 0;
 }
@@ -380,14 +401,18 @@ body {
   opacity: 0.8;
 }
 #udtalelser .bla {
-  display: flex;
+  position: relative;
+  top: 0;
+  white-space: nowrap;
+  transition: transform 1s;
+  transform: translateX(-50px);
 }
 #udtalelser .container {
   padding: 80px;
-  width: 80%;
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
   align-items: center;
+  white-space: normal;
 }
 #udtalelser img {
   transition: box-shadow 0.2s;
@@ -401,6 +426,7 @@ body {
 #udtalelser .inactive {
   opacity: 0.5;
   transition: opacity 0.2s ease-in-out, margin 0.4s ease-in-out;
+  cursor: pointer;
 }
 #udtalelser .inactive:hover {
   opacity: 0.75;
@@ -571,9 +597,9 @@ img {
 }
 
 footer {
-  margin: 0 80px;
-  padding: 40px;
-  border-top: 1px solid rgba(0, 0, 0, 0.15);
+  padding: 32px 0;
+  margin: 0 40px;
+  border-top: 1px solid rgba(0, 0, 0, 0.075);
   justify-content: center;
 }
 footer li {
@@ -582,6 +608,38 @@ footer li {
 }
 footer li:hover {
   color: black;
+}
+footer ul {
+  padding: 16px 0;
+}
+footer svg {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  footer ul {
+    display: none;
+  }
+  footer svg {
+    display: flex;
+    margin: 16px;
+  }
+}
+
+.signature {
+  background-color: #1b1b22;
+  letter-spacing: 0.04rem;
+}
+.signature p {
+  text-align: center;
+  color: white;
+  padding: 8px;
+  font-family: "Jost", sans-serif;
+  font-size: 0.85rem;
+  opacity: 0.6;
+  font-weight: 300;
+}
+.signature a {
+  color: #ff59d6;
 }
 
 .button {
