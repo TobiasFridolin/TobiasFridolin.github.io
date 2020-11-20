@@ -32,6 +32,11 @@
 
 * {
   margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 /* Colors */
@@ -44,7 +49,7 @@
   margin-bottom: 1rem;
   line-height: 150%;
   letter-spacing: 0.02rem;
-  color: rgba(0, 0, 0, 0.9);
+  color: #1E2834;
 }
 .body-copy li {
   margin-bottom: 0.2rem;
@@ -82,11 +87,14 @@
 }
 
 .heading-3 {
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   line-height: 2rem;
   font-weight: 600;
   font-family: "Josefin Sans", sans-serif;
-  color: #393D49;
+  color: #1E2834;
+  opacity: 0.75;
+  font-style: italic;
+  margin-top: 1.5rem;
 }
 
 .lead {
@@ -236,7 +244,7 @@ main {
   position: sticky;
   top: 0;
   padding: 8px;
-  margin-left: 2em;
+  margin: 2em;
   z-index: 2;
 }
 .nav ul {
@@ -293,13 +301,6 @@ main {
   display: inline;
   color: #1158BF;
   text-transform: none;
-}
-
-.outline .heading-3 {
-  margin: 0;
-}
-.outline li:active {
-  color: #000000;
 }
 
 .hero {
@@ -639,17 +640,58 @@ footer p {
 }
 
 .nav__burger, .nav__burger--open, .nav__burger--collabsed {
-  padding: 8px;
   margin: 16px;
   position: fixed;
   top: 0;
   right: 0;
   z-index: 100;
   display: none;
+  fill: #1E2834;
+  opacity: 0.8;
 }
 
 .nav__burger--open {
   display: none;
+}
+
+.bar {
+  position: fixed;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 56px;
+  box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.3);
+  background-color: white;
+  transition: transform 0.5s, background-color 1s ease-out;
+}
+.bar h1 {
+  font-family: "Lato", sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: #1E2834;
+  opacity: 0.8;
+}
+.bar--scrolling {
+  transform: translateY(-56px);
+}
+.bar--transparent {
+  background-color: transparent;
+  box-shadow: none;
+}
+.bar--transparent .nav__burger, .bar--transparent .nav__burger--open, .bar--transparent .nav__burger--collabsed {
+  fill: white;
+}
+.bar--transparent h1 {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .bar {
+    display: flex;
+  }
 }
 
 @media screen and (max-width: 768px) {

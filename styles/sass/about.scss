@@ -51,11 +51,14 @@ section{
     padding: 1em 0;
     margin: 32px 0;
     border-radius: 4px;
-    border: 2px solid atoms.$white-toned;
-    transition: background-color 200ms, color 200ms;
+    color: atoms.$black-almost;
+    border: 1px solid atoms.$border-color;
+    transition: box-shadow 0.2s ease-in-out, border 0.2s ease-in-out;
+    
     &:hover{
-        background-color: atoms.$white-almost;
-        border: 2px solid atoms.$white-almost;
+        box-shadow: atoms.$box-shadow-1;
+        border-color: transparent;
+        color: black;
     }
 
     @include atoms.breakpoint(small){

@@ -42,7 +42,7 @@ main{
     position: sticky;
     top: 0;
     padding: 8px;
-    margin-left: 2em;
+    margin: 2em;
     z-index: 2;
 
     ul{
@@ -113,19 +113,6 @@ main{
     text-transform: none;
 }
 
-.outline{
-
-    .heading-3{
-        margin: 0;
-    }
-
-    li:active{
-        color: atoms.$black-full;
-    }
-
-    
-}
-
 .hero{
     //responsive
     height: 400px;
@@ -134,15 +121,18 @@ main{
     background-position: center;
 
     @include atoms.breakpoint(medium){
-        height: 320px;
+        $hero-height: 320px;
+        height: $hero-height;
     }
 
     @include atoms.breakpoint(small){
-        height: 280px;
+        $hero-height: 280px;
+        height: $hero-height;
     }
 
     @include atoms.breakpoint(smallest){
-        height: 224px;
+        $hero-height: 224px;
+        height: $hero-height;    
     }
 }
 
@@ -460,11 +450,6 @@ footer{
     z-index: 99;
 }
 
-// .burger-menu--closed{
-//     @extend .burger-menu;
-    
-// }
-
 .burger-menu--open{    
     transform: translateY(0);
 }
@@ -491,7 +476,6 @@ footer{
 }
 
 .nav__burger{
-    padding: 8px;
     margin: 16px;
     position: fixed;
     top: 0;
@@ -499,6 +483,8 @@ footer{
     z-index: 100;
 
     display: none;
+    fill: atoms.$black-almost;
+    opacity: 0.8;
 }
 
 .nav__burger--open, .nav__burger--collabsed{
@@ -507,6 +493,51 @@ footer{
 
 .nav__burger--open{
     display: none;
+}
+
+.bar{
+    position: fixed;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 56px;
+    box-shadow: 0px 0px 4px 2px atoms.$grey-30;
+    background-color: white;
+    
+    transition: transform 0.5s, background-color 1s ease-out;
+
+    h1{
+        font-family: atoms.$lato;
+        font-size: 1rem;
+        text-transform: uppercase;
+        color: atoms.$black-almost;
+        opacity: 0.8;
+    }
+    
+    &--scrolling{
+        transform: translateY(-56px);
+    }
+
+    &--transparent{
+        background-color: transparent;
+        box-shadow: none;
+        
+        .nav__burger{
+            fill: white;
+        }
+
+        h1{
+            display: none;
+        }
+    }
+
+    @include atoms.breakpoint(small){
+        display: flex;
+    }
 }
 
 @include atoms.breakpoint(biggest){

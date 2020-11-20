@@ -492,9 +492,9 @@ body{
 #udtalelser{
     background-color: rgba(black, 0.8);
     color: white;
-    overflow-x: hidden;
     box-shadow: $shadow-3;
     z-index: 0;
+    overflow-x: hidden;
 
     img{
         border-radius: 100%;
@@ -528,19 +528,22 @@ body{
 
     p{
         font-family: $font-2;
+        line-height: 150%;
+
         max-width: 32rem;
         text-align: center;
-        padding: 24px;
+        padding: 16px;
         opacity: 0.8;
     }
 
     .bla{
         // display: flex;
+        // overflow-x: hidden;
         position: relative;
         top: 0;
         white-space: nowrap;
         transition: transform 1s;
-        transform: translateX(-50px);
+        // transform: translateX(-50px);
     }
 
     .container{
@@ -580,6 +583,33 @@ body{
             }
         }
 
+    }
+
+    @include breakpoint(small){
+        .bla{
+            overflow-x: scroll;
+            div:first-child, div:last-child{
+                display: none;
+            }
+        }
+
+        .container{
+            width: 100%;
+        }
+
+        .inactive{
+            opacity: 1;
+
+            img{
+                transition: box-shadow 0.2s;
+                box-shadow: $shadow-2;
+            }
+
+            &:hover{
+                opacity: 1;
+                margin: 0;
+            }
+        }
     }
 }
 

@@ -46,7 +46,9 @@ section{
     text-align: left;
     
     @include atoms.breakpoint(small){
-        text-align: justify;
+        text-align: center;
+        font-size: 1.25rem;
+        margin: 0;
     }
 }
 
@@ -90,6 +92,13 @@ section{
         text-transform: uppercase;
         font-size: 0.9rem;
     }
+
+    @include atoms.breakpoint(small){
+        .header-container{
+            width: 100%;
+        }
+        text-align: center;
+    }
 }
 
 figure.prototype{
@@ -102,6 +111,41 @@ figure.prototype{
     
     img{
         opacity: 0.5;
+    }
+}
+
+.outline{
+
+    .heading-3{
+        margin: 0;
+    }
+
+    li:active{
+        color: atoms.$black-full;
+    }
+
+    &--mobile{
+        display: none;
+        padding: 32px;
+        margin: 32px 0;
+        border-radius: 4px;
+        box-shadow: atoms.$box-shadow-1;
+
+        .heading-2{
+            margin: 4px 0;
+            color: atoms.$black-almost;
+        }
+
+        li{
+            list-style: none;
+            line-height: 2rem;
+        }
+    }    
+
+    @include atoms.breakpoint(small){
+        &--mobile{
+            display: block;
+        }
     }
 }
 

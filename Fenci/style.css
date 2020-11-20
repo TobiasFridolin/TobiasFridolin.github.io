@@ -363,9 +363,9 @@ body {
 #udtalelser {
   background-color: rgba(0, 0, 0, 0.8);
   color: white;
-  overflow-x: hidden;
   box-shadow: 0 4px 16px 8px rgba(0, 0, 0, 0.2);
   z-index: 0;
+  overflow-x: hidden;
 }
 #udtalelser img {
   border-radius: 100%;
@@ -395,9 +395,10 @@ body {
 }
 #udtalelser p {
   font-family: "Raleway", sans-serif;
+  line-height: 150%;
   max-width: 32rem;
   text-align: center;
-  padding: 24px;
+  padding: 16px;
   opacity: 0.8;
 }
 #udtalelser .bla {
@@ -405,7 +406,6 @@ body {
   top: 0;
   white-space: nowrap;
   transition: transform 1s;
-  transform: translateX(-50px);
 }
 #udtalelser .container {
   padding: 80px;
@@ -436,6 +436,28 @@ body {
 #udtalelser .inactive:hover img {
   transition: box-shadow 0.2s;
   box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.2);
+}
+@media screen and (max-width: 768px) {
+  #udtalelser .bla {
+    overflow-x: scroll;
+  }
+  #udtalelser .bla div:first-child, #udtalelser .bla div:last-child {
+    display: none;
+  }
+  #udtalelser .container {
+    width: 100%;
+  }
+  #udtalelser .inactive {
+    opacity: 1;
+  }
+  #udtalelser .inactive img {
+    transition: box-shadow 0.2s;
+    box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.2);
+  }
+  #udtalelser .inactive:hover {
+    opacity: 1;
+    margin: 0;
+  }
 }
 
 #hook-2 {

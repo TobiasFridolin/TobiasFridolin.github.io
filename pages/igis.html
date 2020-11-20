@@ -22,6 +22,30 @@
     <div class="hero" style="background-image: url(/resources/flyfotos/flyfotos-hero.jpeg);"></div>
 
     <main>        
+        <div class="bar bar--transparent">
+            <h1>Portfolio</h1>
+            <svg class="nav__burger--collabsed"  width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <rect y="3" width="24" height="2" />
+                <rect y="19" width="24" height="2" />
+                <rect y="11" width="24" height="2" />
+            </svg>
+        </div>
+
+        <svg class="nav__burger--open" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 3L21 21" stroke="black" stroke-width="2"/>
+            <path d="M21 3L3 21" stroke="black" stroke-width="2"/>
+            </svg>
+            
+
+        <div class="burger-menu">
+            <ul class="burger-menu__items">
+                <a class="navigation-link" href="/index.html"><li>Home</li></a>
+                <a class="navigation-link" href="portfolio.html"><li class="navigation-link--selected">Portfolio</li></a>
+                <a class="navigation-link" href="about.html" ><li>About Me</li></a>
+                <a class="navigation-link" href="cv.html"><li>CV</li></a>
+            </ul>  
+        </div>
+        
         <div class="content">
             <div class="header" id="header">
                 <div class="header-container">
@@ -33,27 +57,6 @@
                         <h2 class="date">21. September - 16. October 2020</h2>
                     </div>
                 </div>
-            </div>
-
-            <svg class="nav__burger--collabsed"  width="24" height="24" viewBox="0 0 24 24" fill="black" xmlns="http://www.w3.org/2000/svg">
-                <rect y="3" width="24" height="2" />
-                <rect y="19" width="24" height="2" />
-                <rect y="11" width="24" height="2" />
-            </svg>
-
-            <svg class="nav__burger--open" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M3 3L21 21" stroke="black" stroke-width="2"/>
-                <path d="M21 3L3 21" stroke="black" stroke-width="2"/>
-                </svg>
-                
-
-            <div class="burger-menu">
-                <ul class="burger-menu__items">
-                    <a class="navigation-link" href="/index.html"><li>Home</li></a>
-                    <a class="navigation-link" href="portfolio.html"><li class="navigation-link--selected">Portfolio</li></a>
-                    <a class="navigation-link" href="about.html" ><li>About Me</li></a>
-                    <a class="navigation-link" href="cv.html"><li>CV</li></a>
-                </ul>  
             </div>
 
             <div class="nav">
@@ -77,6 +80,17 @@
             </div>   
             
             <div class="article">
+                <ul class="outline outline--mobile">
+                    <li class="outline heading-2">Contents</li>
+                    <a class="outline outline-item" href="#sec1"><li>Introduction</li></a>
+                    <a class="outline outline-item" href="#sec2"><li>The Product</li></a>
+                    <a class="outline outline-item" href="#sec3"><li>Approach</li></a>
+                    <a class="outline outline-item" href="#sec4"><li>Design Process</li></a>
+                    <a class="outline outline-item" href="#sec5"><li>Icon System</li></a>
+                    <a class="outline outline-item" href="#sec6"><li>Designing for Business Goals</li></a>
+                    <a class="outline outline-item" href="#sec7"><li>Outcomes</li></a>
+                    <a class="outline outline-item" href="#sec8"><li>Final Reflections</li></a>
+                </ul>
                 <section>
                     <h2 class="heading-2" id="sec1">Introduction</h2>
                     <p class="body-copy">
@@ -451,6 +465,8 @@
         <p>Designed & Developed by Tobias Fridolin | 2020</p>
     </footer>
     
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="/scripts/bar.js"></script>
     <script src="/scripts/image-fullscreen.js"></script>    
     <script src="/scripts/burger-menu.js"></script>
 

@@ -162,12 +162,20 @@ main{
         padding: 12px 40px;
         background-color: rgba(atoms.$primary-strong, 0.7);
         margin: 2rem auto;
-        transition: background-color 200ms;
-        
+        transition: background-color 200ms, box-shadow 200ms ease-in-out;
+        border-radius: 4px;
+
+        &:hover{
+            box-shadow: atoms.$box-shadow-1;
+        }
     }
 
    @include atoms.breakpoint(medium){
-        flex-direction: column;
+        flex-direction: column-reverse;
+
+        img{
+            margin-bottom: 4rem;
+        }
 
         .text-container{
             margin-bottom: 2rem;

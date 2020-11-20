@@ -32,6 +32,11 @@
 
 * {
   margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 /* Colors */
@@ -44,7 +49,7 @@
   margin-bottom: 1rem;
   line-height: 150%;
   letter-spacing: 0.02rem;
-  color: rgba(0, 0, 0, 0.9);
+  color: #1E2834;
 }
 .body-copy li {
   margin-bottom: 0.2rem;
@@ -82,11 +87,14 @@
 }
 
 .heading-3 {
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   line-height: 2rem;
   font-weight: 600;
   font-family: "Josefin Sans", sans-serif;
-  color: #393D49;
+  color: #1E2834;
+  opacity: 0.75;
+  font-style: italic;
+  margin-top: 1.5rem;
 }
 
 .lead {
