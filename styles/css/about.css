@@ -265,7 +265,7 @@ section {
   transition: box-shadow 0.2s ease-in-out, border 0.2s ease-in-out;
 }
 .cases:hover {
-  box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.075);
+  box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.1);
   border-color: transparent;
   color: black;
 }

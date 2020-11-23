@@ -62,7 +62,8 @@ $flyfotos: #6a9ace;
 $naturbasen: #789fe6;
 $musical-composition: #fab16c;
 $icu: #ff4848;
-$box-shadow-1: 0 0 8px 2px rgba(black, 0.075);
+$box-shadow-1: 0 0 8px 2px rgba(black, 0.1);
+$box-shadow-2: 2px 2px 16px 4px rgba(black, 0.1);
 $border-color: rgba(black, 0.1);
 
 @mixin box-shadow {

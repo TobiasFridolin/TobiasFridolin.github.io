@@ -633,9 +633,10 @@ footer p {
 }
 .burger-menu__items .navigation-link--selected {
   border: none;
-  padding-left: 0;
+  padding-left: 8px;
 }
 .burger-menu__items li {
+  font-size: 1.25rem;
   line-height: 200%;
 }
 

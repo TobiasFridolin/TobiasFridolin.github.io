@@ -463,13 +463,14 @@ footer{
     padding: 8px;
 
     text-align: center;
-
+    
     .navigation-link--selected{
         border: none;
-        padding-left: 0;
+        padding-left: 8px;
     }
-
+    
     li{
+        font-size: 1.25rem;
         line-height: 200%;
     }
 

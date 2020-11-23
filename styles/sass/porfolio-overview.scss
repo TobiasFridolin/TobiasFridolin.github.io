@@ -1,7 +1,6 @@
 @use 'atoms';
     
 body, .header{
-    background-color: atoms.$black-portfolio;
 }
 
 .header-container{
@@ -15,13 +14,7 @@ body, .header{
 main{
     display: flex;
     justify-content: center;
-    margin: 0 120px;
-
-    @include atoms.breakpoint(medium){
-        hr{
-            display: none;
-        }
-    }
+    margin: 0;
 
     @include atoms.breakpoint(small){
         margin: 0;
@@ -29,25 +22,10 @@ main{
         .image-container{
             position: relative;
         }
-        
-        img{
-            border-radius: 0%;
-        }
     }
 }
 
-
-.heading-1, .button{
-    color: atoms.$white-full;
-}
-
-.heading-2, .heading-3, .topics, .type{
-    color: atoms.$white-almost;
-}
-
 .heading-2{
-    margin-bottom: 0.25rem;
-    font-size: 2.7rem;
     font-size: 1.9rem;
     font-weight: 600;
     text-align: left;
@@ -59,13 +37,10 @@ main{
 }
 
 .subtitle{
-    color: atoms.$grey-30;
-    color: rgba(atoms.$primary-weak_on-black, 0.9);
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
+    font-size: 1rem;
+    margin-bottom: 1rem;
     text-align: center;
     font-weight: normal;
-    // display: inline-block;
 }
 
 .type{
@@ -73,12 +48,11 @@ main{
 }
 
 .body-copy{
-    color: atoms.$white-toned;
     text-align: left;
     text-align: center;
     font-family: atoms.$lora;
     margin-bottom: 1rem;
-    font-size: 24px;
+    font-size: 1rem;
 
     @include atoms.breakpoint(smallest){
         font-size: 20px;
@@ -89,24 +63,15 @@ main{
     display: inline-block;
 }
 
-.topics{
-    display: none;
-    color: atoms.$white-almost;
-    font-size: 12px;
-    padding: 2px 8px;
-    border: 1px solid atoms.$white-almost;
-    border-radius: 16px;
-    margin-bottom: 0.5rem;
-}
-
 .header{
     position: sticky;
+    position: relative;
     margin-top: 80px;
     display: flex;
     justify-content: space-between;
 
     .button{
-        color: atoms.$white-70;
+        color: black;
         padding-bottom: 4px;
 
         &:hover{
@@ -127,92 +92,6 @@ main{
     }
 }
 
-.case{
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    margin: 120px 0;
-    position: relative;
-    
-    > div{        
-        min-width: 8rem;
-        align-self: center;
-        text-align: left;
-    }
-
-    .text-container{
-        max-width: 24rem;
-        margin: 0 1rem;
-    }
-
-    .image-container{
-        width: fit-content;
-    }
-
-   &--1{
-       flex-direction: row-reverse;
-   }
-
-   .button{
-        display: block;
-        font-size: 18px;
-        text-align: center;
-        color: atoms.$white-toned;
-        width: fit-content;
-        padding: 12px 40px;
-        background-color: rgba(atoms.$primary-strong, 0.7);
-        margin: 2rem auto;
-        transition: background-color 200ms, box-shadow 200ms ease-in-out;
-        border-radius: 4px;
-
-        &:hover{
-            box-shadow: atoms.$box-shadow-1;
-        }
-    }
-
-   @include atoms.breakpoint(medium){
-        flex-direction: column-reverse;
-
-        img{
-            margin-bottom: 4rem;
-        }
-
-        .text-container{
-            margin-bottom: 2rem;
-        }
-
-       .button{
-           width: auto;
-       }
-
-       hr{
-           display: none;
-       }
-   }
-
-    @media screen and (max-width: 1200px){
-    
-        margin: 80px 0;
-        
-        > div{
-           min-width: 3rem;
-        }
-    }
-
-    @include atoms.breakpoint(small){
-        margin: 64px 0;
-
-        .text-container{
-            .body-copy{
-                // display: none;
-            }
-            margin-bottom: 64px;
-        }
-    }
-
-}
-
-
 .cases{
     display: flex;
     flex-direction: column;
@@ -227,18 +106,95 @@ main{
     }
 }
 
+.case{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
 
-.image-placeholder, img{
+    margin: 80px;
+    position: relative;
+
+    >div{
+        width: 50%;
+    }
+
+    .text-container{
+        margin: 0 1rem;
+        align-self: center;
+
+        p{
+            max-width: 32em;
+            margin: 0 auto;
+        }
+    }
+
+    .image-container{
+        display: flex;
+        justify-content: center;
+    }
+
+   .button{
+        display: block;
+        color: white;
+        font-size: 1rem;
+        text-align: center;
+        width: fit-content;
+        padding: 8px 24px;
+        background-color: rgba(atoms.$primary-strong, 0.7);
+        margin: 2rem auto;
+        transition: background-color 200ms, box-shadow 200ms ease-in-out;
+        border-radius: 4px;
+
+        &:hover{
+            box-shadow: atoms.$box-shadow-1;
+        }
+    }
+
+   @include atoms.breakpoint(medium){
+        flex-direction: column-reverse;
+
+        > div{
+            width: 100%;
+        }
+
+        .text-container{
+            margin: 4rem;
+        }
+   }
+
+    @include atoms.breakpoint(small){
+        margin: 64px 16px;
+
+        .text-container{
+            margin-bottom: 64px;
+            p{
+                font-size: 1rem;
+            }
+        }
+    }
+
+}
+
+// .reverse{
+//     flex-direction: row-reverse;
+// }
+
+img{
     max-width: 100%;
-    max-height: 100%;
+    height: auto;
     object-fit: contain;
     object-position: center;
     border-radius: 4px;
+    border: 1px solid atoms.$border-color; 
+    
+    box-shadow: atoms.$box-shadow-2;
+    padding:8px;
+    background-color: white;
 }
 
 hr{
-    background-color: atoms.$black-toned;
-    margin: 2rem 0;
+    background-color: atoms.$border-color;
+    margin: 2rem;
 }
 
 @include atoms.breakpoint(small){

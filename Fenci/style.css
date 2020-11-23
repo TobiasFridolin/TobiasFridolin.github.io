@@ -361,7 +361,7 @@ body {
 }
 
 #udtalelser {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: #282828;
   color: white;
   box-shadow: 0 4px 16px 8px rgba(0, 0, 0, 0.2);
   z-index: 0;
@@ -372,47 +372,55 @@ body {
 }
 #udtalelser h1 {
   font-family: "Jost", sans-serif;
-  font-size: 3rem;
+  font-size: 2.5rem;
+  text-transform: uppercase;
   font-weight: 500;
-  width: 100%;
+  opacity: 0.9;
   text-align: center;
   padding: 32px;
 }
 #udtalelser h2 {
   font-family: "Jost", sans-serif;
-  margin-top: 16px;
   padding: 0 8px;
   font-weight: 300;
-  font-size: 1.125rem;
+  font-size: 1rem;
   color: rgba(255, 255, 255, 0.8);
   text-transform: uppercase;
 }
 #udtalelser h3 {
   font-family: "Jost", sans-serif;
-  font-size: 0.875rem;
+  font-size: 0.8rem;
+  font-weight: 600;
   color: rgba(255, 255, 255, 0.4);
   text-transform: uppercase;
 }
 #udtalelser p {
   font-family: "Raleway", sans-serif;
   line-height: 150%;
-  max-width: 32rem;
+  width: 32em;
   text-align: center;
-  padding: 16px;
-  opacity: 0.8;
+  padding: 16px 40px;
+  color: gainsboro;
 }
 #udtalelser .bla {
   position: relative;
   top: 0;
   white-space: nowrap;
-  transition: transform 1s;
+  transition: transform 1s, height 0.2s;
 }
 #udtalelser .container {
-  padding: 80px;
+  padding: 32px;
   display: inline-flex;
   flex-direction: column;
   align-items: center;
   white-space: normal;
+}
+#udtalelser .container > div {
+  margin: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 #udtalelser img {
   transition: box-shadow 0.2s;
@@ -420,28 +428,66 @@ body {
 #udtalelser img:hover {
   box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.2);
 }
+#udtalelser .active .quotes, #udtalelser .active p:after, #udtalelser .active p:before {
+  font-family: "Jost", sans-serif;
+  font-size: 6rem;
+  color: #94225F;
+  content: '"';
+  position: absolute;
+  color: #94225F;
+}
 #udtalelser .active img {
   box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.2);
 }
+#udtalelser .active > div:last-child {
+  position: relative;
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+#udtalelser .active p:before {
+  top: 0;
+  left: 0;
+  transform: translate(-50%, 150%);
+}
+#udtalelser .active p:after {
+  bottom: 0;
+  right: 0;
+  transform: translate(50%, 0);
+}
 #udtalelser .inactive {
-  opacity: 0.5;
+  opacity: 0.2;
+  position: relative;
   transition: opacity 0.2s ease-in-out, margin 0.4s ease-in-out;
   cursor: pointer;
 }
 #udtalelser .inactive:hover {
-  opacity: 0.75;
+  opacity: 0.5;
   margin-top: -8px;
-  margin-bottom: 8px;
 }
 #udtalelser .inactive:hover img {
   transition: box-shadow 0.2s;
   box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.2);
 }
+#udtalelser:after {
+  content: "";
+  width: 100%;
+  height: 40px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 255, 0) 100%);
+  pointer-events: none;
+}
+@media screen and (max-width: 1024px) {
+  #udtalelser p {
+    width: 24em;
+  }
+}
 @media screen and (max-width: 768px) {
   #udtalelser .bla {
     overflow-x: scroll;
   }
-  #udtalelser .bla div:first-child, #udtalelser .bla div:last-child {
+  #udtalelser .bla > div:first-child, #udtalelser .bla > div:last-child {
     display: none;
   }
   #udtalelser .container {
@@ -450,6 +496,11 @@ body {
   #udtalelser .inactive {
     opacity: 1;
   }
+  #udtalelser .inactive > div:last-child {
+    position: relative;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
   #udtalelser .inactive img {
     transition: box-shadow 0.2s;
     box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.2);
@@ -457,6 +508,13 @@ body {
   #udtalelser .inactive:hover {
     opacity: 1;
     margin: 0;
+  }
+  #udtalelser .active p:before, #udtalelser .active p:after {
+    content: none;
+  }
+  #udtalelser > div:last-child {
+    position: relative;
+    border-radius: 8px;
   }
 }
 
@@ -668,10 +726,11 @@ footer svg {
   font-family: "Jost", sans-serif;
   width: fit-content;
   font-size: 1rem;
-  color: rgba(0, 0, 0, 0.9);
+  color: #94225f;
+  font-weight: 500;
   text-decoration: none;
   padding: 8px 32px;
-  border: 2px solid rgba(0, 0, 0, 0.6);
+  border: 2px solid rgba(148, 34, 95, 0.6);
   text-transform: uppercase;
   margin: 24px auto;
   transition: box-shadow 0.2s ease-in-out;
