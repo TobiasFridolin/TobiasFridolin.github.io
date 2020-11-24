@@ -280,11 +280,13 @@ main {
   justify-content: space-between;
 }
 .header .button {
+  transition: opacity 0.2s;
   color: black;
   padding-bottom: 4px;
+  opacity: 0.7;
 }
 .header .button:hover {
-  color: white;
+  opacity: 0.9;
 }
 .header-container {
   width: 100%;
@@ -302,36 +304,36 @@ main {
   flex-direction: column;
   margin: 40px 0;
 }
-.cases .case:first-child {
+.cases .case:first-child, .cases .case--reverse:first-child, .cases .case--right:first-child {
   margin-top: 0;
 }
-.cases .case:last-child {
+.cases .case:last-child, .cases .case--reverse:last-child, .cases .case--right:last-child {
   margin-bottom: 0;
 }
 
-.case {
+.case, .case--reverse, .case--right {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   margin: 80px;
   position: relative;
 }
-.case > div {
+.case > div, .case--reverse > div, .case--right > div {
   width: 50%;
 }
-.case .text-container {
+.case .text-container, .case--reverse .text-container, .case--right .text-container {
   margin: 0 1rem;
   align-self: center;
 }
-.case .text-container p {
+.case .text-container p, .case--reverse .text-container p, .case--right .text-container p {
   max-width: 32em;
   margin: 0 auto;
 }
-.case .image-container {
+.case .image-container, .case--reverse .image-container, .case--right .image-container {
   display: flex;
   justify-content: center;
 }
-.case .button {
+.case .button, .case--reverse .button, .case--right .button {
   display: block;
   color: white;
   font-size: 1rem;
@@ -343,28 +345,35 @@ main {
   transition: background-color 200ms, box-shadow 200ms ease-in-out;
   border-radius: 4px;
 }
-.case .button:hover {
+.case .button:hover, .case--reverse .button:hover, .case--right .button:hover {
   box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.1);
 }
+.case--right {
+  margin: 80px 0;
+}
+.case--right .text-container {
+  margin: 0 80px;
+}
+.case--reverse {
+  flex-direction: row-reverse;
+}
 @media screen and (max-width: 1024px) {
-  .case {
-    flex-direction: column-reverse;
-  }
-  .case > div {
+  .case > div, .case--right > div, .case--reverse > div {
     width: 100%;
   }
-  .case .text-container {
+  .case .text-container, .case--right .text-container, .case--reverse .text-container {
     margin: 4rem;
   }
 }
 @media screen and (max-width: 768px) {
-  .case {
+  .case, .case--reverse, .case--right {
     margin: 64px 16px;
+    flex-direction: column-reverse;
   }
-  .case .text-container {
+  .case .text-container, .case--right .text-container, .case--reverse .text-container {
     margin-bottom: 64px;
   }
-  .case .text-container p {
+  .case .text-container p, .case--right .text-container p, .case--reverse .text-container p {
     font-size: 1rem;
   }
 }
@@ -374,6 +383,8 @@ img {
   height: auto;
   object-fit: contain;
   object-position: center;
+}
+img.bordered {
   border-radius: 4px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   box-shadow: 2px 2px 16px 4px rgba(0, 0, 0, 0.1);
@@ -383,7 +394,21 @@ img {
 
 hr {
   background-color: rgba(0, 0, 0, 0.1);
-  margin: 2rem;
+  margin: 0 64px;
+}
+
+footer {
+  background-color: transparent;
+  padding: 8px;
+}
+footer p, footer a.hyperlink {
+  color: black;
+  opacity: 0.3;
+}
+@media screen and (max-width: 768px) {
+  footer p, footer a.hyperlink {
+    font-size: 0.75rem;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -405,6 +430,17 @@ hr {
   background-color: rgba(211, 45, 45, 0.85);
 }
 
+#flyfotos .mobile {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  #flyfotos .big {
+    display: none;
+  }
+  #flyfotos .mobile {
+    display: flex;
+  }
+}
 #flyfotos .subtitle {
   color: #6a9ace;
 }

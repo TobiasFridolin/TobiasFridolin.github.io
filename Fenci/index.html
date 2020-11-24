@@ -89,10 +89,10 @@
         <section id="om">
             <h1 class="t">Content creator</h1>
             <div class="container">
-                <p class="t">
-                    <b>Den kommunikative indholdskaber</b>, der hovedsageligt har hænderne nede i driftrummet, hvor der udtænkes og skabes video-, billede-, grafisk- og lydindhold til, eksempelvis, opslag på LinkedIn, annoncer på Facebook, nyhedsbreve og andet content. 
-                </p>
-                <img src="profil1.png" alt="profil" width="456" height="425">
+                    <p class="t">
+                        <b>Den kommunikative indholdskaber</b>, der hovedsageligt har hænderne nede i driftrummet, hvor der udtænkes og skabes video-, billede-, grafisk- og lydindhold til, eksempelvis, opslag på LinkedIn, annoncer på Facebook, nyhedsbreve og andet content. 
+                    </p>
+                    <img src="profil1.png" alt="profil" width="456" height="425">
             </div>
         </section>
         <section id="hook-1">
@@ -106,7 +106,7 @@
             </div>
         </section>
         <section id="udtalelser">
-            <h1 class="t">Udtalelser</h1>
+            <h1>Udtalelser</h1>
 
             <div class="bla">
 
@@ -331,7 +331,7 @@
                 <p>
                     Igennem <b>fotografi, tekstforfatning og podcasting</b> formidler jeg dit budskab bedst muligt.
                 </p>
-                <a class="button" href="">Kontakt</a>
+                <a class="button" href="#cases">Se Cases</a>
             </div>
 
             <img src="2.jpg" alt="billede" width="501" heigth="373">
@@ -341,17 +341,26 @@
             <h1>Cases</h1>
             <h2>Se hvordan jeg bruger mine kompetencer til at løse opgaven.</h2>
             <div class="container">
-                <div class="case-placeholder"></div>
-                <div class="case-placeholder"></div>
-                <div class="case-placeholder"></div>
-                <div class="case-placeholder"></div>
+                <div class="case" id="gaa-med"></div>
+                <div class="case" id="case-2"></div>
+                <div class="case" id="case-3"></div>
+                <div class="case" id="case-4"></div>
             </div>
         </section>
         <section class="stemning">
             <div class="container">
-                <h1>Skal vi ikke arbejde sammen?</h1>
-                <p>Bacon ipsum dolor amet flank brisket kielbasa pastrami alcatra pig short ribs strip steak chuck boudin pork belly tenderloin jerky buffalo. Short loin chicken pork frankfurter meatball drumstick. Tenderloin hamburger brisket, turkey tail boudin pork chop pork loin fatback. </p>
-                <a class="button" href="">Kontakt</a>
+                <h2>Gå Med Det</h2>
+                <h1>Historier vi går med</h1>
+                <p>
+                    "Gå med det" er et podcast jeg har skabt sammen med Kathrine Kanne.
+                    Tag og lyt med imens vi går med vores gæster og de deler deres historie.
+                    Du finder os her:
+                </p>
+                <div>
+                    <a class="button" href="">Apple Podcast</a>
+                    <a class="button" href="https://open.spotify.com/show/1CmZi5CLcv1zSaHfdyGo3Z?si=Skf7gWOXTkqnGiYGODzLVQ">Spotify</a>
+                    <a class="button" href="https://podcasts.google.com/feed/aHR0cHM6Ly93d3cuc3ByZWFrZXIuY29tL3Nob3cvNDY0NzQyOS9lcGlzb2Rlcy9mZWVk">Google Podcast</a>
+                </div>
             </div>
         </section>
         <section id="kontakt">
@@ -419,7 +428,6 @@
         $(document).scroll(function(){
             var omTop = $("#om").offset().top;
             var hook1Top = $("#hook-1").offset().top;
-            var udtalelserTop = $("#udtalelser").offset().top;
 
             if(omTop - window.scrollY < window.innerHeight / 2){
                 $("#om").children("h1").addClass("t--on");
@@ -429,10 +437,6 @@
             if(hook1Top - window.scrollY < window.innerHeight / 2){
                 $("#hook-1").find("h1").addClass("t--on");
                 $("#hook-1").find("p").addClass("t--on");
-            }
-
-            if(udtalelserTop - window.scrollY < window.innerHeight / 2){
-                $("#udtalelser").children("h1").addClass("t--on");
             }
 
             if(window.scrollY < 20 || window.scrollY + window.innerHeight + 20 > $(document).height()){

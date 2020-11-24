@@ -309,11 +309,23 @@ body {
   padding: 120px 160px;
   background-color: rgba(0, 0, 0, 0.05);
   box-shadow: 0 4px 16px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
 }
 #om h1 {
   font-family: "Jost", sans-serif;
   font-size: 3rem;
   font-weight: 600;
+  opacity: 0.8;
+}
+#om h1:after {
+  content: "";
+  width: 80px;
+  height: 6px;
+  background-color: black;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin-bottom: -8px;
 }
 #om .container {
   margin-top: -3rem;
@@ -323,7 +335,8 @@ body {
 }
 #om p {
   font-family: "Raleway", sans-serif;
-  max-width: 32rem;
+  max-width: 32em;
+  min-width: 24em;
   text-align: right;
   padding: 40px 16px;
 }
@@ -331,6 +344,16 @@ body {
   height: 280px;
   width: auto;
   margin: 0 32px;
+}
+@media screen and (max-width: 1024px) {
+  #om {
+    padding: 120px 88px;
+  }
+}
+@media screen and (max-width: 768px) {
+  #om {
+    padding: 120px 40px;
+  }
 }
 
 #hook-1 {
@@ -520,7 +543,6 @@ body {
 
 #hook-2 {
   padding: 80px 120px;
-  font-size: 2.25rem;
   text-align: right;
   width: 100vw;
   display: flex;
@@ -533,6 +555,7 @@ body {
 }
 #hook-2 p {
   font-family: "Raleway", sans-serif;
+  font-size: 2.25rem;
   font-weight: 200;
   padding: 16px;
 }
@@ -541,37 +564,158 @@ body {
   padding: 24px;
   height: 100%;
   flex-direction: column;
-  align-self: center;
+  align-items: flex-end;
+}
+#hook-2 .button {
+  margin: 24px 80px;
+}
+@media screen and (max-width: 1132px) {
+  #hook-2 {
+    padding: 80px 0;
+  }
+  #hook-2 p {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 896px) {
+  #hook-2 h1 {
+    max-width: 14em;
+  }
+}
+@media screen and (max-width: 1024px) {
+  #hook-2 {
+    text-align: center;
+  }
+  #hook-2 .container {
+    padding: 8px;
+    margin-right: -40px;
+    align-items: center;
+  }
+  #hook-2 h1 {
+    z-index: 1;
+  }
+  #hook-2 p {
+    z-index: 1;
+    background-color: white;
+    margin-right: -16px;
+  }
+}
+@media screen and (max-width: 768px) {
+  #hook-2 {
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    padding: 104px 40px;
+  }
+  #hook-2 h1 {
+    z-index: 1;
+    text-align: center;
+    max-width: 100%;
+  }
+  #hook-2 p {
+    background-color: transparent;
+    margin: 0;
+  }
+  #hook-2 .container {
+    margin: 0;
+    box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+  #hook-2 img {
+    width: 100%;
+    position: absolute;
+    left: 0;
+  }
+}
+@media screen and (max-width: 481px) {
+  #hook-2 {
+    text-align: center;
+  }
+  #hook-2 img {
+    width: 100%;
+    left: 0;
+  }
+  #hook-2 .container {
+    min-width: 100%;
+  }
 }
 
 #cases {
   padding: 80px 160px;
   box-shadow: 0 4px 16px 8px rgba(0, 0, 0, 0.2);
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: #282828;
+  overflow-x: scroll;
 }
 #cases h1 {
   font-family: "Jost", sans-serif;
   font-size: 4rem;
   font-weight: 600;
+  color: white;
+  position: relative;
+  margin-bottom: 32px;
+  opacity: 0.8;
+}
+#cases h1:after {
+  content: "";
+  width: 104px;
+  height: 6px;
+  background-color: white;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin-bottom: -8px;
 }
 #cases h2 {
   font-family: "Raleway", sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
+  color: white;
+  opacity: 0.7;
   font-weight: 400;
 }
 #cases .container {
   display: flex;
+  padding: 40px 0;
 }
 
-.case-placeholder {
+.case-placeholder, .case {
   background-color: black;
   opacity: 0.5;
   height: 350px;
   width: 310px;
-  margin: 16px;
+  margin: 32px;
+  box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  filter: grayscale(1);
+  background-position: center;
+  background-size: cover;
+  transition: box-shadow 0.2s, transform 0.2s, filter 0.2s;
 }
-.case-placeholder:first-child {
+.case-placeholder:first-child, .case:first-child {
   margin-left: 0;
+}
+.case-placeholder:hover, .case:hover {
+  box-shadow: 0 4px 16px 8px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+  filter: grayscale(0);
+}
+
+#gaa-med {
+  background-image: url("/gaamed.png");
+}
+
+#case-2 {
+  background-image: url("/gaamed.png");
+  background-position: left;
+}
+
+#case-3 {
+  background-image: url("/gaamed.png");
+  background-position: right;
+}
+
+#case-4 {
+  background-image: url("gaa-med-det.jpeg");
 }
 
 .stemning {
@@ -590,12 +734,20 @@ body {
 }
 .stemning h1 {
   color: white;
-  margin: 32px;
-  font-size: 3rem;
+  font-size: 2.75rem;
   font-family: "Raleway", sans-serif;
-  font-style: oblique;
   font-weight: 600;
   text-align: center;
+}
+.stemning h2 {
+  color: white;
+  font-family: "Jost", sans-serif;
+  font-style: italic;
+  text-align: center;
+  font-weight: 500;
+  font-size: 1.35rem;
+  letter-spacing: 0.07em;
+  opacity: 0.8;
 }
 .stemning p {
   color: white;
@@ -606,14 +758,16 @@ body {
   margin: 16px auto;
 }
 .stemning .button {
-  margin: 32px auto;
+  margin: 32px 16px;
   color: white;
   border-color: rgba(255, 255, 255, 0.5);
-  font-size: 1.5rem;
 }
 .stemning .container {
   display: flex;
   flex-direction: column;
+}
+.stemning .container > div {
+  display: flex;
 }
 
 #kontakt {

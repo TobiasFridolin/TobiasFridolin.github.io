@@ -429,11 +429,23 @@ body{
     padding: 120px 160px;
     background-color: rgba(black, 0.05);
     box-shadow: $shadow-3;
+    position: relative;
 
     h1{
         font-family: $font-1;
         font-size: 3rem;
         font-weight: 600;
+        opacity: 0.8;
+        &:after{
+            content: "";
+            width: 80px;
+            height: 6px;
+            background-color: black;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            margin-bottom: -8px;
+        }
     }
     
     .container{
@@ -445,7 +457,8 @@ body{
 
     p{
         font-family: $font-2;
-        max-width: 32rem;
+        max-width: 32em;
+        min-width: 24em;
         text-align: right;
         padding: 40px 16px;
     }
@@ -454,6 +467,14 @@ body{
         height: 280px;
         width: auto;
         margin: 0 32px;
+    }
+
+    @include breakpoint(medium){
+        padding: 120px 88px;
+    }
+
+    @include breakpoint(small){
+        padding: 120px 40px;
     }
 }
 
@@ -692,7 +713,6 @@ body{
 
 #hook-2{
     padding: 80px 120px;
-    font-size: 2.25rem;
     text-align: right;
     width: 100vw;
     
@@ -707,6 +727,7 @@ body{
     }
     p{
         font-family: $font-2;
+        font-size: 2.25rem;
         font-weight: 200;
         padding: 16px;
     }
@@ -716,45 +737,174 @@ body{
         padding: 24px;
         height: 100%;
         flex-direction: column;
-        align-self: center;
+        align-items: flex-end;
     }
 
+    .button{
+        margin: 24px 80px;
+        // margin-left: -40px;
+    }
+
+    @media screen and (max-width: 1132px) {
+        padding: 80px 0;
+        p{
+            font-size: 2rem;
+        }
+    }
+
+    @media screen and (max-width: 896px){
+        h1{
+            max-width: 14em;
+        }
+    }
+
+    @include breakpoint(medium){
+        text-align: center;
+
+        .container{
+            padding: 8px;
+            margin-right: -40px;
+            align-items: center;
+        }
+        
+        h1{
+            z-index: 1;
+        }
+
+        p{
+            z-index: 1;
+            background-color: white;
+            margin-right: -16px;
+        }
+    }
+
+    @include breakpoint(small){
+        align-items: center;
+        justify-content: flex-start;
+        position: relative;
+        padding: 104px 40px;
+
+        h1{
+            z-index: 1;
+            text-align: center;
+            max-width: 100%;
+        }
+
+        p{
+            background-color: transparent;
+            margin: 0;
+        }
+        
+        .container{
+            margin: 0;
+            box-shadow: $shadow-2;
+            z-index: 1;
+            background-color: rgba(white, 0.8);
+        }
+
+        img{
+            width: 100%;
+            position: absolute;
+            left: 0;
+        }
+    }
+
+    @include breakpoint(smallest){
+        img{
+            width: 100%;
+            left: 0;
+        }
+
+        text-align: center;
+
+        .container{
+            min-width: 100%;
+        }
+    }
 }
 
 #cases{
     padding: 80px 160px;
     box-shadow: $shadow-3;
-
+    background-color: rgb(40,40,40);
+    overflow-x: scroll;
     
     h1{
         font-family: $font-1;
         font-size: 4rem;
         font-weight: 600;
+        color: white;
+        position: relative;
+        margin-bottom: 32px;
+        opacity: 0.8;
+
+        &:after{
+            content: "";
+            width: 104px;
+            height: 6px;
+            background-color: white;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            margin-bottom: -8px;
+        }
     }
 
     h2{
         font-family: $font-2;
-        font-size: 1.5rem;
+        font-size: 1.25rem;
+        color: white;
+        opacity: 0.7;
         font-weight: 400;
     }
 
-    background-color: rgba(black, 0.2);
-
     .container{
         display: flex;
+        padding: 40px 0;
     }
 }
 
-.case-placeholder{
+.case-placeholder, .case{
     background-color: black;
     opacity: 0.5;
     height: 350px;
     width: 310px;
-    margin: 16px;
+    margin: 32px;
+    box-shadow: $shadow-2;
+    cursor: pointer;
+    filter: grayscale(1);
+    background-position: center;
+    background-size: cover;
 
     &:first-child{
         margin-left: 0;
     }
+    
+    transition: box-shadow 0.2s, transform 0.2s, filter 0.2s;
+
+    &:hover{
+        box-shadow: $shadow-3;
+        transform: scale(1.05);
+        filter: grayscale(0);
+    }
+}
+
+#gaa-med{
+    background-image: url("/gaamed.png");
+}
+
+#case-2{
+    background-image: url("/gaamed.png");
+    background-position: left;
+}
+
+#case-3{
+    background-image: url("/gaamed.png");
+    background-position: right;
+}
+
+#case-4{
+    background-image: url("gaa-med-det.jpeg");
 }
 
 .stemning{
@@ -774,12 +924,22 @@ body{
     
     h1{
         color: white;
-        margin: 32px;
-        font-size: 3rem;
+        font-size: 2.75rem;
         font-family: $font-2;
-        font-style: oblique;
+        // font-style: oblique;
         font-weight: 600;
         text-align: center;
+    }
+
+    h2{
+        color: white;
+        font-family: $font-1;
+        font-style: italic;
+        text-align: center;
+        font-weight: 500;
+        font-size: 1.35rem;
+        letter-spacing: 0.07em;
+        opacity: 0.8;
     }
 
     p{
@@ -792,11 +952,10 @@ body{
     }
 
     .button{
-        margin: 32px auto;
+        margin: 32px 16px;
 
         color: white;
         border-color: rgba(white, 0.5);
-        font-size: 1.5rem;
     }
 
     .container{
@@ -804,7 +963,11 @@ body{
         flex-direction: column;
         // background-color: $bordeux;
 
+        >div{
+            display: flex;
+        }
     }
+
 }
 
 #kontakt{
