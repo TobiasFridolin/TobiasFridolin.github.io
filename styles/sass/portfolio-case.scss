@@ -2,8 +2,12 @@
 
 .content{
     padding-top: 0;
-    margin: 0;
     box-shadow: 4px 4px 4px 0 rgb(255, 255, 255, 0.2);
+    .wrapper{
+        display: flex; 
+        flex-direction: row-reverse; 
+        align-content: space-around;
+    }
 }
 
 section{
@@ -42,7 +46,7 @@ section{
 }
 
 .lead{
-    margin: 32px 0;
+    margin-bottom: 16px;
     text-align: left;
     
     @include atoms.breakpoint(small){
@@ -63,12 +67,12 @@ section{
     }
 }
 
-.header{
+.case-meta{
     background-color: white;
-    position: sticky;
     position: relative;
-    top: 0;
-    
+    width: fit-content;
+    margin: 0 auto;
+
     &-container{
         margin:0;
         // padding: 16px 0;
@@ -93,12 +97,10 @@ section{
         font-size: 0.9rem;
     }
 
-    @include atoms.breakpoint(small){
-        .header-container{
-            width: 100%;
-        }
-        text-align: center;
-    }
+    // @include atoms.breakpoint(small){
+    //     width: auto;
+    //     text-align: center;
+    // }
 }
 
 figure.prototype{
@@ -116,11 +118,6 @@ figure.prototype{
 
 .outline{
 
-    .heading-3{
-        margin: 0;
-        font-style: normal;
-        opacity: 1;
-    }
 
     li:active{
         color: atoms.$black-full;
@@ -129,18 +126,14 @@ figure.prototype{
     &--mobile{
         display: none;
         padding: 32px;
-        margin: 32px 0;
+        margin-bottom: 16px;
         border-radius: 4px;
         box-shadow: atoms.$box-shadow-1;
 
         .heading-2{
             margin: 4px 0;
-            color: atoms.$black-almost;
-        }
-
-        li{
             list-style: none;
-            line-height: 2rem;
+            color: atoms.$black-almost;
         }
     }    
 
@@ -264,16 +257,11 @@ audio{
         $color: atoms.$icu;
     }
 
-    .navigation-link--selected{
-        border-color: $color;
-    }
-
     figure.prototype{
         background-color: rgba($color, 0.04);
     }
 
-    .header{
-
+    .case-meta{
         .subtitle{
             color: $color;
         }
@@ -289,6 +277,31 @@ audio{
         }
 
         background-color: rgba($color, 0.075);
+    }
+
+    footer{
+        background-color: rgba($color, 0.075);
+        border-top: 1px solid atoms.$border-color;
+        p{
+            color: rgba(black, 0.4);
+        }
+    }
+}
+
+.case-meta{
+    margin: 16px 0;
+    min-height: 120px;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+
+    .container{
+        margin: 16px 0;
+    }
+
+    .heading-1{
+        transform: translateX(-2px);
     }
 }
 

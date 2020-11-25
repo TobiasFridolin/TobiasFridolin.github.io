@@ -1,196 +1,119 @@
 @use 'atoms';
 
-body{
-    background-color: atoms.$black-almost;
-    height: 100vh;
-    overflow: hidden;
+.heading-1, .subtitle{
+    text-align: center;
 }
 
+.heading-1{
+    color: atoms.$black-toned;
+    font-size: 3.5rem;
+    font-weight: 400;
+}
 
-.header{
-    min-height: 80px;
+.subtitle{
+    font-size: 1.2rem;
+    color: rgba(atoms.$primary-text, 1);
+}
 
-    &-container{
-        width: 100%;
-        justify-content: space-between;
-        align-items: center;
+.lead{
+    color: #858db8;
+    font-size: 1.8rem;
+    line-height: 1.5em;
+    max-width: 28em;
+    font-weight: 300;
+    text-align: right;
 
-        .nav__burger{
-            margin: 0 1rem;
-            align-self: flex-start;
-        }
-    }
-
-    .heading-1{
-        color: atoms.$white-full;
-        margin-bottom: 0;
-    }
-
-    .subtitle{
-        color: rgba(atoms.$primary-text, 0.9);
-        width: fit-content;
+    @include atoms.breakpoint(medium){
+        font-size: 1.2rem;
     }
 
     @include atoms.breakpoint(small){
-        position: absolute;
-        top: 0;
-        margin-top: 1.5rem;
-        width: 100vw;
-        min-height: 0;
-
-        &-container{
-            width: 100%;
-        }
-
-        .subtitle{
-            color: atoms.$primary-strong;
-        }
+        text-align: center;
     }
 }
 
 .landing{
-    background-image: url('/resources/landing.jpeg'); 
-    background-size: cover; 
-    background-position: 50% 50%;
-    position: relative;
-    height: 70vh; 
-
+    box-shadow: atoms.$box-shadow-2;
+    width: 50%;
+    height: auto;
 
     @include atoms.breakpoint(small){
-        background-image: url('/resources/musikkens\ hus\ 2\ mobile.jpeg'); 
-        height: 100vh;
-        width: 100vw;
-        position: absolute;
+        width: 100%;
     }
 }
 
-.nav{
-    color: atoms.$white-full;
-    padding: 0 60px;
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    background: none;
-    background-color: atoms.$grey-30;
+.lead, .landing{
+    margin: 32px;
+}
+
+.flex-cols{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 80px auto;
+
+    @include atoms.breakpoint(small){
+        flex-direction: column;
+        margin: 40px auto;
+    }
+}
+
+.flex-rows{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    margin: 80px auto;
     
-    
-    .navigation-link{
-        color: rgba(white, 0.8);
-
-        &--selected{
-            color: atoms.$white-full;
-        }
-
-        li{    
-            &:hover{
-                background-color: rgba(atoms.$primary-strong, 0.5);
-                color: white;
-            }
-        }
-
+    @include atoms.breakpoint(small){
+        margin: 40px auto;
     }
 }
 
 main{
-    margin: 0 160px;
-
-    @include atoms.breakpoint(big){
-        margin: 0 80px;
-    }
-
-    @include atoms.breakpoint(medium){
-        margin: 0 40px;
-    }
-
-    @include atoms.breakpoint(small){
-        margin: 0;
-        height: 100vh;
-    }
+    margin: 64px 16px;
+    margin-top: 160px;
 }
 
 .contact-info{
-    height: 100%; 
-    display: flex; 
-    align-items: flex-end;
-    
-    .container{
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        transform-origin: 0 0; 
-        transform: rotateZ(-90deg) translate(-16px, -120%); 
-
-        display: flex;
-        justify-content: space-between;
-        width: 70vh;
-        height: 16px;
-
-        > div{
-            overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-           
-        }
-        
-        a{
-            display: flex;
-            font-family: atoms.$source-sans-pro;
-            font-size: 12px;
-            color: rgba(atoms.$white-toned, 0.7); 
-            letter-spacing: 1px;
-            text-transform: uppercase;
-
-            &:hover{
-                color: atoms.$white-toned;
-            }
-        }
-
-        @media screen and (max-height: 580px){
-            display: none;
-        }
-    }
-}
-
-.container{
+    margin: 0 auto;
     display: flex;
-    justify-content: center;    
-    height: 100%;
-    width: 100%;
+    justify-content: center;
+    font-family: atoms.$lato;
+    font-size: 0.9rem;
+    line-height: 1.5em;
+    color: atoms.$grey-30; 
+    text-transform: uppercase; 
+    a, p{
+        display: inline;
+        padding: 8px 24px;
+    }
 }
 
 .alert{
     display: flex;
-    background-color: rgba(black, 0.7);
-    border-radius: 4px;
-    max-width: 30rem;
-    padding: 0.5rem;
-    height: fit-content;
+    font-size: 1.2rem;
+    max-width: 30em;
+    margin: 16px;
 
     svg{
         align-self: center;
         opacity: 0.8;
         min-width: 24px;
         height: 32px;
+        margin: 8px;
     }
-    
-    position: absolute;
-    // left: 50%;
-    // transform: translate(-50%, 0);
-    bottom: 1rem;
-    
-    
+
     p, a{
         font-family: atoms.$lato;
-        letter-spacing: 0.03rem;
+        letter-spacing: 0.03em;
         line-height: 150%;
-        font-size: 0.85rem;
         text-align: left;
+
     }
     
     p{
         padding: 0 1rem;
-        color: rgba(white, 0.7);
+        color: rgba(black, 0.5);
     }
 
     a{
@@ -199,7 +122,7 @@ main{
 
     em{
         font-style: italic;
-        font-weight: bold;
+        color: atoms.$primary-strong;
     }
 
     @include atoms.breakpoint(smallest){

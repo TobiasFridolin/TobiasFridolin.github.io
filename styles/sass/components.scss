@@ -6,32 +6,75 @@ $margin-medium: 64px;
 $margin-small: 32px;
 $margin-smallest: 16px;
 
+// PLACEHOLDERS
+%navigation-link{
+    color: rgba(black, 0.5);
+    font-family: atoms.$lato;
+    font-size: 0.9rem;
+    letter-spacing: 0.04em;
+    font-weight: 300;
 
+    transition: color 0.2s;
+    &:hover{
+        color: black;
+    }
 
+    &.selected{
+        color: atoms.$hyperlink;
+    }
+}
+
+%navigation-heading{
+    font-family: atoms.$josefin-sans;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: atoms.$black-almost;
+}
 
 body{
     width: 100vw;
     overflow-x: hidden;
 }
 
-main{
-    //responsive
-    margin: 80px $margin-bigger;
+.header{
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    background-color: white;
+    width: 100%;
+    padding: 16px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    // border-bottom: 1px solid atoms.$border-color;
 
-    @include atoms.breakpoint(big){
-        margin: 80px $margin-big;
+    .button{
+        font-size: 0.8rem;
     }
 
-    @include atoms.breakpoint(medium){
-        margin: 80px $margin-medium;
+    h1{
+        @extend %navigation-heading;
+        color: atoms.$black-toned;
+        font-size: 1rem;
+        text-transform: uppercase;
+    }
+    
+    li{
+        list-style: none;
+        @extend %navigation-link;
+        padding-left: 40px;
+        display: inline;
     }
 
     @include atoms.breakpoint(small){
-        margin: 80px $margin-small
-    }
-
-    @include atoms.breakpoint(smallest){
-        margin: 80px $margin-smallest;
+        display: none;
+        // li{
+        //     display: none;
+        // }
+        // .nav__burger--collabsed{
+        //     display: flex;
+        //     margin: 0;
+        // }
     }
 }
 
@@ -42,68 +85,30 @@ main{
     position: sticky;
     top: 0;
     padding: 8px;
-    margin: 2em;
     z-index: 2;
-
+    
     ul{
-        margin: 2em 0;
-        padding: 0;
-    }
-
-    li{
         list-style: none;
-        display: inline-block;
-        margin: 8px 0;
-    }    
+        margin: 40px;
+        font-size: 1.5rem;
 
-    a{
-        display: block;
-    }
+        li{
+            @extend %navigation-heading;
+            margin: 12px 0;
 
-    &__icon{
-        padding: 8px;
-        width: 28px;
-        height: 28px;
-         
-        fill: atoms.$black-toned;
-
-        &:hover{
-            fill: atoms.$primary-strong;
+            display: inline;
         }
-    }
 
-    .flex{
-        margin: 2em 0;
+        a{
+            li{
+                @extend %navigation-link;
+                display: block;
+            }
+        }
     }
 
     @include atoms.breakpoint(small){
         display: none;
-    }
-}
-
-.navigation-link{
-    color: atoms.$grey-50;    
-
-    li{
-        text-transform: uppercase;
-        transition: background-color 200ms, color 200ms;
-        margin: 4px 0;
-
-        padding: 8px;
-        width: 100%;
-
-        
-        &:hover{
-            color: atoms.$black-full;    
-            background-color: atoms.$white-almost;
-        }
-    }
-
-    &--selected{
-        @extend .navigation-link;
-        padding-left: 8px;
-        border-left: 4px solid atoms.$primary-strong;   
-        color: atoms.$black-full;       
     }
 }
 
@@ -136,47 +141,10 @@ main{
     }
 }
 
-.header{
-    position: sticky;
-    top: 0;
-    margin-top: 80px;
-    min-height: 120px;
-    z-index: 1;
-    display: flex;
-    align-content: center;
-
-    &-container{
-        display: flex;
-        margin: 0 $margin-bigger 0 $margin-bigger; 
-
-        .heading-1{
-            transform: translateX(-2px);
-        }
-    
-        &-container{
-            padding: 0 8px;
-        }
-
-        @include atoms.breakpoint(big){
-            margin: 0 $margin-big;
-        }
-    
-        @include atoms.breakpoint(medium){
-            margin: 0 $margin-medium;
-        }
-    
-        @include atoms.breakpoint(small){
-            margin: 0 $margin-small;
-        }
-    
-        @include atoms.breakpoint(smallest){
-            margin: 0 $margin-smallest;
-        }
-    }
-}
-
 .content{
-    margin: 80px 0;
+    margin: 80px auto 40px auto;
+    padding: 32px;
+    width: fit-content;
 
     @include atoms.breakpoint(small){
         margin: 64px 0;
@@ -189,8 +157,9 @@ main{
 
 .about-info{
     display: flex;
-    margin: 8px 0;
-    padding: 8px 0;
+    width: fit-content;
+    margin: 32px 0;
+    padding: 8px;
     position: relative;
     align-items: center;
 
@@ -224,13 +193,10 @@ main{
         font-family: atoms.$lato;
         line-height: 1.5rem;
         font-size: 0.8rem;
-        font-weight: 200;
         color: atoms.$grey-50;
 
         a{
-            font-size: 0.8rem;  
             text-transform: uppercase; 
-            font-family: atoms.$lato;
         }
 
         p{
@@ -361,20 +327,19 @@ section{
     display: flex;
 }
 
-
 hr{
-    margin: 4px 0;
+    margin: 0 64px;
     height: 1px;
     border: none;
-    background-color: atoms.$white-toned;
+    background-color: atoms.$border-color;
 }
 
 figure{
     margin: 16px 0;
 }
 
-footer{
-    background-color: rgba(atoms.$black-almost, 0.9);    
+footer{ 
+    background-color: rgba(atoms.$black-almost, 0.9);
     padding: 16px;
 
     div{
@@ -407,6 +372,22 @@ footer{
     @include atoms.breakpoint(small){
         padding: 40px 16px;
     }
+}
+
+.footer--white{
+
+    background-color: white;
+    padding: 8px;
+
+    p, a.hyperlink{
+        color: black;
+        opacity: 0.3;
+        
+        @include atoms.breakpoint(small){
+            font-size: 0.75rem;
+        }
+    }
+
 }
 
 .collapsible__button{

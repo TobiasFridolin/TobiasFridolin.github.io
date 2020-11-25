@@ -209,13 +209,8 @@ figcaption em {
   font-weight: bold;
 }
 
-.header-container {
-  margin: 0 120px;
-}
-@media screen and (max-width: 768px) {
-  .header-container {
-    margin: 0 32px;
-  }
+.positioned {
+  position: relative;
 }
 
 main {
@@ -232,8 +227,16 @@ main {
   }
 }
 
+.content {
+  padding: 0;
+}
+
+.heading-1 {
+  font-size: 3rem;
+}
+
 .heading-2 {
-  font-size: 1.9rem;
+  font-size: 3rem;
   font-weight: 600;
   text-align: left;
   text-align: center;
@@ -246,7 +249,7 @@ main {
 
 .subtitle {
   font-size: 1rem;
-  margin-bottom: 1rem;
+  margin: 1rem 0;
   text-align: center;
   font-weight: normal;
 }
@@ -270,33 +273,6 @@ main {
 
 .heading-3, .topics {
   display: inline-block;
-}
-
-.header {
-  position: sticky;
-  position: relative;
-  margin-top: 80px;
-  display: flex;
-  justify-content: space-between;
-}
-.header .button {
-  transition: opacity 0.2s;
-  color: black;
-  padding-bottom: 4px;
-  opacity: 0.7;
-}
-.header .button:hover {
-  opacity: 0.9;
-}
-.header-container {
-  width: 100%;
-  justify-content: space-between;
-}
-.header-container div:first-child {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100%;
 }
 
 .cases {
@@ -392,27 +368,8 @@ img.bordered {
   background-color: white;
 }
 
-hr {
-  background-color: rgba(0, 0, 0, 0.1);
-  margin: 0 64px;
-}
-
-footer {
-  background-color: transparent;
-  padding: 8px;
-}
-footer p, footer a.hyperlink {
-  color: black;
-  opacity: 0.3;
-}
 @media screen and (max-width: 768px) {
-  footer p, footer a.hyperlink {
-    font-size: 0.75rem;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .content, .header {
+  .content {
     margin: 0;
   }
 

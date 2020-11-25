@@ -1,15 +1,4 @@
 @use 'atoms';
-    
-body, .header{
-}
-
-.header-container{
-    margin: 0 120px;
-
-    @include atoms.breakpoint(small){
-        margin: 0 32px;
-    }
-}
 
 main{
     display: flex;
@@ -25,8 +14,16 @@ main{
     }
 }
 
+.content{
+    padding: 0;
+}
+
+.heading-1{
+    font-size: 3rem;
+}
+
 .heading-2{
-    font-size: 1.9rem;
+    font-size: 3rem;
     font-weight: 600;
     text-align: left;
     text-align: center;
@@ -38,7 +35,7 @@ main{
 
 .subtitle{
     font-size: 1rem;
-    margin-bottom: 1rem;
+    margin: 1rem 0;
     text-align: center;
     font-weight: normal;
 }
@@ -63,36 +60,35 @@ main{
     display: inline-block;
 }
 
-.header{
-    position: sticky;
-    position: relative;
-    margin-top: 80px;
-    display: flex;
-    justify-content: space-between;
+// .header{
+//     position: sticky;
+//     margin-top: 80px;
+//     display: flex;
+//     justify-content: space-between;
 
-    .button{
-        transition: opacity 0.2s;
-        color: black;
-        padding-bottom: 4px;
-        opacity: 0.7;
+//     .button{
+//         transition: opacity 0.2s;
+//         color: black;
+//         padding-bottom: 4px;
+//         opacity: 0.7;
 
-        &:hover{
-            opacity: 0.9;
-        }
-    }
+//         &:hover{
+//             opacity: 0.9;
+//         }
+//     }
 
-    &-container{
-        width: 100%;
-        justify-content: space-between;
+//     &-container{
+//         width: 100%;
+//         justify-content: space-between;
 
-        div:first-child{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            height: 100%;
-        }
-    }
-}
+//         div:first-child{
+//             display: flex;
+//             flex-direction: column;
+//             justify-content: center;
+//             height: 100%;
+//         }
+//     }
+// }
 
 .cases{
     display: flex;
@@ -208,28 +204,8 @@ img{
     }
 }
 
-hr{
-    background-color: atoms.$border-color;
-    margin: 0 64px;
-}
-
-footer{
-    background-color: transparent;
-    padding: 8px;
-
-    p, a.hyperlink{
-        color: black;
-        opacity: 0.3;
-        
-        @include atoms.breakpoint(small){
-            font-size: 0.75rem;
-        }
-    }
-
-}
-
 @include atoms.breakpoint(small){
-    .content, .header{
+    .content{
         margin: 0;
     }
 

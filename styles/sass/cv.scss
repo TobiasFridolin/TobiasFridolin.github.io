@@ -25,6 +25,14 @@ $padding-big: 120px;
     color: atoms.$grey-80;
 }
 
+.header{
+    transition: top 500ms ease-out 100ms;
+}
+
+main{
+    margin: 0;
+}
+
 .heading-1{
     font-size: 1.4rem;
     padding: 8px 0;
@@ -57,8 +65,6 @@ p{
     text-align: left;
     margin: 0.5rem 0;
 }
-
-
 
 section{
     margin-bottom: 0;
@@ -354,43 +360,6 @@ section{
             }
         }
     }
-}
-
-.header{
-    position: sticky;
-    opacity: 100%;
-    min-height: 0;
-    width: 100vw;
-    margin: 0;
-    z-index: 100;
-    background-color: white;
-
-    transition: top 500ms ease-out 100ms;
-}
-
-.header-container{
-    padding: 16px;
-
-    margin: 0 $margin-small;
-
-    > div{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    @include atoms.breakpoint(small){
-        padding: 16px 8px;
-    } 
-
-    @include atoms.breakpoint(smallest){
-        padding: 16px $padding;
-        margin: 0;
-    }
-}
-
-main{
-    margin: 0;
 }
 
 footer{

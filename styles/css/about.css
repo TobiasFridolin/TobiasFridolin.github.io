@@ -209,55 +209,27 @@ figcaption em {
   font-weight: bold;
 }
 
-.header .heading-1 {
-  color: #FFFFFF;
-}
-.header .subtitle {
-  color: #FFFFFF;
-}
-
-.hero {
-  background-image: url("/resources/about/About_Hero 1440x440.png");
-}
-
-.header {
-  position: static;
-  height: 100%;
-  display: flex;
-  align-items: flex-end;
-  margin-top: 0;
-}
-.header-container {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
-  margin-bottom: 3em;
-}
-@media screen and (max-width: 1024px) {
-  .header-container {
-    margin-bottom: 2em;
-  }
-}
-@media screen and (max-width: 768px) {
-  .header-container {
-    margin-bottom: 1em;
-  }
-}
-@media screen and (max-width: 481px) {
-  .header-container {
-    margin-bottom: 8px;
-  }
+.positioned {
+  position: relative;
 }
 
 section {
-  margin-bottom: 8px;
+  margin: 8px auto;
+  font-size: 1.2rem;
+  max-width: 32em;
+}
+
+.heading-1 {
+  font-size: 3rem;
+  width: 100%;
+  text-align: center;
+  margin-top: 64px;
 }
 
 .cases {
   display: flex;
   justify-content: center;
-  padding: 1em 0;
+  padding: 16px 32px;
   margin: 32px 0;
   border-radius: 4px;
   color: #1E2834;
@@ -275,49 +247,14 @@ section {
   }
 }
 
-.primer {
+.content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative;
-  padding: 1rem;
-  margin-bottom: 4rem;
-  background-color: rgba(71, 91, 195, 0.07);
-  border-left: 8px solid rgba(102, 77, 192, 0.4);
-  height: 100%;
-  transform: translateX(-4em);
 }
-.primer .lead {
-  color: #858db8;
-  max-width: 28em;
-  margin-bottom: 0.5rem;
-  font-weight: 600;
-  font-weight: 400;
-}
-.primer .lead:first-child {
-  font-weight: 600;
-  color: #6f7aa3;
-}
-@media screen and (max-width: 1024px) {
-  .primer {
-    transform: translateX(0);
-  }
-  .primer .lead {
-    font-size: 1.2rem;
-  }
-}
-@media screen and (max-width: 768px) {
-  .primer {
-    margin: 64px 0;
-  }
-  .primer .lead {
-    font-size: 1rem;
-  }
-}
-@media screen and (max-width: 481px) {
-  .primer {
-    margin: 40px 0;
-  }
+
+img {
+  margin: 16px;
 }
 
 /*# sourceMappingURL=about.css.map */

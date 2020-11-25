@@ -209,183 +209,133 @@ figcaption em {
   font-weight: bold;
 }
 
-body {
-  background-color: #1E2834;
-  height: 100vh;
-  overflow: hidden;
+.positioned {
+  position: relative;
 }
 
-.header {
-  min-height: 80px;
+.heading-1, .subtitle {
+  text-align: center;
 }
-.header-container {
-  width: 100%;
-  justify-content: space-between;
-  align-items: center;
+
+.heading-1 {
+  color: #393D49;
+  font-size: 3.5rem;
+  font-weight: 400;
 }
-.header-container .nav__burger {
-  margin: 0 1rem;
-  align-self: flex-start;
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #b5a3f9;
 }
-.header .heading-1 {
-  color: #FFFFFF;
-  margin-bottom: 0;
+
+.lead {
+  color: #858db8;
+  font-size: 1.8rem;
+  line-height: 1.5em;
+  max-width: 28em;
+  font-weight: 300;
+  text-align: right;
 }
-.header .subtitle {
-  color: rgba(181, 163, 249, 0.9);
-  width: fit-content;
+@media screen and (max-width: 1024px) {
+  .lead {
+    font-size: 1.2rem;
+  }
 }
 @media screen and (max-width: 768px) {
-  .header {
-    position: absolute;
-    top: 0;
-    margin-top: 1.5rem;
-    width: 100vw;
-    min-height: 0;
-  }
-  .header-container {
-    width: 100%;
-  }
-  .header .subtitle {
-    color: #664DC0;
+  .lead {
+    text-align: center;
   }
 }
 
 .landing {
-  background-image: url("/resources/landing.jpeg");
-  background-size: cover;
-  background-position: 50% 50%;
-  position: relative;
-  height: 70vh;
+  box-shadow: 2px 2px 16px 4px rgba(0, 0, 0, 0.1);
+  width: 50%;
+  height: auto;
 }
 @media screen and (max-width: 768px) {
   .landing {
-    background-image: url("/resources/musikkens hus 2 mobile.jpeg");
-    height: 100vh;
-    width: 100vw;
-    position: absolute;
+    width: 100%;
   }
 }
 
-.nav {
-  color: #FFFFFF;
-  padding: 0 60px;
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  background: none;
-  background-color: rgba(0, 0, 0, 0.3);
+.lead, .landing {
+  margin: 32px;
 }
-.nav .navigation-link {
-  color: rgba(255, 255, 255, 0.8);
+
+.flex-cols {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 80px auto;
 }
-.nav .navigation-link--selected {
-  color: #FFFFFF;
+@media screen and (max-width: 768px) {
+  .flex-cols {
+    flex-direction: column;
+    margin: 40px auto;
+  }
 }
-.nav .navigation-link li:hover {
-  background-color: rgba(102, 77, 192, 0.5);
-  color: white;
+
+.flex-rows {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  margin: 80px auto;
+}
+@media screen and (max-width: 768px) {
+  .flex-rows {
+    margin: 40px auto;
+  }
 }
 
 main {
-  margin: 0 160px;
-}
-@media screen and (max-width: 1388px) {
-  main {
-    margin: 0 80px;
-  }
-}
-@media screen and (max-width: 1024px) {
-  main {
-    margin: 0 40px;
-  }
-}
-@media screen and (max-width: 768px) {
-  main {
-    margin: 0;
-    height: 100vh;
-  }
+  margin: 64px 16px;
+  margin-top: 160px;
 }
 
 .contact-info {
-  height: 100%;
-  display: flex;
-  align-items: flex-end;
-}
-.contact-info .container {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  transform-origin: 0 0;
-  transform: rotateZ(-90deg) translate(-16px, -120%);
-  display: flex;
-  justify-content: space-between;
-  width: 70vh;
-  height: 16px;
-}
-.contact-info .container > div {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-.contact-info .container a {
-  display: flex;
-  font-family: "Source Sans Pro", sans-serif;
-  font-size: 12px;
-  color: rgba(237, 237, 237, 0.7);
-  letter-spacing: 1px;
-  text-transform: uppercase;
-}
-.contact-info .container a:hover {
-  color: #EDEDED;
-}
-@media screen and (max-height: 580px) {
-  .contact-info .container {
-    display: none;
-  }
-}
-
-.container {
+  margin: 0 auto;
   display: flex;
   justify-content: center;
-  height: 100%;
-  width: 100%;
+  font-family: "Lato", sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.5em;
+  color: rgba(0, 0, 0, 0.3);
+  text-transform: uppercase;
+}
+.contact-info a, .contact-info p {
+  display: inline;
+  padding: 8px 24px;
 }
 
 .alert {
   display: flex;
-  background-color: rgba(0, 0, 0, 0.7);
-  border-radius: 4px;
-  max-width: 30rem;
-  padding: 0.5rem;
-  height: fit-content;
-  position: absolute;
-  bottom: 1rem;
+  font-size: 1.2rem;
+  max-width: 30em;
+  margin: 16px;
 }
 .alert svg {
   align-self: center;
   opacity: 0.8;
   min-width: 24px;
   height: 32px;
+  margin: 8px;
 }
 .alert p, .alert a {
   font-family: "Lato", sans-serif;
-  letter-spacing: 0.03rem;
+  letter-spacing: 0.03em;
   line-height: 150%;
-  font-size: 0.85rem;
   text-align: left;
 }
 .alert p {
   padding: 0 1rem;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(0, 0, 0, 0.5);
 }
 .alert a {
   padding-left: 4px;
 }
 .alert em {
   font-style: italic;
-  font-weight: bold;
+  color: #664DC0;
 }
 @media screen and (max-width: 481px) {
   .alert {

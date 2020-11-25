@@ -209,10 +209,18 @@ figcaption em {
   font-weight: bold;
 }
 
+.positioned {
+  position: relative;
+}
+
 .content {
   padding-top: 0;
-  margin: 0;
   box-shadow: 4px 4px 4px 0 rgba(255, 255, 255, 0.2);
+}
+.content .wrapper {
+  display: flex;
+  flex-direction: row-reverse;
+  align-content: space-around;
 }
 
 section .heading-2 {
@@ -239,7 +247,7 @@ section ul em {
 }
 
 .lead {
-  margin: 32px 0;
+  margin-bottom: 16px;
   text-align: left;
 }
 @media screen and (max-width: 768px) {
@@ -258,36 +266,28 @@ section ul em {
   padding-right: 0.5em;
 }
 
-.header {
+.case-meta {
   background-color: white;
-  position: sticky;
   position: relative;
-  top: 0;
+  width: fit-content;
+  margin: 0 auto;
 }
-.header-container {
+.case-meta-container {
   margin: 0;
   flex-direction: column;
   justify-content: center;
 }
-.header-container .heading-1, .header-container .heading-2 {
+.case-meta-container .heading-1, .case-meta-container .heading-2 {
   display: inline;
   color: #1E2834;
 }
-.header-container div:last-child {
+.case-meta-container div:last-child {
   margin: 1rem 0;
 }
-.header .subtitle {
+.case-meta .subtitle {
   font-family: "Josefin Sans", sans-serif;
   text-transform: uppercase;
   font-size: 0.9rem;
-}
-@media screen and (max-width: 768px) {
-  .header {
-    text-align: center;
-  }
-  .header .header-container {
-    width: 100%;
-  }
 }
 
 figure.prototype {
@@ -302,28 +302,20 @@ figure.prototype img {
   opacity: 0.5;
 }
 
-.outline .heading-3 {
-  margin: 0;
-  font-style: normal;
-  opacity: 1;
-}
 .outline li:active {
   color: #000000;
 }
 .outline--mobile {
   display: none;
   padding: 32px;
-  margin: 32px 0;
+  margin-bottom: 16px;
   border-radius: 4px;
   box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.1);
 }
 .outline--mobile .heading-2 {
   margin: 4px 0;
-  color: #1E2834;
-}
-.outline--mobile li {
   list-style: none;
-  line-height: 2rem;
+  color: #1E2834;
 }
 @media screen and (max-width: 768px) {
   .outline--mobile {
@@ -418,13 +410,25 @@ audio {
   }
 }
 
-#flyfotos .navigation-link--selected {
-  border-color: #6a9ace;
+.case-meta {
+  margin: 16px 0;
+  min-height: 120px;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
 }
+.case-meta .container {
+  margin: 16px 0;
+}
+.case-meta .heading-1 {
+  transform: translateX(-2px);
+}
+
 #flyfotos figure.prototype {
   background-color: rgba(106, 154, 206, 0.04);
 }
-#flyfotos .header .subtitle {
+#flyfotos .case-meta .subtitle {
   color: #6a9ace;
 }
 #flyfotos .contact {
@@ -436,14 +440,18 @@ audio {
 #flyfotos .contact .button:hover {
   background-color: rgba(106, 154, 206, 0.9);
 }
-
-#naturbasen .navigation-link--selected {
-  border-color: #789fe6;
+#flyfotos footer {
+  background-color: rgba(106, 154, 206, 0.075);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
+#flyfotos footer p {
+  color: rgba(0, 0, 0, 0.4);
+}
+
 #naturbasen figure.prototype {
   background-color: rgba(120, 159, 230, 0.04);
 }
-#naturbasen .header .subtitle {
+#naturbasen .case-meta .subtitle {
   color: #789fe6;
 }
 #naturbasen .contact {
@@ -455,14 +463,18 @@ audio {
 #naturbasen .contact .button:hover {
   background-color: rgba(120, 159, 230, 0.9);
 }
-
-#ascendant-games .navigation-link--selected {
-  border-color: #d32d2d;
+#naturbasen footer {
+  background-color: rgba(120, 159, 230, 0.075);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
+#naturbasen footer p {
+  color: rgba(0, 0, 0, 0.4);
+}
+
 #ascendant-games figure.prototype {
   background-color: rgba(211, 45, 45, 0.04);
 }
-#ascendant-games .header .subtitle {
+#ascendant-games .case-meta .subtitle {
   color: #d32d2d;
 }
 #ascendant-games .contact {
@@ -473,6 +485,13 @@ audio {
 }
 #ascendant-games .contact .button:hover {
   background-color: rgba(211, 45, 45, 0.9);
+}
+#ascendant-games footer {
+  background-color: rgba(211, 45, 45, 0.075);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+#ascendant-games footer p {
+  color: rgba(0, 0, 0, 0.4);
 }
 
 #res-dmg-list {
