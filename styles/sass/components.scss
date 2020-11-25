@@ -266,20 +266,6 @@ body{
         color: atoms.$black-almost;
     }
 
-    .button{
-        color: atoms.$white-full;
-        background-color: atoms.$primary-strong;
-        width: fit-content;
-        margin: auto;
-        border-radius: 4px;
-        padding: 8px 16px;
-
-        &:hover{
-            color: atoms.$white-full;
-            background-color: rgba(atoms.$primary-strong, 0.9);
-        }
-    }
-
     img{
         position: relative;
         top: 0;
@@ -475,6 +461,37 @@ footer{
 
 .nav__burger--open{
     display: none;
+}
+
+.button{
+    color: atoms.$black-toned;
+    width: fit-content;
+    border-radius: 2px;
+    margin: 40px auto;
+    padding: 12px 48px;
+   
+    &:hover{
+        box-shadow: atoms.$box-shadow-1;
+    }
+}
+
+.button.cases{
+    display: flex;
+    width: fit-content;
+    color: atoms.$black-almost;
+    transition: box-shadow 0.2s ease-in-out, border 0.2s ease-in-out;
+    border: 1px solid atoms.$border-color;
+    
+    &:hover{
+        border-color: transparent;
+        box-shadow: atoms.$box-shadow-1;
+        color: black;
+    }
+
+    @include atoms.breakpoint(small){
+        width: auto;
+        margin: 32px 16px;
+    }
 }
 
 .bar{

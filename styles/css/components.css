@@ -438,18 +438,6 @@ body {
   max-width: 40em;
   color: #1E2834;
 }
-.contact .button {
-  color: #FFFFFF;
-  background-color: #664DC0;
-  width: fit-content;
-  margin: auto;
-  border-radius: 4px;
-  padding: 8px 16px;
-}
-.contact .button:hover {
-  color: #FFFFFF;
-  background-color: rgba(102, 77, 192, 0.9);
-}
 .contact img {
   position: relative;
   top: 0;
@@ -626,6 +614,36 @@ footer p {
 
 .nav__burger--open {
   display: none;
+}
+
+.button {
+  color: #393D49;
+  width: fit-content;
+  border-radius: 2px;
+  margin: 40px auto;
+  padding: 12px 48px;
+}
+.button:hover {
+  box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.1);
+}
+
+.button.cases {
+  display: flex;
+  width: fit-content;
+  color: #1E2834;
+  transition: box-shadow 0.2s ease-in-out, border 0.2s ease-in-out;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.button.cases:hover {
+  border-color: transparent;
+  box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.1);
+  color: black;
+}
+@media screen and (max-width: 768px) {
+  .button.cases {
+    width: auto;
+    margin: 32px 16px;
+  }
 }
 
 .bar {

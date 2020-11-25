@@ -34,7 +34,7 @@ main{
 }
 
 .subtitle{
-    font-size: 1rem;
+    font-size: 1.2rem;
     margin: 1rem 0;
     text-align: center;
     font-weight: normal;
@@ -48,8 +48,8 @@ main{
     text-align: left;
     text-align: center;
     font-family: atoms.$lora;
-    margin-bottom: 1rem;
     font-size: 1rem;
+    color: atoms.$grey-80;
 
     @include atoms.breakpoint(smallest){
         font-size: 20px;
@@ -59,36 +59,6 @@ main{
 .heading-3, .topics{
     display: inline-block;
 }
-
-// .header{
-//     position: sticky;
-//     margin-top: 80px;
-//     display: flex;
-//     justify-content: space-between;
-
-//     .button{
-//         transition: opacity 0.2s;
-//         color: black;
-//         padding-bottom: 4px;
-//         opacity: 0.7;
-
-//         &:hover{
-//             opacity: 0.9;
-//         }
-//     }
-
-//     &-container{
-//         width: 100%;
-//         justify-content: space-between;
-
-//         div:first-child{
-//             display: flex;
-//             flex-direction: column;
-//             justify-content: center;
-//             height: 100%;
-//         }
-//     }
-// }
 
 .cases{
     display: flex;
@@ -135,17 +105,7 @@ main{
         display: block;
         color: white;
         font-size: 1rem;
-        text-align: center;
-        width: fit-content;
-        padding: 8px 24px;
-        background-color: rgba(atoms.$primary-strong, 0.7);
-        margin: 2rem auto;
         transition: background-color 200ms, box-shadow 200ms ease-in-out;
-        border-radius: 4px;
-
-        &:hover{
-            box-shadow: atoms.$box-shadow-1;
-        }
     }
 
     &--right{
