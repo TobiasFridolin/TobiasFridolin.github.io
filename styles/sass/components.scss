@@ -469,6 +469,8 @@ footer{
     border-radius: 2px;
     margin: 40px auto;
     padding: 12px 48px;
+    text-align: center;
+    justify-content: center;
    
     &:hover{
         box-shadow: atoms.$box-shadow-1;
