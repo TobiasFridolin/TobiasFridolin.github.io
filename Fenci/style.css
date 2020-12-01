@@ -83,7 +83,7 @@ header, footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 16px;
+  padding: 16px 80px;
 }
 header ul, footer ul {
   display: flex;
@@ -93,7 +93,7 @@ header li, footer li {
   color: white;
   font-family: "Jost", sans-serif;
   text-transform: uppercase;
-  font-weight: 300;
+  font-weight: 600;
   font-size: 0.875rem;
   letter-spacing: 0.1em;
   padding-left: 48px;
@@ -248,12 +248,40 @@ body {
 .hero h2 {
   font-family: "Jost", sans-serif;
   font-size: 5rem;
-  width: 400px;
+  width: 7em;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  margin-left: 60px;
+  margin-left: 64px;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
+}
+@media screen and (max-width: 1388px) {
+  .hero h2 {
+    font-size: 4rem;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .hero h2 {
+    font-size: 3.5rem;
+    margin-left: 24px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .hero h2 {
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 356px) {
+  .hero {
+    padding: 0;
+  }
+  .hero h2 {
+    font-size: 2.8rem;
+    padding: 16px;
+    margin: 0 auto;
+    text-align: center;
+    width: auto;
+  }
 }
 
 .brands {
@@ -266,6 +294,7 @@ body {
 .brands .container {
   padding: 40px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
 }
 .brands img {
@@ -276,6 +305,32 @@ body {
 .brands img:hover {
   transform: scale(1.1);
   filter: none;
+}
+@media screen and (max-width: 1024px) {
+  .brands img {
+    margin: 40px;
+  }
+  .brands .container {
+    align-self: center;
+    width: 640px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .brands img {
+    margin: 16px;
+  }
+  .brands .container {
+    width: 500px;
+  }
+}
+@media screen and (max-width: 481px) {
+  .brands img {
+    width: 40px;
+    height: 40px;
+  }
+  .brands .container {
+    width: 100%;
+  }
 }
 
 #brands-2 {
@@ -753,9 +808,10 @@ body {
   color: white;
   max-width: 32em;
   font-family: "Raleway", sans-serif;
-  line-height: 2em;
+  line-height: 1.75em;
   text-align: center;
   margin: 16px auto;
+  margin-bottom: 0;
 }
 .stemning .button {
   margin: 32px 16px;

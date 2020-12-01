@@ -150,7 +150,7 @@ header, footer{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 16px;
+    padding: 16px 80px;
 
     ul{
         display: flex;
@@ -162,7 +162,7 @@ header, footer{
 
         font-family: $font-1;
         text-transform: uppercase;
-        font-weight: 300;
+        font-weight: 600;
         font-size: 0.875rem;
         letter-spacing: 0.1em;
         
@@ -355,11 +355,11 @@ body{
     h2{
         font-family: $font-1;
         font-size: 5rem;
-        width: 400px;
+        width: 7em;
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        margin-left: 60px;
+        margin-left: 64px;
         text-shadow: 2px 2px 8px rgba(black, 0.15);
     }
 
@@ -367,6 +367,42 @@ body{
     background-size: cover;
     background-position: center;
     filter: grayscale(100%);
+
+    @include breakpoint(big){
+        h2{
+            font-size: 4rem;
+        }
+    }
+
+    @include breakpoint(medium){
+        h2{
+            font-size: 3.5rem;
+            margin-left: 24px;
+        }
+    }
+
+    @include breakpoint(small){
+        h2{
+            font-size: 3rem;
+        }
+    }
+
+    @include breakpoint(smallest){
+        h2{
+           
+        }
+    }
+
+    @media screen and (max-width: 356px){
+        padding: 0;
+        h2{
+            font-size: 2.8rem;
+            padding: 16px;
+            margin: 0 auto;
+            text-align: center;
+            width: auto;
+        }
+    }
 }
 
 .brands{
@@ -375,10 +411,11 @@ body{
     flex-direction: column;
     justify-content: center;
     justify-content: space-around;
-
+    
     .container{
         padding: 40px;
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-around;
     }
 
@@ -391,6 +428,46 @@ body{
             transform: scale(1.1);
             filter: none;
         }
+    }
+
+    @include breakpoint(big){
+
+    }
+
+    @include breakpoint(medium){
+        
+        img{
+            margin: 40px;
+        }
+
+        .container{
+            align-self: center;
+            width: 640px;
+        }
+
+      
+    }
+
+    @include breakpoint(small){
+        img{
+            margin: 16px;
+        }
+
+        .container{
+            width: 500px;
+        }
+    }
+
+    @include breakpoint(smallest){
+        img{
+            width: 40px;
+            height: 40px;
+        }
+
+        .container{
+            width: 100%;
+        }
+
     }
 }
 
@@ -946,9 +1023,10 @@ body{
         color: white;
         max-width: 32em;
         font-family: $font-2;
-        line-height: 2em;
+        line-height: 1.75em;
         text-align: center;
         margin: 16px auto;
+        margin-bottom: 0;
     }
 
     .button{
@@ -1149,4 +1227,3 @@ footer{
         opacity: 1;
     }    
 }
-
