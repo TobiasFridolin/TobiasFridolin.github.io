@@ -49,7 +49,7 @@ main{
     text-align: center;
     font-family: atoms.$lora;
     font-size: 1rem;
-    color: atoms.$grey-80;
+    color: atoms.$grey-70;
 
     @include atoms.breakpoint(smallest){
         font-size: 20px;

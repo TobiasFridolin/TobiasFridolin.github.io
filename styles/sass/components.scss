@@ -8,15 +8,15 @@ $margin-smallest: 16px;
 
 // PLACEHOLDERS
 %navigation-link{
-    color: rgba(black, 0.5);
+    color: rgba(black, 0.4);
     font-family: atoms.$lato;
     font-size: 0.9rem;
     letter-spacing: 0.04em;
-    font-weight: 300;
+    font-weight: 400;
 
     transition: color 0.2s;
     &:hover{
-        color: black;
+        color: atoms.$black-toned;
     }
 
     &.selected{
@@ -56,14 +56,27 @@ body{
         @extend %navigation-heading;
         color: atoms.$black-toned;
         font-size: 1rem;
+        margin-bottom: -2px;
         text-transform: uppercase;
     }
     
     li{
         list-style: none;
         @extend %navigation-link;
-        padding-left: 40px;
+        text-transform: uppercase;
+        margin-left: 40px;
+        padding: 4px;
         display: inline;
+    }
+
+    transition: box-shadow 0.2s;
+
+    &--scrolling{
+        // box-shadow: atoms.$box-shadow-1;
+        box-shadow:  
+                        0 1px 4px 0 rgba(black, 0.17),
+                        0 2px 4px 2px rgba(black, 0.08),
+                        0 4px 6px -1px rgba(black, 0.1);
     }
 
     @include atoms.breakpoint(small){
@@ -95,12 +108,12 @@ body{
         li{
             @extend %navigation-heading;
             margin: 12px 0;
-
             display: inline;
         }
-
+        
         a{
             li{
+                font-weight: 300;
                 @extend %navigation-link;
                 display: block;
             }
