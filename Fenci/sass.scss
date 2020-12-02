@@ -162,7 +162,7 @@ header, footer{
 
         font-family: $font-1;
         text-transform: uppercase;
-        font-weight: 600;
+        font-weight: 400;
         font-size: 0.875rem;
         letter-spacing: 0.1em;
         
@@ -184,6 +184,18 @@ header, footer{
         li{
             padding: 0;
         }
+    }
+
+    @include breakpoint(medium){
+        padding: 16px 40px;
+    }
+
+    @include breakpoint(small){
+        padding: 16px 32px;
+    }
+
+    @include breakpoint(smallest){
+        padding: 16px;
     }
 }
 
@@ -214,9 +226,6 @@ header, footer{
         &--open{
             display: block;
             position: absolute;
-            top: 24px;
-            right: 16px;
-
             
             #path-1{
                 transition: 0.2s;
@@ -252,6 +261,20 @@ header, footer{
         background: rgba(15,15,15, 0.85);
         backdrop-filter: blur(2px);
         box-shadow: $shadow-2;
+    }
+
+
+    @include breakpoint(small){
+        .burger--open{
+            right: 32px;
+        }
+    }
+    
+    @include breakpoint(smallest){
+        padding: 16px;
+        .burger--open{
+            right: 16px;
+        }
     }
 }
 
@@ -472,7 +495,7 @@ body{
 }
 
 #brands-2{
-    margin: 80px 120px;
+    margin: 80px 16px;
 
     h1{
         padding: 16px;
@@ -500,10 +523,46 @@ body{
         height: 80px;
         margin: 16px;
     }
+
+    @include breakpoint(medium){
+        
+        img{
+            margin: 40px;
+        }
+
+        .container{
+            align-self: center;
+            width: 640px;
+        }
+
+      
+    }
+
+    @include breakpoint(small){
+        img{
+            margin: 16px;
+        }
+
+        .container{
+            width: 500px;
+        }
+    }
+
+    @include breakpoint(smallest){
+        img{
+            width: 40px;
+            height: 40px;
+        }
+
+        .container{
+            width: 100%;
+        }
+
+    }  
 }
 
 #om{
-    padding: 120px 160px;
+    padding: 120px 220px;
     background-color: rgba(black, 0.05);
     box-shadow: $shadow-3;
     position: relative;
@@ -537,7 +596,7 @@ body{
         max-width: 32em;
         min-width: 24em;
         text-align: right;
-        padding: 40px 16px;
+        padding: 32px 16px;
     }
 
     img{
@@ -546,12 +605,45 @@ body{
         margin: 0 32px;
     }
 
+    @include breakpoint(big){
+        padding: 120px 160px;
+    }
+
     @include breakpoint(medium){
-        padding: 120px 88px;
+        padding: 64px 88px;
+
+        .container{
+            flex-direction: column-reverse;
+            margin: 0;
+        }
+
+        h1{
+            width: fit-content;
+            margin: 32px auto;
+        }
+
+        p{
+            text-align: center;
+        }
+
+        img{
+            width: 100%;
+            height: auto;
+            padding: 8px 16px;
+        }
     }
 
     @include breakpoint(small){
-        padding: 120px 40px;
+        padding: 64px 16px;
+        h1{
+            font-size: 2.5rem;
+        }
+    }
+
+    @include breakpoint(smallest){
+        h1{
+            font-size: 2rem;
+        }
     }
 }
 
@@ -559,6 +651,7 @@ body{
     display: flex;
 
     .container{
+        z-index: 1;
         display: flex;
         flex-direction: column;
         padding: 40px;
@@ -581,10 +674,27 @@ body{
     }
 
     img{
+        z-index: -1;
         width: 33%;
         height: auto;
     }
+    @include breakpoint(medium){
+        .container{
+            padding: 80px 32px;
+        }
+    }
 
+    @include breakpoint(small){
+        color: rgba(white, 0.9);
+        img{
+            width: 100%;
+        }
+        .container{
+            background-color: rgba(black,0.7);
+            position: absolute;
+
+        }
+    }
 }
 
 #udtalelser{
@@ -880,7 +990,9 @@ body{
         }
 
         img{
+            height: 100%;
             width: 100%;
+            object-fit: cover;
             position: absolute;
             left: 0;
         }
@@ -939,6 +1051,14 @@ body{
         display: flex;
         padding: 40px 0;
     }
+    
+    @include breakpoint(small){
+        padding: 32px;
+    }
+
+    @include breakpoint(smallest){
+        padding: 16px;
+    }
 }
 
 .case-placeholder, .case{
@@ -986,7 +1106,6 @@ body{
 
 .stemning{
     width: 100vw;
-    padding: 160px 80px;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -1039,13 +1158,37 @@ body{
     .container{
         display: flex;
         flex-direction: column;
-        // background-color: $bordeux;
-
+        background-color: rgba(black, 0.55);
+        padding: 160px 80px;
+        
+        height: 100%;
+        width: 100%;
+        
         >div{
             display: flex;
+            justify-content: center;
         }
     }
 
+    @include breakpoint(medium){
+        .container{
+            padding: 160px 40px;
+            >div{
+                margin-top: 32px;
+                flex-direction: column;
+            }
+        }
+        .button{
+            margin: 16px;
+            width: 20rem;
+        }
+    }
+
+    @include breakpoint(smallest){
+        .button{
+            width: 100%;
+        }
+    }
 }
 
 #kontakt{
@@ -1112,6 +1255,22 @@ body{
     img{
         filter: none;
     }
+
+    @include breakpoint(medium){
+        padding: 40px;
+        .container{
+            padding: 40px 16px;
+        }
+    }
+
+    @include breakpoint(small){
+        flex-direction: column-reverse;
+        padding: 80px 16px;
+        p{
+            text-align: center;
+        }
+    }
+
 }
 
 img{
@@ -1175,6 +1334,9 @@ footer{
     color: rgba($bordeux, 1);
     font-weight: 500;
     text-decoration: none;
+    text-align: center;
+    // height: fit-content;
+    align-self: center;
     padding: 8px 32px;
     border: 2px solid rgba($bordeux, 0.6);
     text-transform: uppercase;

@@ -93,7 +93,7 @@ header li, footer li {
   color: white;
   font-family: "Jost", sans-serif;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 0.875rem;
   letter-spacing: 0.1em;
   padding-left: 48px;
@@ -107,6 +107,21 @@ header a, footer a {
 }
 header a:first-child li, footer a:first-child li {
   padding: 0;
+}
+@media screen and (max-width: 1024px) {
+  header, footer {
+    padding: 16px 40px;
+  }
+}
+@media screen and (max-width: 768px) {
+  header, footer {
+    padding: 16px 32px;
+  }
+}
+@media screen and (max-width: 481px) {
+  header, footer {
+    padding: 16px;
+  }
 }
 
 .header {
@@ -134,8 +149,6 @@ header a:first-child li, footer a:first-child li {
 .header .burger--open {
   display: block;
   position: absolute;
-  top: 24px;
-  right: 16px;
 }
 .header .burger--open #path-1 {
   transition: 0.2s;
@@ -163,6 +176,19 @@ header a:first-child li, footer a:first-child li {
   background: rgba(15, 15, 15, 0.85);
   backdrop-filter: blur(2px);
   box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.2);
+}
+@media screen and (max-width: 768px) {
+  .header .burger--open {
+    right: 32px;
+  }
+}
+@media screen and (max-width: 481px) {
+  .header {
+    padding: 16px;
+  }
+  .header .burger--open {
+    right: 16px;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -334,7 +360,7 @@ body {
 }
 
 #brands-2 {
-  margin: 80px 120px;
+  margin: 80px 16px;
 }
 #brands-2 h1 {
   padding: 16px;
@@ -359,9 +385,35 @@ body {
   height: 80px;
   margin: 16px;
 }
+@media screen and (max-width: 1024px) {
+  #brands-2 img {
+    margin: 40px;
+  }
+  #brands-2 .container {
+    align-self: center;
+    width: 640px;
+  }
+}
+@media screen and (max-width: 768px) {
+  #brands-2 img {
+    margin: 16px;
+  }
+  #brands-2 .container {
+    width: 500px;
+  }
+}
+@media screen and (max-width: 481px) {
+  #brands-2 img {
+    width: 40px;
+    height: 40px;
+  }
+  #brands-2 .container {
+    width: 100%;
+  }
+}
 
 #om {
-  padding: 120px 160px;
+  padding: 120px 220px;
   background-color: rgba(0, 0, 0, 0.05);
   box-shadow: 0 4px 16px 8px rgba(0, 0, 0, 0.2);
   position: relative;
@@ -393,21 +445,50 @@ body {
   max-width: 32em;
   min-width: 24em;
   text-align: right;
-  padding: 40px 16px;
+  padding: 32px 16px;
 }
 #om img {
   height: 280px;
   width: auto;
   margin: 0 32px;
 }
+@media screen and (max-width: 1388px) {
+  #om {
+    padding: 120px 160px;
+  }
+}
 @media screen and (max-width: 1024px) {
   #om {
-    padding: 120px 88px;
+    padding: 64px 88px;
+  }
+  #om .container {
+    flex-direction: column-reverse;
+    margin: 0;
+  }
+  #om h1 {
+    width: fit-content;
+    margin: 32px auto;
+  }
+  #om p {
+    text-align: center;
+  }
+  #om img {
+    width: 100%;
+    height: auto;
+    padding: 8px 16px;
   }
 }
 @media screen and (max-width: 768px) {
   #om {
-    padding: 120px 40px;
+    padding: 64px 16px;
+  }
+  #om h1 {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (max-width: 481px) {
+  #om h1 {
+    font-size: 2rem;
   }
 }
 
@@ -415,6 +496,7 @@ body {
   display: flex;
 }
 #hook-1 .container {
+  z-index: 1;
   display: flex;
   flex-direction: column;
   padding: 40px;
@@ -434,8 +516,26 @@ body {
   padding: 24px;
 }
 #hook-1 img {
+  z-index: -1;
   width: 33%;
   height: auto;
+}
+@media screen and (max-width: 1024px) {
+  #hook-1 .container {
+    padding: 80px 32px;
+  }
+}
+@media screen and (max-width: 768px) {
+  #hook-1 {
+    color: rgba(255, 255, 255, 0.9);
+  }
+  #hook-1 img {
+    width: 100%;
+  }
+  #hook-1 .container {
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+  }
 }
 
 #udtalelser {
@@ -678,7 +778,9 @@ body {
     background-color: rgba(255, 255, 255, 0.8);
   }
   #hook-2 img {
+    height: 100%;
     width: 100%;
+    object-fit: cover;
     position: absolute;
     left: 0;
   }
@@ -732,6 +834,16 @@ body {
   display: flex;
   padding: 40px 0;
 }
+@media screen and (max-width: 768px) {
+  #cases {
+    padding: 32px;
+  }
+}
+@media screen and (max-width: 481px) {
+  #cases {
+    padding: 16px;
+  }
+}
 
 .case-placeholder, .case {
   background-color: black;
@@ -775,7 +887,6 @@ body {
 
 .stemning {
   width: 100vw;
-  padding: 160px 80px;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -821,9 +932,32 @@ body {
 .stemning .container {
   display: flex;
   flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.55);
+  padding: 160px 80px;
+  height: 100%;
+  width: 100%;
 }
 .stemning .container > div {
   display: flex;
+  justify-content: center;
+}
+@media screen and (max-width: 1024px) {
+  .stemning .container {
+    padding: 160px 40px;
+  }
+  .stemning .container > div {
+    margin-top: 32px;
+    flex-direction: column;
+  }
+  .stemning .button {
+    margin: 16px;
+    width: 20rem;
+  }
+}
+@media screen and (max-width: 481px) {
+  .stemning .button {
+    width: 100%;
+  }
 }
 
 #kontakt {
@@ -880,6 +1014,23 @@ body {
 }
 #kontakt img {
   filter: none;
+}
+@media screen and (max-width: 1024px) {
+  #kontakt {
+    padding: 40px;
+  }
+  #kontakt .container {
+    padding: 40px 16px;
+  }
+}
+@media screen and (max-width: 768px) {
+  #kontakt {
+    flex-direction: column-reverse;
+    padding: 80px 16px;
+  }
+  #kontakt p {
+    text-align: center;
+  }
 }
 
 img {
@@ -939,6 +1090,8 @@ footer svg {
   color: #94225f;
   font-weight: 500;
   text-decoration: none;
+  text-align: center;
+  align-self: center;
   padding: 8px 32px;
   border: 2px solid rgba(148, 34, 95, 0.6);
   text-transform: uppercase;
