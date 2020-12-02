@@ -224,13 +224,14 @@ figcaption em {
 }
 
 .subtitle {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   color: #b5a3f9;
+  font-family: "Lato", sans-serif;
 }
 
 .lead {
   color: #858db8;
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   line-height: 1.5em;
   max-width: 28em;
   font-weight: 300;
@@ -300,6 +301,7 @@ main {
   font-size: 0.9rem;
   line-height: 1.5em;
   color: rgba(0, 0, 0, 0.3);
+  color: #858db8;
   text-transform: uppercase;
 }
 .contact-info a, .contact-info p {
@@ -309,26 +311,25 @@ main {
 
 .alert {
   display: flex;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   max-width: 30em;
   margin: 16px;
 }
 .alert svg {
   align-self: center;
   opacity: 0.8;
-  min-width: 24px;
-  height: 32px;
   margin: 8px;
 }
 .alert p, .alert a {
-  font-family: "Lato", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 300;
   letter-spacing: 0.03em;
   line-height: 150%;
   text-align: left;
 }
 .alert p {
   padding: 0 1rem;
-  color: rgba(0, 0, 0, 0.5);
+  color: #858db8;
 }
 .alert a {
   padding-left: 4px;
