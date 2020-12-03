@@ -4,7 +4,7 @@
 }
 * ::selection {
   color: white;
-  background: #573030;
+  background: #9ecac3;
 }
 
 main {
@@ -34,8 +34,11 @@ section {
   padding: 16px;
 }
 #somebar svg {
-  filter: grayscale(1);
   -webkit-filter: grayscale(1);
+  -moz-filter: grayscale(1);
+  -ms-filter: grayscale(1);
+  -o-filter: grayscale(1);
+  filter: grayscale(1);
 }
 #somebar svg:hover {
   filter: none;
@@ -222,7 +225,7 @@ header a:first-child li, footer a:first-child li {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: #573030;
+    background-color: #9ecac3;
     background-image: url("nav-menu.png");
     background-size: cover;
     justify-content: center;
@@ -523,6 +526,7 @@ body {
 @media screen and (max-width: 1024px) {
   #hook-1 .container {
     padding: 80px 32px;
+    width: 100%;
   }
 }
 @media screen and (max-width: 768px) {
@@ -609,10 +613,10 @@ body {
 #udtalelser .active .quotes, #udtalelser .active p:after, #udtalelser .active p:before {
   font-family: "Jost", sans-serif;
   font-size: 6rem;
-  color: #573030;
+  color: #9ecac3;
   content: '"';
   position: absolute;
-  color: #573030;
+  color: #9ecac3;
 }
 #udtalelser .active img {
   box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.2), 0 2px 8px 0 rgba(0, 0, 0, 0.25);
@@ -723,6 +727,8 @@ body {
 }
 #hook-2 .button {
   margin: 24px 80px;
+  color: white;
+  background-color: #9ecac3;
 }
 @media screen and (max-width: 1132px) {
   #hook-2 {
@@ -950,6 +956,11 @@ body {
   align-items: center;
   justify-content: center;
   border: 1px solid rgba(255, 255, 255, 0.5);
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: background-color 0.2s;
+}
+.stemning .button:hover {
+  background-color: black;
 }
 .stemning img {
   padding-right: 4px;
@@ -1039,6 +1050,10 @@ body {
   font-size: 0.85rem;
   font-weight: 500;
 }
+#kontakt .button {
+  color: white;
+  background-color: #9ecac3;
+}
 #kontakt img {
   filter: none;
 }
@@ -1108,19 +1123,20 @@ footer svg {
 }
 .signature a {
   color: #ff59d6;
+  color: #9ecac3;
 }
 
 .button {
   font-family: "Jost", sans-serif;
   width: fit-content;
   font-size: 1rem;
-  color: #573030;
+  color: #9ecac3;
   font-weight: 500;
   text-decoration: none;
   text-align: center;
   align-self: center;
   padding: 8px 32px;
-  border: 2px solid rgba(87, 48, 48, 0.6);
+  border: 2px solid rgba(158, 202, 195, 0.6);
   text-transform: uppercase;
   margin: 24px auto;
   transition: box-shadow 0.2s ease-in-out;

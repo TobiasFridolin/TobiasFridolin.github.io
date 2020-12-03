@@ -3,7 +3,7 @@ $font-2: 'Raleway', sans-serif;
 $shadow-1:  0 0 8px 2px rgba(black, 0.2);
 $shadow-2: 0 0 8px 4px rgba(black, 0.2), 0 2px 8px 0 rgba(black, 0.25);
 $shadow-3: 0 4px 16px 8px rgba(black, 0.2);
-$bordeux: #573030;
+$bordeux: #9ecac3;
 // $bordeux: #94225F;
 $black: rgb(27, 27, 34);
 
@@ -88,8 +88,7 @@ section{
     padding: 16px;
 
     svg{
-        filter: grayscale(1);
-        -webkit-filter: grayscale(1);
+        @include filter(grayscale, 1);
 
         &:hover{
             filter: none;
@@ -682,6 +681,7 @@ body{
     @include breakpoint(medium){
         .container{
             padding: 80px 32px;
+            width: 100%;
         }
     }
 
@@ -930,6 +930,8 @@ body{
 
     .button{
         margin: 24px 80px;
+        color: white;
+        background-color: #9ecac3;
         // margin-left: -40px;
     }
 
@@ -1174,6 +1176,12 @@ body{
         align-items: center;
         justify-content: center;
         border: 1px solid rgba(white, 0.5);
+        background-color: rgba(black, 0.4);
+        transition: background-color 0.2s;
+
+        &:hover{
+                background-color: rgba(black, 1);
+        }
     }
     
     img{
@@ -1279,6 +1287,11 @@ body{
         }
     }
 
+    .button{
+        color: white;
+        background-color: #9ecac3;
+    }
+
     img{
         filter: none;
     }
@@ -1351,6 +1364,7 @@ footer{
 
     a{
         color: rgb(255, 89, 214);
+        color: #9ecac3;
     }
 }
 
