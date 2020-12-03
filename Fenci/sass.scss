@@ -3,8 +3,8 @@ $font-2: 'Raleway', sans-serif;
 $shadow-1:  0 0 8px 2px rgba(black, 0.2);
 $shadow-2: 0 0 8px 4px rgba(black, 0.2), 0 2px 8px 0 rgba(black, 0.25);
 $shadow-3: 0 4px 16px 8px rgba(black, 0.2);
-$bordeux: #681d36;
-$bordeux: #94225F;
+$bordeux: #573030;
+// $bordeux: #94225F;
 $black: rgb(27, 27, 34);
 
 @mixin breakpoint ($point) {
@@ -33,11 +33,12 @@ $black: rgb(27, 27, 34);
     }
 }
 
-@mixin filter($value) {
-    -webkit-filter: $value;
-       -moz-filter: $value;
-         -o-filter: $value;
-            filter: $value;
+@mixin filter($filter-type,$filter-amount) {
+    -webkit-filter: unquote($filter-type+unquote('(#{$filter-amount})'));
+    -moz-filter: unquote($filter-type+unquote('(#{$filter-amount})'));
+    -ms-filter: unquote($filter-type+unquote('(#{$filter-amount})'));
+    -o-filter: unquote($filter-type+unquote('(#{$filter-amount})'));
+    filter: unquote($filter-type+unquote('(#{$filter-amount})'));
 }
 
 @mixin transition($args...) {
@@ -1116,12 +1117,11 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-
     background-image: url("gaamed.png");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    opacity: 0.9;
+    opacity: 1;
     
     h1{
         color: white;
@@ -1186,7 +1186,7 @@ body{
         flex-direction: column;
         background-color: rgba(black, 0.55);
         padding: 160px 80px;
-        
+        backdrop-filter: grayscale(1);
         height: 100%;
         width: 100%;
         
