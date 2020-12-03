@@ -225,7 +225,6 @@ header a:first-child li, footer a:first-child li {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: #9ecac3;
     background-image: url("nav-menu.png");
     background-size: cover;
     justify-content: center;
@@ -616,7 +615,6 @@ body {
   color: #9ecac3;
   content: '"';
   position: absolute;
-  color: #9ecac3;
 }
 #udtalelser .active img {
   box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.2), 0 2px 8px 0 rgba(0, 0, 0, 0.25);
@@ -1122,7 +1120,6 @@ footer svg {
   font-weight: 300;
 }
 .signature a {
-  color: #ff59d6;
   color: #9ecac3;
 }
 
@@ -1130,13 +1127,11 @@ footer svg {
   font-family: "Jost", sans-serif;
   width: fit-content;
   font-size: 1rem;
-  color: #9ecac3;
   font-weight: 500;
   text-decoration: none;
   text-align: center;
   align-self: center;
   padding: 8px 32px;
-  border: 2px solid rgba(158, 202, 195, 0.6);
   text-transform: uppercase;
   margin: 24px auto;
   transition: box-shadow 0.2s ease-in-out;

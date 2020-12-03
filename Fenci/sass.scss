@@ -3,9 +3,8 @@ $font-2: 'Raleway', sans-serif;
 $shadow-1:  0 0 8px 2px rgba(black, 0.2);
 $shadow-2: 0 0 8px 4px rgba(black, 0.2), 0 2px 8px 0 rgba(black, 0.25);
 $shadow-3: 0 4px 16px 8px rgba(black, 0.2);
-$bordeux: #9ecac3;
-// $bordeux: #94225F;
 $black: rgb(27, 27, 34);
+$primary-color: #9ecac3;
 
 @mixin breakpoint ($point) {
     @if $point == smallest {
@@ -54,7 +53,7 @@ $black: rgb(27, 27, 34);
     box-sizing: border-box;
     ::selection{
         color: white;
-        background: $bordeux;
+        background: $primary-color;
     }
 }
 
@@ -316,7 +315,6 @@ header, footer{
         left: 0;
         width: 100vw;
         height: 100vh;
-        background-color: $bordeux;
         background-image: url("nav-menu.png");
         background-size: cover;
 
@@ -784,10 +782,9 @@ body{
         .quotes{
             font-family: $font-1;
             font-size: 6rem;
-            color: $bordeux;
+            color: $primary-color;
             content: '"';
             position: absolute;
-            color: $bordeux;
         }
 
         img{
@@ -931,7 +928,7 @@ body{
     .button{
         margin: 24px 80px;
         color: white;
-        background-color: #9ecac3;
+        background-color: $primary-color;
         // margin-left: -40px;
     }
 
@@ -1289,7 +1286,7 @@ body{
 
     .button{
         color: white;
-        background-color: #9ecac3;
+        background-color: $primary-color;
     }
 
     img{
@@ -1363,8 +1360,7 @@ footer{
     }
 
     a{
-        color: rgb(255, 89, 214);
-        color: #9ecac3;
+        color: $primary-color;
     }
 }
 
@@ -1372,14 +1368,13 @@ footer{
     font-family: $font-1;
     width: fit-content;
     font-size: 1rem;
-    color: rgba($bordeux, 1);
+    // color: rgba($bordeux, 1);
     font-weight: 500;
     text-decoration: none;
     text-align: center;
     // height: fit-content;
     align-self: center;
     padding: 8px 32px;
-    border: 2px solid rgba($bordeux, 0.6);
     text-transform: uppercase;
     margin: 24px auto;
     transition: box-shadow 0.2s ease-in-out;
