@@ -1225,7 +1225,6 @@ body{
 #kontakt{
     padding: 80px 120px;
     background-color: rgba(black, 0.1);
-    filter: grayscale(1);
     
     display: flex;
     justify-content: center;
@@ -1327,7 +1326,7 @@ footer{
         text-align: center;
         color: white;
         padding: 8px;
-        font-family: $font-3;
+        font-family: $font-2;
         font-size: 0.85rem;
         opacity: 0.6;
         font-weight: 300;
@@ -1339,7 +1338,7 @@ footer{
 }
 
 .button{
-    font-family: $font-3;
+    font-family: $font-1;
     width: fit-content;
     font-size: 1rem;
     // color: rgba($bordeux, 1);

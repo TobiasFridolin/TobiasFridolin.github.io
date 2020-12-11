@@ -988,7 +988,6 @@ body {
 #kontakt {
   padding: 80px 120px;
   background-color: rgba(0, 0, 0, 0.1);
-  filter: grayscale(1);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1082,7 +1081,7 @@ footer svg {
   text-align: center;
   color: white;
   padding: 8px;
-  font-family: "Bebas Neue", cursive;
+  font-family: "Helvetica", "arial", sans-serif;
   font-size: 0.85rem;
   opacity: 0.6;
   font-weight: 300;
@@ -1092,7 +1091,7 @@ footer svg {
 }
 
 .button {
-  font-family: "Bebas Neue", cursive;
+  font-family: "Jost", sans-serif;
   width: fit-content;
   font-size: 1rem;
   font-weight: 500;
