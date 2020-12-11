@@ -99,6 +99,7 @@ main{
     .image-container{
         display: flex;
         justify-content: center;
+        margin: auto 0;
     }
 
    .button{
@@ -218,6 +219,30 @@ img{
         background-color: rgba(atoms.$naturbasen, 0.7);
         &:hover{
             background-color: rgba(atoms.$naturbasen, 0.85);
+        }
+    }
+}
+
+#gn{
+    .subtitle{
+        color: atoms.$gn;
+    }
+    .button{
+        background-color: rgba(atoms.$gn, 0.7);
+        &:hover{
+            background-color: rgba(atoms.$gn, 0.85);
+        }
+    }
+}
+
+#cj{
+    .subtitle{
+        color: atoms.$cj;
+    }
+    .button{
+        background-color: rgba(atoms.$cj, 0.7);
+        &:hover{
+            background-color: rgba(atoms.$cj, 0.85);
         }
     }
 }
