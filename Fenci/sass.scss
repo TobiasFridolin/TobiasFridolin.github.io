@@ -1,5 +1,7 @@
 $font-1: 'Jost', sans-serif;
 $font-2: 'Raleway', sans-serif;
+$font-2: 'Helvetica', 'arial', sans-serif;
+$font-3: 'Bebas Neue', cursive;
 $shadow-1:  0 0 8px 2px rgba(black, 0.2);
 $shadow-2: 0 0 8px 4px rgba(black, 0.2), 0 2px 8px 0 rgba(black, 0.25);
 $shadow-3: 0 4px 16px 8px rgba(black, 0.2);
@@ -157,7 +159,7 @@ header, footer{
     li{
         color: white;
 
-        font-family: $font-1;
+        font-family: $font-3;
         text-transform: uppercase;
         font-weight: 400;
         font-size: 0.875rem;
@@ -373,7 +375,7 @@ body{
     cursor: pointer;
 
     h2{
-        font-family: $font-1;
+        font-family: $font-3;
         font-size: 5rem;
         width: 7em;
         position: absolute;
@@ -496,7 +498,7 @@ body{
 
     h1{
         padding: 16px;
-        font-family: $font-1;
+        font-family: $font-3;
         text-align: center;
         width: 100%;
         color: rgba(black, 0.2);
@@ -565,7 +567,7 @@ body{
     position: relative;
 
     h1{
-        font-family: $font-1;
+        font-family: $font-3;
         font-size: 3rem;
         font-weight: 600;
         opacity: 0.8;
@@ -657,7 +659,7 @@ body{
     }
 
     h1{
-        font-family: $font-1;
+        font-family: $font-3;
         font-size: 2.25rem;
         margin-bottom: 16px;
         font-weight: 500;
@@ -706,7 +708,7 @@ body{
     }
 
     h1{
-        font-family: $font-1;
+        font-family: $font-3;
         font-size: 2.5rem;
         text-transform: uppercase;
         font-weight: 500;
@@ -716,7 +718,7 @@ body{
     }
 
     h2{
-        font-family: $font-1;
+        font-family: $font-3;
         padding: 0 8px;
         font-weight: 300;
         font-size: 1rem;
@@ -725,7 +727,7 @@ body{
     }
     
     h3{
-        font-family: $font-1;
+        font-family: $font-3;
         font-size: 0.8rem;
         font-weight: 600;
         color: rgba(white, 0.4);
@@ -777,7 +779,7 @@ body{
 
     .active{
         .quotes{
-            font-family: $font-1;
+            font-family: $font-3;
             font-size: 6rem;
             color: $primary-color;
             content: '"';
@@ -902,7 +904,7 @@ body{
     
     
     h1{
-        font-family: $font-1;
+        font-family: $font-3;
         font-size: 1.5rem;
         font-weight: 600;
         padding: 16px;
@@ -1022,7 +1024,7 @@ body{
     scrollbar-width: none;  /* Firefox */
     
     h1{
-        font-family: $font-1;
+        font-family: $font-3;
         font-size: 4rem;
         font-weight: 600;
         color: white;
@@ -1130,7 +1132,7 @@ body{
 
     h2{
         color: white;
-        font-family: $font-1;
+        font-family: $font-3;
         font-style: italic;
         text-align: center;
         font-weight: 500;
@@ -1141,7 +1143,7 @@ body{
 
     h3{
         color: white;
-        font-family: $font-1;
+        font-family: $font-3;
         font-weight: 600;
         text-align: center;
         margin-top: 64px;
@@ -1223,13 +1225,14 @@ body{
 #kontakt{
     padding: 80px 120px;
     background-color: rgba(black, 0.1);
+    filter: grayscale(1);
     
     display: flex;
     justify-content: center;
     align-items: center;
     
     h1{
-        font-family: $font-1;
+        font-family: $font-3;
         font-size: 3.5rem;
         font-weight: 500;
         text-align: center;
@@ -1324,7 +1327,7 @@ footer{
         text-align: center;
         color: white;
         padding: 8px;
-        font-family: $font-1;
+        font-family: $font-3;
         font-size: 0.85rem;
         opacity: 0.6;
         font-weight: 300;
@@ -1336,7 +1339,7 @@ footer{
 }
 
 .button{
-    font-family: $font-1;
+    font-family: $font-3;
     width: fit-content;
     font-size: 1rem;
     // color: rgba($bordeux, 1);
