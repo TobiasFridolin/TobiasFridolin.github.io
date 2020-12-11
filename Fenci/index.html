@@ -112,7 +112,6 @@
                 <h1 class="t">Fokus på modtageren.</h1>
                 <p class="t"> 
                     <b>Med stort engagement og kvalitetsbevidsthed</b> går jeg systematisk til opgaverne. 
-                    Mit mål er at give dine modtagere en god oplevelse i indholder jeg producerer.
                     Jeg stræber efter at gøre indholdet relevant, og budskabet klart og vedkommende.
                 </p>
             </div>
@@ -351,7 +350,7 @@
             <div class="container">
                 <h1>Den rette person til opgaven</h1>
                 <p>
-                    Igennem <b>video, fotografi og podcasting</b> og min baggrund i kommunikation, formidler jeg dit budskab.
+                    Igennem <b>video, fotografi og podcasting</b> formidler jeg dit budskab.
                 </p>
                 <a class="button" href="#cases">Se Cases</a>
             </div>
@@ -632,12 +631,9 @@
                 }
             }    
             
-            console.log($(".active").innerHeight());
-            
-            $(".bla .active").trigger("click");
-
-            // fordi $(".bla .active").innerHeight() ikke virker...
-            $(".bla").css("height", 852);
+            window.setTimeout(function(){
+                $(".bla .active").trigger("click");
+            }, 200);
         });
     </script>
     <script>

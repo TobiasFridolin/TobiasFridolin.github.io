@@ -1268,8 +1268,13 @@ body{
 
     @include breakpoint(medium){
         padding: 40px;
+
         .container{
             padding: 40px 16px;
+        }
+
+        img{
+            margin: auto;
         }
     }
 
@@ -1278,6 +1283,14 @@ body{
         padding: 80px 16px;
         p{
             text-align: center;
+        }
+
+        .container{
+            z-index: 1;
+        }
+
+        img{
+            margin-bottom: -40px;
         }
     }
 

@@ -1029,6 +1029,9 @@ body {
   #kontakt .container {
     padding: 40px 16px;
   }
+  #kontakt img {
+    margin: auto;
+  }
 }
 @media screen and (max-width: 768px) {
   #kontakt {
@@ -1037,6 +1040,12 @@ body {
   }
   #kontakt p {
     text-align: center;
+  }
+  #kontakt .container {
+    z-index: 1;
+  }
+  #kontakt img {
+    margin-bottom: -40px;
   }
 }
 
