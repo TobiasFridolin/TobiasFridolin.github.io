@@ -1011,33 +1011,6 @@ body {
   display: flex;
   flex-direction: column;
 }
-#kontakt .profil {
-  position: relative;
-  background-image: url("profil-4.jpeg");
-  background-size: cover;
-  height: fit-content;
-}
-#kontakt .profil > div {
-  width: 251px;
-  height: 342px;
-  opacity: 0.6;
-  margin: 4px;
-  border: 3px solid white;
-}
-#kontakt .profil h2 {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  text-align: center;
-  color: white;
-  padding-bottom: 4px;
-  line-height: 2.5em;
-  font-family: "Raleway", sans-serif;
-  font-style: oblique;
-  font-size: 0.85rem;
-  font-weight: 500;
-}
 #kontakt .button {
   color: white;
   background-color: #9ecac3;
