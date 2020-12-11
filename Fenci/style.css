@@ -7,6 +7,10 @@
   background: #9ecac3;
 }
 
+p {
+  line-height: 1.5em;
+}
+
 main {
   width: 100vw;
   overflow: visible;
@@ -264,13 +268,9 @@ body {
 .hero {
   position: relative;
   color: white;
-  padding: 16px 32px;
-  height: 100vh;
   width: 100vw;
   box-shadow: 0 4px 16px 8px rgba(0, 0, 0, 0.2);
-  background-image: url("hero.jpg");
-  background-size: cover;
-  background-position: center;
+  cursor: pointer;
   filter: grayscale(100%);
 }
 .hero h2 {
@@ -508,19 +508,16 @@ body {
 #hook-1 h1 {
   font-family: "Jost", sans-serif;
   font-size: 2.25rem;
-  padding: 24px;
+  margin-bottom: 16px;
   font-weight: 500;
 }
 #hook-1 p {
   font-family: "Raleway", sans-serif;
   line-height: 1.5rem;
   max-width: 32rem;
-  padding: 24px;
 }
 #hook-1 img {
   z-index: -1;
-  width: 33%;
-  height: auto;
 }
 @media screen and (max-width: 1024px) {
   #hook-1 .container {
@@ -1024,7 +1021,8 @@ body {
 }
 #kontakt .profil {
   position: relative;
-  background-image: url("profil2.png");
+  background-image: url("profil-4.jpeg");
+  background-size: cover;
   height: fit-content;
 }
 #kontakt .profil > div {

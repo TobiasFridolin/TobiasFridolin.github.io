@@ -304,6 +304,7 @@ main {
 .case .text-container p, .case--reverse .text-container p, .case--right .text-container p {
   max-width: 32em;
   margin: 0 auto;
+  margin-bottom: 1em;
 }
 .case .image-container, .case--reverse .image-container, .case--right .image-container {
   display: flex;

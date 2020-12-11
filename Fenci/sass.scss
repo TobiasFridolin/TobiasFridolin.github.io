@@ -57,6 +57,10 @@ $primary-color: #9ecac3;
     }
 }
 
+p{
+    line-height: 1.5em;
+}
+
 main{
     width: 100vw;
     overflow: visible;
@@ -368,10 +372,11 @@ body{
     position: relative;
 
     color: white;    
-    padding: 16px 32px;
-    height: 100vh;
+    // padding: 16px 32px;
+    // height: 100vh;
     width: 100vw;
     box-shadow: $shadow-3;
+    cursor: pointer;
 
     h2{
         font-family: $font-1;
@@ -384,9 +389,9 @@ body{
         text-shadow: 2px 2px 8px rgba(black, 0.15);
     }
 
-    background-image: url("hero.jpg");
-    background-size: cover;
-    background-position: center;
+    // background-image: url("hero.jpg");
+    // background-size: cover;
+    // background-position: center;
     filter: grayscale(100%);
 
     @include breakpoint(big){
@@ -660,7 +665,7 @@ body{
     h1{
         font-family: $font-1;
         font-size: 2.25rem;
-        padding: 24px;
+        margin-bottom: 16px;
         font-weight: 500;
     }
 
@@ -668,14 +673,12 @@ body{
         font-family: $font-2;
         line-height: 1.5rem;
         max-width: 32rem;
-        padding: 24px;
     }
 
     img{
         z-index: -1;
-        width: 33%;
-        height: auto;
     }
+
     @include breakpoint(medium){
         .container{
             padding: 80px 32px;
@@ -1256,7 +1259,8 @@ body{
 
     .profil{
         position: relative;
-        background-image: url("profil2.png");
+        background-image: url("profil-4.jpeg");
+        background-size: cover;
         height: fit-content;
         // box-shadow: 4px 4px 16px 0 rgba(black, 0.2);
         

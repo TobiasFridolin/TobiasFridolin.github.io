@@ -75,8 +75,11 @@
 
     </header>
     <main>
-        <section class="hero">
-            <h2>Din historie. Dit budskab.</h2>
+        <section class="hero" style="position: relative;">
+            <video id="video" width="100%" height="auto">
+                <source src="video.mp4" type="video/mp4">
+            </video>
+            <!-- <h2>Din historie. Dit budskab.</h2> -->
         </section>
         <section class="brands" id="brands-1">
             <div class="container">
@@ -103,7 +106,7 @@
             </div>
         </section>
         <section id="hook-1">
-            <img src="1.jpg" alt="billede" heigth="668" width="536">
+            <img src="1.jpg" alt="billede" heigth="auto" width="33%">
             
             <div class="container">
                 <h1 class="t">Fokus på modtageren.</h1>
@@ -628,6 +631,42 @@
             
             // fordi $(".bla .active").innerHeight() ikke virker...
             $(".bla").css("height", 446);
+        });
+    </script>
+    <script>
+        // Video
+        video = document.getElementById("video");
+        video.muted = true;
+        video.loop = true;
+        stopped = false;
+
+        function play(){
+            video.play();
+        }
+
+        function pause(){
+            video.pause();
+        }
+
+        $("#video").click(function(){
+            stopped ? play() : pause();
+            stopped = !stopped;
+        });
+
+        $(document).ready(function(){
+            play();
+
+            $(document).scroll(function(){
+                if(window.scrollY > window.innerHeight / 2){
+                    if(stopped == false){
+                        pause();
+                    }
+                }else{
+                    if(stopped == false){
+                        play();
+                    }
+                }
+            });
         });
 
     </script>
