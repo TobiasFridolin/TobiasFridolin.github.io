@@ -998,11 +998,10 @@ body {
   font-weight: 500;
   text-align: center;
   text-transform: uppercase;
-  color: white;
 }
 #kontakt p {
+  color: #303538;
   font-family: "Raleway", sans-serif;
-  color: white;
   text-align: right;
   line-height: 1.5em;
   margin: 16px;
@@ -1015,12 +1014,12 @@ body {
   background-color: #9ecac3;
 }
 #kontakt .button {
-  color: white;
-  border: 1px solid white;
+  color: black;
+  border: 1px solid #303538;
   background-color: #9ecac3;
 }
 #kontakt img {
-  margin-left: -16px;
+  margin-left: -40px;
   filter: none;
 }
 @media screen and (max-width: 1024px) {
