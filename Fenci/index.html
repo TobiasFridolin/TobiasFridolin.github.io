@@ -109,7 +109,7 @@
             <img src="1.jpg" alt="billede" heigth="auto" width="33%">
             
             <div class="container">
-                <h1 class="t">Fokus på modtageren.</h1>
+                <h1 class="t">Fokus på modtageren</h1>
                 <p class="t"> 
                     <b>Med stort engagement og kvalitetsbevidsthed</b> går jeg systematisk til opgaverne. 
                     Jeg stræber efter at gøre indholdet relevant, og budskabet klart og vedkommende.
@@ -118,6 +118,9 @@
         </section>
         <section id="udtalelser">
             <h1>Udtalelser</h1>
+
+            <button class="left-control" id="left-control">&lt;</button>
+            <div class="right-control">&gt;</div>
 
             <div class="bla">
 
@@ -343,7 +346,6 @@
                     </div>
                 </div>
             </div>
-            <!-- <div class="gradient"></div> -->
         </section>
         <section id="hook-2">
 
@@ -520,14 +522,14 @@
             });
         });
 
-        function closeMenu(){
+        closeMenu = () =>{
             $(".nav-menu").removeClass("nav-menu--open");
             $(".burger").addClass("burger--collapsed");
             $(".burger").removeClass("burger--open");
             $("main").removeClass("nav-open");
         }
 
-        function openMenu(){
+        openMenu = () =>{
             $(".nav-menu").addClass("nav-menu--open");
             $(".burger").removeClass("burger--collapsed");
             $(".burger").addClass("burger--open");
@@ -577,8 +579,6 @@
     <script>
 
         $(document).ready(function(){
-
-            var mobileWidth = 768;
     
             function handleClick(event){
     
@@ -604,36 +604,45 @@
                    
                     event.removeClass("inactive");
                     event.addClass("active");
-                    $(".bla").css("height", event.innerHeight());
-
-                    console.log(event.innerHeight());       
+                    $(".bla").css("height", event.innerHeight() + 64);
+                    console.log("clicked");
                 };
             }
-    
-            if(screen.width > mobileWidth){
-                $("#udtalelser").find(".container").each(function(index){$(this).click(handleClick($(this)));});
-            }
-    
+
+            $("#udtalelser").find(".container").each(function(index){$(this).click(handleClick($(this)));});
+            $(".bla .active").trigger("click");
+
+            // hvis click på control
+            $("#left-control").click(function(){ 
+                console.log("control clicked");
+                $(".bla .active").next().trigger("click");
+            });
+
+            document.querySelector('.left-control').addEventListener('click', function() {
+                {
+                    console.log("control clicked");
+                }
+            });
+
+            $(".right-control").click(function(){console.log("geplfgep")});
+            // find ud af hvilken .bla som er active, og hvilken plads den har i array
+            // trigger click på den som er ved siden af 
+
+
             // handle resizing
             window.onresize = handleResizing;
             
             function handleResizing(){
                 console.log(screen.width);
-                if(screen.width > mobileWidth){
-                    $(".active").trigger("click");
-                    
-                    // SHOULD IDEALLY CHECK IF IT ALREADY HAS AN EVENT HANDLER
-                    $("#udtalelser").find(".container").each(function(index){$(this).click(handleClick($(this)));});
-                    
-                }else{
-                    $(".bla").css("transform", "translateX(0)");
-                    $(".bla .container").off("click");
-                }
+                $(".bla .active").trigger("click");
+                // SHOULD IDEALLY CHECK IF IT ALREADY HAS AN EVENT HANDLER
+                $("#udtalelser").find(".container").each(function(index){$(this).click(handleClick($(this)));});
             }    
             
             window.setTimeout(function(){
                 $(".bla .active").trigger("click");
             }, 200);
+
         });
     </script>
     <script>

@@ -499,7 +499,7 @@ body {
 }
 #hook-1 h1 {
   font-family: "Bebas Neue", cursive;
-  font-size: 2.25rem;
+  font-size: 2.5rem;
   margin-bottom: 16px;
   font-weight: 500;
 }
@@ -536,30 +536,61 @@ body {
   box-shadow: 0 4px 16px 8px rgba(0, 0, 0, 0.2);
   z-index: 0;
   overflow-x: hidden;
+  position: relative;
+}
+#udtalelser .control, #udtalelser .right-control, #udtalelser .left-control {
+  display: none;
+  position: absolute;
+  top: 50%;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 32px;
+  text-align: center;
+  border: none;
+  border-radius: 100%;
+  color: #9ecac3;
+  font-family: "Bebas Neue", cursive;
+  cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+  #udtalelser .control, #udtalelser .right-control, #udtalelser .left-control {
+    display: inline-block;
+  }
+}
+#udtalelser .left-control {
+  left: 16px;
+}
+#udtalelser .right-control {
+  right: 16px;
 }
 #udtalelser img {
   border-radius: 100%;
 }
 #udtalelser h1 {
   font-family: "Bebas Neue", cursive;
-  font-size: 2.5rem;
+  font-size: 4rem;
+  line-height: 1.2em;
   text-transform: uppercase;
   font-weight: 500;
   opacity: 0.9;
   text-align: center;
-  padding: 32px;
+  margin: 0px auto;
+  padding: 32px 0;
+  width: 100%;
+  border-bottom: 1px solid black;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: relative;
 }
 #udtalelser h2 {
   font-family: "Bebas Neue", cursive;
   padding: 0 8px;
   font-weight: 300;
-  font-size: 1rem;
+  font-size: 1.4rem;
   color: rgba(255, 255, 255, 0.8);
   text-transform: uppercase;
 }
 #udtalelser h3 {
   font-family: "Bebas Neue", cursive;
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-weight: 600;
   color: rgba(255, 255, 255, 0.4);
   text-transform: uppercase;
@@ -573,8 +604,8 @@ body {
   color: gainsboro;
 }
 #udtalelser .bla {
-  position: relative;
   top: 0;
+  padding: 40px 0;
   white-space: nowrap;
   transition: transform 1s, height 0.2s;
 }
@@ -653,12 +684,6 @@ body {
   }
 }
 @media screen and (max-width: 768px) {
-  #udtalelser .bla {
-    overflow-x: scroll;
-  }
-  #udtalelser .bla > div:first-child, #udtalelser .bla > div:last-child {
-    display: none;
-  }
   #udtalelser .container {
     width: 100%;
   }
