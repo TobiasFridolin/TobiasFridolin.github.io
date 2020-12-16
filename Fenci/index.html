@@ -75,13 +75,13 @@
 
     </header>
     <main>
-        <section class="hero" style="position: relative;">
+        <section id="hero" class="hero" style="position: relative;">
             <video id="video" width="100%" height="auto">
                 <source src="video.mp4" type="video/mp4">
             </video>
             <!-- <h2>Din historie. Dit budskab.</h2> -->
         </section>
-        <section class="brands" id="brands-1">
+        <!-- <section class="brands" id="brands-1">
             <div class="container">
                 <a class="t-2" href=""><img src="batalla.png" width="80" height="82" alt="batalla"></a>
                 <a class="t-2" href=""><img src="boss-lady.png" width="80" height="81" alt="boss lady"></a>
@@ -92,7 +92,7 @@
                 <a class="t-2" href=""><img src="walk-and-talk.png" width="80" height="81" alt="walk and talk"></a>
                 <a class="t-2" href=""><img src="gaa-med-det--on-white.png" width="80" height="80" alt="ga med det"></a>
             </div>
-        </section>
+        </section> -->
         <section id="om">
             <h1 class="t">Content creator</h1>
             <div class="container">
@@ -119,11 +119,10 @@
         <section id="udtalelser">
             <h1>Udtalelser</h1>
 
-            <button class="left-control" id="left-control">&lt;</button>
-            <div class="right-control">&gt;</div>
+            <!-- <button class="left-control" id="left-control">&lt;</button>
+            <button class="right-control">&gt;</button> -->
 
             <div class="bla">
-
                 <div class="container inactive">
                     <img src="udtalelser/bjarke.jpeg" alt="Bjarke profil" heigth="100" width="100">
                     <div>
@@ -448,239 +447,10 @@
             <p>Developed by <a href="http://tobiasfridolin.github.io/">Tobias Fridolin</a> | 2020</p>
         </div>
     </main>
-    <script>
-        var brand1Animate = false;
-        var brand2Animate = false;
-
-        var animate = function(elem, c){
-            elem.addClass(c);
-        }
-
-
-        $(document).scroll(function(){
-            var omTop = $("#om").offset().top;
-            var hook1Top = $("#hook-1").offset().top;
-
-            if(omTop - window.scrollY < window.innerHeight / 2){
-                $("#om").children("h1").addClass("t--on");
-                $("#om").find("p").addClass("t--on");
-            };
-
-            if(hook1Top - window.scrollY < window.innerHeight / 2){
-                $("#hook-1").find("h1").addClass("t--on");
-                $("#hook-1").find("p").addClass("t--on");
-            }
-
-            if(window.scrollY < 20 || window.scrollY + window.innerHeight + 20 > $(document).height()){
-                $("#somebar").children(".container").addClass("container--active");
-                $("#somebar").children(".container").removeClass("container--inactive");
-            }
-            else if(window.scrollY > 20 || window.scrollY + window.innerHeight + 20 < $(document).height()){
-                $("#somebar").children(".container").addClass("container--inactive");
-                $("#somebar").children(".container").removeClass("container--active");
-            }
-
-            if(window.scrollY > $("#brands-1").offset().top - window.innerHeight * 0.9 && !brand1Animate){
-                $("#brands-1").find(".t-2").each(function(index){
-                    var elem = $(this);
-                    setTimeout(function(){ animate(elem, "t-2--on")}, index * 100);
-                })
-                brand1Animate = true;
-            }
-  
-
-            if(window.scrollY > $("#brands-2").offset().top - window.innerHeight * 0.9 && !brand2Animate){
-                $("#brands-2").find(".t-2").each(function(index){
-                    var elem = $(this);
-                    setTimeout(function(){ animate(elem, "t-2--on")}, index * 100);
-                })  
-                brand2Animate = true;
-            }   
-        });  
-
-    </script>
-    <script>
-        
-        // header scroll
-        $(document).ready(function(){
-            var scrollPrev;
-            $(document).scroll(function(){
-
-                if(window.scrollY > 0){
-                    if(window.scrollY > scrollPrev){
-                        $("#header").addClass("header--hidden");
-                    }else{
-                        $("#header").removeClass("header--hidden");
-                    }
-                    if(window.scrollY > $("header").innerHeight()){
-                        $("#header").addClass("header--scrolling");
-                    }
-                }else{
-                    $("#header").removeClass("header--scrolling");
-                }
-                scrollPrev = window.scrollY;
-            });
-        });
-
-        closeMenu = () =>{
-            $(".nav-menu").removeClass("nav-menu--open");
-            $(".burger").addClass("burger--collapsed");
-            $(".burger").removeClass("burger--open");
-            $("main").removeClass("nav-open");
-        }
-
-        openMenu = () =>{
-            $(".nav-menu").addClass("nav-menu--open");
-            $(".burger").removeClass("burger--collapsed");
-            $(".burger").addClass("burger--open");
-            $("main").addClass("nav-open");
-        }
-
-        $(".burger").click(function(){
-            $(this).hasClass("burger--collapsed") ? openMenu() : closeMenu();
-        });
-
-        $(".nav-links").find("a").click(function(){
-            if($("nav-menu").hasClass("nav-menu--open")){
-                closeMenu()
-            }else{
-                setTimeout(function(){ $(".header").removeClass("header--hidden")}, 20);
-            }
-        })
-
-        $(document).mousemove(function(event){
-            if(event.clientY < ($(".header").innerHeight())){
-                $(".header").removeClass("header--hidden");
-            };
-        });
-
-        function transitionNavLinks(navMenu){
-
-            $(".contact-info").addClass("t-4--on");
-            
-            navMenu.find("li").each(function(index){
-                var elem = $(this);
-                setTimeout(function(){ elem.addClass("t-3--on")}, index * 200);
-            }); 
-        }
-
-        function resetNavLinks(navMenu){
-            $(".contact-info").removeClass("t-4--on");
-            navMenu.find("li").removeClass("t-3--on");
-        }
-
-        // transition contact info in
-        $("#nav-menu").on("transitionend", function(){
-            $(this).hasClass("nav-menu--open") ? transitionNavLinks($(this)) : resetNavLinks($(this));
-        });
-
-    </script>
-
-    <script>
-
-        $(document).ready(function(){
-    
-            function handleClick(event){
-    
-                return function(){
-                    if(event.prev().length == 0){
-                            
-                        elem = $(".bla .container").eq($(".bla .container").length - 2);
-                        t = 0.5 * $(document).width() - 0.5 * $(".active").outerWidth() - ($(".bla .container").length - 2) * $(".active").outerWidth();
-                        event = $(".bla .container").eq($(".bla .container").length - 2);
-                    }else if(event.next().length == 0){
-                        elem = $(".bla .container").eq(1);
-                        t = 0.5 * $(document).width() - 0.5 * $(".active").outerWidth() - $(".active").outerWidth();
-                        event = $(".bla .container").eq(1);
-                    }
-                    else{
-                        t = 0.5 * $(document).width() - 0.5 * $(".active").outerWidth() - event.prevAll().length * $(".active").outerWidth();
-                    }
-    
-                    $(".bla").css("transform", "translateX(" + t + "px)");
-    
-                    $(".active").addClass("inactive");
-                    $(".active").removeClass("active");
-                   
-                    event.removeClass("inactive");
-                    event.addClass("active");
-                    $(".bla").css("height", event.innerHeight() + 64);
-                    console.log("clicked");
-                };
-            }
-
-            $("#udtalelser").find(".container").each(function(index){$(this).click(handleClick($(this)));});
-            $(".bla .active").trigger("click");
-
-            // hvis click på control
-            $("#left-control").click(function(){ 
-                console.log("control clicked");
-                $(".bla .active").next().trigger("click");
-            });
-
-            document.querySelector('.left-control').addEventListener('click', function() {
-                {
-                    console.log("control clicked");
-                }
-            });
-
-            $(".right-control").click(function(){console.log("geplfgep")});
-            // find ud af hvilken .bla som er active, og hvilken plads den har i array
-            // trigger click på den som er ved siden af 
-
-
-            // handle resizing
-            window.onresize = handleResizing;
-            
-            function handleResizing(){
-                console.log(screen.width);
-                $(".bla .active").trigger("click");
-                // SHOULD IDEALLY CHECK IF IT ALREADY HAS AN EVENT HANDLER
-                $("#udtalelser").find(".container").each(function(index){$(this).click(handleClick($(this)));});
-            }    
-            
-            window.setTimeout(function(){
-                $(".bla .active").trigger("click");
-            }, 200);
-
-        });
-    </script>
-    <script>
-        // Video
-        video = document.getElementById("video");
-        video.muted = true;
-        video.loop = true;
-        stopped = false;
-
-        function play(){
-            video.play();
-        }
-
-        function pause(){
-            video.pause();
-        }
-
-        $("#video").click(function(){
-            stopped ? play() : pause();
-            stopped = !stopped;
-        });
-
-        $(document).ready(function(){
-            play();
-
-            $(document).scroll(function(){
-                if(window.scrollY > window.innerHeight / 2){
-                    if(stopped == false){
-                        pause();
-                    }
-                }else{
-                    if(stopped == false){
-                        play();
-                    }
-                }
-            });
-        });
-
-    </script>
+    <script src="js/scroll-animations.js"></script>
+    <script src="js/header-scrolling.js"></script>
+    <script src="js/burger-nav.js"></script>
+    <script src="js/cases.js"></script>
+    <script src="js/video.js"></script>
 </body>
 </html>

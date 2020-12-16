@@ -18,9 +18,7 @@ main {
 }
 
 .nav-open {
-  height: 100vh;
-  overflow: hidden;
-  transform: translateY(-70px);
+  overflow-y: hidden;
 }
 
 section {
@@ -542,11 +540,13 @@ body {
   display: none;
   position: absolute;
   top: 50%;
+  z-index: 1;
   background-color: rgba(0, 0, 0, 0.2);
-  padding: 32px;
+  padding: 8px;
+  font-size: 3rem;
   text-align: center;
   border: none;
-  border-radius: 100%;
+  border-radius: 4px;
   color: #9ecac3;
   font-family: "Bebas Neue", cursive;
   cursor: pointer;
@@ -610,11 +610,12 @@ body {
   transition: transform 1s, height 0.2s;
 }
 #udtalelser .container {
-  padding: 32px;
+  margin: 32px;
   display: inline-flex;
   flex-direction: column;
   align-items: center;
   white-space: normal;
+  position: relative;
 }
 #udtalelser .container > div {
   margin: 16px;
@@ -622,6 +623,17 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
+}
+#udtalelser .container::after {
+  content: "";
+  height: 100px;
+  z-index: 4;
+  width: 5px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  background-color: green;
 }
 #udtalelser img {
   transition: box-shadow 0.2s;
@@ -685,7 +697,7 @@ body {
 }
 @media screen and (max-width: 768px) {
   #udtalelser .container {
-    width: 100%;
+    width: 100vw;
   }
   #udtalelser .inactive {
     opacity: 1;
@@ -703,13 +715,20 @@ body {
     opacity: 1;
     margin: 0;
   }
-  #udtalelser .active p:before, #udtalelser .active p:after {
-    content: none;
-  }
   #udtalelser > div:last-child {
     position: relative;
     border-radius: 8px;
   }
+}
+
+body:after {
+  content: "";
+  width: 1px;
+  height: 100vh;
+  position: fixed;
+  left: 50%;
+  top: 0;
+  background-color: red;
 }
 
 #hook-2 {
@@ -885,6 +904,9 @@ body {
 }
 .case-placeholder:first-child, .case:first-child {
   margin-left: 0;
+}
+.case-placeholder:last-child, .case:last-child {
+  margin-right: 0;
 }
 .case-placeholder:hover, .case:hover {
   box-shadow: 0 4px 16px 8px rgba(0, 0, 0, 0.2);
