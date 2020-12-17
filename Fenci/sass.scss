@@ -772,7 +772,7 @@ body{
 
     p{
         font-family: $font-2;
-        line-height: 150%;
+        line-height: 175%;
 
         width: 32em;
         text-align: center;
@@ -796,7 +796,7 @@ body{
         flex-direction: column;
         align-items: center;
         white-space: normal;
-
+        
         >div{
             margin: 16px;
             display: flex;
