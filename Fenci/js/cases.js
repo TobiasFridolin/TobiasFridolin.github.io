@@ -6,26 +6,24 @@ $(document).ready(function(){
 
             // Hvis det er det første element
             if(event.prev().length == 0){
-                t = 0.5 * $(document).outerWidth(true) - 0.5 * $(".active").outerWidth(true) - ($(".bla .container").length - 2) * $(".active").outerWidth(true);
+                t = 0.5 * $(document).outerWidth(true) - 0.5 * $(".active").outerWidth(true) - ($(".bla .container").length - 2) * ($(".active").outerWidth(true));
                 event = $(".bla .container").eq($(".bla .container").length - 2);
             // Hvis det er det sidste element
             }else if(event.next().length == 0){
-                t = 0.5 * $(document).outerWidth(true) - 0.5 * $(".active").outerWidth(true) - $(".bla .container").outerWidth(true);
+                t = (0.5 * $(document).outerWidth(true)) - (0.5 * $(".active").outerWidth(true)) - ($(".bla .container").outerWidth(true));
                 event = $(".bla .container").eq(1);
-
             }
             else{
-                t = 0.5 * $(document).outerWidth(true) - 0.5 * $(".active").outerWidth(true) - event.prevAll().length * $(".active").outerWidth(true);
-                console.log($(".active").outerWidth(true));
-                console.log($(document).outerWidth(true));
+                t = (0.5 * $(document).outerWidth(true)) - (0.5 * $(".active").outerWidth(true)) - (event.prevAll().length * $(".active").outerWidth(true));
             }
-
-            $(".bla").css("transform", "translateX(" + t     + "px)");
+            // t-= 6;
+            $(".bla").css("transform", "translateX(" + t + "px)");
             $(".active").addClass("inactive");
             $(".active").removeClass("active");
             event.removeClass("inactive");
             event.addClass("active");
-            $(".bla").css("height", event.innerHeight() + 128);
+            $(".bla").css("height", event.outerHeight(true) + 64);
+            console.log( event.innerHeight() + 128 );
         };
     }
 

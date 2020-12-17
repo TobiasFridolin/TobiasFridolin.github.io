@@ -257,7 +257,8 @@ body {
 
 .hero {
   position: relative;
-  color: white;
+  display: flex;
+  align-content: center;
   width: 100vw;
   box-shadow: 0 4px 16px 8px rgba(0, 0, 0, 0.2);
   cursor: pointer;
@@ -539,11 +540,11 @@ body {
 #udtalelser .control, #udtalelser .right-control, #udtalelser .left-control {
   display: none;
   position: absolute;
-  top: 50%;
+  top: 232px;
   z-index: 1;
   background-color: rgba(0, 0, 0, 0.2);
-  padding: 8px;
-  font-size: 3rem;
+  padding: 4px;
+  font-size: 2rem;
   text-align: center;
   border: none;
   border-radius: 4px;
@@ -606,11 +607,14 @@ body {
 #udtalelser .bla {
   top: 0;
   padding: 40px 0;
-  white-space: nowrap;
+  display: flex;
+  margin: 0;
   transition: transform 1s, height 0.2s;
+  width: fit-content;
 }
 #udtalelser .container {
   margin: 32px;
+  height: fit-content;
   display: inline-flex;
   flex-direction: column;
   align-items: center;
@@ -623,17 +627,6 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
-}
-#udtalelser .container::after {
-  content: "";
-  height: 100px;
-  z-index: 4;
-  width: 5px;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 0;
-  background-color: green;
 }
 #udtalelser img {
   transition: box-shadow 0.2s;
@@ -687,7 +680,7 @@ body {
   position: absolute;
   bottom: 0;
   left: 0;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 255, 0) 100%);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 100%);
   pointer-events: none;
 }
 @media screen and (max-width: 1024px) {
@@ -719,16 +712,6 @@ body {
     position: relative;
     border-radius: 8px;
   }
-}
-
-body:after {
-  content: "";
-  width: 1px;
-  height: 100vh;
-  position: fixed;
-  left: 50%;
-  top: 0;
-  background-color: red;
 }
 
 #hook-2 {
