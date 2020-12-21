@@ -11,8 +11,8 @@ var omTop = $("#om").offset().top;
 var hook1Top = $("#hook-1").offset().top;
 
 if(omTop - window.scrollY < window.innerHeight / 2){
-    $("#om").children("h1").addClass("t--on");
-    $("#om").find("p").addClass("t--on");
+    $("#om .t").addClass("t--on");
+    // $("#om").find("p").addClass("t--on");
 };
 
 if(hook1Top - window.scrollY < window.innerHeight / 2){

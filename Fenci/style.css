@@ -8,7 +8,7 @@
 }
 
 p {
-  line-height: 1.5em;
+  line-height: 1.6em;
 }
 
 main {
@@ -24,7 +24,6 @@ main {
 section {
   position: relative;
   z-index: 0;
-  overflow: hidden;
 }
 
 #somebar {
@@ -251,10 +250,6 @@ header a:first-child li, footer a:first-child li {
   display: hidden;
 }
 
-body {
-  overflow-x: hidden;
-}
-
 .hero {
   position: relative;
   display: flex;
@@ -406,12 +401,25 @@ body {
 }
 
 #om {
-  padding: 120px 220px;
   background-color: rgba(0, 0, 0, 0.05);
   box-shadow: 0 4px 16px 8px rgba(0, 0, 0, 0.2);
   position: relative;
 }
+#om .wrapper {
+  padding: 80px;
+}
+#om .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+#om .lead {
+  font-size: 1.6rem;
+  font-style: italic;
+  margin: auto 0;
+}
 #om h1 {
+  margin: 32px;
   font-family: "Bebas Neue", cursive;
   font-size: 3rem;
   font-weight: 600;
@@ -427,15 +435,46 @@ body {
   bottom: 0;
   margin-bottom: -8px;
 }
-#om .container {
-  margin-top: -3rem;
+#om h2 {
+  font-family: "Bebas Neue", cursive;
+  font-size: 2.25rem;
+  width: 100%;
+  border-bottom: 1px solid black;
+}
+#om .carousel {
+  padding: 80px;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+#om .carousel > .child {
+  display: none;
+  flex-direction: column;
+}
+#om .carousel > .child p {
+  max-width: 38em;
+}
+#om .carousel > .child.active {
+  display: flex;
+}
+#om .controls, #om .right-control, #om .left-control {
+  height: 32px;
+  margin: auto 32px;
+  background-color: #9ecac3;
+  color: white;
+  border: none;
+  width: 32px;
+  height: 32px;
+  font-weight: bold;
+  border-radius: 100%;
+  transition: box-shadow 0.2s ease-in-out;
+}
+#om .controls:hover, #om .right-control:hover, #om .left-control:hover {
+  box-shadow: 0 0 8px 0px rgba(0, 0, 0, 0.2);
 }
 #om p {
   font-family: "Helvetica", "arial", sans-serif;
-  max-width: 32em;
+  max-width: 28em;
   min-width: 24em;
   text-align: right;
   padding: 32px 16px;
@@ -475,16 +514,7 @@ body {
   #om {
     padding: 64px 16px;
   }
-  #om h1 {
-    font-size: 2.5rem;
-  }
 }
-@media screen and (max-width: 481px) {
-  #om h1 {
-    font-size: 2rem;
-  }
-}
-
 #hook-1 {
   display: flex;
 }
@@ -515,7 +545,6 @@ body {
 }
 #hook-1 p {
   font-family: "Helvetica", "arial", sans-serif;
-  line-height: 1.5rem;
   max-width: 32rem;
 }
 #hook-1 img {
@@ -545,7 +574,7 @@ body {
   color: white;
   box-shadow: 0 4px 16px 8px rgba(0, 0, 0, 0.2);
   z-index: 0;
-  overflow-x: hidden;
+  overflow: hidden;
   position: relative;
 }
 #udtalelser .control, #udtalelser .right-control, #udtalelser .left-control {
@@ -581,8 +610,6 @@ body {
   font-family: "Bebas Neue", cursive;
   font-size: 4rem;
   line-height: 1.2em;
-  text-transform: uppercase;
-  font-weight: 500;
   opacity: 0.9;
   text-align: center;
   margin: 0px auto;
@@ -596,7 +623,7 @@ body {
   font-family: "Bebas Neue", cursive;
   padding: 0 8px;
   font-weight: 300;
-  font-size: 1.4rem;
+  font-size: 2rem;
   color: rgba(255, 255, 255, 0.8);
   text-transform: uppercase;
 }
@@ -699,6 +726,9 @@ body {
   }
 }
 @media screen and (max-width: 768px) {
+  #udtalelser h1 {
+    font-size: 3rem;
+  }
   #udtalelser .container {
     width: 100vw;
   }
@@ -762,7 +792,7 @@ body {
   align-items: flex-end;
 }
 #hook-2 .button {
-  margin: 24px 80px;
+  margin: 24px auto;
   color: white;
   background-color: #9ecac3;
 }
@@ -809,6 +839,9 @@ body {
     text-align: center;
     max-width: 100%;
   }
+  #hook-2 h1::after {
+    content: none;
+  }
   #hook-2 p {
     background-color: transparent;
     margin: 0;
@@ -841,100 +874,94 @@ body {
 }
 
 #cases {
-  padding: 80px 160px;
   box-shadow: 0 4px 16px 8px rgba(0, 0, 0, 0.2);
   background-color: #282828;
-  overflow-x: scroll;
-  -ms-overflow-style: none;
-  /* IE and Edge */
-  scrollbar-width: none;
-  /* Firefox */
-}
-#cases::-webkit-scrollbar {
-  display: none;
+  height: 1500px;
 }
 #cases h1 {
   font-family: "Bebas Neue", cursive;
   font-size: 4rem;
-  font-weight: 600;
+  width: 100%;
+  line-height: 140px;
+  padding-left: 112px;
   color: white;
-  position: relative;
-  margin-bottom: 32px;
-  opacity: 0.8;
+  background-color: rgba(0, 0, 0, 0.5);
 }
-#cases h1:after {
-  content: "";
-  width: 104px;
-  height: 6px;
-  background-color: #9ecac3;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  margin-bottom: -8px;
+#cases h2, #cases h3 {
+  font-family: "Bebas Neue", cursive;
+  line-height: 110%;
+}
+#cases h3 {
+  color: rgba(255, 255, 255, 0.2);
+  font-size: 1rem;
 }
 #cases h2 {
+  font-size: 2rem;
+  color: rgba(255, 255, 255, 0.4);
+}
+#cases p {
+  margin: 16px auto;
+  color: rgba(255, 255, 255, 0.8);
   font-family: "Helvetica", "arial", sans-serif;
-  font-size: 1.25rem;
-  color: white;
-  opacity: 0.7;
-  font-weight: 400;
+  max-width: 32rem;
+  text-align: left;
 }
-#cases .container {
-  display: flex;
-  padding: 40px 0;
+#cases img {
+  margin: 16px auto;
 }
-@media screen and (max-width: 768px) {
-  #cases {
-    padding: 32px;
-  }
+#cases .outline {
+  width: 33%;
+  display: inline-flex;
+  flex-direction: column;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
 }
-@media screen and (max-width: 481px) {
-  #cases {
-    padding: 16px;
-  }
+#cases .outline ul {
+  list-style: none;
+  margin: 136px 0;
+  padding: 0;
 }
-
-.case-placeholder, .case {
-  background-color: black;
-  opacity: 0.5;
-  height: 350px;
-  width: 310px;
-  margin: 32px;
-  box-shadow: 0 0 8px 4px rgba(0, 0, 0, 0.2), 0 2px 8px 0 rgba(0, 0, 0, 0.25);
+#cases .outline li {
+  padding: 16px 112px;
+  margin: 24px 0;
   cursor: pointer;
-  filter: grayscale(1);
-  background-position: center;
-  background-size: cover;
-  transition: box-shadow 0.2s, transform 0.2s, filter 0.2s;
+  transition: color 0.2s, margin 0.2s;
 }
-.case-placeholder:first-child, .case:first-child {
+#cases .outline li:hover {
+  margin-left: 4px;
+}
+#cases .outline li:hover h3 {
+  color: rgba(255, 255, 255, 0.4);
+}
+#cases .outline li:hover h2 {
+  color: rgba(255, 255, 255, 0.8);
+}
+#cases .outline .active {
+  border-left: 4px solid #9ecac3;
+}
+#cases .outline .active h3 {
+  color: rgba(255, 255, 255, 0.4);
+}
+#cases .outline .active h2 {
+  color: rgba(255, 255, 255, 0.8);
+}
+#cases .outline .active:hover {
   margin-left: 0;
 }
-.case-placeholder:last-child, .case:last-child {
-  margin-right: 0;
+#cases .content {
+  float: right;
+  clear: left;
+  width: 66%;
 }
-.case-placeholder:hover, .case:hover {
-  box-shadow: 0 4px 16px 8px rgba(0, 0, 0, 0.2);
-  transform: scale(1.05);
-  filter: grayscale(0);
+#cases .case {
+  display: none;
 }
-
-#gaa-med {
-  background-image: url("/gaamed.png");
-}
-
-#case-2 {
-  background-image: url("/gaamed.png");
-  background-position: left;
-}
-
-#case-3 {
-  background-image: url("/gaamed.png");
-  background-position: right;
-}
-
-#case-4 {
-  background-image: url("gaa-med-det.jpeg");
+#cases .case.active {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 104px 16px;
 }
 
 .stemning {
@@ -1044,6 +1071,7 @@ body {
 }
 #kontakt h1 {
   font-family: "Bebas Neue", cursive;
+  color: white;
   font-size: 3.5rem;
   font-weight: 500;
   text-align: center;
@@ -1051,6 +1079,7 @@ body {
 }
 #kontakt p {
   color: #303538;
+  color: white;
   font-family: "Helvetica", "arial", sans-serif;
   text-align: right;
   line-height: 1.5em;
@@ -1064,8 +1093,8 @@ body {
   background-color: #9ecac3;
 }
 #kontakt .button {
-  color: black;
-  border: 1px solid #303538;
+  color: white;
+  border: 1px solid white;
   background-color: #9ecac3;
 }
 #kontakt img {

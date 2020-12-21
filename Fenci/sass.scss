@@ -1,5 +1,4 @@
 $font-1: 'Jost', sans-serif;
-$font-2: 'Raleway', sans-serif;
 $font-2: 'Helvetica', 'arial', sans-serif;
 $font-3: 'Bebas Neue', cursive;
 $shadow-1:  0 0 8px 2px rgba(black, 0.2);
@@ -60,7 +59,7 @@ $primary-color: #9ecac3;
 }
 
 p{
-    line-height: 1.5em;
+    line-height: 1.6em;
 }
 
 main{
@@ -80,7 +79,6 @@ main{
 section{
     position: relative;
     z-index: 0;
-    overflow: hidden;
 }
 
 #somebar{
@@ -359,10 +357,6 @@ header, footer{
     }
 }
 
-body{
-    overflow-x: hidden;
-}
-
 .hero{
     position: relative;
     display: flex;
@@ -558,12 +552,28 @@ body{
 }
 
 #om{
-    padding: 120px 220px;
     background-color: rgba(black, 0.05);
     box-shadow: $shadow-3;
     position: relative;
 
+    .wrapper{
+        padding: 80px;
+    }
+
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .lead{
+        font-size: 1.6rem;
+        font-style: italic;
+        margin: auto 0;
+    }
+
     h1{
+        margin: 32px;
         font-family: $font-3;
         font-size: 3rem;
         font-weight: 600;
@@ -579,17 +589,60 @@ body{
             margin-bottom: -8px;
         }
     }
-    
-    .container{
-        margin-top: -3rem;
+
+    h2{
+        font-family: $font-3;
+        font-size: 2.25rem;
+        width: 100%;
+        border-bottom: 1px solid black;
+    }
+
+    .carousel{
+        padding: 80px;
         display: flex;
-        align-items: center;
-        justify-content: space-between;
+        justify-content: center;
+        background-color: rgba(black, 0.05);
+
+
+        > .child{
+            display: none;
+            flex-direction: column;
+            p{
+                max-width: 38em;
+            }
+            &.active{
+                display: flex;
+            }
+        }
+    }
+
+    .controls{
+        height: 32px;
+        margin: auto 32px;
+        background-color: rgba($primary-color, 1);
+        color: white;
+        border: none;
+        width: 32px;
+        height: 32px;
+        font-weight: bold;
+        border-radius: 100%;
+        transition: box-shadow 0.2s ease-in-out;
+        &:hover{
+            box-shadow: 0 0 8px 0px rgba(black, 0.2);
+        }
+    }
+
+    .left-control{
+        @extend .controls;
+    }
+
+    .right-control{
+        @extend .controls;
     }
 
     p{
         font-family: $font-2;
-        max-width: 32em;
+        max-width: 28em;
         min-width: 24em;
         text-align: right;
         padding: 32px 16px;
@@ -631,15 +684,9 @@ body{
 
     @include breakpoint(small){
         padding: 64px 16px;
-        h1{
-            font-size: 2.5rem;
-        }
     }
 
     @include breakpoint(smallest){
-        h1{
-            font-size: 2rem;
-        }
     }
 }
 
@@ -675,7 +722,6 @@ body{
 
     p{
         font-family: $font-2;
-        line-height: 1.5rem;
         max-width: 32rem;
     }
 
@@ -709,7 +755,7 @@ body{
     color: white;
     box-shadow: $shadow-3;
     z-index: 0;
-    overflow-x: hidden;
+    overflow: hidden;
     position: relative;
 
     .control{
@@ -752,8 +798,6 @@ body{
         font-family: $font-3;
         font-size: 4rem;
         line-height: 1.2em;
-        text-transform: uppercase;
-        font-weight: 500;
         opacity: 0.9;
         text-align: center;
         margin: 0px auto;
@@ -768,7 +812,7 @@ body{
         font-family: $font-3;
         padding: 0 8px;
         font-weight: 300;
-        font-size: 1.4rem;
+        font-size: 2rem;
         color: rgba(white, 0.8);
         text-transform: uppercase;
     }
@@ -893,7 +937,9 @@ body{
     }
 
     @include breakpoint(small){
-
+        h1{
+            font-size: 3rem;
+        }
         .container{
             width: 100vw;
         }
@@ -967,7 +1013,7 @@ body{
     }
 
     .button{
-        margin: 24px 80px;
+        margin: 24px auto;
         color: white;
         background-color: $primary-color;
         // margin-left: -40px;
@@ -1016,6 +1062,9 @@ body{
             z-index: 1;
             text-align: center;
             max-width: 100%;
+            &::after{
+                content: none;
+            }
         }
 
         p{
@@ -1054,105 +1103,110 @@ body{
 }
 
 #cases{
-    padding: 80px 160px;
     box-shadow: $shadow-3;
-    background-color: rgb(40,40,40);
-    overflow-x: scroll;
-
-    &::-webkit-scrollbar {
-        display: none;
-    }
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+    background-color: #282828;
+    height: 1500px;
     
     h1{
         font-family: $font-3;
         font-size: 4rem;
-        font-weight: 600;
+        width: 100%;
+        line-height: 140px;
+        padding-left: 112px;
         color: white;
-        position: relative;
-        margin-bottom: 32px;
-        opacity: 0.8;
+        background-color: rgba(black, 0.5);
+    }
 
-        &:after{
-            content: "";
-            width: 104px;
-            height: 6px;
-            background-color: $primary-color;
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            margin-bottom: -8px;
-        }
+    h2, h3{
+        font-family: $font-3;
+        line-height: 110%;
+    }
+
+    h3{
+        color: rgba(White, 0.2);
+        font-size: 1rem;
+
     }
 
     h2{
+        font-size: 2rem;
+        color: rgba(white, 0.4);
+    }
+
+    p{  
+        margin: 16px auto;
+        color: rgba(white, 0.8);
         font-family: $font-2;
-        font-size: 1.25rem;
-        color: white;
-        opacity: 0.7;
-        font-weight: 400;
+        max-width: 32rem;
+        text-align: left;
+    }
+    img{
+        margin: 16px auto;
     }
 
-    .container{
-        display: flex;
-        padding: 40px 0;
+    .outline{
+        width: 33%;
+        display: inline-flex;
+        flex-direction: column;
+
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        
+        ul{
+            list-style: none;
+            margin: 136px 0;
+            padding: 0;
+        }
+        
+        li{
+            padding: 16px 112px;
+            margin: 24px 0;
+            cursor: pointer;
+
+            transition: color 0.2s, margin 0.2s;
+            &:hover{
+                margin-left: 4px;
+                h3{
+                    color: rgba(white, 0.4);
+                }
+                h2{
+                    color: rgba(white, 0.8);
+                }
+            }
+        }
+
+        .active{
+            border-left: 4px solid $primary-color;
+            // background-color: rgba(black, 0.1);
+            h3{
+                color: rgba(white, 0.4);
+            }
+            h2{
+                color: rgba(white, 0.8);
+            }
+            &:hover{
+                margin-left: 0;
+            }
+        }
     }
-    
-    @include breakpoint(small){
-        padding: 32px;
+
+    .content{
+        float: right;
+        clear: left;
+        width: 66%;
     }
 
-    @include breakpoint(smallest){
-        padding: 16px;
+    .case{
+        display: none;
+        
+        &.active{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 104px 16px;
+        }
     }
-}
-
-.case-placeholder, .case{
-    background-color: black;
-    opacity: 0.5;
-    height: 350px;
-    width: 310px;
-    margin: 32px;
-    box-shadow: $shadow-2;
-    cursor: pointer;
-    filter: grayscale(1);
-    background-position: center;
-    background-size: cover;
-
-    &:first-child{
-        margin-left: 0;
-    }
-
-    &:last-child{
-        margin-right: 0;
-    }
-    
-    transition: box-shadow 0.2s, transform 0.2s, filter 0.2s;
-
-    &:hover{
-        box-shadow: $shadow-3;
-        transform: scale(1.05);
-        filter: grayscale(0);
-    }
-}
-
-#gaa-med{
-    background-image: url("/gaamed.png");
-}
-
-#case-2{
-    background-image: url("/gaamed.png");
-    background-position: left;
-}
-
-#case-3{
-    background-image: url("/gaamed.png");
-    background-position: right;
-}
-
-#case-4{
-    background-image: url("gaa-med-det.jpeg");
 }
 
 .stemning{
@@ -1276,6 +1330,7 @@ body{
     
     h1{
         font-family: $font-3;
+        color: white;
         font-size: 3.5rem;
         font-weight: 500;
         text-align: center;
@@ -1284,6 +1339,7 @@ body{
     
     p{
         color: #303538;
+        color: white;
         font-family: $font-2;
         text-align: right;
         line-height: 1.5em;
@@ -1297,11 +1353,13 @@ body{
         flex-direction: column;
         
         background-color: $primary-color;
+        // border: 3px solid rgba($primary-color, 0.4);
+
     }
 
     .button{
-        color: black;
-        border: 1px solid #303538;
+        color: white;
+        border: 1px solid white;
         background-color: $primary-color;
     }
 
@@ -1398,11 +1456,9 @@ footer{
     font-family: $font-1;
     width: fit-content;
     font-size: 1rem;
-    // color: rgba($bordeux, 1);
     font-weight: 500;
     text-decoration: none;
     text-align: center;
-    // height: fit-content;
     align-self: center;
     padding: 8px 32px;
     text-transform: uppercase;
