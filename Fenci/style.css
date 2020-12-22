@@ -255,7 +255,7 @@ header a:first-child li, footer a:first-child li {
   display: flex;
   align-content: center;
   width: 100vw;
-  box-shadow: 0 4px 16px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 16px 8px rgba(0, 0, 0, 0.2);
   cursor: pointer;
   filter: grayscale(100%);
 }
@@ -402,7 +402,7 @@ header a:first-child li, footer a:first-child li {
 
 #om {
   background-color: rgba(0, 0, 0, 0.05);
-  box-shadow: 0 4px 16px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 16px 8px rgba(0, 0, 0, 0.2);
   position: relative;
 }
 #om .wrapper {
@@ -572,7 +572,7 @@ header a:first-child li, footer a:first-child li {
 #udtalelser {
   background-color: #282828;
   color: white;
-  box-shadow: 0 4px 16px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 16px 8px rgba(0, 0, 0, 0.2);
   z-index: 0;
   overflow: hidden;
   position: relative;
@@ -609,14 +609,12 @@ header a:first-child li, footer a:first-child li {
 #udtalelser h1 {
   font-family: "Bebas Neue", cursive;
   font-size: 4rem;
-  line-height: 1.2em;
+  line-height: 140px;
   opacity: 0.9;
   text-align: center;
-  margin: 0px auto;
-  padding: 32px 0;
   width: 100%;
-  border-bottom: 1px solid black;
   background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 16px 8px rgba(0, 0, 0, 0.2);
   position: relative;
 }
 #udtalelser h2 {
@@ -713,7 +711,7 @@ header a:first-child li, footer a:first-child li {
 #udtalelser:after {
   content: "";
   width: 100%;
-  height: 40px;
+  height: 24px;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -874,7 +872,7 @@ header a:first-child li, footer a:first-child li {
 }
 
 #cases {
-  box-shadow: 0 4px 16px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 16px 8px rgba(0, 0, 0, 0.2);
   background-color: #282828;
   height: 1500px;
 }
@@ -886,6 +884,7 @@ header a:first-child li, footer a:first-child li {
   padding-left: 112px;
   color: white;
   background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 16px 8px rgba(0, 0, 0, 0.2);
 }
 #cases h2, #cases h3 {
   font-family: "Bebas Neue", cursive;
@@ -904,15 +903,19 @@ header a:first-child li, footer a:first-child li {
   color: rgba(255, 255, 255, 0.8);
   font-family: "Helvetica", "arial", sans-serif;
   max-width: 32rem;
-  text-align: left;
+  text-align: justify;
 }
 #cases img {
-  margin: 16px auto;
+  margin: 24px;
+  float: right;
+  margin-right: -24px;
 }
 #cases .outline {
   width: 33%;
+  height: 100vh;
   display: inline-flex;
   flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.1);
   position: -webkit-sticky;
   position: sticky;
   top: 0;
@@ -954,6 +957,10 @@ header a:first-child li, footer a:first-child li {
   clear: left;
   width: 66%;
 }
+#cases .content h2 {
+  font-size: 3rem;
+  color: rgba(255, 255, 255, 0.8);
+}
 #cases .case {
   display: none;
 }
@@ -962,6 +969,15 @@ header a:first-child li, footer a:first-child li {
   flex-direction: column;
   align-items: center;
   padding: 104px 16px;
+}
+#cases:after {
+  content: "";
+  width: 100%;
+  height: 24px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0, rgba(0, 0, 0, 0) 100%);
 }
 
 .stemning {
@@ -1033,7 +1049,7 @@ header a:first-child li, footer a:first-child li {
 .stemning .container {
   display: flex;
   flex-direction: column;
-  background-color: rgba(0, 0, 0, 0.55);
+  background-color: rgba(0, 0, 0, 0.6);
   padding: 160px 80px;
   backdrop-filter: grayscale(1);
   height: 100%;

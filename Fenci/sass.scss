@@ -3,7 +3,7 @@ $font-2: 'Helvetica', 'arial', sans-serif;
 $font-3: 'Bebas Neue', cursive;
 $shadow-1:  0 0 8px 2px rgba(black, 0.2);
 $shadow-2: 0 0 8px 4px rgba(black, 0.2), 0 2px 8px 0 rgba(black, 0.25);
-$shadow-3: 0 4px 16px 8px rgba(black, 0.2);
+$shadow-3: 0 0 16px 8px rgba(black, 0.2);
 $black: rgb(27, 27, 34);
 $primary-color: #9ecac3;
 
@@ -797,14 +797,12 @@ header, footer{
     h1{
         font-family: $font-3;
         font-size: 4rem;
-        line-height: 1.2em;
+        line-height: 140px;
         opacity: 0.9;
         text-align: center;
-        margin: 0px auto;
-        padding: 32px 0;
         width: 100%;
-        border-bottom: 1px solid black;
         background-color: rgba(black, 0.5);
+        box-shadow: $shadow-3;
         position: relative;
     }
 
@@ -922,7 +920,7 @@ header, footer{
     &:after{
         content: "";
         width: 100%;
-        height: 40px;
+        height: 24px;
         position: absolute;
         bottom: 0;
         left: 0;
@@ -1115,6 +1113,7 @@ header, footer{
         padding-left: 112px;
         color: white;
         background-color: rgba(black, 0.5);
+        box-shadow: $shadow-3;
     }
 
     h2, h3{
@@ -1138,16 +1137,20 @@ header, footer{
         color: rgba(white, 0.8);
         font-family: $font-2;
         max-width: 32rem;
-        text-align: left;
+        text-align: justify;
     }
     img{
-        margin: 16px auto;
+        margin: 24px;
+        float: right;
+        margin-right: -24px;
     }
 
     .outline{
         width: 33%;
+        height: 100vh;
         display: inline-flex;
         flex-direction: column;
+        background-color: rgba(black, 0.1);
 
         position: -webkit-sticky;
         position: sticky;
@@ -1195,6 +1198,10 @@ header, footer{
         float: right;
         clear: left;
         width: 66%;
+        h2{
+            font-size: 3rem;
+            color: rgba(white, 0.8);
+        }
     }
 
     .case{
@@ -1206,6 +1213,16 @@ header, footer{
             align-items: center;
             padding: 104px 16px;
         }
+    }
+
+    &:after{
+        content: "";
+        width: 100%;
+        height: 24px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background: linear-gradient(0deg, rgba(black, 0.2) 0, rgba(black, 0)100%);
     }
 }
 
@@ -1286,7 +1303,7 @@ header, footer{
     .container{
         display: flex;
         flex-direction: column;
-        background-color: rgba(black, 0.55);
+        background-color: rgba(black, 0.6);
         padding: 160px 80px;
         backdrop-filter: grayscale(1);
         height: 100%;
