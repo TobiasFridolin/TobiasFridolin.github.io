@@ -274,8 +274,6 @@ header, footer{
     }
 }
 
-
-// clean
 #header{
     @include breakpoint(small){
         .burger--collapsed{
@@ -457,8 +455,6 @@ header, footer{
             align-self: center;
             width: 640px;
         }
-
-      
     }
 
     @include breakpoint(small){
