@@ -9,6 +9,14 @@ body{
     overflow-x: hidden;
 }
 
+// Global device screen width
+// 360×640 – 7.6%
+// 414*896 4.49%
+// 375×667 – 3.83%
+// 1366×768 – 8.5%
+// 1536x864 - 3.73%
+// 1920×1080 – 8.8%
+
 @mixin breakpoint ($point) {
     @if $point == smallest {
         @media screen and (max-width: 481px){

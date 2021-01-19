@@ -17,10 +17,6 @@ main {
   height: auto;
 }
 
-.nav-open {
-  overflow-y: hidden;
-}
-
 section {
   position: relative;
   z-index: 0;
@@ -177,6 +173,9 @@ header a:first-child li, footer a:first-child li {
   .header .burger--open {
     right: 32px;
   }
+  .header .burger--collapsed {
+    display: flex;
+  }
 }
 @media screen and (max-width: 481px) {
   .header {
@@ -187,13 +186,8 @@ header a:first-child li, footer a:first-child li {
   }
 }
 
-@media screen and (max-width: 768px) {
-  #header {
-    top: 0;
-  }
-  #header .burger--collapsed {
-    display: flex;
-  }
+.nav-open {
+  overflow-y: hidden;
 }
 
 .nav-menu .contact-info {
@@ -296,6 +290,23 @@ header a:first-child li, footer a:first-child li {
     text-align: center;
     width: auto;
   }
+}
+
+.control, #cases .left-control, #cases .right-control, #udtalelser .right-control, #udtalelser .left-control, #om .right-control, #om .left-control {
+  height: 32px;
+  min-width: 32px;
+  background-color: #9ecac3;
+  color: white;
+  border: none;
+  border-radius: 100%;
+  font-family: "Bebas Neue", cursive;
+  font-size: 2rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  line-height: 100%;
+  box-shadow: 0 0 8px -2px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 }
 
 .brands {
@@ -414,7 +425,7 @@ header a:first-child li, footer a:first-child li {
   justify-content: space-around;
 }
 #om .lead {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-style: italic;
   margin: auto 0;
 }
@@ -457,21 +468,6 @@ header a:first-child li, footer a:first-child li {
 #om .carousel > .child.active {
   display: flex;
 }
-#om .controls, #om .right-control, #om .left-control {
-  height: 32px;
-  margin: auto 32px;
-  background-color: #9ecac3;
-  color: white;
-  border: none;
-  width: 32px;
-  height: 32px;
-  font-weight: bold;
-  border-radius: 100%;
-  transition: box-shadow 0.2s ease-in-out;
-}
-#om .controls:hover, #om .right-control:hover, #om .left-control:hover {
-  box-shadow: 0 0 8px 0px rgba(0, 0, 0, 0.2);
-}
 #om p {
   font-family: "Helvetica", "arial", sans-serif;
   max-width: 28em;
@@ -508,6 +504,9 @@ header a:first-child li, footer a:first-child li {
     width: 100%;
     height: auto;
     padding: 8px 16px;
+  }
+  #om .wrapper {
+    padding: 0;
   }
 }
 @media screen and (max-width: 768px) {
@@ -582,15 +581,6 @@ header a:first-child li, footer a:first-child li {
   position: absolute;
   top: 232px;
   z-index: 1;
-  background-color: rgba(0, 0, 0, 0.2);
-  padding: 4px;
-  font-size: 2rem;
-  text-align: center;
-  border: none;
-  border-radius: 4px;
-  color: #9ecac3;
-  font-family: "Bebas Neue", cursive;
-  cursor: pointer;
 }
 @media screen and (max-width: 768px) {
   #udtalelser .control, #udtalelser .right-control, #udtalelser .left-control {
@@ -640,7 +630,7 @@ header a:first-child li, footer a:first-child li {
   padding: 16px 40px;
   color: gainsboro;
 }
-#udtalelser .bla {
+#udtalelser .wrapper {
   top: 0;
   padding: 40px 0;
   display: flex;
@@ -915,7 +905,8 @@ header a:first-child li, footer a:first-child li {
   height: 100vh;
   display: inline-flex;
   flex-direction: column;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: #1f1f1f;
+  z-index: 1;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
@@ -952,6 +943,9 @@ header a:first-child li, footer a:first-child li {
 #cases .outline .active:hover {
   margin-left: 0;
 }
+#cases .control, #cases .left-control, #cases .right-control {
+  display: none;
+}
 #cases .content {
   float: right;
   clear: left;
@@ -978,6 +972,36 @@ header a:first-child li, footer a:first-child li {
   bottom: 0;
   left: 0;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0, rgba(0, 0, 0, 0) 100%);
+}
+@media screen and (max-width: 1024px) {
+  #cases .outline {
+    height: auto;
+    width: 100vw;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  #cases .outline ul {
+    margin: 0;
+  }
+  #cases .outline .active {
+    display: block;
+    border: none;
+  }
+  #cases .content {
+    width: 100%;
+  }
+  #cases li {
+    display: none;
+  }
+  #cases .control, #cases .left-control, #cases .right-control {
+    display: flex;
+    margin: auto 16px;
+  }
+  #cases img {
+    margin: 16px auto;
+    width: 100%;
+    object-fit: contain;
+  }
 }
 
 .stemning {

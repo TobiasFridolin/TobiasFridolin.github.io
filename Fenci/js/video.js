@@ -20,7 +20,7 @@ $(document).ready(function(){
     play();
 
     $(document).scroll(function(){
-        if(window.scrollY > window.innerHeight / 2){
+        if(window.scrollY > window.innerHeight * 0.8){
             if(stopped == false){
                 pause();
             }
